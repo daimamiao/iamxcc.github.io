@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>LeetCode 141: Linked List Cycle | amxcc</title>
+    <title>LeetCode 234: Palindrome Linked List | amxcc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+    <meta name="description" content="Given a singly linked list, determine if it is a palindrome. Follow up: Could you do it in O(n) time and O(1) space?">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 141: Linked List Cycle">
-<meta property="og:url" content="http://yoursite.com/2016/08/03/LeetCode-141-Linked-List-Cycle/index.html">
+<meta property="og:title" content="LeetCode 234: Palindrome Linked List">
+<meta property="og:url" content="http://yoursite.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/index.html">
 <meta property="og:site_name" content="amxcc">
-<meta property="og:description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+<meta property="og:description" content="Given a singly linked list, determine if it is a palindrome. Follow up: Could you do it in O(n) time and O(1) space?">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-03T14:04:32.004Z">
+<meta property="og:updated_time" content="2016-08-03T14:24:52.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 141: Linked List Cycle">
-<meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+<meta name="twitter:title" content="LeetCode 234: Palindrome Linked List">
+<meta name="twitter:description" content="Given a singly linked list, determine if it is a palindrome. Follow up: Could you do it in O(n) time and O(1) space?">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
@@ -128,7 +128,7 @@
 
         <div class="outer">
             
-            <section id="main"><article id="post-LeetCode-141-Linked-List-Cycle" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-LeetCode-234-Palindrome-Linked-List" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -144,8 +144,8 @@
 
                         
     <div class="article-date">
-        <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/">
-            <time datetime="2016-08-03T13:15:18.000Z" itemprop="datePublished">2016-08-03</time>
+        <a href="/2016/08/03/LeetCode-234-Palindrome-Linked-List/">
+            <time datetime="2016-08-03T14:21:55.000Z" itemprop="datePublished">2016-08-03</time>
         </a>
     </div>
 
@@ -153,10 +153,10 @@
                         
                     </div>
                 
-                <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/" class="thumbnail">
+                <a href="/2016/08/03/LeetCode-234-Palindrome-Linked-List/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 141: Linked List Cycle" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 234: Palindrome Linked List" class="thumbnail-image"></span>
     
 </a>
 
@@ -169,7 +169,7 @@
         
     
         <h1 class="article-title" itemprop="name">
-            LeetCode 141: Linked List Cycle
+            LeetCode 234: Palindrome Linked List
         </h1>
     
 
@@ -182,9 +182,10 @@
         
         
             
-            <p>Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?<a id="more"></a></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>设两个指针即快慢指针，只要是一个环，那么跑得快的总能追上跑得慢的。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(<span class="keyword">struct</span> ListNode *head)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">struct</span> ListNode* fast = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* slow = head;</div><div class="line">    </div><div class="line">    <span class="keyword">while</span> ( fast &amp;&amp; fast -&gt; next )&#123;</div><div class="line">        fast = fast -&gt; next -&gt; next;</div><div class="line">        slow = slow -&gt; next;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (fast == slow)&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+            <p>Given a singly linked list, determine if it is a palindrome. Follow up: Could you do it in O(n) time and O(1) space? <a id="more"></a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题让我们判断一个链表是否为回文链表，LeetCode中关于回文串的题共有六道，除了这道，其他的五道为 Palindrome Number 验证回文数字， Validate Palindrome 验证回文字符串， Palindrome Partitioning 拆分回文串，Palindrome Partitioning II 拆分回文串之二 和 Longest Palindromic Substring 最长回文串.链表比字符串难的地方就在于不能通过坐标来直接访问，而只能从头开始遍历到某个位置。那么根据回文串的特点，我们需要比较对应位置的值是否相等，那么我们首先需要找到链表的中点，这个可以用快慢指针来实现，使用方法可以参见之前的两篇Convert Sorted List to Binary Search Tree 将有序链表转为二叉搜索树 和 Reorder List 链表重排序，我们使用快慢指针找中点的原理是fast和slow两个指针，每次快指针走两步，慢指针走一步，等快指针走完时，慢指针的位置就是中点。我们还需要用栈，每次慢指针走一步，都把值存入栈中，等到达中点时，链表的前半段都存入栈中了，由于栈的后进先出的性质，就可以和后半段链表按照回文对应的顺序比较了。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">struct</span> ListNode* <span class="title">reverseList</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="literal">NULL</span> == head)&#123;</div><div class="line">        <span class="keyword">return</span> head;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">struct</span> ListNode *p = head;</div><div class="line">    <span class="keyword">struct</span> ListNode *pNext;</div><div class="line">    p = head-&gt;next;</div><div class="line">    head-&gt;next = <span class="literal">NULL</span>;</div><div class="line">    <span class="keyword">while</span> (p != <span class="literal">NULL</span>)&#123;</div><div class="line">        pNext = p-&gt;next;</div><div class="line">        p-&gt;next = head;</div><div class="line">        head = p;</div><div class="line">        p = pNext;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> head;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span> </span>&#123;</div><div class="line">    <span class="keyword">struct</span> ListNode* fast = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* slow = head;</div><div class="line">    <span class="keyword">while</span> ( fast != <span class="literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="literal">NULL</span>) &#123;</div><div class="line">        slow = slow -&gt; next;</div><div class="line">        fast = fast -&gt; next -&gt; next;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">///reverse the bottom half list</span></div><div class="line">    <span class="keyword">struct</span> ListNode* rHead = reverseList(slow);</div><div class="line">    <span class="keyword">while</span>(head != <span class="literal">NULL</span> &amp;&amp; rHead != <span class="literal">NULL</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(head-&gt;val != rHead-&gt;val)</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        head = head-&gt;next;</div><div class="line">        rHead = rHead-&gt;next;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>22 / 22 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>12 ms</code></p>
 
         
         </div>
@@ -197,7 +198,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/03/LeetCode-141-Linked-List-Cycle/" data-id="cirf0n335000n04inhq822yqs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/" data-id="cirf0n33f001404inhjs7532x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -265,7 +266,7 @@
 
                 
     
-        <a href="http://yoursite.com/2016/08/03/LeetCode-141-Linked-List-Cycle/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/08/03/LeetCode-141-Linked-List-Cycle/">Comments</a>
+        <a href="http://yoursite.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/">Comments</a>
     
 
             </footer>
@@ -275,19 +276,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新一篇</strong>
-            <div class="article-nav-title">
-                
-                    LeetCode 83: Remove Duplicates from Sorted List
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/08/03/LeetCode-19-Remove-Nth-Node-From-End-of-List/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">LeetCode 19: Remove Nth Node From End of List</div>
+            <div class="article-nav-title">LeetCode 83: Remove Duplicates from Sorted List</div>
         </a>
     
 </nav>
@@ -301,7 +293,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/08/03/LeetCode-141-Linked-List-Cycle/" data-title="LeetCode 141: Linked List Cycle" data-url="http://yoursite.com/2016/08/03/LeetCode-141-Linked-List-Cycle/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/03/LeetCode-234-Palindrome-Linked-List/" data-title="LeetCode 234: Palindrome Linked List" data-url="http://yoursite.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
