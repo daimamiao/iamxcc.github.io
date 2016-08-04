@@ -425,6 +425,18 @@ code {
 #container > .outer {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 559px) {
+  #main {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 799px) {
+  #main {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+}
 .archive-article-header a,
 .layout-wrap-inner.tag-cloud a,
 .timeline-row .content h1 a,
@@ -1904,7 +1916,12 @@ ol.toc {
   padding: 0 10px 10px 0;
   height: 88px;
 }
-@media normal {
+@media screen and (min-width: 1200px) {
+  .category-list .category-list-item:nth-child(3n) {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1199px) {
   .category-list .category-list-item:nth-child(3n) {
     padding-right: 0;
   }
