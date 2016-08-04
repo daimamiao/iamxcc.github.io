@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     
-    <title>LeetCode 328: Odd Even Linked List | amxcc</title>
+    <title>LeetCode 328: Odd Even Linked List | Iamxcc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 328: Odd Even Linked List">
 <meta property="og:url" content="http://yoursite.com/2016/08/04/LeetCode-328-Odd-Even-Linked-List/index.html">
-<meta property="og:site_name" content="amxcc">
+<meta property="og:site_name" content="Iamxcc">
 <meta property="og:description" content="Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-04T13:49:03.843Z">
+<meta property="og:updated_time" content="2016-08-04T14:34:11.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 328: Odd Even Linked List">
 <meta name="twitter:description" content="Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.">
@@ -20,7 +20,7 @@
     
 
     
-        <link rel="alternate" href="/" title="amxcc" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="Iamxcc" type="application/atom+xml" />
     
 
     
@@ -48,7 +48,7 @@
     <div id="header-main" class="header-inner container">
         <a href="/" id="logo">
             <i class="logo"></i>
-            <span class="site-title">amxcc</span>
+            <span class="site-title">Iamxcc</span>
         </a>
         <nav id="main-nav">
             
@@ -100,7 +100,7 @@
 
 </div>
     </div>
-    <!-- <div id="main-nav-mobile" class="header-sub">
+    <div id="main-nav-mobile" class="header-sub">
         <table class="menu outer">
             <tr>
                 
@@ -121,13 +121,15 @@
                 </td>
             </tr>
         </table>
-    </div> -->
+    </div>
 </header>
 
         <div class="container">
             <div class="row">
                 
-                <section id="main" class="md-8 sm-8"><article id="post-LeetCode-328-Odd-Even-Linked-List" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                <section id="main" class="md-8 sm-8">
+                    <div class="row-mobile">
+                        <article id="post-LeetCode-328-Odd-Even-Linked-List" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -187,6 +189,7 @@
 <p>Example:<br>Given <code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL,</code><br>return <code>1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL.</code></p>
 <p><strong>Note:</strong><br>The relative order inside both the even and odd groups should remain as it was in the input.<br>The first node is considered odd, the second node even and so on …</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">struct</span> ListNode* <span class="title">oddEvenList</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( !head || !(head -&gt; next) )&#123;</div><div class="line">        <span class="keyword">return</span> head;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">struct</span> ListNode* slow = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* fast = head -&gt; next;</div><div class="line">    <span class="keyword">struct</span> ListNode* oddHead = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* evenHead = head -&gt; next;</div><div class="line">    <span class="keyword">while</span> ( fast &amp;&amp; fast -&gt; next )&#123;</div><div class="line">        slow -&gt; next = fast -&gt; next;</div><div class="line">        slow = fast -&gt; next;</div><div class="line">        <span class="keyword">if</span> ( !slow -&gt; next )&#123;</div><div class="line">            fast -&gt; next = <span class="literal">NULL</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">        fast -&gt; next = slow -&gt; next;</div><div class="line">        fast = slow -&gt; next;</div><div class="line">    &#125;</div><div class="line">    slow -&gt; next = evenHead;</div><div class="line">    <span class="keyword">return</span> oddHead;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>70 / 70 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
 
         
         </div>
@@ -199,7 +202,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/04/LeetCode-328-Odd-Even-Linked-List/" data-id="cirgf8u7i001cj0ini90h98xt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/08/04/LeetCode-328-Odd-Even-Linked-List/" data-id="cirgze212001hsginznsc5oua" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -277,6 +280,15 @@
         
 <nav id="article-nav">
     
+        <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 350: Intersection of Two Arrays II
+                
+            </div>
+        </a>
+    
     
         <a href="/2016/08/04/LeetCode-142-Linked-List-Cycle-II/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
@@ -336,11 +348,14 @@
     
     </section>
 
-</section>
+
+                    </div>
+                </section>
                 
-                    <aside id="sidebar" class="md-4 sm-4 row">
-   
-        
+                    <aside id="sidebar" class="md-4 sm-4">
+	<div class="row">
+		
+        	
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget tagcloud">
@@ -349,12 +364,34 @@
         </div>
     </div>
 
-    
-        
+	    
+        	
     <div class="widget-wrap">
         <h3 class="widget-title">最近文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 350: Intersection of Two Arrays II" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" class="title">LeetCode 350: Intersection of Two Arrays II</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                            </p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -444,43 +481,21 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/" class="thumbnail">
-    
-    
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 141: Linked List Cycle" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-title">
-                                <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/" class="title">LeetCode 141: Linked List Cycle</a>
-                            </p>
-                            <p class="item-category">
-                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-                            </p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
 
-    
-        
+	    
+        	
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
-    
-        
+	    
+        	
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">链接</h3>
         <div class="widget">
@@ -495,8 +510,10 @@
     </div>
 
 
-    
-    <div id="toTop" class="fa fa-angle-up"></div>
+	    
+    	<div id="toTop" class="fa fa-angle-up"></div>
+	</div>
+   
 </aside>
                 
             </div>
