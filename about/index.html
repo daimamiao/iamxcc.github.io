@@ -56,25 +56,24 @@ En">
 <body>
     <div id="container">
         <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">amxcc</span>
-            </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/archives">归档</a>
-                
-                    <a class="main-nav-link" href="/categories">分类</a>
-                
-                    <a class="main-nav-link" href="/tags">标签</a>
-                
-                    <a class="main-nav-link" href="/about">关于</a>
-                
-            </nav>
+    <div id="header-main" class="header-inner container">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+            <span class="site-title">amxcc</span>
+        </a>
+        <nav id="main-nav">
             
-            <div id="search-form-wrap">
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav>
+        
+        <div id="search-form-wrap">
 
     <form class="search-form">
         <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
@@ -111,9 +110,8 @@ En">
 <script src="/js/insight.js"></script>
 
 </div>
-        </div>
     </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
+    <div id="main-nav-mobile" class="header-sub">
         <table class="menu outer">
             <tr>
                 
@@ -137,25 +135,27 @@ En">
     </div>
 </header>
 
-        <div class="outer">
-            
-            <section id="main"><article id="page-undefined" class="article article-type-page article-position-false" itemscope itemprop="blogPost">
+        <div class="container">
+            <div class="row">
+                
+                <section id="main" class="md-8 sm-8"><article id="page-undefined" class="article article-type-page article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
         
             <header class="article-header">
                 
-                <a href="/about/index.html" class="thumbnail">
+            </header>
+        
+        <div class="article-img">
+            <a href="/about/index.html" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
     
 </a>
 
-            </header>
-        
-
+        </div>
         
 
         <div class="article-entry" itemprop="articleBody">
@@ -244,7 +244,7 @@ En">
 
 </div>
 
-    <a data-url="http://yoursite.com/about/index.html" data-id="cirfvwcx300023cinwt7m1jz6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/about/index.html" data-id="cirg8j67i00022oinsnqdigjo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -372,8 +372,8 @@ En">
     </section>
 
 </section>
-            
-                <aside id="sidebar">
+                
+                    <aside id="sidebar" class="md-4 sm-4 row">
    
         
     <div class="widget-wrap">
@@ -533,7 +533,8 @@ En">
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
-            
+                
+            </div>
         </div>
         <footer id="footer">
     <div class="outer">
