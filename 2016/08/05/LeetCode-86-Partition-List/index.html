@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>LeetCode 350: Intersection of Two Arrays II | Iamxcc</title>
+    <title>LeetCode 86: Partition List | Iamxcc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Given two arrays, write a function to compute their intersection. Example: Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].">
+    <meta name="description" content="Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 350: Intersection of Two Arrays II">
-<meta property="og:url" content="http://yoursite.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/index.html">
+<meta property="og:title" content="LeetCode 86: Partition List">
+<meta property="og:url" content="http://yoursite.com/2016/08/05/LeetCode-86-Partition-List/index.html">
 <meta property="og:site_name" content="Iamxcc">
-<meta property="og:description" content="Given two arrays, write a function to compute their intersection. Example: Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].">
+<meta property="og:description" content="Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-04T23:28:32.643Z">
+<meta property="og:updated_time" content="2016-08-05T03:29:19.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 350: Intersection of Two Arrays II">
-<meta name="twitter:description" content="Given two arrays, write a function to compute their intersection. Example: Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].">
+<meta name="twitter:title" content="LeetCode 86: Partition List">
+<meta name="twitter:description" content="Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
@@ -129,7 +129,7 @@
                 
                 <section id="main" class="md-8 sm-8">
                     <div class="row-mobile">
-                        <article id="post-LeetCode-350-Intersection-of-Two-Arrays-II" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-86-Partition-List" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -145,8 +145,8 @@
 
                         
     <div class="article-date">
-        <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/">
-            <time datetime="2016-08-04T23:25:38.000Z" itemprop="datePublished">2016-08-05</time>
+        <a href="/2016/08/05/LeetCode-86-Partition-List/">
+            <time datetime="2016-08-05T03:27:08.000Z" itemprop="datePublished">2016-08-05</time>
         </a>
     </div>
 
@@ -157,10 +157,10 @@
             </header>
         
         <div class="article-img">
-            <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" class="thumbnail">
+            <a href="/2016/08/05/LeetCode-86-Partition-List/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 350: Intersection of Two Arrays II" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 86: Partition List" class="thumbnail-image"></span>
     
 </a>
 
@@ -171,7 +171,7 @@
         
     
         <h1 class="article-title" itemprop="name">
-            LeetCode 350: Intersection of Two Arrays II
+            LeetCode 86: Partition List
         </h1>
     
 
@@ -184,14 +184,9 @@
         
         
             
-            <p>Given two arrays, write a function to compute their intersection. Example: Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2]. <a id="more"></a></p>
-<p><strong>Note:</strong></p>
-<ul>
-<li>Each element in the result should appear as many times as it shows in both arrays.</li>
-<li>The result can be in any order.</li>
-</ul>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>* a, <span class="keyword">const</span> <span class="keyword">int</span>* b)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">intersect</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    qsort(nums1, nums1Size, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), cmp);</div><div class="line">    qsort(nums2, nums2Size, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), cmp);</div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>, k = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span>* intersect = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(nums1Size+nums2Size));</div><div class="line">    <span class="keyword">while</span> ( i &lt; nums1Size &amp;&amp; j &lt; nums2Size ) &#123;</div><div class="line">        <span class="keyword">if</span> ( nums1[i] &lt; nums2[j]) &#123;</div><div class="line">            i++;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ( nums1[i] &gt; nums2[j] ) &#123;</div><div class="line">            j++;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            intersect[k++] = nums1[i];</div><div class="line">            i++;</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    *returnSize = k;</div><div class="line">    <span class="keyword">return</span> intersect;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>60 / 60 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
+            <p>Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.<a id="more"></a>You should preserve the original relative order of the nodes in each of the two partitions.<br>For example,Given <code>1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2</code> and <code>x = 3</code>,return <code>1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5</code>.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">struct</span> ListNode* <span class="title">partition</span><span class="params">(<span class="keyword">struct</span> ListNode* head, <span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( !head ) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">struct</span> ListNode *smaller, *smallerHeader;</div><div class="line">    smallerHeader -&gt; next = head;</div><div class="line">    smaller = smallerHeader;</div><div class="line">    <span class="keyword">struct</span> ListNode *bigger, *biggerHeader;</div><div class="line">    biggerHeader -&gt; next = head;</div><div class="line">    bigger = biggerHeader;</div><div class="line">    <span class="keyword">while</span> ( head ) &#123;</div><div class="line">        <span class="keyword">if</span> ( head -&gt; val &lt; x ) &#123;</div><div class="line">            smaller -&gt; next = head;</div><div class="line">            smaller = head;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            bigger -&gt; next = head;</div><div class="line">            bigger = head;</div><div class="line">        &#125;</div><div class="line">        head = head -&gt; next;</div><div class="line">    &#125;</div><div class="line">    bigger -&gt; next = <span class="literal">NULL</span>;</div><div class="line">    smaller -&gt; next = biggerHeader -&gt; next;</div><div class="line">    <span class="keyword">return</span> smallerHeader -&gt; next;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>166 / 166 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
 
         
         </div>
@@ -204,7 +199,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" data-id="cirh70kxc001jw4inlycfd5ur" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/08/05/LeetCode-86-Partition-List/" data-id="cirh70kxh001uw4ing9lgsyy1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -272,7 +267,7 @@
 
                 
     
-        <a href="http://yoursite.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/">Comments</a>
+        <a href="http://yoursite.com/2016/08/05/LeetCode-86-Partition-List/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/08/05/LeetCode-86-Partition-List/">Comments</a>
     
 
             </footer>
@@ -282,19 +277,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/08/05/LeetCode-86-Partition-List/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新一篇</strong>
-            <div class="article-nav-title">
-                
-                    LeetCode 86: Partition List
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/08/04/LeetCode-328-Odd-Even-Linked-List/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">LeetCode 328: Odd Even Linked List</div>
+            <div class="article-nav-title">LeetCode 350: Intersection of Two Arrays II</div>
         </a>
     
 </nav>
@@ -308,7 +294,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/" data-title="LeetCode 350: Intersection of Two Arrays II" data-url="http://yoursite.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/05/LeetCode-86-Partition-List/" data-title="LeetCode 86: Partition List" data-url="http://yoursite.com/2016/08/05/LeetCode-86-Partition-List/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
