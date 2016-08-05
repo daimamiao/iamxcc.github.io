@@ -2259,7 +2259,6 @@ ol.toc {
 #sidebar ol:not(#recent-post) li a:before,
 .widget ol:not(#recent-post) li a:before {
   color: #ccc;
-  content: "\f0da";
   font-size: 12px;
   margin-right: 6px;
   font-family: FontAwesome;
