@@ -437,6 +437,11 @@ code {
   height: 64px;
   line-height: 64px;
 }
+.timeline-row-major .title {
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
 #header,
 #profile .inner,
 .article-inner,
@@ -2112,9 +2117,14 @@ ol.toc {
   padding: 5px 0 0 8px;
 }
 .timeline-row-major .title {
-  font-size: 18px;
-  margin-left: 15px;
+  font-size: 14px;
+  color: #ffa200;
+  margin-left: 12px;
+  margin-top: -5px;
   line-height: 30px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 3px 12px;
 }
 #footer {
   padding: 20px 0;
