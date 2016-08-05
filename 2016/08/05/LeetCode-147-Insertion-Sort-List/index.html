@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Git命令add和commit的区别 | Iamxcc</title>
+    <title>LeetCode 147: Insertion Sort List | Iamxcc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="要想弄明白git add和git commit的区别，首先我们需要知道三个概念：工作区(Working Directory)、版本库(Repository)、暂存区(Stage or index)。">
+    <meta name="description" content="Sort a linked list using insertion sort.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git命令add和commit的区别">
-<meta property="og:url" content="http://yoursite.com/2016/07/27/Git命令add和commit的区别/index.html">
+<meta property="og:title" content="LeetCode 147: Insertion Sort List">
+<meta property="og:url" content="http://yoursite.com/2016/08/05/LeetCode-147-Insertion-Sort-List/index.html">
 <meta property="og:site_name" content="Iamxcc">
-<meta property="og:description" content="要想弄明白git add和git commit的区别，首先我们需要知道三个概念：工作区(Working Directory)、版本库(Repository)、暂存区(Stage or index)。">
-<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/57c83535399791a07f83e3ad9782fcab.png">
-<meta property="og:updated_time" content="2016-07-27T05:25:47.684Z">
+<meta property="og:description" content="Sort a linked list using insertion sort.">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta property="og:updated_time" content="2016-08-05T06:24:14.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git命令add和commit的区别">
-<meta name="twitter:description" content="要想弄明白git add和git commit的区别，首先我们需要知道三个概念：工作区(Working Directory)、版本库(Repository)、暂存区(Stage or index)。">
-<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/57c83535399791a07f83e3ad9782fcab.png">
+<meta name="twitter:title" content="LeetCode 147: Insertion Sort List">
+<meta name="twitter:description" content="Sort a linked list using insertion sort.">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
     
@@ -129,7 +129,7 @@
                 
                 <section id="main" class="md-8 sm-8">
                     <div class="row-mobile">
-                        <article id="post-Git命令add和commit的区别" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-147-Insertion-Sort-List" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -140,13 +140,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Git/">Git</a>
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
     </div>
 
                         
     <div class="article-date">
-        <a href="/2016/07/27/Git命令add和commit的区别/">
-            <time datetime="2016-07-27T00:42:34.000Z" itemprop="datePublished">2016-07-27</time>
+        <a href="/2016/08/05/LeetCode-147-Insertion-Sort-List/">
+            <time datetime="2016-08-05T06:22:38.000Z" itemprop="datePublished">2016-08-05</time>
         </a>
     </div>
 
@@ -157,10 +157,10 @@
             </header>
         
         <div class="article-img">
-            <a href="/2016/07/27/Git命令add和commit的区别/" class="thumbnail">
+            <a href="/2016/08/05/LeetCode-147-Insertion-Sort-List/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/57c83535399791a07f83e3ad9782fcab.png) no-repeat;background-size: 100% 100%;" alt="Git命令add和commit的区别" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 147: Insertion Sort List" class="thumbnail-image"></span>
     
 </a>
 
@@ -171,25 +171,22 @@
         
     
         <h1 class="article-title" itemprop="name">
-            Git命令add和commit的区别
+            LeetCode 147: Insertion Sort List
         </h1>
     
 
         
             
     <div class="article-tag">
-        <a class="tag-link" href="/tags/Git/">Git</a>
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Linked-List/">Linked List</a>
     </div>
 
         
         
             
-            <p>要想弄明白<code>git add</code>和<code>git commit</code>的区别，首先我们需要知道三个概念：<code>工作区(Working Directory)</code>、<code>版本库(Repository)</code>、<code>暂存区(Stage or index)</code>。<a id="more"></a></p>
-<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>当你在开发一个项目时，主目录就是你的工作区。</p>
-<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>工作区中有一个隐藏目录<code>.git</code>，这个就是git的版本库了。</p>
-<h4 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h4><p>Git的版本库里存了很多文件，其中包括称为Stage或index的暂存区，还有一个git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针<code>HEAD</code>。<br>下面就是三个区的示意图：图片来着廖雪峰老师的 <a href="http://www.liaoxuefeng.com" target="_blank" rel="external">博客</a>。<br><img src="http://7xveyh.com1.z0.glb.clouddn.com/0.jpg" alt="三个区的示意图"></p>
-<h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p><code>git add</code>和<code>git commit</code>的区别就在于：<br><code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br><code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支。所以，git commit就是往master分支上提交更改。<br>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
-<p>所以要想将修改提交到master中一定要先<code>git add</code>到暂存区中，再<code>git commit</code>到master分支。</p>
+            <p>Sort a linked list using insertion sort. <a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">struct</span> ListNode* <span class="title">insertionSortList</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> ( !head ) &#123;</div><div class="line">        <span class="keyword">return</span> head;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">struct</span> ListNode* helper;</div><div class="line">    helper -&gt; next = <span class="literal">NULL</span>;</div><div class="line">    <span class="keyword">struct</span> ListNode* cur = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* behind = <span class="literal">NULL</span>;</div><div class="line">    <span class="keyword">struct</span> ListNode* pre = helper;</div><div class="line">    <span class="keyword">while</span> ( cur ) &#123;</div><div class="line">        behind = cur -&gt; next;</div><div class="line">        <span class="keyword">while</span> ( pre -&gt; next &amp;&amp; pre-&gt;next-&gt;val &lt; cur-&gt;val ) &#123;</div><div class="line">            pre = pre -&gt; next;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        cur -&gt; next = pre -&gt; next;</div><div class="line">        pre -&gt; next = cur;</div><div class="line">        pre = helper;</div><div class="line">        cur = behind;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> helper -&gt; next;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>21 / 21 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>64 ms</code></p>
 
         
         </div>
@@ -202,7 +199,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/07/27/Git命令add和commit的区别/" data-id="cirhd92jr0007k0inq52mdrq6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/08/05/LeetCode-147-Insertion-Sort-List/" data-id="cirhd92k5000pk0iny4331jfm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -270,7 +267,7 @@
 
                 
     
-        <a href="http://yoursite.com/2016/07/27/Git命令add和commit的区别/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/07/27/Git命令add和commit的区别/">Comments</a>
+        <a href="http://yoursite.com/2016/08/05/LeetCode-147-Insertion-Sort-List/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://yoursite.com/2016/08/05/LeetCode-147-Insertion-Sort-List/">Comments</a>
     
 
             </footer>
@@ -280,19 +277,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/07/27/git上传时出现error/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新一篇</strong>
-            <div class="article-nav-title">
-                
-                    Git上传时出现error
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/07/26/Sublime3美化/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/05/LeetCode-86-Partition-List/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">Win下Sublime3美化</div>
+            <div class="article-nav-title">LeetCode 86: Partition List</div>
         </a>
     
 </nav>
@@ -306,7 +294,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/07/27/Git命令add和commit的区别/" data-title="Git命令add和commit的区别" data-url="http://yoursite.com/2016/07/27/Git命令add和commit的区别/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/05/LeetCode-147-Insertion-Sort-List/" data-title="LeetCode 147: Insertion Sort List" data-url="http://yoursite.com/2016/08/05/LeetCode-147-Insertion-Sort-List/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
