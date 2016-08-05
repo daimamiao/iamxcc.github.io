@@ -1062,7 +1062,7 @@ code {
   background: #fcfcfc;
   padding: 22px;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .article-position-true .article-entry {
     padding: 0 13px 13px;
   }
@@ -1075,7 +1075,7 @@ code {
 .article-position-true .article-entry h6 {
   margin: 0 0 8px;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .article-position-true .article-entry h1,
   .article-position-true .article-entry h2,
   .article-position-true .article-entry h3,
@@ -1108,7 +1108,7 @@ code {
 .article-header {
   padding: 20px 20px 0;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .article-header {
     padding: 13px 13px 0;
   }
@@ -1148,7 +1148,7 @@ a.article-title:hover {
   border-top: 1px solid #f3f3f3;
   border-bottom: 1px solid #f3f3f3;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .thumbnail {
     height: 200px;
   }
@@ -1210,9 +1210,9 @@ a.article-title:hover {
   padding: 0 20px;
   line-height: 1.9em;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .article-entry {
-    padding: 13px;
+    padding: 0 12px;
   }
 }
 .article-entry:before,
@@ -1228,7 +1228,7 @@ a.article-title:hover {
   margin: 12px 0;
 }
 .article-entry p {
-  line-height: 1.9em;
+  line-height: 1.5em;
   margin: 16px 0;
   font-size: 16px;
   word-wrap: break-word;
@@ -1247,8 +1247,8 @@ a.article-title:hover {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  line-height: 0.9em;
-  margin: 0.9em 0;
+  line-height: 1.3em;
+  margin: 0 0 0.9em 0;
 }
 .article-entry a {
   color: #38b7ea;
