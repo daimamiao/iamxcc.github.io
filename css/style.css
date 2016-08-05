@@ -1979,24 +1979,15 @@ ol.toc {
   .tag-list .tag-list-item:nth-child(4n) {
     padding-right: 0;
   }
-  .tag-list .tag-list-item:nth-child(4n+1) {
-    padding-left: 0;
-  }
 }
 @media screen and (min-width: 767px) and (max-width: 991px) {
   .tag-list .tag-list-item:nth-child(3n) {
     padding-right: 0;
   }
-  .tag-list .tag-list-item:nth-child(3n+1) {
-    padding-left: 0;
-  }
 }
 @media screen and (max-width: 768px) {
   .tag-list .tag-list-item:nth-child(3n) {
     padding-right: 0;
-  }
-  .tag-list .tag-list-item:nth-child(3n+1) {
-    padding-left: 0;
   }
 }
 .tag-list .tag-list-item:nth-child(6n) a {
