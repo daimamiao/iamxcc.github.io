@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0strlen%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2016-08-05T13:51:29.610Z</lastmod>
+    <data>
+        <display>
+        <title>C语言实现strlen函数的方法</title>
+        <pubTime>2016-08-05T13:42:17.000Z</pubTime>
+        
+        <tag>C语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/0-%E3%80%810%E3%80%810%E3%80%81-0-%E3%80%81NULL/</loc>
+    <lastmod>2016-08-05T13:29:20.946Z</lastmod>
+    <data>
+        <display>
+        <title>NULL,'\0',0,'/0'和"0"的区别</title>
+        <pubTime>2016-08-05T13:03:42.000Z</pubTime>
+        
+        <tag>C语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-263-Ugly-Number/</loc>
+    <lastmod>2016-08-05T11:29:54.368Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 263: Ugly Number</title>
+        <pubTime>2016-08-05T11:28:12.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/</loc>
+    <lastmod>2016-08-05T10:25:00.248Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 58: Length of Last Word</title>
+        <pubTime>2016-08-05T10:23:40.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>String</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</loc>
+    <lastmod>2016-08-05T09:56:07.168Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 13: Roman to Integer</title>
+        <pubTime>2016-08-05T09:34:44.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>String</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-344-Reverse-String/</loc>
+    <lastmod>2016-08-05T09:18:56.336Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 344: Reverse String</title>
+        <pubTime>2016-08-05T09:12:25.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>String</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/</loc>
+    <lastmod>2016-08-05T08:56:47.608Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 2: Add Two Numbers</title>
+        <pubTime>2016-08-05T08:52:42.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-147-Insertion-Sort-List/</loc>
+    <lastmod>2016-08-05T06:24:14.239Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 147: Insertion Sort List</title>
+        <pubTime>2016-08-05T06:22:38.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-86-Partition-List/</loc>
+    <lastmod>2016-08-05T03:29:19.485Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 86: Partition List</title>
+        <pubTime>2016-08-05T03:27:08.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/</loc>
+    <lastmod>2016-08-04T23:28:32.643Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 350: Intersection of Two Arrays II</title>
+        <pubTime>2016-08-04T23:25:38.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/04/LeetCode-328-Odd-Even-Linked-List/</loc>
+    <lastmod>2016-08-04T14:34:11.923Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 328: Odd Even Linked List</title>
+        <pubTime>2016-08-04T13:47:47.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/04/LeetCode-142-Linked-List-Cycle-II/</loc>
+    <lastmod>2016-08-04T04:54:50.934Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 142: Linked List Cycle II</title>
+        <pubTime>2016-08-04T04:49:05.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/</loc>
+    <lastmod>2016-08-03T14:24:52.044Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 234: Palindrome Linked List</title>
+        <pubTime>2016-08-03T14:21:55.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/</loc>
+    <lastmod>2016-08-03T14:04:32.004Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 141: Linked List Cycle</title>
+        <pubTime>2016-08-03T13:15:18.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/</loc>
+    <lastmod>2016-08-03T13:49:34.684Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 83: Remove Duplicates from Sorted List</title>
+        <pubTime>2016-08-03T13:46:45.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-19-Remove-Nth-Node-From-End-of-List/</loc>
+    <lastmod>2016-08-03T10:37:59.938Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 19: Remove Nth Node From End of List</title>
+        <pubTime>2016-08-03T10:35:26.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/12/hello-world/</loc>
+    <lastmod>2016-08-03T08:53:03.529Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-06-12T05:34:53.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.iamxcc.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/Leetcode-283-Move-Zeroes/</loc>
+    <lastmod>2016-08-03T08:18:14.081Z</lastmod>
+    <data>
+        <display>
+        <title>Leetcode 283: Move Zeroes</title>
+        <pubTime>2016-07-30T10:48:47.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/Leetcode-268-Missing-Number-C%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2016-08-03T08:18:09.353Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 268: Missing Number</title>
+        <pubTime>2016-07-31T07:55:31.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-238-Product-of-Array-Except-Self/</loc>
+    <lastmod>2016-08-03T08:18:02.665Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 238: Product of Array Except Self</title>
+        <pubTime>2016-07-31T13:28:39.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-169-Majority-Element/</loc>
+    <lastmod>2016-08-03T08:17:54.905Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 169 Majority Element</title>
+        <pubTime>2016-07-31T13:40:08.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/</loc>
+    <lastmod>2016-08-03T08:17:41.745Z</lastmod>
+    <data>
+        <display>
+        <title>Leetcode 217: Contains Duplicate</title>
+        <pubTime>2016-07-30T10:34:47.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-160-Intersection-of-Two-Linked-Lists/</loc>
+    <lastmod>2016-08-03T06:15:12.439Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 160: Intersection of Two Linked Lists</title>
+        <pubTime>2016-08-03T03:26:12.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/</loc>
+    <lastmod>2016-08-03T02:03:57.765Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 203: Remove Linked List Elements</title>
+        <pubTime>2016-08-02T14:58:14.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/</loc>
+    <lastmod>2016-08-02T11:00:20.352Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 371: Sum of Two integers</title>
+        <pubTime>2016-08-02T10:43:25.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Bit Manupulation</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-24-Swap-Nodes-in-Pairs/</loc>
+    <lastmod>2016-08-02T09:22:49.264Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 24: Swap Nodes in Pairs</title>
+        <pubTime>2016-08-02T09:17:28.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-21-Merge-Two-Sorted-Lists/</loc>
+    <lastmod>2016-08-02T02:49:29.549Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 21: Merge Two Sorted Lists</title>
+        <pubTime>2016-08-02T02:45:27.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-206-Reverse-Linked-List/</loc>
+    <lastmod>2016-08-02T00:36:18.089Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 206: Reverse Linked List</title>
+        <pubTime>2016-08-02T00:30:43.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Linked List</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/01/LeetCode-136-Single-Number/</loc>
+    <lastmod>2016-08-02T00:32:47.031Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 136: Single Number</title>
+        <pubTime>2016-08-01T15:43:43.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Bit Manupulation</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/</loc>
+    <lastmod>2016-08-02T00:32:08.475Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 229: Majority Element II</title>
+        <pubTime>2016-07-31T14:29:46.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/01/51NOD-1005-%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2016-07-31T16:36:51.004Z</lastmod>
+    <data>
+        <display>
+        <title>51NOD 1005: 排序</title>
+        <pubTime>2016-07-31T16:31:39.000Z</pubTime>
+        
+        <tag>51NOD</tag>
+         
+         
+           
+             
+              <breadCrumb title="51NOD" url="http://blog.iamxcc.com/categories/51NOD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/01/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2016-07-31T16:14:27.492Z</lastmod>
+    <data>
+        <display>
+        <title>贪心算法入门</title>
+        <pubTime>2016-07-31T16:10:35.000Z</pubTime>
+        
+        <tag>贪心算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/%E5%BC%82%E6%88%96-%E7%9A%84%E5%A6%99%E7%94%A8/</loc>
+    <lastmod>2016-07-31T10:15:51.434Z</lastmod>
+    <data>
+        <display>
+        <title>异或^的妙用</title>
+        <pubTime>2016-07-31T08:33:10.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/hexo%E4%B8%BB%E9%A2%98%E4%B8%AD%E4%BD%BF%E7%94%A8mathjax%E6%9D%A5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F/</loc>
+    <lastmod>2016-07-31T06:42:08.750Z</lastmod>
+    <data>
+        <display>
+        <title>hexo主题中使用mathjax来支持LaTex公式</title>
+        <pubTime>2016-07-31T05:19:44.000Z</pubTime>
+        
+        <tag>LaTex</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://blog.iamxcc.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/31/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2016-07-31T06:01:29.389Z</lastmod>
+    <data>
+        <display>
+        <title>归并排序</title>
+        <pubTime>2016-07-31T03:06:33.000Z</pubTime>
+        
+        <tag>排序算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="排序" url="http://blog.iamxcc.com/categories/%E6%8E%92%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/05/27/%E4%B8%80%E5%8A%A0%E9%80%9A%E8%BF%87adb%E5%88%B7%E6%9C%BA/</loc>
+    <lastmod>2016-07-30T23:20:53.029Z</lastmod>
+    <data>
+        <display>
+        <title>一加通过adb刷机</title>
+        <pubTime>2016-05-27T15:26:19.000Z</pubTime>
+        
+        <tag>Oneplus</tag>
+         
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://blog.iamxcc.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/16/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B9%8BHttp/</loc>
+    <lastmod>2016-07-30T23:20:50.892Z</lastmod>
+    <data>
+        <display>
+        <title>通信协议之Http</title>
+        <pubTime>2016-06-16T02:54:50.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+        <tag>通信协议</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTTP" url="http://blog.iamxcc.com/categories/HTTP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/25/99-%E7%9A%84%E4%BA%BA%E9%83%BD%E7%90%86%E8%A7%A3%E9%94%99%E4%BA%86HTTP%E4%B8%ADGET%E4%B8%8EPOST%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2016-07-30T23:20:41.884Z</lastmod>
+    <data>
+        <display>
+        <title>99%的人都理解错了HTTP中GET与POST的区别</title>
+        <pubTime>2016-07-25T05:38:30.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+        <tag>GET</tag>
+         
+        <tag>POST</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTTP" url="http://blog.iamxcc.com/categories/HTTP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/13/c%E8%AF%AD%E8%A8%80%E4%BA%A4%E6%8D%A2a%E3%80%81b%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2016-07-30T23:20:27.691Z</lastmod>
+    <data>
+        <display>
+        <title>c语言交换a、b的方法</title>
+        <pubTime>2016-06-13T15:42:03.000Z</pubTime>
+        
+        <tag>C语言</tag>
+         
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/19/sass%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2016-07-30T23:20:15.928Z</lastmod>
+    <data>
+        <display>
+        <title>sass安装</title>
+        <pubTime>2016-06-19T14:59:33.000Z</pubTime>
+        
+        <tag>Sass</tag>
+         
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="Sass" url="http://blog.iamxcc.com/categories/Sass/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/26/Sublime3%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2016-07-30T23:20:06.672Z</lastmod>
+    <data>
+        <display>
+        <title>Sublime3快捷键整理</title>
+        <pubTime>2016-07-26T10:59:51.000Z</pubTime>
+        
+        <tag>Sublime</tag>
+         
+         
+           
+             
+              <breadCrumb title="Sublime" url="http://blog.iamxcc.com/categories/Sublime/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/26/Sublime3%E7%BE%8E%E5%8C%96/</loc>
+    <lastmod>2016-07-30T23:19:58.881Z</lastmod>
+    <data>
+        <display>
+        <title>Win下Sublime3美化</title>
+        <pubTime>2016-07-26T11:20:15.000Z</pubTime>
+        
+        <tag>Sublime</tag>
+         
+        <tag>Win10</tag>
+         
+         
+           
+             
+              <breadCrumb title="Sublime" url="http://blog.iamxcc.com/categories/Sublime/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/14/wampserver%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%AB%99%E7%82%B9/</loc>
+    <lastmod>2016-07-30T23:19:46.917Z</lastmod>
+    <data>
+        <display>
+        <title>wampserver配置多站点</title>
+        <pubTime>2016-06-14T04:54:06.000Z</pubTime>
+        
+        <tag>Wampserver</tag>
+         
+        <tag>Wordpress</tag>
+         
+         
+           
+             
+              <breadCrumb title="Wampserver" url="http://blog.iamxcc.com/categories/Wampserver/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/26/Win10%E4%B8%8A%E4%BD%BF%E7%94%A8Mactype/</loc>
+    <lastmod>2016-07-30T23:19:36.867Z</lastmod>
+    <data>
+        <display>
+        <title>Win10上使用Mactype</title>
+        <pubTime>2016-07-26T02:21:47.000Z</pubTime>
+        
+        <tag>Win10</tag>
+         
+        <tag>Mactype</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mactype" url="http://blog.iamxcc.com/categories/Mactype/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/win10%E5%8F%96%E6%B6%88%E5%BC%80%E6%9C%BA%E5%AF%86%E7%A0%81/</loc>
+    <lastmod>2016-07-30T23:19:17.582Z</lastmod>
+    <data>
+        <display>
+        <title>win10取消开机密码</title>
+        <pubTime>2016-07-30T07:16:48.000Z</pubTime>
+        
+        <tag>Win10</tag>
+         
+         
+           
+             
+              <breadCrumb title="Win10" url="http://blog.iamxcc.com/categories/Win10/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/26/WinSnap-%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE%E6%89%8D%E6%98%AF%E5%A5%BD%E6%88%AA%E5%9B%BE/</loc>
+    <lastmod>2016-07-30T23:19:03.997Z</lastmod>
+    <data>
+        <display>
+        <title>WinSnap:带阴影的截图才是好截图</title>
+        <pubTime>2016-07-26T09:39:20.000Z</pubTime>
+        
+        <tag>Win10</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="Win10" url="http://blog.iamxcc.com/categories/Win10/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/C%E5%87%BD%E6%95%B0qsort%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2016-07-30T23:18:34.435Z</lastmod>
+    <data>
+        <display>
+        <title>C函数qsort的用法</title>
+        <pubTime>2016-07-30T07:37:31.000Z</pubTime>
+        
+        <tag>C语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/27/git%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%87%BA%E7%8E%B0error/</loc>
+    <lastmod>2016-07-30T07:30:39.698Z</lastmod>
+    <data>
+        <display>
+        <title>Git上传时出现error</title>
+        <pubTime>2016-07-27T05:24:55.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://blog.iamxcc.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/27/Git%E5%91%BD%E4%BB%A4add%E5%92%8Ccommit%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2016-07-27T05:25:47.684Z</lastmod>
+    <data>
+        <display>
+        <title>Git命令add和commit的区别</title>
+        <pubTime>2016-07-27T00:42:34.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://blog.iamxcc.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/06/16/Git%E7%B3%BB%E5%88%97%E4%B9%8B%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2016-07-27T05:25:40.577Z</lastmod>
+    <data>
+        <display>
+        <title>Git系列之安装</title>
+        <pubTime>2016-06-16T05:34:53.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://blog.iamxcc.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/07/20/Research%20directions%20for%20IOT/</loc>
+    <lastmod>2016-07-26T03:06:06.709Z</lastmod>
+    <data>
+        <display>
+        <title>Research directions for IOT</title>
+        <pubTime>2016-07-20T00:57:18.000Z</pubTime>
+        
+        <tag>物联网</tag>
+         
+         
+           
+             
+              <breadCrumb title="物联网" url="http://blog.iamxcc.com/categories/%E7%89%A9%E8%81%94%E7%BD%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
