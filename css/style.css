@@ -1059,6 +1059,11 @@ code {
     line-height: 1em !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .article-position-true .article-img {
+    margin-bottom: 13px;
+  }
+}
 .article-position-true .article-entry {
   background: #fcfcfc;
   padding: 22px;
@@ -1089,7 +1094,7 @@ code {
 }
 .article-position-true .article-entry p {
   font-size: 14px;
-  color: #888;
+  color: #666;
   margin: 0;
 /*overflow:hidden
             text-overflow:ellipsis
@@ -1899,6 +1904,10 @@ ol.toc {
 #page-nav .space {
   color: #eceff2;
 }
+.category-list {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .category-list .category-list-item {
   padding: 0 10px 10px 0;
   height: 88px;
@@ -1948,16 +1957,33 @@ ol.toc {
   font-weight: 800;
   float: left;
 }
+.category-list .category-list-item a .category-list-num {
+  font-size: 12px;
+  color: #777;
+  overflow: hidden;
+}
 .category-list .category-list-item a .category-list-name {
   color: #333;
-}
-.category-list .category-list-item a .category-list-num {
-  font-size: 13px;
-  color: #666;
+  overflow: hidden;
 }
 .tag-list .tag-list-item {
   padding: 0 10px 10px 0;
   height: 108px;
+}
+@media screen and (min-width: 992px) {
+  .tag-list .tag-list-item:nth-child(4n) {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .tag-list .tag-list-item:nth-child(3n) {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tag-list .tag-list-item:nth-child(3n) {
+    padding-right: 0;
+  }
 }
 .tag-list .tag-list-item:nth-child(6n) a {
   background: #41566f;
