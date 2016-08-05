@@ -1064,9 +1064,12 @@ code {
     line-height: 1em !important;
   }
 }
+.article-position-true .article-img {
+  margin: 0 20px 20px;
+}
 @media screen and (max-width: 768px) {
   .article-position-true .article-img {
-    margin-bottom: 13px;
+    margin: 0 12px 6px;
   }
 }
 .article-position-true .article-entry {
@@ -1157,8 +1160,7 @@ a.article-title:hover {
   position: relative;
   height: 332px;
   display: block;
-  border-top: 1px solid #f3f3f3;
-  border-bottom: 1px solid #f3f3f3;
+  border: 1px solid #f3f3f3;
 }
 @media screen and (max-width: 768px) {
   .thumbnail {
