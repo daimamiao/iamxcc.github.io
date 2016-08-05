@@ -1053,9 +1053,10 @@ code {
 .article-position-true a.article-title {
   font-size: 21px;
 }
-@media mq-mini {
+@media screen and (max-width: 768px) {
   .article-position-true a.article-title {
     font-size: 18px;
+    line-height: 1em !important;
   }
 }
 .article-position-true .article-entry {
@@ -1083,6 +1084,7 @@ code {
   .article-position-true .article-entry h5,
   .article-position-true .article-entry h6 {
     margin: 0 0 3px;
+    line-height: 0.6em !important;
   }
 }
 .article-position-true .article-entry p {
