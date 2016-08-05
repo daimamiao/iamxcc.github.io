@@ -1161,6 +1161,8 @@ a.article-title:hover {
   height: 332px;
   display: block;
   border: 1px solid #f3f3f3;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 @media screen and (max-width: 768px) {
   .thumbnail {
