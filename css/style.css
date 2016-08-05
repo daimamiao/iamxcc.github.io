@@ -2009,11 +2009,6 @@ ol.toc {
   height: 100%;
   display: block;
   color: #fff !important;
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
   padding: 8px;
 }
 .tag-list .tag-list-item a .tag-list-img {
@@ -2023,17 +2018,16 @@ ol.toc {
   -webkit-border-radius: 36px;
   border-radius: 36px;
   margin: 8px auto;
-  color: #000;
+  color: #ffa200;
   text-align: center;
   line-height: 36px;
   font-size: 22px;
-  font-weight: 800;
 }
 .tag-list .tag-list-item a .tag-list-name {
   text-align: center;
 }
-.tag-list .tag-list-item a:hover {
-  opacity: 0.8;
+.tag-list .tag-list-item:hover .tag-list-img {
+  background: #000;
 }
 .timeline-wrap {
   margin: 12px 0 0 18px;
