@@ -191,7 +191,7 @@
 <h4 id="按文章加载"><a href="#按文章加载" class="headerlink" title="按文章加载"></a>按文章加载</h4><p>在文章需要调用 Mathjax 时, 只需在 front-matter 前加上 mathjax: true 即可, 即<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hexo主题中使用mathjax来支持LaTex公式</div><div class="line">date: 2016-07-31 13:19:44</div><div class="line">tags: [LaTex, hexo]</div><div class="line">categories: hexo</div><div class="line">thumbnail: http://7xveyh.com1.z0.glb.clouddn.com/latex<span class="emphasis">_latin_</span>symbols.jpg</div><div class="line"><span class="section">mathjax: true</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
 <h4 id="加载mathjax文件"><a href="#加载mathjax文件" class="headerlink" title="加载mathjax文件"></a>加载mathjax文件</h4><p>有了上面的修改，这时候就可以按需要加载mathjax脚本文件了。我主题加载js文件都是在script.ejs中判断后加载的(你们可以根据自己的情况来处理)，所以这里加上下面这段代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;% if (page.mathjax)&#123; %&gt;</div><div class="line">	&lt;%- partial(&apos;plugin/mathjax&apos;) %&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
 <p>上面代码说明如果mardkown文件中写了上面说的<code>mathjax: ture</code>，那么if条件为ture，则加载<code>plugin/mathjax</code></p>
-<h4 id="mathjax-ejs文件"><a href="#mathjax-ejs文件" class="headerlink" title="mathjax.ejs文件"></a>mathjax.ejs文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.mathjax.enable)&#123; %&gt;</div><div class="line">  &lt;script type="text/x-mathjax-config"&gt;</div><div class="line">    MathJax.Hub.Config(&#123;</div><div class="line">      tex2jax: &#123;</div><div class="line">        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],</div><div class="line">        processEscapes: true,</div><div class="line">        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  &lt;/script&gt;</div><div class="line"></div><div class="line">  &lt;script type=<span class="string">"text/x-mathjax-config"</span>&gt;</div><div class="line">    MathJax.Hub.Queue(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> all = MathJax.Hub.getAllJax(), i;</div><div class="line">      <span class="keyword">for</span> (i=<span class="number">0</span>; i &lt; all.length; i += <span class="number">1</span>) &#123;</div><div class="line">        all[i].SourceElement().parentNode.className += <span class="string">' has-jax'</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  &lt;/script&gt;</div><div class="line">  &lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"&lt;%= theme.mathjax.cdn %&gt;"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<h4 id="mathjax-ejs文件"><a href="#mathjax-ejs文件" class="headerlink" title="mathjax.ejs文件"></a>mathjax.ejs文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.mathjax.enable)&#123; %&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="javascript"></span></span></div><div class="line">    MathJax.Hub.Config(&#123;</div><div class="line">      tex2jax: &#123;</div><div class="line">        inlineMath: [ [<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">"\\("</span>,<span class="string">"\\)"</span>]  ],</div><div class="line">        processEscapes: <span class="literal">true</span>,</div><div class="line">        skipTags: [<span class="string">'script'</span>, <span class="string">'noscript'</span>, <span class="string">'style'</span>, <span class="string">'textarea'</span>, <span class="string">'pre'</span>, <span class="string">'code'</span>]</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">  &lt;script type=<span class="string">"text/x-mathjax-config"</span>&gt;</div><div class="line">    MathJax.Hub.Queue(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> all = MathJax.Hub.getAllJax(), i;</div><div class="line">      <span class="keyword">for</span> (i=<span class="number">0</span>; i &lt; all.length; i += <span class="number">1</span>) &#123;</div><div class="line">        all[i].SourceElement().parentNode.className += <span class="string">' has-jax'</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  <span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">  &lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"&lt;%= theme.mathjax.cdn %&gt;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
 <p>可以看到代码中的<code>theme.mathjax.cdn</code>就是主题配置文件中的mathjax下的cdn啦。</p>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>我的主题使用的是ejs模板语言写的，如果是swig或者其他语言，还要稍微修改一下，具体怎么改可以上网搜索一下。<br>下面放张效果图：<br><img src="http://7xveyh.com1.z0.glb.clouddn.com/sshot-2221.png" alt="Latex效果"></p>
 
@@ -206,7 +206,7 @@
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/07/31/hexo主题中使用mathjax来支持latex公式/" data-id="cirimix0m0048jwinxotp1r3h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/07/31/hexo主题中使用mathjax来支持latex公式/" data-id="cirir4vme004l2sinqjqwm583" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -364,7 +364,7 @@
         <h3 class="widget-title">标签</h3>
         <div class="widget tagcloud">
         	<a href="/" style="background: #ffa200; color: #fff;">全部</a>	
-            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.67px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 15px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.67px;">HTTP</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.33px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a> <a href="/tags/POST/" style="font-size: 10px;">POST</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/String/" style="font-size: 16.67px;">String</a> <a href="/tags/Sublime/" style="font-size: 11.67px;">Sublime</a> <a href="/tags/Wampserver/" style="font-size: 10px;">Wampserver</a> <a href="/tags/Win10/" style="font-size: 15px;">Win10</a> <a href="/tags/Wordpress/" style="font-size: 10px;">Wordpress</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/排序算法/" style="font-size: 10px;">排序算法</a> <a href="/tags/物联网/" style="font-size: 10px;">物联网</a> <a href="/tags/算法/" style="font-size: 11.67px;">算法</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a> <a href="/tags/通信协议/" style="font-size: 10px;">通信协议</a>
+            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 15.71px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.43px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 14.29px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 12.86px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.43px;">HTTP</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.57px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a> <a href="/tags/POST/" style="font-size: 10px;">POST</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/String/" style="font-size: 17.14px;">String</a> <a href="/tags/Sublime/" style="font-size: 11.43px;">Sublime</a> <a href="/tags/Wampserver/" style="font-size: 10px;">Wampserver</a> <a href="/tags/Win10/" style="font-size: 14.29px;">Win10</a> <a href="/tags/Wordpress/" style="font-size: 10px;">Wordpress</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/排序算法/" style="font-size: 10px;">排序算法</a> <a href="/tags/物联网/" style="font-size: 10px;">物联网</a> <a href="/tags/算法/" style="font-size: 11.43px;">算法</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a> <a href="/tags/通信协议/" style="font-size: 10px;">通信协议</a>
         </div>
     </div>
 
@@ -374,6 +374,28 @@
         <h3 class="widget-title">最近文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/06/LeetCode-8-String-to-Integer-atoi/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 8: String to Integer(atoi)" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/06/LeetCode-8-String-to-Integer-atoi/" class="title">LeetCode 8: String to Integer(atoi)</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                            </p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -463,28 +485,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/05/NULL,0,'0'/" class="thumbnail">
-    
-    
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/timthumb.png) no-repeat;background-size: 100% 100%;" alt="NULL,&#39;\0&#39;,0,&#39;/0&#39;和&quot;0&quot;的区别" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-title">
-                                <a href="/2016/08/05/NULL,0,'0'/" class="title">NULL,&#39;\0&#39;,0,&#39;/0&#39;和&quot;0&quot;的区别</a>
-                            </p>
-                            <p class="item-category">
-                                <a class="article-category-link" href="/categories/C语言/">C语言</a>
-                            </p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -494,7 +494,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">28</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">29</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 

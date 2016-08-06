@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Leetcode 217: Contains Duplicate | 胡闹的日子</title>
+    <title>LeetCode 8: String to Integer(atoi) | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array">
+    <meta name="description" content="Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 217: Contains Duplicate">
-<meta property="og:url" content="http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/index.html">
+<meta property="og:title" content="LeetCode 8: String to Integer(atoi)">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array">
+<meta property="og:description" content="Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases.">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-03T08:17:41.745Z">
+<meta property="og:updated_time" content="2016-08-06T05:40:16.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode 217: Contains Duplicate">
-<meta name="twitter:description" content="Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array">
+<meta name="twitter:title" content="LeetCode 8: String to Integer(atoi)">
+<meta name="twitter:description" content="Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases.">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
@@ -129,7 +129,7 @@
                 
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
-                        <article id="post-Leetcode-217-Contains-Duplicate" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-8-String-to-Integer-atoi" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -145,8 +145,8 @@
 
                         
     <div class="article-date">
-        <a href="/2016/07/30/Leetcode-217-Contains-Duplicate/">
-            <time datetime="2016-07-30T10:34:47.000Z" itemprop="datePublished">2016-07-30</time>
+        <a href="/2016/08/06/LeetCode-8-String-to-Integer-atoi/">
+            <time datetime="2016-08-06T05:38:56.000Z" itemprop="datePublished">2016-08-06</time>
         </a>
     </div>
 
@@ -157,10 +157,10 @@
             </header>
         
         <div class="article-img">
-            <a href="/2016/07/30/Leetcode-217-Contains-Duplicate/" class="thumbnail">
+            <a href="/2016/08/06/LeetCode-8-String-to-Integer-atoi/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="Leetcode 217: Contains Duplicate" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 8: String to Integer(atoi)" class="thumbnail-image"></span>
     
 </a>
 
@@ -171,23 +171,23 @@
         
     
         <h1 class="article-title" itemprop="name">
-            Leetcode 217: Contains Duplicate
+            LeetCode 8: String to Integer(atoi)
         </h1>
     
 
         
             
     <div class="article-tag">
-        <a class="tag-link" href="/tags/Array/">Array</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
     </div>
 
         
         
             
-            <p>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array<a id="more"></a>,and it should return false if every element is distinct.</p>
-<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>大概为, 考虑一个整型的数组，找出是否该数组有重复的数。如果有数出现超过两次，那么你的函数返回<code>ture</code>，否则返回<code>false</code>。</p>
-<h3 id="程序-C语言"><a href="#程序-C语言" class="headerlink" title="程序(C语言)"></a>程序(C语言)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>* a, <span class="keyword">const</span> <span class="keyword">int</span>* b)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</div><div class="line">    qsort(nums, numsSize, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), cmp);</div><div class="line">    <span class="keyword">if</span> (numsSize &lt; <span class="number">2</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> i;</div><div class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;(numsSize<span class="number">-1</span>); i++)&#123;</div><div class="line">        <span class="keyword">if</span> (nums[i] == nums[i+<span class="number">1</span>])&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><code>16 / 16 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>12 ms</code></p>
+            <p>Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases. <a id="more"></a>If you want a challenge, please do not see below and ask yourself what are the possible input cases.</p>
+<p><strong>Notes:</strong> It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span>* str)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (!str) &#123;</div><div class="line">        <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(<span class="string">' '</span> == *str) &#123;</div><div class="line">        str++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (<span class="string">'-'</span> == *str || <span class="string">'+'</span> == *str) &#123;</div><div class="line">        sign = *str++ == <span class="string">'+'</span> ? <span class="number">1</span> : <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(*str &gt;= <span class="string">'0'</span> &amp;&amp; *str &lt;= <span class="string">'9'</span>) &#123;</div><div class="line">		<span class="keyword">if</span> (res &gt; INT_MAX / <span class="number">10</span> || (res == INT_MAX / <span class="number">10</span> &amp;&amp; *str - <span class="string">'0'</span> &gt; <span class="number">7</span>)) &#123;</div><div class="line">			<span class="keyword">return</span> sign &gt; <span class="number">0</span> ? INT_MAX : INT_MIN;</div><div class="line">		&#125;</div><div class="line">		res = res * <span class="number">10</span> + (((<span class="keyword">int</span>)*str++) - <span class="string">'0'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res * sign;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>1047 / 1047 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
 
         
         </div>
@@ -200,7 +200,7 @@
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/" data-id="cirir4vlo002p2sin53kr44ps" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/" data-id="cirir4vli002f2sin2be97rpj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -268,7 +268,7 @@
 
                 
     
-        <a href="http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/">Comments</a>
+        <a href="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/">Comments</a>
     
 
             </footer>
@@ -278,19 +278,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/07/30/Leetcode-283-Move-Zeroes/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新一篇</strong>
-            <div class="article-nav-title">
-                
-                    Leetcode 283: Move Zeroes
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/07/30/C函数qsort用法/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/06/LeetCode-67-Add-Binary/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">C函数qsort的用法</div>
+            <div class="article-nav-title">LeetCode 67: Add Binary</div>
         </a>
     
 </nav>
@@ -304,7 +295,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/07/30/Leetcode-217-Contains-Duplicate/" data-title="Leetcode 217: Contains Duplicate" data-url="http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/06/LeetCode-8-String-to-Integer-atoi/" data-title="LeetCode 8: String to Integer(atoi)" data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
