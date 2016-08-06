@@ -1073,7 +1073,7 @@ code {
   }
 }
 .article-position-true .article-entry {
-  background: #fcfcfc;
+  background: #fafafa;
   padding: 22px;
 }
 @media screen and (max-width: 768px) {
@@ -1144,15 +1144,13 @@ a.article-title:visited {
 a.article-title:hover {
   color: #38b7ea;
 }
-@media mq-mini {
-  .article-title {
-    font-size: 1.6em;
-  }
-}
 @media screen and (max-width: 768px) {
   .article-title {
     font-size: 1.6em;
   }
+}
+.article-img {
+  margin-bottom: 20px;
 }
 .thumbnail {
   overflow: hidden;
@@ -1244,9 +1242,9 @@ a.article-title:hover {
   margin: 12px 0;
 }
 .article-entry p {
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin: 16px 0;
-  font-size: 16px;
+  font-size: 15px;
   word-wrap: break-word;
 }
 .article-entry h1,
