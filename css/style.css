@@ -1041,12 +1041,12 @@ code {
   z-index: 2;
 }
 #profile.card {
-  top: 50px;
+  top: 113px;
   right: 20px;
   z-index: 999;
   display: block;
   min-width: 280px;
-  position: absolute;
+  position: fixed;
 }
 #profile.card .profile-inner {
   position: relative;
