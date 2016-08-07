@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>LeetCode 141: Linked List Cycle | 胡闹的日子</title>
+    <title>LeetCode 20: Valid Parentheses | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+    <meta name="description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 141: Linked List Cycle">
-<meta property="og:url" content="http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/index.html">
+<meta property="og:title" content="LeetCode 20: Valid Parentheses">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+<meta property="og:description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid.">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-03T14:04:32.004Z">
+<meta property="og:updated_time" content="2016-08-07T03:01:39.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 141: Linked List Cycle">
-<meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?">
+<meta name="twitter:title" content="LeetCode 20: Valid Parentheses">
+<meta name="twitter:description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid.">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
@@ -129,7 +129,7 @@
                 
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
-                        <article id="post-LeetCode-141-Linked-List-Cycle" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-20-Valid-Parentheses" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -145,8 +145,8 @@
 
                         
     <div class="article-date">
-        <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/">
-            <time datetime="2016-08-03T13:15:18.000Z" itemprop="datePublished">2016-08-03</time>
+        <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/">
+            <time datetime="2016-08-07T02:58:47.000Z" itemprop="datePublished">2016-08-07</time>
         </a>
     </div>
 
@@ -157,10 +157,10 @@
             </header>
         
         <div class="article-img">
-            <a href="/2016/08/03/LeetCode-141-Linked-List-Cycle/" class="thumbnail">
+            <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 141: Linked List Cycle" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 20: Valid Parentheses" class="thumbnail-image"></span>
     
 </a>
 
@@ -171,23 +171,22 @@
         
     
         <h1 class="article-title" itemprop="name">
-            LeetCode 141: Linked List Cycle
+            LeetCode 20: Valid Parentheses
         </h1>
     
 
         
             
     <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Linked-List/">Linked List</a>
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
     </div>
 
         
         
             
-            <p>Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?<a id="more"></a></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>设两个指针即快慢指针，只要是一个环，那么跑得快的总能追上跑得慢的。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct ListNode *next;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(<span class="keyword">struct</span> ListNode *head)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">struct</span> ListNode* fast = head;</div><div class="line">    <span class="keyword">struct</span> ListNode* slow = head;</div><div class="line">    </div><div class="line">    <span class="keyword">while</span> ( fast &amp;&amp; fast -&gt; next )&#123;</div><div class="line">        fast = fast -&gt; next -&gt; next;</div><div class="line">        slow = slow -&gt; next;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (fast == slow)&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+            <p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.<br><a id="more"></a>The brackets must close in the correct order, <code>&quot;()&quot;</code> and <code>&quot;()[]{}&quot;</code> are all valid but <code>&quot;(]&quot;</code> and <code>&quot;([)]&quot;</code> are not. </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>我看到这种括弧匹配问题，首先想到的就是用stack来实现。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</div><div class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; paren;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">char</span>&amp; c : s) &#123;</div><div class="line">            <span class="keyword">switch</span> (c) &#123;</div><div class="line">                <span class="keyword">case</span> <span class="string">'('</span>: </div><div class="line">                <span class="keyword">case</span> <span class="string">'&#123;'</span>: </div><div class="line">                <span class="keyword">case</span> <span class="string">'['</span>: paren.push(c); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">')'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'('</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'&#125;'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'&#123;'</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">']'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'['</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">default</span>: ; <span class="comment">// pass</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> paren.empty() ;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
         
         </div>
 
@@ -199,7 +198,7 @@
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/" data-id="cirk22w4v000oosin4aos5z52" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/" data-id="cirk22w530014osinqk8k7yzm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -267,7 +266,7 @@
 
                 
     
-        <a href="http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/">Comments</a>
+        <a href="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/">Comments</a>
     
 
             </footer>
@@ -277,19 +276,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">新一篇</strong>
-            <div class="article-nav-title">
-                
-                    LeetCode 83: Remove Duplicates from Sorted List
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/08/03/LeetCode-19-Remove-Nth-Node-From-End-of-List/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">LeetCode 19: Remove Nth Node From End of List</div>
+            <div class="article-nav-title">LeetCode 125: Valid Palindrome</div>
         </a>
     
 </nav>
@@ -303,7 +293,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/08/03/LeetCode-141-Linked-List-Cycle/" data-title="LeetCode 141: Linked List Cycle" data-url="http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/07/LeetCode-20-Valid-Parentheses/" data-title="LeetCode 20: Valid Parentheses" data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
