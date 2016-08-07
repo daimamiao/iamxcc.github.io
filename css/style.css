@@ -1213,9 +1213,9 @@ a.article-title:hover {
   color: #ffa200;
   font-size: 20px;
   font-weight: 600;
-  -webkit-border-radius: 26px;
-  border-radius: 26px;
-  border: 1px solid #ffa200;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 2px dashed #ffa200;
   text-align: center;
   line-height: 32px;
   margin-right: 6px;
