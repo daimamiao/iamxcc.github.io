@@ -2136,7 +2136,7 @@ ol.toc {
   overflow: hidden;
 }
 #list .list-item .list-item-title {
-  width: 60%;
+  width: 65%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
