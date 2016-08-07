@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/</loc>
+    
+    <lastmod>2016-08-07T12:42:50.239Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/</loc>
     
     <lastmod>2016-08-07T07:53:43.448Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.iamxcc.com/series/index.html</loc>
     
     <lastmod>2016-08-07T06:46:05.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/</loc>
-    
-    <lastmod>2016-08-07T04:18:31.798Z</lastmod>
     
   </url>
   

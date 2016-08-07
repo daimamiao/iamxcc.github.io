@@ -1195,21 +1195,37 @@ a.article-title:hover {
 .article-meta a:hover {
   color: #38b7ea;
 }
+.article-category-img {
+  float: left;
+  width: 32px;
+  height: 32px;
+  color: #ffa200;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-border-radius: 26px;
+  border-radius: 26px;
+  border: 1px solid #ffa200;
+  text-align: center;
+  line-height: 32px;
+  margin-right: 6px;
+}
 .article-category {
   float: left;
-  background: #ffa200;
   padding: 2px 6px;
-  color: #fff;
+  color: #000;
+  font-size: 16px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  margin-top: 4px;
 }
 .article-category .article-category-link {
-  color: #fff;
+  color: #000;
 }
 .article-category .fa-angle-right {
   margin: 0 5px;
 }
 .article-date {
+  margin-top: 4px;
   float: right;
 }
 .article-date a {
@@ -1219,7 +1235,7 @@ a.article-title:hover {
   border: 1px solid #6ae3ff;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  padding: 2px 6px;
+  padding: 5px 10px;
 }
 .article-entry {
   color: #565a5f;

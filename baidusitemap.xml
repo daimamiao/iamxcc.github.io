@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/</loc>
+    <lastmod>2016-08-07T12:42:50.239Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 20: Valid Parentheses</title>
+        <pubTime>2016-08-07T02:58:47.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>String</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/LeetCode/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/</loc>
     <lastmod>2016-08-07T07:53:43.448Z</lastmod>
     <data>
@@ -47,28 +72,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/</loc>
-    <lastmod>2016-08-07T04:18:31.798Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 20: Valid Parentheses</title>
-        <pubTime>2016-08-07T02:58:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://blog.iamxcc.com/2016/08/01/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
@@ -1139,9 +1142,9 @@
         <title>Win10上使用Mactype</title>
         <pubTime>2016-07-26T02:21:47.000Z</pubTime>
         
-        <tag>Mactype</tag>
-         
         <tag>Win10</tag>
+         
+        <tag>Mactype</tag>
          
          
            
