@@ -438,7 +438,7 @@ code {
   line-height: 64px;
 }
 .timeline-row-major .title,
-.widget-serial {
+.widget-series {
   background: #fff;
   -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
@@ -2445,7 +2445,7 @@ ol.toc {
   color: #aaa;
   font-size: 13px;
 }
-.widget-serial {
+.widget-series {
   display: block;
   cursor: pointer;
   height: 161px;
@@ -2454,28 +2454,31 @@ ol.toc {
   margin-bottom: 10px;
   position: relative;
 }
-.widget-serial img {
+.widget-series:after {
+  display: block;
+  position: absolute;
+  content: ' ';
+  background: rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.widget-series img {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   display: block;
   width: 100%;
   height: 100%;
 }
-.widget-serial .serial-title {
+.widget-series .series-title {
+  z-index: 99;
   position: absolute;
   bottom: 20px;
   font-size: 28px;
   color: #fff;
   left: 20px;
-}
-.widget-serial::after {
-  display: block;
-  background: rgba(0,0,0,0.2);
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 99;
 }
 .ins-search {
   display: none;
