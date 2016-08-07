@@ -382,7 +382,7 @@ code {
   background-color: #f8f8f8;
 }
 .outer {
-  max-width: 1020px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 0;
 }
@@ -437,6 +437,7 @@ code {
   height: 64px;
   line-height: 64px;
 }
+#profile .inner,
 .timeline-row-major .title,
 #list,
 .widget-series {
@@ -445,7 +446,6 @@ code {
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 #header,
-#profile .inner,
 .article-inner,
 #comments,
 .archive-year-wrap,
@@ -727,6 +727,17 @@ code {
 #sub-nav {
   float: right;
 }
+@media screen and (max-width: 768px) {
+  #sub-nav {
+    padding-top: 12px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  #sub-nav {
+    padding-top: 12px;
+    margin-left: 12px;
+  }
+}
 @media screen and (min-width: 992px) {
   #sub-nav {
     display: none;
@@ -885,7 +896,7 @@ code {
   margin-top: 15px;
 }
 #profile .inner .bio p {
-  margin: 5px 20px 10px 20px;
+  margin: 0 20px 10px 20px;
   text-align: justify;
   max-width: 300px;
   line-height: 1.5em;
@@ -898,6 +909,7 @@ code {
   border-bottom: none;
 }
 #profile {
+  margin-bottom: 10px;
   display: none;
 }
 @media screen and (min-width: 992px) {
@@ -906,7 +918,6 @@ code {
   }
 }
 #profile .inner {
-  margin-top: 12px;
   background: #fff;
 }
 #profile .inner .base-info #avatar {
