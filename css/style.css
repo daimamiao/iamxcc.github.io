@@ -1737,10 +1737,10 @@ ol.toc {
 .archive-category-wrap,
 .archive-tag-wrap,
 .layout-title {
-  font-size: 0.9em;
+  font-size: 16px;
   margin: 0 0 10px;
   display: inline-block;
-  padding: 5px 12px;
+  padding: 8px 12px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #ffa200;
@@ -2159,12 +2159,12 @@ ol.toc {
   color: #ffa200;
   text-align: right;
   display: inline-block !important;
-  width: 20px;
+  width: 32px;
   padding: 16px 0;
   overflow: hidden;
 }
 #list .list-item .list-item-title {
-  width: 70%;
+  width: 65%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
