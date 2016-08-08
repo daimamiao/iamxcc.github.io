@@ -154,7 +154,230 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-LeetCode-67-Add-Binary" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    L
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/06/LeetCode-67-Add-Binary/">
+            <time datetime="2016-08-06T03:29:22.000Z" itemprop="datePublished">2016-08-06</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/06/LeetCode-67-Add-Binary/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 67: Add Binary" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            LeetCode 67: Add Binary
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
+    </div>
+
+        
+        
+            
+            <p>Given two binary strings, return their sum (also a binary string). For example, a = <code>&quot;11&quot;</code>, b = <code>&quot;1&quot;</code>, Return <code>&quot;100&quot;</code>.<br><a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">addBinary</span><span class="params">(<span class="keyword">char</span>* a, <span class="keyword">char</span>* b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lenA = <span class="built_in">strlen</span>(a);</div><div class="line">    <span class="keyword">int</span> lenB = <span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> len = lenA &gt; lenB ? lenA : lenB;</div><div class="line">    <span class="keyword">char</span> *sum = (<span class="keyword">char</span>*)<span class="built_in">calloc</span>(len + <span class="number">2</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</div><div class="line">    sum[len + <span class="number">1</span>] = <span class="string">'\0'</span>;</div><div class="line">    lenA--; lenB--;</div><div class="line">    <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (lenA &gt;= <span class="number">0</span> || lenB &gt;= <span class="number">0</span>) &#123;</div><div class="line">        c += lenA &gt;= <span class="number">0</span> ? a[lenA--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        c += lenB &gt;= <span class="number">0</span> ? b[lenB--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        sum[len--] = c % <span class="number">2</span> + <span class="string">'0'</span>;</div><div class="line">        c /= <span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (!c) <span class="keyword">return</span> sum + <span class="number">1</span>;</div><div class="line">    sum[<span class="number">0</span>] = <span class="string">'1'</span>;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>294 / 294 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>0 ms</code></p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/" data-id="cirlv9dvy003eh0in8oftnse5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/06/LeetCode-8-String-to-Integer-atoi/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 8: String to Integer(atoi)
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/06/LeetCode-14-Longest-Common-Prefix/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">LeetCode 14: Longest Common Prefix</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/08/06/LeetCode-67-Add-Binary/" data-title="LeetCode 67: Add Binary" data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

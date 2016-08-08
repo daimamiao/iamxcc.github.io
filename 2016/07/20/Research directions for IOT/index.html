@@ -154,7 +154,305 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-Research directions for IOT" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    物
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/物联网/">物联网</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/07/20/Research directions for IOT/">
+            <time datetime="2016-07-20T00:57:18.000Z" itemprop="datePublished">2016-07-20</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/07/20/Research directions for IOT/" class="thumbnail">
+    
+    
+        <span style="background:url(https://pic.36krcnd.com/avatar/201607/24004958/8a6l5hjpfmw743bg.jpg) no-repeat;background-size: 100% 100%;" alt="Research directions for IOT" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            Research directions for IOT
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/物联网/">物联网</a>
+    </div>
+
+        
+        
+            
+            <p>As each individual system has its own assumptions and strategy to control the physical world variables without much knowledge of the other systems,<a id="more"></a> which leads to conflicts when these systems are integrated without careful consideration.</p>
+<h3 id="1-What-s-the-problem-of-dependency-in-IOT"><a href="#1-What-s-the-problem-of-dependency-in-IOT" class="headerlink" title="1.What`s the problem of dependency in IOT?"></a>1.What`s the problem of dependency in IOT?</h3><p>As each individual system has its own assumptions and strategy to control the physical world variables without much knowledge of the other systems, which leads to conflicts when these systems are integrated without careful consideration. Such problems arise in the cyber part mainly because each application has assumptions on the physical world entities without knowing how other applications work. </p>
+<p><strong>Let’s use an example to better illustrate “what the problem of dependency” are:</strong></p>
+<p>a home health care application may detect depression and decide to turn on all the lights. On the other hand, the energy management application may decide to turn off lights when no motion is detected. Detecting and resolving such dependency problems is important for correctness of operation of interacting IoT systems.</p>
+<p><strong>The problem of dependencies are:</strong></p>
+<ol>
+<li><strong>App interdependency:</strong>  It arises when one app relies on another app. If the independent app makes an error, the error may propagate and affect all the dependent apps and may cause a lot of conflicts in the system.t</li>
+<li><strong>Control dependency for the sensors and actuators:</strong>  It arises when multiple apps want to control a sensor in different ways.For example, App1 wants to run a humidifier and App2 wants to run a dehumidifier at the same time.</li>
+<li><strong>Missing dependency:</strong>  It arises when app developers forget to specify the dependency information of their apps. For example, App1 forgets to specify its dependency on light L1 in its meta data., but at runtime it tries to control L1.</li>
+</ol>
+<h3 id="2-What-s-the-major-technologies-to-address-the-dependency-issues-in-IOT"><a href="#2-What-s-the-major-technologies-to-address-the-dependency-issues-in-IOT" class="headerlink" title="2.What`s the major technologies to address the dependency issues in IOT?"></a>2.What`s the major technologies to address the dependency issues in IOT?</h3><h4 id="Cyber-Physical-system-CPS"><a href="#Cyber-Physical-system-CPS" class="headerlink" title="Cyber Physical system(CPS)"></a>Cyber Physical system(CPS)</h4><p>We can propose a integrated CPS, a utility sensing and actuation system  that provides comprehensive strategies to specify, detect, and resolve conflicts.This system  consideres a comprehensive spectrum of dependencies and treating each system as an app. Each system communicates with its sensors and actuators and performs computations for taking appropriate control decisions to actuate on the physical world entities.</p>
+<p>App developers specify dependency  information as meta data within their apps and their apps are put in an app store. Users can choose and install apps from the app store. This system can use the meta-data to detect and resolve conflicts at app installation time and at run-time.</p>
+<p>Let`s take some examples to introduce this ststem:</p>
+<ol>
+<li><strong>addressing requirement dependency:</strong>  This system reqiures developers to specify the requirement of each app in a manifest file written in XML.just like this : <figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;requirement&gt;</div><div class="line">	&lt;device&gt;</div><div class="line">		&lt;device_type&gt; x10_motion_sensor &lt;/device_type&gt;</div><div class="line">		&lt;container&gt; room &lt;/container&gt;</div><div class="line">		&lt;level&gt; strict &lt;/level&gt;</div><div class="line">	&lt;/device&gt;	</div><div class="line">	&lt;device&gt;</div><div class="line">		&lt;device_type&gt; x10_contact_sensor &lt;/device_type&gt;</div><div class="line">		&lt;container&gt; window, door &lt;/container&gt;</div><div class="line">		&lt;level&gt; strict &lt;/level&gt;</div><div class="line">	&lt;/device&gt;	</div><div class="line">&lt;/requirement&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Requirements can be either strict or loose. The motion sensor requirement is strict, which means that the app will not work without the motion sensors.But the app will still work without the contact sensors.</p>
+<ol>
+<li><strong>adderssing actuator control dependency: </strong> Resolving control dependency of the actuators in a wrong way may cause death, e.g, granting an app’s request to turn off the breathing machine to save energy while it is being used by another health app.therefore, this system will detect such conflicts when two apps try to access the same device at the same time and resolve the conflict in favor of the higher priority app.It requires app developers to specify in XML<code>effect</code>,<code>emphasis</code>, and <code>condition</code> for each actuator that app wants to control.</li>
+</ol>
+<ul>
+<li><strong>Effect</strong><br>Effect specifies the effect of an app on the environment when using a particular device.Two apps may be using completely different devices, but are conflicting with each orher by causing opposite effects.The XML tags can be increase, decrease, and change.For example, App1 may specify:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;device&gt;</div><div class="line">	&lt;device_name&gt; humidifier &lt;/device_name&gt;</div><div class="line">	&lt;effect&gt;</div><div class="line">		&lt;humidity&gt; increase &lt;/humidity&gt;</div><div class="line">	&lt;/effect&gt;</div><div class="line">&lt;/device&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>On the other hand, App2 mey specify:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;device&gt;</div><div class="line">	&lt;device_name&gt; humidifier &lt;/device_name&gt;</div><div class="line">	&lt;effect&gt;</div><div class="line">		&lt;humidity&gt; increase &lt;/humidity&gt;</div><div class="line">	&lt;/effect&gt;</div><div class="line">&lt;/device&gt;</div></pre></td></tr></table></figure></p>
+<p>When  two apps have an opposite effect, they will not conflict. When two apps have an opposite effect, there is a chance that they will conflict at runtime. When two apps have the same effect, or mixed effect, system will look into <code>emphasis</code> and<code>condition</code>to determine whether these apps will conflict or not.</p>
+<ul>
+<li><strong>Emphasis</strong><br>Emphasis is based on the insight that not all control operations are equally important to an app, and emphasis allows an app to specify which device operation is more important than others.<br>The security app mentioinsed above specifies its emphasis for controlling lights:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;emphasis&gt;</div><div class="line">	&lt;operation&gt; On() &lt;/operation&gt;</div><div class="line">&lt;/emphasis&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>The energy app mentioned above specified above specifies its emphasis for controlling lights:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;emphasis&gt;</div><div class="line">	&lt;operation&gt; On() &lt;/operation&gt;</div><div class="line">	&lt;operation&gt; Off() &lt;/operation&gt;</div><div class="line">&lt;/emphasis&gt;</div></pre></td></tr></table></figure></p>
+<p>when two apps have the same emphasis, then they are not conflicting with each other. if the emphasis of two apps is different, then they may be conflicting(also depends on conditions).</p>
+<ul>
+<li><strong>Condition</strong><br>Two apps are not conflicting if they operate on a device with a mutually exclusive condition.The conditions can be categorized into two groups: (1)conditions based on time.(2)conditions based on event. Here are some example:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;start_time&gt; 20:00:00&lt;/start_time&gt;</div><div class="line">&lt;end_time&gt; 21:00:00 &lt;/end_time&gt;</div><div class="line">&lt;night&gt; duration &lt;/night&gt;</div><div class="line">&lt;sunset&gt; begin &lt;/sunset&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-What’s-the-questions-and-gaps-that-need-to-be-filled-in-IoT-system-with-examples"><a href="#3-What’s-the-questions-and-gaps-that-need-to-be-filled-in-IoT-system-with-examples" class="headerlink" title="3.What’s the questions and gaps that need to be filled in IoT system with examples?"></a>3.What’s the questions and gaps that need to be filled in IoT system with examples?</h3><p>####Security<br>A fundamental problem that must be solved in IOT is dealing with security problem.It worth to think about 3 security problem as follow:</p>
+<ol>
+<li><strong>dependency issues – Do you know when something goes wrong?</strong><br>The aforementioned paragraph suggests that resolving control dependency of the actuators in a wrong way may cause death, e.g, granting an app’s request to turn off the breathing machine to save energy while it is being used by another health app.</li>
+<li><strong>Data Encryption – Is your data protected?</strong><br>At a glance, many developers may be inclined to use SSL for secure communications. However, this can be problematic in an M2M application due to the additional processing power and memory required in a device to support SSL, and the increased wireless data costs that are a product of the increase in network communications overhead.</li>
+<li><strong>Controlling access – Who can access your data/system?</strong><br>While encryption is demanded for private information, in some instances, confidentiality may be far less important than access and authentication. For example, the data transmitted with a wireless command to open your car door may not be confidential, but it is critical that no unauthorized parties have access to unlock the door through that system.</li>
+</ol>
+<h4 id="Privacy"><a href="#Privacy" class="headerlink" title="Privacy"></a>Privacy</h4><p>Despite the immense potential of IoT in the various spheres, the whole communication infrastructure of the IoT is flawed from the security standpoint and is susceptible to loss of privacy for the end users. Some of the most prominent security issues plaguing the entire developing IoT system arise out of the security issues present in the technologies used in IoT for information relay from one device to another. As such some of the prominent security issues stemming out from the communication technology are the following:<br><strong>( Wireless Sensor Networks (WSN) )</strong></p>
+<ol>
+<li><strong>DoS attack on the physical layer:</strong><br>The physical layer of a wireless sensor network carries out the function of selection and generation of carrier frequency, modulation and demodulation, encryption and decryption, transmission and reception of data. This layer of the wireless sensor network is attacked mainly through </li>
+</ol>
+<ul>
+<li>Jamming: In this type of DoS attack occupies the communication channel between the nodes thus preventing them from communicating with each other. </li>
+<li>Node tampering: Physical tampering of the node to extract sensitive information is known as node tampering.</li>
+</ul>
+<ol>
+<li><strong>DoS attack on the link layer:</strong><br>The link layer of WSN multiplexes the various data streams, provides detection of data frame, MAC and error control. Moreover the link layer ensures point-point or pointmultipoint  reliability . The DoS attacks taking place in this layer are: </li>
+</ol>
+<ul>
+<li><strong>Collision</strong>: This type of DoS attack can be initiated whentwo nodes simultaneously transmit packets of data on the same frequency channel. </li>
+<li><strong>Unfairness</strong>: As described in , unfairness is a repeated collision based attack. It can also be referred to as exhaustion based attacks.</li>
+<li><strong>Battery Exhaustion</strong>: This type of DoS attack causes unusually high traffic in a channel making its accessibility very limited to the nodes. Such a disruption in the channel is caused by a large number of requests (Request To Send) and transmissions over the channel.</li>
+</ul>
+<ol>
+<li><strong>DoS attack on the network layer:</strong><br>The main function of the network layer of WSN is routing. The specific DoS attacks taking place in this layer are:</li>
+</ol>
+<ul>
+<li>Spoofing, replaying and misdirection of traffic.</li>
+<li>Hello flood attack: This attack causes high traffic in channels by congesting the channel with an unusually high number of useless messages. Here a single malicious node sends a useless message which is then replayed by the attacker to create a high traffic.</li>
+<li>Homing: In case of homing attack, a search is made in the traffic for cluster heads and key managers which have the capability to shut down the entire network.</li>
+</ul>
+<ol>
+<li><strong>DoS attack on the transport layer:</strong><br>This layer of the WSN architecture provides reliability of data transmission and avoids congestion resulting from high traffic in the routers. The DoS attacks in this layer are:</li>
+</ol>
+<ul>
+<li>Flooding: It refers to deliberate congestion of communication channels through relay of unnecessary messages and high traffic.</li>
+<li>De-synchronization: In de-synchronization attack, fake messages are created at one or both endpoints requesting retransmissions for correction of non-existent error. This results in loss of energy in one or both the end-points in carrying out the spoofed instructions. </li>
+</ul>
+<p>####Data Challenge<br>The technologies to address the big data challenge already exist, like Hadoop or NoSQL, providing horizontal scalability, high capacity and parallel processing at prices that make them affordable and economical.With the development of wearables for consumers and the emerging use of smart machines the portion of IoT as a subset of big data will grow quickly forcing enterprises to think their infrastructure to enable scalability and to make them cost effective.</p>
+<p>####Server Technologies<br>The impact of IoT on the server market will be largely focused on increased investment in key vertical industries and organizations related to those industries where IoT can be profitable, or add significant value.<br>Some organizations that manage and consume data collected from a huge array of devices will require additional compute capacity and may well increase server budgets if there is a business case for it.</p>
+<p>####Data Center Network<br>Existing data center WAN (Wide Area Network) links have been built for moderate-bandwidth requirements created by our current use of technology. However, as the amount of data being transferred is set to increase dramatically, the need for expanded bandwidth grows.The result of all this, the research points out, is that because of the scale of the data being created it will no longer be economically feasible to store data at a single location.</p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p>[1] S. Munir and J. Stankovic, “DepSys: Dependency aware integration of systems for smart homes,” in Proc. ACM/IEEE Int. Conf. Cyber Phys. Syst.,Apr. 2014.<br>[2] J. Stankovic, “When sensor, and actuator networks cover the world,invited keynote article,” ETRI J., vol. 30, no. 5, pp. 627–633, Oct. 2008.<br>[3] Security. <a href="http://embedded-computing.com/guest-blogs/5-security-questions-for-your-next-iot-deployment/" target="_blank" rel="external">http://embedded-computing.com/guest-blogs/5-security-questions-for-your-next-iot-deployment/</a><br>[4] Tuhin Borgohain,  Uday Kumar,  Sugata Sanyal. “Survey of Security and Privacy Issues of Internet of Things“.  Fri, 9 Jan 2015.<br>[5] “7 Big Problems with the Internet of Things”. <a href="http://www.cmswire.com/cms/internet-of-things/7-big-problems-with-the-internet-of-things-024571.php" target="_blank" rel="external">http://www.cmswire.com/cms/internet-of-things/7-big-problems-with-the-internet-of-things-024571.php</a></p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/07/20/Research directions for IOT/" data-id="cirlv9dwh004eh0ins17s0s6c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/07/20/Research directions for IOT/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/20/Research directions for IOT/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/07/25/99-的人都理解错了HTTP中GET与POST的区别/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    99%的人都理解错了HTTP中GET与POST的区别
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/06/19/sass安装/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">sass安装</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/07/20/Research directions for IOT/" data-title="Research directions for IOT" data-url="http://blog.iamxcc.com/2016/07/20/Research directions for IOT/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

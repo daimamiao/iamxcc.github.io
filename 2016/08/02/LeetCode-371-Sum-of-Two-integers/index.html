@@ -154,7 +154,295 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-LeetCode-371-Sum-of-Two-integers" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    L
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/02/LeetCode-371-Sum-of-Two-integers/">
+            <time datetime="2016-08-02T10:43:25.000Z" itemprop="datePublished">2016-08-02</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/02/LeetCode-371-Sum-of-Two-integers/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 371: Sum of Two integers" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            LeetCode 371: Sum of Two integers
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Bit-Manupulation/">Bit Manupulation</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
+    </div>
+
+        
+        
+            
+            <p>Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.Example: Given a = 1 and b = 2, return 3.<a id="more"></a></p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>计算a和b的和，但是不能使用<code>+</code>和<code>-</code>号。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这里要求我们不能用加法、减法等运算符来实现加法运算。这里应该使用位运算来实现加法运算，实际上，这也是计算机CPU内部实现加法运算的方案。<br><strong>x ^ y真值表:</strong></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:right">x^y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>x &amp; y真值表:</strong></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:right">x&amp;y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+<p>我们可以基于以上的真值表用&amp;和^运算来实现加法，每一位的^运算得到每一位上的不加进位的和，用&amp;运算得到每一位的进位。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sum = a;</div><div class="line">    <span class="keyword">int</span> carry = b;</div><div class="line">    <span class="keyword">int</span> tmp;</div><div class="line">    <span class="keyword">while</span> ( carry )&#123;</div><div class="line">        tmp = sum;</div><div class="line">        sum = sum ^ carry;</div><div class="line">        carry = (carry &amp; tmp) &lt;&lt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/" data-id="cirlv9dvs0036h0inh24uwt7r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 203: Remove Linked List Elements
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/02/LeetCode-24-Swap-Nodes-in-Pairs/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">LeetCode 24: Swap Nodes in Pairs</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/08/02/LeetCode-371-Sum-of-Two-integers/" data-title="LeetCode 371: Sum of Two integers" data-url="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

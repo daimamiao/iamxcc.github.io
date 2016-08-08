@@ -154,7 +154,255 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-sass安装" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    S
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/Sass/">Sass</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/06/19/sass安装/">
+            <time datetime="2016-06-19T14:59:33.000Z" itemprop="datePublished">2016-06-19</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/06/19/sass安装/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/sass.png) no-repeat;background-size: 100% 100%;" alt="sass安装" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            sass安装
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Sass/">Sass</a> <a class="tag-link" href="/tags/css/">css</a>
+    </div>
+
+        
+        
+            
+            <p>Sass 是最早的 CSS 预处理语言，有比 LESS 更为强大的功能，不过其一开始的缩进式语法（Sass老版本语法)并不能被大众接受<a id="more"></a>，不过由于其强大的功能和 Ruby on Rails 的大力推动，还是有很多开发者选择了 Sass。Sass 是采用 Ruby 语言编写的一款 CSS 预处理语言，它诞生于2007年，是最大的成熟的 CSS 预处理语言。最初它是为了配合 HAML（一种缩进式 HTML 预编译器）而设计的，因此有着和 HTML 一样的缩进式风格。</p>
+<h3 id="Ruby安装"><a href="#Ruby安装" class="headerlink" title="Ruby安装"></a>Ruby安装</h3><p>在 Windows 平台下安装 Ruby 需要先有 Ruby 安装包，大家可以到 Ruby 的 <a href="http://rubyinstaller.org/downloads" target="_blank" rel="external">官网</a>下载对应需要的 Ruby 版本。<br>Ruby 安装文件下载好后，可以按应用软件安装步骤进行安装 Ruby。在安装过程中，个人建议将其安装在 C 盘下，在安装过程中选择第二个选项（不选中，就会出现编译时找不到Ruby环境的情况），如下图所示：<br><img src="http://img.mukewang.com/54f561190001531806350474.jpg" alt="Ruby安装步骤"></p>
+<p>Ruby 安装完成后，在开始菜单中找到新安装的 Ruby，并启动 Ruby 的 Command 控制面板，如下图所示：</p>
+<p><img src="http://img.mukewang.com/54f5615f00011cb604530648.jpg" alt="Ruby Command"></p>
+<h3 id="Sass安装"><a href="#Sass安装" class="headerlink" title="Sass安装"></a>Sass安装</h3><p>当你的电脑中安装好 Ruby 之后，接下来就可以安装 Sass 了。同样的在windows下安装 Sass 有多种方法。但这几种方法都是非常的简单，只需要在你的命令终端输入一行命令即可。</p>
+<h4 id="1、通过命令安装-Sass"><a href="#1、通过命令安装-Sass" class="headerlink" title="1、通过命令安装 Sass"></a>1、通过命令安装 Sass</h4><p>打开电脑的命令终端，输入下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install sass</div></pre></td></tr></table></figure></p>
+<p>提醒一下，在使用 Mac 的同学，可能需要在上面的命令前加上”sudo”，才能正常安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install sass</div></pre></td></tr></table></figure></p>
+<p>如果上面的方法没有安装成功，可以使用下面的两种方法。</p>
+<h4 id="2、通过-Compass-来安装-Sass"><a href="#2、通过-Compass-来安装-Sass" class="headerlink" title="2、通过 Compass 来安装 Sass"></a>2、通过 Compass 来安装 Sass</h4><p>除了使用 gem 命令来安装 Sass 之外，还可以通过安装 compass 来安装 Sass，因为 Compass 是基于 Sass 开发的一个框架。也就是说，你安装了 Compass，也就同时安装好了 Sass。</p>
+<p>同样的在你的命令终端输入下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install sass</div></pre></td></tr></table></figure>
+<p>执行完上面的命令之后，就开始安装 Compass 和 Sass。</p>
+<p>注：Compass 是一个成熟的、基于 Sass 开发的一个框架，这里面集成了很多写好的 mixins 和 Sass 函数。不过在此暂不做过多阐述。</p>
+<h4 id="3、本地安装Sass"><a href="#3、本地安装Sass" class="headerlink" title="3、本地安装Sass"></a>3、本地安装Sass</h4><p>由于有时候直接使用上面的命令安装会让你无法正常实现安装（网络受限原因），当碰到这种情况之时，那么安装需要特殊去处理，可以通过下面的方法来实现 Sass 的正常安装：</p>
+<p>可以到 <a href="http://rubygems.org/" target="_blank" rel="external">Rubygems</a> 网站上将 Sass 的安装包（<a href="http://rubygems.org/gems/sass）下载下来，然后在命令终端输入：" target="_blank" rel="external">http://rubygems.org/gems/sass）下载下来，然后在命令终端输入：</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install &lt;把下载的安装包拖到这里&gt;</div></pre></td></tr></table></figure>
+<p>直接回车即可安装成功。</p>
+<p>注：在 iOSX和win10系统平台，可以直接将下载的安装包拖到 “gem install” 后面。</p>
+<h4 id="4、淘宝-RubyGems-镜像安装-Sass"><a href="#4、淘宝-RubyGems-镜像安装-Sass" class="headerlink" title="4、淘宝 RubyGems 镜像安装 Sass"></a>4、淘宝 RubyGems 镜像安装 Sass</h4><p>除了下载 Sass 安装包到本地安装之外，碰到网络原因无法安装时还可以使用淘宝 RubyGems 镜像安装 Sass。只是我们需要通过 gem sources 命令来配置源，先移除默认的 <a href="https://rubygems.org" target="_blank" rel="external">https://rubygems.org</a> 源，然后添加淘宝的源 <a href="https://ruby.taobao.org：" target="_blank" rel="external">https://ruby.taobao.org：</a></p>
+<p>第一步：移动默认的源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div></pre></td></tr></table></figure>
+<p>第二步：指定淘宝的源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources <span class="_">-a</span> https://ruby.taobao.org/</div></pre></td></tr></table></figure>
+<p>第三步：查看指定的源是不是淘宝源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources <span class="_">-l</span></div></pre></td></tr></table></figure>
+<p>返回结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*** CURRENT SOURCES ***</div><div class="line">https://ruby.taobao.org</div></pre></td></tr></table></figure>
+<p>请确保只有 ruby.taobao.org。如果无误之后，执行下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install sass</div></pre></td></tr></table></figure>
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/06/19/sass安装/" data-id="cirlv9dx4005sh0infww85fa6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/06/19/sass安装/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/06/19/sass安装/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/07/20/Research directions for IOT/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    Research directions for IOT
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/06/16/Git系列之安装/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">Git系列之安装</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/06/19/sass安装/" data-title="sass安装" data-url="http://blog.iamxcc.com/2016/06/19/sass安装/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

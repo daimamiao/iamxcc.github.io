@@ -154,7 +154,235 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-git上传时出现error" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    G
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/Git/">Git</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/07/27/git上传时出现error/">
+            <time datetime="2016-07-27T05:24:55.000Z" itemprop="datePublished">2016-07-27</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/07/27/git上传时出现error/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/338398_7fde_6.jpg) no-repeat;background-size: 100% 100%;" alt="Git上传时出现error" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            Git上传时出现error
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Git/">Git</a>
+    </div>
+
+        
+        
+            
+            <p>今天使用git上传文件到github上时出现错误，提示是<code>error: src refspec master does not match any</code>，后来上网查了一下，问题解决了。<a id="more"></a>为了防止以后再遇到类似问题又给忘记了，所以还是把这个方法简单记录在此。</p>
+<h3 id="git工作大致流程"><a href="#git工作大致流程" class="headerlink" title="git工作大致流程"></a>git工作大致流程</h3><blockquote>
+<p>1、在github上创建项目<br>  2、使用git clone <a href="https://github.com/xxxxxxx/xxxxx.git克隆到本地" target="_blank" rel="external">https://github.com/xxxxxxx/xxxxx.git克隆到本地</a><br>  3、编辑项目<br>  4、git add . （将改动添加到暂存区）<br>  5、git commit -m “提交说明”<br>  6、git push origin master 将本地更改推送到远程master分支。</p>
+</blockquote>
+<p>这样你就完成了向远程仓库的推送。</p>
+<h3 id="解决措施"><a href="#解决措施" class="headerlink" title="解决措施"></a>解决措施</h3><p>如果在github的remote上已经有了文件，会出现错误。此时应当先pull一下，即：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div></pre></td></tr></table></figure></p>
+<p>然后再进行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
+<p>这样就不会出现错误提示了。</p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/07/27/git上传时出现error/" data-id="cirlv9dws004xh0in20e16kg3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/07/27/git上传时出现error/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/27/git上传时出现error/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/07/30/win10取消开机密码/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    win10取消开机密码
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/07/27/Git命令add和commit的区别/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">Git命令add和commit的区别</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/07/27/git上传时出现error/" data-title="Git上传时出现error" data-url="http://blog.iamxcc.com/2016/07/27/git上传时出现error/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

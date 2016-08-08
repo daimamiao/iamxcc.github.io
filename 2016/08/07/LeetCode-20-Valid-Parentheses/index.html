@@ -154,7 +154,233 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-LeetCode-20-Valid-Parentheses" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    L
+                                
+                            
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/LeetCode/算法/">算法</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/">
+            <time datetime="2016-08-07T02:58:47.000Z" itemprop="datePublished">2016-08-07</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 20: Valid Parentheses" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            LeetCode 20: Valid Parentheses
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
+    </div>
+
+        
+        
+            
+            <p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.<br><a id="more"></a>The brackets must close in the correct order, <code>&quot;()&quot;</code> and <code>&quot;()[]{}&quot;</code> are all valid but <code>&quot;(]&quot;</code> and <code>&quot;([)]&quot;</code> are not. </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>看到这种括弧匹配问题，我首先想到的就是用stack来实现。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</div><div class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; paren;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">char</span>&amp; c : s) &#123;</div><div class="line">            <span class="keyword">switch</span> (c) &#123;</div><div class="line">                <span class="keyword">case</span> <span class="string">'('</span>: </div><div class="line">                <span class="keyword">case</span> <span class="string">'&#123;'</span>: </div><div class="line">                <span class="keyword">case</span> <span class="string">'['</span>: paren.push(c); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">')'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'('</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'&#125;'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'&#123;'</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">']'</span>: <span class="keyword">if</span> (paren.empty() || paren.top()!=<span class="string">'['</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="keyword">else</span> paren.pop(); <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">default</span>: ; <span class="comment">// pass</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> paren.empty() ;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">if</span>( len%<span class="number">2</span> != <span class="number">0</span> )</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> limit = len/<span class="number">2</span>;</div><div class="line">    <span class="keyword">char</span> *<span class="built_in">stack</span> = <span class="built_in">malloc</span>(limit+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> topOfStack = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">        <span class="keyword">if</span>(s[i] == <span class="string">'('</span> || s[i] == <span class="string">'['</span> || s[i] ==<span class="string">'&#123;'</span>) &#123;</div><div class="line">            <span class="keyword">if</span>(topOfStack == limit)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                <span class="built_in">stack</span>[++topOfStack] = s[i];</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span>(topOfStack == <span class="number">-1</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>( (<span class="built_in">stack</span>[topOfStack] == <span class="string">'('</span> &amp;&amp; s[i] == <span class="string">')'</span>) || (<span class="built_in">stack</span>[topOfStack] == <span class="string">'['</span> &amp;&amp; s[i] == <span class="string">']'</span>) || (<span class="built_in">stack</span>[topOfStack] == <span class="string">'&#123;'</span> &amp;&amp; s[i] == <span class="string">'&#125;'</span>) ) &#123;</div><div class="line">                topOfStack--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> topOfStack == <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/" data-id="cirlv9dut001eh0in8fgywtqo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 232: Implement Queue using Stacks
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">LeetCode 125: Valid Palindrome</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/08/07/LeetCode-20-Valid-Parentheses/" data-title="LeetCode 20: Valid Parentheses" data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 

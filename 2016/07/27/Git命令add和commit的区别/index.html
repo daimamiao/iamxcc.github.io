@@ -154,7 +154,233 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
+                        <article id="post-Git命令add和commit的区别" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    G
+                                
+                            
+                        </div>
                         
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/Git/">Git</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/07/27/Git命令add和commit的区别/">
+            <time datetime="2016-07-27T00:42:34.000Z" itemprop="datePublished">2016-07-27</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/07/27/Git命令add和commit的区别/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/57c83535399791a07f83e3ad9782fcab.png) no-repeat;background-size: 100% 100%;" alt="Git命令add和commit的区别" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            Git命令add和commit的区别
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Git/">Git</a>
+    </div>
+
+        
+        
+            
+            <p>要想弄明白<code>git add</code>和<code>git commit</code>的区别，首先我们需要知道三个概念：<code>工作区(Working Directory)</code>、<code>版本库(Repository)</code>、<code>暂存区(Stage or index)</code>。<a id="more"></a></p>
+<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>当你在开发一个项目时，主目录就是你的工作区。</p>
+<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>工作区中有一个隐藏目录<code>.git</code>，这个就是git的版本库了。</p>
+<h4 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h4><p>Git的版本库里存了很多文件，其中包括称为Stage或index的暂存区，还有一个git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针<code>HEAD</code>。<br>下面就是三个区的示意图：图片来着廖雪峰老师的 <a href="http://www.liaoxuefeng.com" target="_blank" rel="external">博客</a>。<br><img src="http://7xveyh.com1.z0.glb.clouddn.com/0.jpg" alt="三个区的示意图"></p>
+<h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p><code>git add</code>和<code>git commit</code>的区别就在于：<br><code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br><code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支。所以，git commit就是往master分支上提交更改。<br>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
+<p>所以要想将修改提交到master中一定要先<code>git add</code>到暂存区中，再<code>git commit</code>到master分支。</p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/07/27/Git命令add和commit的区别/" data-id="cirlv9dud000eh0inl38iirwm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/07/27/Git命令add和commit的区别/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/27/Git命令add和commit的区别/">Comments</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/07/27/git上传时出现error/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    Git上传时出现error
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/07/26/Sublime3美化/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">Win下Sublime3美化</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/07/27/Git命令add和commit的区别/" data-title="Git命令add和commit的区别" data-url="http://blog.iamxcc.com/2016/07/27/Git命令add和commit的区别/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+
                     </div>
                 </section>
                 
