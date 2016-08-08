@@ -3,29 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>About | 胡闹的日子</title>
+    <title>趣说KMP算法 | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="The blog theme you may fall in love with, coming to Hexo. Preview
-InstallationInstall1$ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus
-Icarus requires Hexo 3.0 and above.
-En">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://blog.iamxcc.com/about/index.html">
+    <meta name="description" content="今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="趣说KMP算法">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="The blog theme you may fall in love with, coming to Hexo. Preview
-InstallationInstall1$ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus
-Icarus requires Hexo 3.0 and above.
-En">
-<meta property="og:image" content="http://qstatic.zuimeia.com/img/covers/cld/2016051216554666081_640x360.jpeg">
-<meta property="og:updated_time" content="2016-08-07T23:55:06.007Z">
+<meta property="og:description" content="今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/string-matching-algorithms-24-638.jpg">
+<meta property="og:updated_time" content="2016-08-06T12:04:51.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="The blog theme you may fall in love with, coming to Hexo. Preview
-InstallationInstall1$ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus
-Icarus requires Hexo 3.0 and above.
-En">
-<meta name="twitter:image" content="http://qstatic.zuimeia.com/img/covers/cld/2016051216554666081_640x360.jpeg">
+<meta name="twitter:title" content="趣说KMP算法">
+<meta name="twitter:description" content="今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/string-matching-algorithms-24-638.jpg">
     
 
     
@@ -163,20 +154,45 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
-                        <article id="page-undefined" class="article article-type-page article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-趣说KMP算法" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
         
             <header class="article-header">
                 
+                    <div class="article-meta">
+                        <div class="article-category-img">
+                            
+                            
+                                
+                                    算
+                                
+                            
+                        </div>
+                        
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/算法/">算法</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/06/趣说KMP算法/">
+            <time datetime="2016-08-06T11:59:24.000Z" itemprop="datePublished">2016-08-06</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
             </header>
         
         <div class="article-img">
-            <a href="/about/index.html" class="thumbnail">
+            <a href="/2016/08/06/趣说KMP算法/" class="thumbnail">
     
     
-        <span style="background:url(http://qstatic.zuimeia.com/img/covers/cld/2016051216554666081_640x360.jpeg) no-repeat;background-size: 100% 100%;" alt="About" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/string-matching-algorithms-24-638.jpg) no-repeat;background-size: 100% 100%;" alt="趣说KMP算法" class="thumbnail-image"></span>
     
 </a>
 
@@ -187,76 +203,24 @@ var _hmt = _hmt || [];
         
     
         <h1 class="article-title" itemprop="name" class="name">
-            About
+            趣说KMP算法
         </h1>
     
 
         
             
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/KMP算法/">KMP算法</a>
+    </div>
+
         
         
             
-            <h3 id="The-blog-theme-you-may-fall-in-love-with-coming-to-Hexo-Preview"><a href="#The-blog-theme-you-may-fall-in-love-with-coming-to-Hexo-Preview" class="headerlink" title="The blog theme you may fall in love with, coming to Hexo. Preview"></a>The blog theme you may fall in love with, coming to Hexo. <a href="http://blog.iamxcc.com/">Preview</a></h3><p><img src="http://ppoffice.github.io/hexo-theme-icarus/gallery/preview.jpg" alt=""></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</div></pre></td></tr></table></figure>
-<p><strong>Icarus requires Hexo 3.0 and above.</strong></p>
-<h3 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h3><ol>
-<li>Rename <code>themes\icarus\_config.yml.example</code> to <code>themes\icarus\_config.yml</code>;</li>
-<li>Copy <code>themes\icarus\_config.yml.site.example</code> to your hexo blog’s root directory and rename it to <code>_config.yml</code>;</li>
-<li>Copy <code>themes\icarus\_source\*</code> into your hexo blog’s directory <code>source</code>;</li>
-<li>Then modify <code>theme</code> setting in <code>_config.yml</code> to <code>icarus</code>.</li>
-</ol>
-<h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> themes/icarus</div><div class="line">git pull</div></pre></td></tr></table></figure>
-<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Theme-configuration-example"><a href="#Theme-configuration-example" class="headerlink" title="Theme configuration example"></a>Theme configuration example</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header</span></div><div class="line">menu:</div><div class="line">  Home: .</div><div class="line">  Archives: archives</div><div class="line">  Categories: categories <span class="comment"># you need to add extra page to enable this, please see the config below.</span></div><div class="line">  Tags: tags             <span class="comment"># you need to add extra page to enable this, please see the config below.</span></div><div class="line">  About: about</div><div class="line"></div><div class="line"><span class="comment"># Content</span></div><div class="line">excerpt_link: Read More</div><div class="line">fancybox: true</div><div class="line"></div><div class="line"><span class="comment"># Sidebar</span></div><div class="line">sidebar: right</div><div class="line">widgets:</div><div class="line">- recent_posts</div><div class="line">- category</div><div class="line">- tag</div><div class="line">- tagcloud</div><div class="line">- archive</div><div class="line">thumbnail: true</div><div class="line"></div><div class="line"><span class="comment"># Contacts</span></div><div class="line">contacts:</div><div class="line">  github: http://github.com/ppoffice/hexo-theme-icarus</div><div class="line">  twitter: <span class="string">'#'</span></div><div class="line">  facebook: <span class="string">'#'</span></div><div class="line">  dribbble: <span class="string">'#'</span></div><div class="line">  rss: atom.xml</div><div class="line"></div><div class="line"><span class="comment"># Links</span></div><div class="line">links:</div><div class="line">  Hexo: http://hexo.io</div><div class="line"></div><div class="line"><span class="comment"># Miscellaneous</span></div><div class="line">google_analytics:</div><div class="line">favicon: favicon.png</div><div class="line">twitter:</div><div class="line">google_plus:</div><div class="line">fb_admins:</div><div class="line">fb_app_id:</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>excerpt_link</strong> - Cooperate with <code>&lt;!-- more --&gt;</code> tag to show only part of the article in index pages.</li>
-<li><strong>fancybox</strong> - Enable <a href="http://fancyapps.com/fancybox/" target="_blank" rel="external">Fancybox</a>.</li>
-<li><strong>contacts</strong> - Your social network links, RSS link, etc.</li>
-<li><strong>widgets</strong> - Widgets displaying in sidebar.</li>
-<li><strong>thumbnail</strong> - Whether to show post thumbnails in the sidebar and archive pages.</li>
-<li><strong>links</strong> - Links displayed in the link widget.</li>
-<li><strong>google_analytics</strong> - Google Analytics ID.</li>
-<li><strong>favicon</strong> - Favicon path.</li>
-</ul>
-<h3 id="Site-configuration-example"><a href="#Site-configuration-example" class="headerlink" title="Site configuration example"></a>Site configuration example</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Site</span></div><div class="line">title: Icarus</div><div class="line">subtitle:</div><div class="line">description: Hexo theme - Icarus</div><div class="line">author: PPOffice</div><div class="line">author_title: <span class="string">'Web Developer &amp; Designer'</span></div><div class="line">avatar: css/images/avatar.png</div><div class="line">location: <span class="string">'Harbin, China'</span></div><div class="line">language: en</div><div class="line">timezone:</div><div class="line"></div><div class="line"><span class="keyword">...</span></div><div class="line"></div><div class="line"><span class="comment"># Disqus</span></div><div class="line">disqus_shortname:</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>author</strong> - Your name.</li>
-<li><strong>author_title</strong> - Title to your occupation.</li>
-<li><strong>avatar</strong> - Your avatar image link.</li>
-<li><strong>location</strong> - Where you live in.</li>
-<li><strong>disqus_shortname</strong> - Your Disqus shortname.</li>
-</ul>
-<h3 id="Post-Thumbnail-amp-Banner"><a href="#Post-Thumbnail-amp-Banner" class="headerlink" title="Post Thumbnail &amp; Banner"></a>Post Thumbnail &amp; Banner</h3><p>You can add a thumbnail and a banner to each post by adding the following lines into your post source files’ front-matter:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: Demo</div><div class="line">date: <span class="number">2015</span>-<span class="number">01</span>-<span class="number">01</span></div><div class="line"><span class="keyword">...</span></div><div class="line"><span class="comment"># add those</span></div><div class="line">thumbnail: http://example.com/thumbnail.jpg</div><div class="line">banner: http://example.com/banner.jpg</div></pre></td></tr></table></figure></p>
-<h3 id="Custom-Categories-amp-Tags-Pages"><a href="#Custom-Categories-amp-Tags-Pages" class="headerlink" title="Custom Categories &amp; Tags Pages"></a>Custom Categories &amp; Tags Pages</h3><p>To enable custom categories page and tags page, just copy the <code>categories</code> folder and <code>tags</code> folder under your theme’s <code>_source</code> foler into your site’s <code>source</code> folder. Then edit theme’s _config.yml and add the following lines:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header</span></div><div class="line">menu:</div><div class="line">  <span class="keyword">...</span></div><div class="line">  Categories: categories <span class="comment"># -&gt; add this line</span></div><div class="line">  Tags: tags <span class="comment"># -&gt; and add this line</span></div><div class="line">  <span class="keyword">...</span></div></pre></td></tr></table></figure></p>
-<h3 id="Languages"><a href="#Languages" class="headerlink" title="Languages"></a>Languages</h3><p>English and Simplified Chinese are the default languages of the theme. You can add translations in the <code>languages</code> folder and change the default language in blog’s <code>_config.yml</code>.</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">language: zh-CN</div></pre></td></tr></table></figure>
-<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Profile-Sidebar"><a href="#Profile-Sidebar" class="headerlink" title="Profile Sidebar"></a>Profile Sidebar</h3><p>A nice place to show yourself. You can add your own information in your site’s <code>_config.yml</code></p>
-<p><img src="http://ppoffice.github.io/hexo-theme-icarus/gallery/profile.png" alt=""></p>
-<h3 id="Post-Banner-amp-Thumbnail"><a href="#Post-Banner-amp-Thumbnail" class="headerlink" title="Post Banner &amp; Thumbnail"></a>Post Banner &amp; Thumbnail</h3><p>Thanks to <a href="https://github.com/atika" target="_blank" rel="external">atika</a>, you can now add thumbnails and banners to every post to create better reading experience.</p>
-<h3 id="Responsive-Layout"><a href="#Responsive-Layout" class="headerlink" title="Responsive Layout"></a>Responsive Layout</h3><p>Icarus knows on what screen size you are browsering the website, and reorganize the layout to fit your device.</p>
-<p><img src="http://ppoffice.github.io/hexo-theme-icarus/gallery/responsive.jpg" alt=""></p>
-<h3 id="Custom-Categories-amp-Tags-Pages-1"><a href="#Custom-Categories-amp-Tags-Pages-1" class="headerlink" title="Custom Categories &amp; Tags Pages"></a>Custom Categories &amp; Tags Pages</h3><p>Get your categories and tags listed in single pages to make your blog more methodic.</p>
-<h3 id="Fancybox"><a href="#Fancybox" class="headerlink" title="Fancybox"></a>Fancybox</h3><p>Icarus uses <a href="http://fancyapps.com/fancybox/" target="_blank" rel="external">Fancybox</a> to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![img caption](img url)</div></pre></td></tr></table></figure>
-<h3 id="Sidebar"><a href="#Sidebar" class="headerlink" title="Sidebar"></a>Sidebar</h3><p>Icarus provides 6 built-in widgets:</p>
-<ul>
-<li>recent_posts</li>
-<li>category</li>
-<li>archives</li>
-<li>tag</li>
-<li>tagcloud</li>
-<li>links</li>
-</ul>
-<p>All of them are enabled by default. You can edit them in <code>widget</code> setting.</p>
-<h2 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
-<li><a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a> 0.4+</li>
-<li>Hexo 3.0+</li>
-</ul>
-<h3 id="Grunt-tasks"><a href="#Grunt-tasks" class="headerlink" title="Grunt tasks"></a>Grunt tasks</h3><ul>
-<li><strong>default</strong> - Download <a href="http://fancyapps.com/fancybox/" target="_blank" rel="external">Fancybox</a> and <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</li>
-<li><strong>fontawesome</strong> - Only download <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</li>
-<li><strong>fancybox</strong> - Only download <a href="http://fancyapps.com/fancybox/" target="_blank" rel="external">Fancybox</a>.</li>
-<li><strong>clean</strong> - Clean temporarily files and downloaded files.</li>
-</ul>
+            <p>今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记 <a id="more"></a>。作者信息如下：<br>作者：逍遥行<br>链接：<a href="https://www.zhihu.com/question/21923021/answer/37475572" target="_blank" rel="external">https://www.zhihu.com/question/21923021/answer/37475572</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
+<p>甲：abbaabbaaba<br>在里面寻找<br>乙：abbaaba<br>发现第 7 个字符不匹配。<br>这时候甲把乙叫走了，说你先一边玩去，我自己研究下。<br>然后甲想，自己已经知道乙的前 6 个字符就是自己的前 6 个字符，不妨先「自己与自己匹配一番」。<br>然后甲先用 abbaab 这 6 个已知的字符去匹配自身，错 1 个位，发现第一个就不一样（不匹配），然后错 2 个位，还是不匹配。<br>当错 3 个位的时候，甲发现匹配了一个 a，但是第二个 b 不匹配。<br>当错 4 个位的时候，匹配了两个。错 5 个位不匹配。后面的东西甲就不知道了，因为他只知道前 6 个字符。<br>（注：实际的匹配个数是字符串 [0…i] 的后缀与前缀的最长公共长度）</p>
+<p>随后，甲把乙叫了过来：<br>「我已经知道你下一次匹配开始的位置了，来，让你的头部对齐我的第 5 个字符，然后从你的第 3 个字符开始继续匹配我吧！」</p>
+<p>关键的地方，在于不要让乙「前功尽弃」——已经匹配了 6 个了，还差一个就结束了，这时不匹配导致从 0 开始，多可惜啊！<br>现在我告诉你，在不匹配的情况下，你仍然已经匹配了 2 个（乙内心：还好不是 0），并且你可以继续从不匹配的地方开始比较，即用你的 3 个字符与我继续匹配。<br>那，这个 2 你是怎么算的？<br>我在你来之前就算好啦！<br>我先与自己进行匹配（预处理），对每个位置，找「当前位置往前看的最长字符串，它与我的前缀匹配」（当然这个字符串不能是前缀），这个最长字符串的长度，在学术上称作「失配函数」。<br>UCCU，从你的第 6 个位置往前看，恰好 [ab] 与你的前缀 [ab] 匹配，但是我的第 7 个字符并不知道你的第 3 个字符是否与我一样，所以你直接从这里开始继续匹配我。</p>
+<p>以上为 KMP 的基本思想，关键在于失配函数的计算，网上的代码很多，这里有个很好的例子你仔细体会下：ababzababa，注意最后一个失配函数的值为 3。</p>
 
         
         </div>
@@ -269,7 +233,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/about/index.html" data-id="cirlvq4580002qgin8j5scwl9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/" data-id="cirlvq4820067qginc6n4idvo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -337,7 +301,7 @@ var _hmt = _hmt || [];
 
                 
     
-        <a href="http://blog.iamxcc.com/about/index.html#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/about/index.html">Comments</a>
+        <a href="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/">Comments</a>
     
 
             </footer>
@@ -345,6 +309,25 @@ var _hmt = _hmt || [];
     </div>
     
         
+<nav id="article-nav">
+    
+        <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 125: Valid Palindrome
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/06/LeetCode-28-Implement-strStr/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">LeetCode 28: Implement strStr()</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
@@ -354,7 +337,7 @@ var _hmt = _hmt || [];
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="about/index.html" data-title="About" data-url="http://blog.iamxcc.com/about/index.html"></div>
+    <div class="ds-thread" data-thread-key="2016/08/06/趣说KMP算法/" data-title="趣说KMP算法" data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -639,6 +622,16 @@ var _hmt = _hmt || [];
 
 	    
 	    
+	    	
+<div class="widget-wrap">
+	<h3 class="widget-title">目录</h3>
+	<div class="widget">
+		
+	</div>
+</div>
+
+
+		
     	<div id="toTop" class="fa fa-angle-up"></div>
 	</div>
 </aside>
