@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Implement Queue using Stacks | 胡闹的日子</title>
+    <title>LeetCode 231: Power of Two | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Implement the following operations of a queue using stacks.">
+    <meta name="description" content="这个题跟Power of Three的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以&amp;amp;,|这些位操作总能出奇迹。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Implement Queue using Stacks">
-<meta property="og:url" content="http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/index.html">
+<meta property="og:title" content="LeetCode 231: Power of Two">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="Implement the following operations of a queue using stacks.">
+<meta property="og:description" content="这个题跟Power of Three的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以&amp;amp;,|这些位操作总能出奇迹。">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-08T05:35:00.059Z">
+<meta property="og:updated_time" content="2016-08-08T07:56:22.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Implement Queue using Stacks">
-<meta name="twitter:description" content="Implement the following operations of a queue using stacks.">
+<meta name="twitter:title" content="LeetCode 231: Power of Two">
+<meta name="twitter:description" content="这个题跟Power of Three的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以&amp;amp;,|这些位操作总能出奇迹。">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
@@ -154,7 +154,7 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
-                        <article id="post-Implement-Queue-using-Stacks" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-231-Power-of-Two" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -178,8 +178,8 @@ var _hmt = _hmt || [];
 
                         
     <div class="article-date">
-        <a href="/2016/08/08/Implement-Queue-using-Stacks/">
-            <time datetime="2016-08-08T05:31:50.000Z" itemprop="datePublished">2016-08-08</time>
+        <a href="/2016/08/08/LeetCode-231-Power-of-Two/">
+            <time datetime="2016-08-08T07:33:15.000Z" itemprop="datePublished">2016-08-08</time>
         </a>
     </div>
 
@@ -189,10 +189,10 @@ var _hmt = _hmt || [];
             </header>
         
         <div class="article-img">
-            <a href="/2016/08/08/Implement-Queue-using-Stacks/" class="thumbnail">
+            <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="Implement Queue using Stacks" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 231: Power of Two" class="thumbnail-image"></span>
     
 </a>
 
@@ -203,37 +203,22 @@ var _hmt = _hmt || [];
         
     
         <h1 class="article-title" itemprop="name" class="name">
-            Implement Queue using Stacks
+            LeetCode 231: Power of Two
         </h1>
     
 
         
             
     <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Stack/">Stack</a>
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Math/">Math</a>
     </div>
 
         
         
             
-            <p>Implement the following operations of a queue using stacks. <a id="more"></a></p>
-<ul>
-<li>push(x) – Push element x to the back of queue.</li>
-<li>pop() – Removes the element from in front of queue.</li>
-<li>peek() – Get the front element.</li>
-<li>empty() – Return whether the queue is empty.</li>
-</ul>
-<p><strong>Notes:</strong></p>
-<ul>
-<li><p>You must use only standard operations of a stack – which means only push to top, peek/pop from top, size, and is empty operations are valid.</p>
-</li>
-<li><p>Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque (double-ended queue), as long as you use only standard operations of a stack. </p>
-</li>
-<li><p>You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="comment">//using deque to imitate the two stacks operation avoid extra O(N) space wasting;</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> *<span class="built_in">stack</span>;</div><div class="line">    <span class="keyword">int</span> begin; <span class="comment">//begin -&gt; point to the exact first front element;</span></div><div class="line">    <span class="keyword">int</span> end; <span class="comment">//end -&gt; point to the next element of the last element to be easily indicate the empty case;</span></div><div class="line">    <span class="keyword">int</span> maxSize;</div><div class="line">&#125; Queue;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queueCreate</span><span class="params">(Queue *<span class="built_in">queue</span>, <span class="keyword">int</span> maxSize)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span> = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*maxSize);</div><div class="line">    <span class="built_in">queue</span>-&gt;begin = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>-&gt;end = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>-&gt;maxSize = maxSize; <span class="comment">//record the maxSize for checking;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queuePush</span><span class="params">(Queue *<span class="built_in">queue</span>, <span class="keyword">int</span> element)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">queue</span>-&gt;end == <span class="built_in">queue</span>-&gt;maxSize) <span class="comment">//reach its valid end, we have to rearrange the stack;</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="built_in">queue</span>-&gt;begin; i &lt; <span class="built_in">queue</span>-&gt;end; i++)</div><div class="line">            <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[i-<span class="built_in">queue</span>-&gt;begin] = <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[i];</div><div class="line">        <span class="built_in">queue</span>-&gt;begin = <span class="number">0</span>;</div><div class="line">        <span class="built_in">queue</span>-&gt;end -= <span class="built_in">queue</span>-&gt;begin;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[<span class="built_in">queue</span>-&gt;end++] = element;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queuePop</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">queue</span>-&gt;begin++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">queuePeek</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[<span class="built_in">queue</span>-&gt;begin];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queueEmpty</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">queue</span>-&gt;begin == <span class="built_in">queue</span>-&gt;end;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queueDestroy</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">free</span>(<span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>);</div><div class="line">    <span class="comment">/*free(queue); this part cannot be executed*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
-</ul>
-
+            <p>这个题跟<code>Power of Three</code>的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以<code>&amp;</code>,<code>|</code>这些位操作总能出奇迹。<br><a id="more"></a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>我们可以列几个2的次幂数就可以发现，他们的二进制数的最高位为1，其他位都是0。所以让她与比她小的一个数的数做一下位与<code>&amp;</code>即有结果为0。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfTwo</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; !(n &amp; (n - <span class="number">1</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
         </div>
 
@@ -245,7 +230,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/" data-id="cirlltop6000lhcincla4zqoc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/" data-id="cirlrw2wq001wzsinpi5e41fk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -313,7 +298,7 @@ var _hmt = _hmt || [];
 
                 
     
-        <a href="http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/">Comments</a>
+        <a href="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/">Comments</a>
     
 
             </footer>
@@ -323,10 +308,19 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
+        <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">新一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 9: Palindrome Number
+                
+            </div>
+        </a>
     
-        <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" id="article-nav-older" class="article-nav-link-wrap">
+    
+        <a href="/2016/08/08/LeetCode-326-Power-of-Three/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">旧一篇</strong>
-            <div class="article-nav-title">LeetCode 20: Valid Parentheses</div>
+            <div class="article-nav-title">LeetCode 326: Power of Three</div>
         </a>
     
 </nav>
@@ -340,7 +334,7 @@ var _hmt = _hmt || [];
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/08/08/Implement-Queue-using-Stacks/" data-title="Implement Queue using Stacks" data-url="http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/08/LeetCode-231-Power-of-Two/" data-title="LeetCode 231: Power of Two" data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -402,7 +396,7 @@ var _hmt = _hmt || [];
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                61
+                65
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -460,7 +454,7 @@ var _hmt = _hmt || [];
         <h3 class="widget-title">标签</h3>
         <div class="widget tagcloud">
         	<a href="/" style="background: #ffa200; color: #fff;">全部</a>	
-            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 16.67px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.67px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 15px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.67px;">HTTP</a> <a href="/tags/KMP算法/" style="font-size: 10px;">KMP算法</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.33px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a>
+            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 17.14px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.43px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 14.29px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 12.86px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.43px;">HTTP</a> <a href="/tags/KMP算法/" style="font-size: 10px;">KMP算法</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.57px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 15.71px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a>
         </div>
     </div>
 
@@ -492,10 +486,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/Implement-Queue-using-Stacks/" class="thumbnail">
+                            <a href="/2016/08/08/LeetCode-319-Bulb-Switcher/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="Implement Queue using Stacks" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 319: Bulb Switcher" class="thumbnail-image"></span>
     
 </a>
 
@@ -503,7 +497,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/Implement-Queue-using-Stacks/" class="title">Implement Queue using Stacks</a>
+                                <a href="/2016/08/08/LeetCode-319-Bulb-Switcher/" class="title">LeetCode 319: Bulb Switcher</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -514,32 +508,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" class="thumbnail">
+                            <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 20: Valid Parentheses" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-title">
-                                <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" class="title">LeetCode 20: Valid Parentheses</a>
-                            </p>
-                            <p class="item-category">
-                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/LeetCode/算法/">算法</a>
-                            </p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" class="thumbnail">
-    
-    
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 125: Valid Palindrome" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 9: Palindrome Number" class="thumbnail-image"></span>
     
 </a>
 
@@ -547,7 +519,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" class="title">LeetCode 125: Valid Palindrome</a>
+                                <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="title">LeetCode 9: Palindrome Number</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -558,10 +530,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/06/趣说KMP算法/" class="thumbnail">
+                            <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/string-matching-algorithms-24-638.jpg) no-repeat;background-size: 100% 100%;" alt="趣说KMP算法" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 231: Power of Two" class="thumbnail-image"></span>
     
 </a>
 
@@ -569,10 +541,10 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/06/趣说KMP算法/" class="title">趣说KMP算法</a>
+                                <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="title">LeetCode 231: Power of Two</a>
                             </p>
                             <p class="item-category">
-                                <a class="article-category-link" href="/categories/算法/">算法</a>
+                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
                             </p>
                         </div>
                     </li>
@@ -580,10 +552,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/06/LeetCode-28-Implement-strStr/" class="thumbnail">
+                            <a href="/2016/08/08/LeetCode-326-Power-of-Three/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 28: Implement strStr()" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 326: Power of Three" class="thumbnail-image"></span>
     
 </a>
 
@@ -591,7 +563,29 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/06/LeetCode-28-Implement-strStr/" class="title">LeetCode 28: Implement strStr()</a>
+                                <a href="/2016/08/08/LeetCode-326-Power-of-Three/" class="title">LeetCode 326: Power of Three</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 232: Implement Queue using Stacks" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" class="title">LeetCode 232: Implement Queue using Stacks</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -629,7 +623,7 @@ var _hmt = _hmt || [];
 <div class="widget-wrap">
 	<h3 class="widget-title">目录</h3>
 	<div class="widget">
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.</span> <span class="toc-text">代码</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li></ol>
 	</div>
 </div>
 

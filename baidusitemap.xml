@@ -4,11 +4,99 @@
 
     
   <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/Implement-Queue-using-Stacks/</loc>
-    <lastmod>2016-08-08T05:35:00.059Z</lastmod>
+    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/</loc>
+    <lastmod>2016-08-08T08:25:00.610Z</lastmod>
     <data>
         <display>
-        <title>Implement Queue using Stacks</title>
+        <title>LeetCode 319: Bulb Switcher</title>
+        <pubTime>2016-08-08T08:15:41.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/</loc>
+    <lastmod>2016-08-08T07:56:22.033Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 231: Power of Two</title>
+        <pubTime>2016-08-08T07:33:15.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-326-Power-of-Three/</loc>
+    <lastmod>2016-08-08T07:55:28.625Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 326: Power of Three</title>
+        <pubTime>2016-08-08T07:02:06.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/</loc>
+    <lastmod>2016-08-08T07:54:48.313Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 9: Palindrome Number</title>
+        <pubTime>2016-08-08T07:52:04.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/</loc>
+    <lastmod>2016-08-08T07:54:08.585Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 232: Implement Queue using Stacks</title>
         <pubTime>2016-08-08T05:31:50.000Z</pubTime>
         
         <tag>LeetCode</tag>
