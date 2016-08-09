@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.iamxcc.com/404.html</loc>
+    
+    <lastmod>2016-08-09T08:15:23.289Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</loc>
     
     <lastmod>2016-08-09T06:33:33.310Z</lastmod>
