@@ -1,3 +1,4 @@
+
 if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
 else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
 var hookDUOSHUO_bl=false;
