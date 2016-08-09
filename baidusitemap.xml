@@ -4,6 +4,138 @@
 
     
   <url>
+    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</loc>
+    <lastmod>2016-08-09T06:33:33.310Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 13: Roman to Integer</title>
+        <pubTime>2016-08-05T09:34:44.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>String</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/</loc>
+    <lastmod>2016-08-09T06:23:15.703Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 12: Integer to Roman</title>
+        <pubTime>2016-08-09T00:18:43.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/</loc>
+    <lastmod>2016-08-09T02:43:23.378Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 258: Add Digits</title>
+        <pubTime>2016-08-09T02:42:38.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-69-Sqrt-x/</loc>
+    <lastmod>2016-08-09T02:29:46.675Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 69: Sqrt(x)</title>
+        <pubTime>2016-08-09T02:08:51.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-50-Pow-x-n/</loc>
+    <lastmod>2016-08-09T01:58:36.776Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 50: Pow(x, n)</title>
+        <pubTime>2016-08-09T01:57:20.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/</loc>
+    <lastmod>2016-08-09T01:57:58.832Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 7: Reverse integer</title>
+        <pubTime>2016-08-09T00:37:40.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/</loc>
     <lastmod>2016-08-08T08:52:14.614Z</lastmod>
     <data>
@@ -182,7 +314,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://blog.iamxcc.com/2016/08/01/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
@@ -424,28 +555,6 @@
         <display>
         <title>LeetCode 58: Length of Last Word</title>
         <pubTime>2016-08-05T10:23:40.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</loc>
-    <lastmod>2016-08-05T09:56:07.168Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 13: Roman to Integer</title>
-        <pubTime>2016-08-05T09:34:44.000Z</pubTime>
         
         <tag>LeetCode</tag>
          

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-08T08:52:14.614Z</updated>
+  <updated>2016-08-09T02:43:23.378Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -14,6 +14,135 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode 258: Add Digits</title>
+    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/"/>
+    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/</id>
+    <published>2016-08-09T02:42:38.000Z</published>
+    <updated>2016-08-09T02:43:23.378Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit. <a id="more"></a>For example:Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">addDigits</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = num % <span class="number">9</span>;</div><div class="line">    <span class="keyword">return</span> (res != <span class="number">0</span> || num == <span class="number">0</span>) ? res : <span class="number">9</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 69: Sqrt(x)</title>
+    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-69-Sqrt-x/"/>
+    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-69-Sqrt-x/</id>
+    <published>2016-08-09T02:08:51.000Z</published>
+    <updated>2016-08-09T02:29:46.675Z</updated>
+    
+    <content type="html"><![CDATA[<p>Implement int sqrt(int x). Compute and return the square root of x. <a id="more"></a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这里使用的方法是：牛顿迭代法快速寻找平方根。如果想详细了解，可以看看这篇文章一个Sqrt函数引发的血案 <a href="http://diducoder.com/sotry-about-sqrt.html" target="_blank" rel="external">一个Sqrt函数引发的血案</a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">long</span> r = x;</div><div class="line">    <span class="keyword">while</span> (r*r &gt; x)</div><div class="line">        r = (r + x/r) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> r;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Implement int sqrt(int x). Compute and return the square root of x.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 50: Pow(x, n)</title>
+    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-50-Pow-x-n/"/>
+    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-50-Pow-x-n/</id>
+    <published>2016-08-09T01:57:20.000Z</published>
+    <updated>2016-08-09T01:58:36.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>Implement pow(x, n). <a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">double</span> res = <span class="number">1</span>;</div><div class="line">    <span class="keyword">double</span> flag = x;</div><div class="line">    <span class="keyword">int</span> m = n;</div><div class="line">	<span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</div><div class="line">		x = <span class="number">1</span> / x;</div><div class="line">		<span class="keyword">if</span> (n == INT_MIN) &#123;</div><div class="line">			n = INT_MAX;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			n = -n;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span> (n&gt;<span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">if</span> (n &amp; <span class="number">1</span> == <span class="number">1</span>) &#123;</div><div class="line">			res = res*x;</div><div class="line">		&#125;</div><div class="line">		x *= x;</div><div class="line">		n = n &gt;&gt; <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (m == INT_MIN) &#123;</div><div class="line">	    <span class="keyword">if</span> (flag &lt; <span class="number">0</span>) &#123;</div><div class="line">	        <span class="keyword">return</span> -res;</div><div class="line">	    &#125;</div><div class="line">	&#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Implement pow(x, n).
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 7: Reverse integer</title>
+    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/"/>
+    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/</id>
+    <published>2016-08-09T00:37:40.000Z</published>
+    <updated>2016-08-09T01:57:58.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>Reverse digits of an integer. Example1: x = 123, return 321 Example2: x = -123, return -321. <a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (res &gt; INT_MAX/<span class="number">10</span> ||res &lt; INT_MIN/<span class="number">10</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        res = x % <span class="number">10</span> + res * <span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Reverse digits of an integer. Example1: x = 123, return 321 Example2: x = -123, return -321.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 12: Integer to Roman</title>
+    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/"/>
+    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/</id>
+    <published>2016-08-09T00:18:43.000Z</published>
+    <updated>2016-08-09T06:23:15.703Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999. <a id="more"></a></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">char</span> *str = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);</div><div class="line">    <span class="built_in">memset</span>(str,<span class="number">0</span>,<span class="number">100</span>);</div><div class="line">	<span class="keyword">char</span> *strM[] = &#123; <span class="string">""</span>, <span class="string">"M"</span>, <span class="string">"MM"</span>, <span class="string">"MMM"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strC[] = &#123; <span class="string">""</span>, <span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strX[] = &#123; <span class="string">""</span>, <span class="string">"X"</span>, <span class="string">"XX"</span>, <span class="string">"XXX"</span>, <span class="string">"XL"</span>, <span class="string">"L"</span>, <span class="string">"LX"</span>, <span class="string">"LXX"</span>, <span class="string">"LXXX"</span>, <span class="string">"XC"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strI[] = &#123; <span class="string">""</span>, <span class="string">"I"</span>, <span class="string">"II"</span>, <span class="string">"III"</span>, <span class="string">"IV"</span>, <span class="string">"V"</span>, <span class="string">"VI"</span>, <span class="string">"VII"</span>, <span class="string">"VIII"</span>, <span class="string">"IX"</span> &#125;;</div><div class="line">	<span class="built_in">strcpy</span>(str, strM[num / <span class="number">1000</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strC[(num % <span class="number">1000</span>) / <span class="number">100</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strX[(num % <span class="number">100</span>) / <span class="number">10</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strI[num % <span class="number">10</span>]);</div><div class="line">	<span class="keyword">return</span> str;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 这里不太明白char str[100] = &#123;0&#125; 为什么不行</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 319: Bulb Switcher</title>
@@ -453,155 +582,6 @@
     
     
       <category term="C语言" scheme="http://blog.iamxcc.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NULL,&#39;\0&#39;,0,&#39;/0&#39;和&quot;0&quot;的区别</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/NULL,0,&#39;0&#39;/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/NULL,0,&#39;0&#39;/</id>
-    <published>2016-08-05T13:03:42.000Z</published>
-    <updated>2016-08-05T13:29:20.946Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近发现对于NULL,’\0’,0,’/0’和”0”的区别有点混淆了。所以在查阅资料之后，将笔记记录在此处，免得下次忘记了可以看看。<br><a id="more"></a></p>
-<h2 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h2><p>NULL 即空指针，在C和C++中的形式不一样，msdn上有如下的内容那个：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> !defined(NULL)&amp;&amp;defined(__NEEDS_NULL)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL 0</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL ((void *)0)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
-<p>NULL 在c中用（void*）0表示，在c++中用0表示。    </p>
-<h2 id="‘-0’和’0’"><a href="#‘-0’和’0’" class="headerlink" title="‘\0’和’0’"></a>‘\0’和’0’</h2><ol>
-<li><p>‘\0’表示字符串结束，它在ASCII中的值为0（数值0，非字符‘0’。所以在数值上NULL, ‘\0’,0是一样的，都是0，但’0’就不同了，在ASCII码中编码为48，所以字符0和上述三个值不同。</p>
-</li>
-<li><p>在内存中<code>NULL</code> 和<code>&#39;\0&#39;</code> 和<code>&#39;0&#39;</code>都是一个8位的char类型，NULL 和’\0’ 值一样，都是0，以数字方式读取就是0，以字符串读取时就是’\0’或者null（和编译器有关）。</p>
-</li>
-<li><p>而<code>&#39;0&#39;</code>在内存存储着<code>48</code>，以字符读取就是<code>&#39;0&#39;</code>,以数字读取就是<code>48</code>，至于<code>0</code>，可能是char ,int ,float,double等类型，但是值和<code>NULL</code>和<code>&#39;\0&#39;</code>一样，都是<code>0</code>。</p>
-</li>
-</ol>
-<h2 id="‘-0’和’-0’"><a href="#‘-0’和’-0’" class="headerlink" title="‘/0’和’\0’"></a>‘/0’和’\0’</h2><p>我在写C代码时，经常把’\0’写成’/0’。其实这两者之间差别很大的。因为’/0’表示的是两个字符了，一个是’/‘, 另一个’0’。<br>而’\0’表示的字符串结束，值为0。</p>
-<h2 id="“0”"><a href="#“0”" class="headerlink" title="“0”"></a>“0”</h2><p>“0”表示的是字符串，即在存储中存储了两个内容，一个是’0’(即字符0)，另一个是字符串结束符’\0’(也即数字0)。</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>为了说明情况，下面列举了几个例子。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">48</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>);		==&gt;空（即<span class="literal">NULL</span>）</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>);		==&gt;<span class="number">0</span></div><div class="line"></div><div class="line">那么<span class="number">0</span>+<span class="string">'0'</span>,<span class="number">0</span>+<span class="string">'\0'</span>分别是什么呢？</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;空（<span class="literal">NULL</span>）<span class="comment">//先转换成int,然后ASCII编码相加为0，%c输出，转换成char,所以输出NULL</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;<span class="number">0</span>   	 <span class="comment">//先转换成int，然后ASCII编码相加为0, %d输出，不用转换，输出数字0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">48</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近发现对于NULL,’\0’,0,’/0’和”0”的区别有点混淆了。所以在查阅资料之后，将笔记记录在此处，免得下次忘记了可以看看。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="C语言" scheme="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="C语言" scheme="http://blog.iamxcc.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 263: Ugly Number</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/LeetCode-263-Ugly-Number/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/LeetCode-263-Ugly-Number/</id>
-    <published>2016-08-05T11:28:12.000Z</published>
-    <updated>2016-08-05T11:29:54.368Z</updated>
-    
-    <content type="html"><![CDATA[<p>Write a program to check whether a given number is an ugly number. Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. <a id="more"></a> For example, 6, 8 are ugly while 14 is not ugly since it includes another prime factor 7.</p>
-<p>Note that 1 is typically treated as an ugly number.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isUgly</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;<span class="number">6</span> &amp;&amp; num; i++) &#123;</div><div class="line">        <span class="keyword">while</span> (num % i == <span class="number">0</span>) &#123;</div><div class="line">            num /= i;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> num == <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>1012 / 1012 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Write a program to check whether a given number is an ugly number. Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 58: Length of Last Word</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/</id>
-    <published>2016-08-05T10:23:40.000Z</published>
-    <updated>2016-08-05T10:25:00.248Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. <a id="more"></a></p>
-<p>If the last word does not exist, return 0.<br>Note: A word is defined as a character sequence consists of non-space characters only.</p>
-<p><strong>For example,</strong><br>Given <code>s = &quot;Hello World&quot;</code>,<br>return <code>5</code>.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isChar</span><span class="params">(<span class="keyword">char</span> p)</span> </span>&#123;  </div><div class="line">    <span class="keyword">return</span> (<span class="string">'a'</span>&lt;=p &amp;&amp; p&lt;=<span class="string">'z'</span>)||(<span class="string">'A'</span>&lt;=p &amp;&amp; p&lt;=<span class="string">'Z'</span>);  </div><div class="line">&#125;  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> size = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">int</span> begin;</div><div class="line">    <span class="keyword">int</span> end = size - <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (size &lt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(end &gt;= <span class="number">0</span> &amp;&amp; s[end] == <span class="string">' '</span>) &#123;</div><div class="line">        end--;</div><div class="line">    &#125;</div><div class="line">    begin = end;</div><div class="line">    <span class="keyword">while</span> ( begin &gt;= <span class="number">0</span> &amp;&amp; isChar(s[begin])) &#123;</div><div class="line">            begin--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> end - begin;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 13: Roman to Integer</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</id>
-    <published>2016-08-05T09:34:44.000Z</published>
-    <updated>2016-08-05T09:56:07.168Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given a roman numeral, convert it to an integer.3999 / 3999 test cases passed. <a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanCharToInt</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</div><div class="line">    <span class="keyword">switch</span> (c) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'I'</span>: 	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'V'</span>:	<span class="keyword">return</span> <span class="number">5</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'X'</span>:	<span class="keyword">return</span> <span class="number">10</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'L'</span>:	<span class="keyword">return</span> <span class="number">50</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'C'</span>:	<span class="keyword">return</span> <span class="number">100</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'D'</span>:	<span class="keyword">return</span> <span class="number">500</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'M'</span>:	<span class="keyword">return</span> <span class="number">1000</span>;</div><div class="line">		<span class="keyword">default</span>:	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> size = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (romanCharToInt(s[i]) &lt; romanCharToInt(s[i + <span class="number">1</span>]))&#123;</div><div class="line">            res -= romanCharToInt(s[i]);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            res += romanCharToInt(s[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>3999 / 3999 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>24 ms</code><br>C++版本：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(string s)</span> </span>&#123;</div><div class="line">            <span class="keyword">int</span> num = <span class="number">0</span>;</div><div class="line">            <span class="keyword">int</span> size = s.size();</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">            	<span class="keyword">if</span> (i &lt; (size - <span class="number">1</span>) &amp;&amp; romanCharToInt(s[i]) &lt; romanCharToInt(s[i + <span class="number">1</span>])) &#123;</div><div class="line">            		num -= romanCharToInt(s[i]);</div><div class="line">            	&#125; <span class="keyword">else</span> &#123;</div><div class="line">    				num += romanCharToInt(s[i]);</div><div class="line">    			&#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> num;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">romanCharToInt</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</div><div class="line">        	<span class="keyword">switch</span> (c) &#123;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'I'</span>: 	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'V'</span>:	<span class="keyword">return</span> <span class="number">5</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'X'</span>:	<span class="keyword">return</span> <span class="number">10</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'L'</span>:	<span class="keyword">return</span> <span class="number">50</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'C'</span>:	<span class="keyword">return</span> <span class="number">100</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'D'</span>:	<span class="keyword">return</span> <span class="number">500</span>;</div><div class="line">        		<span class="keyword">case</span> <span class="string">'M'</span>:	<span class="keyword">return</span> <span class="number">1000</span>;</div><div class="line">        		<span class="keyword">default</span>:	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        	&#125;</div><div class="line">        &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p><code>3999 / 3999 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>36 ms</code><br>java版本：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="comment">//：Ⅰ（1）Ⅴ（5）Ⅹ（10）L（50）C（100）D（500）M（1000） </span></div><div class="line">        <span class="comment">// rules:位于大数的后面时就作为加数；位于大数的前面就作为减数</span></div><div class="line">        <span class="comment">//eg：Ⅲ=3,Ⅳ=4,Ⅵ=6,ⅩⅨ=19,ⅩⅩ=20,ⅩLⅤ=45,MCMⅩⅩC=1980</span></div><div class="line">        <span class="comment">//"DCXXI"</span></div><div class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> len = s.length();</div><div class="line">        HashMap&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character,Integer&gt;();</div><div class="line">        map.put(<span class="string">'I'</span>,<span class="number">1</span>);</div><div class="line">        map.put(<span class="string">'V'</span>,<span class="number">5</span>);</div><div class="line">        map.put(<span class="string">'X'</span>,<span class="number">10</span>);</div><div class="line">        map.put(<span class="string">'L'</span>,<span class="number">50</span>);</div><div class="line">        map.put(<span class="string">'C'</span>,<span class="number">100</span>);</div><div class="line">        map.put(<span class="string">'D'</span>,<span class="number">500</span>);</div><div class="line">        map.put(<span class="string">'M'</span>,<span class="number">1000</span>);</div><div class="line">        <span class="keyword">int</span> result = map.get(s.charAt(len -<span class="number">1</span>));</div><div class="line">        <span class="keyword">int</span> pivot = result;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = len -<span class="number">2</span>; i&gt;= <span class="number">0</span>;i--)&#123;</div><div class="line">            <span class="keyword">int</span> cur = map.get(s.charAt(i));</div><div class="line">            <span class="keyword">if</span>(cur &gt;=  pivot)&#123;</div><div class="line">                result += cur;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                result -= cur;</div><div class="line">            &#125;</div><div class="line">            pivot = cur;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>3999 / 3999 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>24 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given a roman numeral, convert it to an integer.3999 / 3999 test cases passed.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 344: Reverse String</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/LeetCode-344-Reverse-String/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/LeetCode-344-Reverse-String/</id>
-    <published>2016-08-05T09:12:25.000Z</published>
-    <updated>2016-08-05T09:18:56.336Z</updated>
-    
-    <content type="html"><![CDATA[<p>Write a function that takes a string as input and returns the string reversed. Example: Given <code>s = &quot;hello&quot;</code>, return <code>&quot;olleh&quot;</code>. <a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">reverseString</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> right = <span class="built_in">strlen</span>(s) - <span class="number">1</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">while</span> (left&lt;right)&#123;</div><div class="line">        s[left] ^= s[right];</div><div class="line">        s[right] ^= s[left];</div><div class="line">        s[left] ^= s[right];</div><div class="line">        left++;</div><div class="line">        right--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>476 / 476 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code><br>C++版本：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function">string <span class="title">reverseString</span><span class="params">(string s)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = s.size() - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (l &lt; r)&#123;</div><div class="line">            swap(s[l++], s[r--]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> s;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p><code>476 / 476 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>12 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Write a function that takes a string as input and returns the string reversed. Example: Given &lt;code&gt;s = &amp;quot;hello&amp;quot;&lt;/code&gt;, return &lt;code&gt;&amp;quot;olleh&amp;quot;&lt;/code&gt;.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
     
   </entry>
   

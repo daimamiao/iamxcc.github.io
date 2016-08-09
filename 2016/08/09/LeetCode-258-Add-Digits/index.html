@@ -3,19 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>series | 胡闹的日子</title>
+    <title>LeetCode 258: Add Digits | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
-    <meta name="description" content="This is the moment">
-<meta property="og:type" content="website">
-<meta property="og:title" content="series">
-<meta property="og:url" content="http://blog.iamxcc.com/series/index.html">
+    <meta name="description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 258: Add Digits">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="This is the moment">
-<meta property="og:updated_time" content="2016-08-07T06:46:05.185Z">
+<meta property="og:description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta property="og:updated_time" content="2016-08-09T02:43:23.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="series">
-<meta name="twitter:description" content="This is the moment">
+<meta name="twitter:title" content="LeetCode 258: Add Digits">
+<meta name="twitter:description" content="Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
     
 
     
@@ -68,6 +70,8 @@ var _hmt = _hmt || [];
                 <a class="main-nav-link" href="/categories">分类</a>
             
                 <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/series">系列</a>
             
                 <a class="main-nav-link" href="/about">关于</a>
             
@@ -137,6 +141,8 @@ var _hmt = _hmt || [];
                 
                     <td><a class="main-nav-link" href="/tags">标签</a></td>
                 
+                    <td><a class="main-nav-link" href="/series">系列</a></td>
+                
                     <td><a class="main-nav-link" href="/about">关于</a></td>
                 
                 <td>
@@ -155,7 +161,7 @@ var _hmt = _hmt || [];
             <div class="row">
                 <section id="main" class="md-8 sm-8">
                     <div class="row">
-                        <article id="series-undefined" class="article article-type-series article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-258-Add-Digits" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -164,11 +170,25 @@ var _hmt = _hmt || [];
                 
                     <div class="article-meta">
                         
+                            <div class="article-category-img">
+                                
+                                
+                                    
+                                        L
+                                    
+                                
+                            </div>
                         
+                        
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
                         
     <div class="article-date">
-        <a href="/series/index.html">
-            <time datetime="2016-08-07T06:35:51.000Z" itemprop="datePublished">2016-08-07</time>
+        <a href="/2016/08/09/LeetCode-258-Add-Digits/">
+            <time datetime="2016-08-09T02:42:38.000Z" itemprop="datePublished">2016-08-09</time>
         </a>
     </div>
 
@@ -178,10 +198,10 @@ var _hmt = _hmt || [];
             </header>
         
         <div class="article-img">
-            <a href="/series/index.html" class="thumbnail">
+            <a href="/2016/08/09/LeetCode-258-Add-Digits/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 258: Add Digits" class="thumbnail-image"></span>
     
 </a>
 
@@ -192,16 +212,21 @@ var _hmt = _hmt || [];
         
     
         <h1 class="article-title" itemprop="name" class="name">
-            series
+            LeetCode 258: Add Digits
         </h1>
     
 
         
             
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Math/">Math</a>
+    </div>
+
         
         
             
-            
+            <p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit. <a id="more"></a>For example:Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">addDigits</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = num % <span class="number">9</span>;</div><div class="line">    <span class="keyword">return</span> (res != <span class="number">0</span> || num == <span class="number">0</span>) ? res : <span class="number">9</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
         </div>
 
@@ -213,7 +238,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/series/index.html" data-id="cirm7604z000fm4in7v6fe3o8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/" data-id="cirn4smqo002fccinjtxphcaf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -281,7 +306,7 @@ var _hmt = _hmt || [];
 
                 
     
-        <a href="http://blog.iamxcc.com/series/index.html#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/series/index.html">Comments</a>
+        <a href="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/">Comments</a>
     
 
             </footer>
@@ -289,6 +314,16 @@ var _hmt = _hmt || [];
     </div>
     
         
+<nav id="article-nav">
+    
+    
+        <a href="/2016/08/09/LeetCode-69-Sqrt-x/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">旧一篇</strong>
+            <div class="article-nav-title">LeetCode 69: Sqrt(x)</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
@@ -298,7 +333,7 @@ var _hmt = _hmt || [];
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="series/index.html" data-title="series" data-url="http://blog.iamxcc.com/series/index.html"></div>
+    <div class="ds-thread" data-thread-key="2016/08/09/LeetCode-258-Add-Digits/" data-title="LeetCode 258: Add Digits" data-url="http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -360,7 +395,7 @@ var _hmt = _hmt || [];
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                65
+                70
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -418,7 +453,7 @@ var _hmt = _hmt || [];
         <h3 class="widget-title">标签</h3>
         <div class="widget tagcloud">
         	<a href="/" style="background: #ffa200; color: #fff;">全部</a>	
-            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 17.14px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.43px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 14.29px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 12.86px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.43px;">HTTP</a> <a href="/tags/KMP算法/" style="font-size: 10px;">KMP算法</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.57px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 15.71px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a>
+            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Array/" style="font-size: 15.71px;">Array</a> <a href="/tags/Bit-Manupulation/" style="font-size: 11.43px;">Bit Manupulation</a> <a href="/tags/C语言/" style="font-size: 14.29px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 12.86px;">Git</a> <a href="/tags/HTTP/" style="font-size: 11.43px;">HTTP</a> <a href="/tags/KMP算法/" style="font-size: 10px;">KMP算法</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Linked-List/" style="font-size: 18.57px;">Linked List</a> <a href="/tags/Mactype/" style="font-size: 10px;">Mactype</a> <a href="/tags/Math/" style="font-size: 17.14px;">Math</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a>
         </div>
     </div>
 
@@ -450,10 +485,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/LeetCode-319-Bulb-Switcher/" class="thumbnail">
+                            <a href="/2016/08/09/LeetCode-258-Add-Digits/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 319: Bulb Switcher" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 258: Add Digits" class="thumbnail-image"></span>
     
 </a>
 
@@ -461,7 +496,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/LeetCode-319-Bulb-Switcher/" class="title">LeetCode 319: Bulb Switcher</a>
+                                <a href="/2016/08/09/LeetCode-258-Add-Digits/" class="title">LeetCode 258: Add Digits</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -472,10 +507,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="thumbnail">
+                            <a href="/2016/08/09/LeetCode-69-Sqrt-x/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 9: Palindrome Number" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 69: Sqrt(x)" class="thumbnail-image"></span>
     
 </a>
 
@@ -483,7 +518,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="title">LeetCode 9: Palindrome Number</a>
+                                <a href="/2016/08/09/LeetCode-69-Sqrt-x/" class="title">LeetCode 69: Sqrt(x)</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -494,10 +529,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="thumbnail">
+                            <a href="/2016/08/09/LeetCode-50-Pow-x-n/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 231: Power of Two" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 50: Pow(x, n)" class="thumbnail-image"></span>
     
 </a>
 
@@ -505,7 +540,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="title">LeetCode 231: Power of Two</a>
+                                <a href="/2016/08/09/LeetCode-50-Pow-x-n/" class="title">LeetCode 50: Pow(x, n)</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -516,10 +551,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/LeetCode-326-Power-of-Three/" class="thumbnail">
+                            <a href="/2016/08/09/LeetCode-7-Reverse-integer/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 326: Power of Three" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 7: Reverse integer" class="thumbnail-image"></span>
     
 </a>
 
@@ -527,7 +562,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/LeetCode-326-Power-of-Three/" class="title">LeetCode 326: Power of Three</a>
+                                <a href="/2016/08/09/LeetCode-7-Reverse-integer/" class="title">LeetCode 7: Reverse integer</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -538,10 +573,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" class="thumbnail">
+                            <a href="/2016/08/09/LeetCode-12-Integer-to-Roman/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 232: Implement Queue using Stacks" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 12: Integer to Roman" class="thumbnail-image"></span>
     
 </a>
 
@@ -549,7 +584,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-title">
-                                <a href="/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" class="title">LeetCode 232: Implement Queue using Stacks</a>
+                                <a href="/2016/08/09/LeetCode-12-Integer-to-Roman/" class="title">LeetCode 12: Integer to Roman</a>
                             </p>
                             <p class="item-category">
                                 <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
@@ -583,6 +618,16 @@ var _hmt = _hmt || [];
 
 	    
 	    
+	    	
+<div class="widget-wrap">
+	<h3 class="widget-title">目录</h3>
+	<div class="widget">
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.</span> <span class="toc-text">代码</span></a></li></ol>
+	</div>
+</div>
+
+
+		
     	<div id="toTop" class="fa fa-angle-up"></div>
 	</div>
 </aside>
@@ -594,6 +639,7 @@ var _hmt = _hmt || [];
         <div id="footer-info" class="inner">
             &copy; 2016 XCC<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 本站总访问量<span id="busuanzi_value_site_uv"></span>次</span>
         </div>
     </div>
 </footer>
@@ -617,15 +663,20 @@ var _hmt = _hmt || [];
 
 
 
-<!-- Custom Scripts -->
+<!-- Fancybox Scripts -->
 
     
         <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
     
 
 
+<!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
 <script>
     (function(){
         var bp = document.createElement('script');
@@ -635,6 +686,11 @@ var _hmt = _hmt || [];
     })();
 </script>
 
+<!-- Statistics Scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Search Scripts -->
 
     <script src="/js/insight.js"></script>
 
