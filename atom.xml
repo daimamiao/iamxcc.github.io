@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-09T02:43:23.378Z</updated>
+  <updated>2016-08-10T15:39:58.142Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -14,6 +14,227 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PAT(Basic Level) 1001: 害死人不偿命的(3n+1)猜想</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/PAT-Basic-Level-1001-%E5%AE%B3%E6%AD%BB%E4%BA%BA%E4%B8%8D%E5%81%BF%E5%91%BD%E7%9A%84-3n-1-%E7%8C%9C%E6%83%B3/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/PAT-Basic-Level-1001-害死人不偿命的-3n-1-猜想/</id>
+    <published>2016-08-10T12:05:49.000Z</published>
+    <updated>2016-08-10T15:39:58.142Z</updated>
+    
+    <content type="html"><![CDATA[<p>卡拉兹(Callatz)猜想：对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。<a id="more"></a> 这样一直反复砍下去，最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？</p>
+<p>输入格式：每个测试输入包含1个测试用例，即给出自然数n的值。</p>
+<p>输出格式：输出从n计算到1需要的步数。</p>
+<p>输入样例：<br>3<br>输出样例：<br>5</p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</div><div class="line">	<span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span> (num != <span class="number">1</span>) &#123;</div><div class="line">		<span class="keyword">if</span> (num % <span class="number">2</span> == <span class="number">0</span>) &#123;</div><div class="line">			num /= <span class="number">2</span>;</div><div class="line">			count++;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			num = (num * <span class="number">3</span> + <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">			count++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d/n"</span>, count);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;卡拉兹(Callatz)猜想：对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。
+    
+    </summary>
+    
+      <category term="PAT" scheme="http://blog.iamxcc.com/categories/PAT/"/>
+    
+    
+      <category term="PAT" scheme="http://blog.iamxcc.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>L1-002: 打印沙漏</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/L1-002-%E6%89%93%E5%8D%B0%E6%B2%99%E6%BC%8F/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/L1-002-打印沙漏/</id>
+    <published>2016-08-10T11:00:27.000Z</published>
+    <updated>2016-08-10T14:19:24.680Z</updated>
+    
+    <content type="html"><![CDATA[<p>本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印 <a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*****</div><div class="line"> ***</div><div class="line">  *</div><div class="line"> ***</div><div class="line">*****</div></pre></td></tr></table></figure></p>
+<p>所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，再从小到大顺序递增；首尾符号数相等。</p>
+<p>给定任意N个符号，不一定能正好组成一个沙漏。要求打印出的沙漏能用掉尽可能多的符号。</p>
+<p>输入格式：</p>
+<p>输入在一行给出1个正整数N（&lt;=1000）和一个符号，中间以空格分隔。</p>
+<p>输出格式：</p>
+<p>首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">输入样例：</div><div class="line">19 *</div><div class="line">输出样例：</div><div class="line">*****</div><div class="line"> ***</div><div class="line">  *</div><div class="line"> ***</div><div class="line">*****</div><div class="line">2</div></pre></td></tr></table></figure></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</div><div class="line">	<span class="keyword">char</span> symbol;</div><div class="line">	<span class="keyword">int</span> max = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> times = <span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %c"</span>, &amp;num, &amp;symbol);</div><div class="line">	max = <span class="built_in">sqrt</span>(<span class="number">2</span>*(num + <span class="number">1</span>)) - <span class="number">1</span>;</div><div class="line">	max = (max % <span class="number">2</span>) == <span class="number">0</span> ? max - <span class="number">1</span> : max;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; max; j++) &#123;</div><div class="line">			<span class="keyword">int</span> temp = i &gt; max / <span class="number">2</span> ? (max - i - <span class="number">1</span>) : i;</div><div class="line">			<span class="keyword">if</span> (temp &lt;= j &amp;&amp; j &lt;= max - <span class="number">1</span> - temp) &#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">"%c"</span>, symbol);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (j &gt; max - <span class="number">1</span> - temp) &#123;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">" "</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> left = <span class="built_in">pow</span>((max + <span class="number">1</span>), <span class="number">2</span>) / <span class="number">2</span> - <span class="number">1</span>;</div><div class="line">	left = left &gt; <span class="number">0</span> ? left : <span class="number">0</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, num - left);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印
+    
+    </summary>
+    
+      <category term="PAT" scheme="http://blog.iamxcc.com/categories/PAT/"/>
+    
+    
+      <category term="PAT" scheme="http://blog.iamxcc.com/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 349: Intersection of Two Arrays</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-349-Intersection-of-Two-Arrays/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-349-Intersection-of-Two-Arrays/</id>
+    <published>2016-08-10T05:25:50.000Z</published>
+    <updated>2016-08-10T14:18:47.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given two arrays, write a function to compute their intersection. <a id="more"></a></p>
+<p><strong>Example:</strong><br>Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].</p>
+<p><strong>Note:</strong><br>Each element in the result must be unique.<br>The result can be in any order.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> *a, <span class="keyword">const</span> <span class="keyword">int</span> *b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">intersection</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    qsort(nums1,nums1Size,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</div><div class="line">    qsort(nums2,nums2Size,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</div><div class="line">    <span class="keyword">int</span> size = nums1Size &lt; nums2Size ? nums1Size : nums2Size;</div><div class="line">    <span class="keyword">int</span>* arr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*size); <span class="comment">//the size of the result will at most be size;</span></div><div class="line">    <span class="keyword">int</span> top = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">int</span> p1=<span class="number">0</span>, p2=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(p1&lt;nums1Size &amp;&amp; p2&lt;nums2Size)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(nums1[p1] &gt; nums2[p2]) p2++;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums1[p1] &lt; nums2[p2]) p1++;</div><div class="line">        <span class="keyword">else</span> <span class="comment">//only collect the equal one;</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(top==<span class="number">-1</span> || arr[top]!=nums1[p1])  <span class="comment">//avoid duplicates;</span></div><div class="line">                arr[++top] = nums1[p1];</div><div class="line">            p1++, p2++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    *returnSize = top+<span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given two arrays, write a function to compute their intersection.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Sort" scheme="http://blog.iamxcc.com/tags/Sort/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 242: Valid Anagram</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-242-Valid-Anagram/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-242-Valid-Anagram/</id>
+    <published>2016-08-10T05:08:47.000Z</published>
+    <updated>2016-08-10T14:19:08.593Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given two strings s and t, write a function to determine if t is an anagram of s. <a id="more"></a><br><strong>For example,</strong><br>s = “anagram”, t = “nagaram”, return true.<br>s = “rat”, t = “car”, return false.</p>
+<p>Note:<br>You may assume the string contains only lowercase alphabets.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *a, <span class="keyword">const</span> <span class="keyword">char</span> *b)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isAnagram</span><span class="params">(<span class="keyword">char</span>* s, <span class="keyword">char</span>* t)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lenS = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">int</span> lenT = <span class="built_in">strlen</span>(t);</div><div class="line">    <span class="keyword">if</span> (lenS != lenT) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    qsort(s, lenS, <span class="keyword">sizeof</span>(<span class="keyword">char</span>), cmp);</div><div class="line">    qsort(t, lenT, <span class="keyword">sizeof</span>(<span class="keyword">char</span>), cmp);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lenS; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (s[i] != t[i]) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given two strings s and t, write a function to determine if t is an anagram of s.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Sort" scheme="http://blog.iamxcc.com/tags/Sort/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 191: Number of 1 Bits</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-191-Number-of-1-Bits/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-191-Number-of-1-Bits/</id>
+    <published>2016-08-10T03:42:49.000Z</published>
+    <updated>2016-08-10T03:43:36.392Z</updated>
+    
+    <content type="html"><![CDATA[<p>Write a function that takes an unsigned integer and returns the number of ’1’ bits it has (also known as the Hamming weight). <a id="more"></a><br>For example, the 32-bit integer ’11’ has binary representation <code>00000000000000000000000000001011</code>, so the function should return <code>3</code>.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> nums = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> ( n != <span class="number">0</span>) &#123;</div><div class="line">        nums = nums + (n &amp; <span class="number">1</span>);</div><div class="line">        n = n &gt;&gt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> nums;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Write a function that takes an unsigned integer and returns the number of ’1’ bits it has (also known as the Hamming weight).
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Bit Manipulation" scheme="http://blog.iamxcc.com/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 338: Counting Bits</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-338-Counting-Bits/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-338-Counting-Bits/</id>
+    <published>2016-08-10T03:23:44.000Z</published>
+    <updated>2016-08-10T03:28:18.920Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. <a id="more"></a></p>
+<p>Example:<br>For num = 5 you should return [0,1,1,2,1,2].</p>
+<p>Follow up:</p>
+<p>It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n) /possibly in a single pass?<br>Space complexity should be O(n).<br>Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">countBits</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>* res = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>((num+<span class="number">1</span>)*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</div><div class="line">    res[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num; i++ ) &#123;</div><div class="line">        res[i] = res[i&gt;&gt;<span class="number">1</span>] + (i &amp; <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    *returnSize = num + <span class="number">1</span>; </div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Bit Manipulation" scheme="http://blog.iamxcc.com/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 342: Power of Four</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/</id>
+    <published>2016-08-10T02:56:19.000Z</published>
+    <updated>2016-08-10T03:03:48.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given an integer (signed 32 bits), write a function to check whether it is a power of 4. <a id="more"></a><br><strong>Example:</strong><br>Given num = 16, return true. Given num = 5, return false.<br>Follow up: Could you solve it without loops/recursion?</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先我们可以列出4, 16, 64, 256这几个数的二进制来看一下规律，发现它们都是在偶数位为1，而且只有一位是1，其余位都是0。有了上面这个规律我们就可以结题了。首先，筛选只有一位是1，其余位是0的数，使用<code>num &amp; (num-1)</code>即可。再使用<code>0x55555555</code>与num作位与操作<code>&amp;</code>即可发现，不是我们所要的数经过这步后都是0。到此我们就可以判断出结果了。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfFour</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> num &gt; <span class="number">0</span> &amp;&amp; (num&amp;(num<span class="number">-1</span>)) == <span class="number">0</span> &amp;&amp; (num &amp; <span class="number">0x55555555</span>) != <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>1060 / 1060 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Bit Manipulation" scheme="http://blog.iamxcc.com/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome52中Mactype无效怎么回退版本</title>
+    <link href="http://blog.iamxcc.com/2016/08/10/Chrome52%E4%B8%ADMactype%E6%97%A0%E6%95%88%E6%80%8E%E4%B9%88%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC/"/>
+    <id>http://blog.iamxcc.com/2016/08/10/Chrome52中Mactype无效怎么回退版本/</id>
+    <published>2016-08-10T02:18:59.000Z</published>
+    <updated>2016-08-10T02:28:44.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在chrome自动更新到523版本后，突然被chrome上显示的字体吓了一下，还以为什么坏了。后来才发现是mactype无效了，因为Chrome52后禁用DirectWrite渲染的选项已经没有了。<a id="more"></a> </p>
+<p>没有办法只能去找各种各样的解决办法，先是试了stylish的方式，效果不明显。后来又去找mactype有没有新的版本。一直折腾了好久后，终于下定决心把chrome回退到上一个版本。 </p>
+<p>可是怎么回退呢？卸载掉再重新装吗？<br>答案是不用这么麻烦。下面是解决办法，来自知乎 <a href="https://www.zhihu.com/people/zhen-ming-36-24" target="_blank" rel="external">Dorawei</a>：<br>C:\Program Files (x86)\Google\Chrome\Temp\ 下的一个文件夹中有old_chrome.exe，把它复制到C:\Program Files (x86)\Google\Chrome\Application 中改为 chrome.exe 就可以返回上一版了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天在chrome自动更新到523版本后，突然被chrome上显示的字体吓了一下，还以为什么坏了。后来才发现是mactype无效了，因为Chrome52后禁用DirectWrite渲染的选项已经没有了。
+    
+    </summary>
+    
+      <category term="Mactype" scheme="http://blog.iamxcc.com/categories/Mactype/"/>
+    
+    
+      <category term="Mactype" scheme="http://blog.iamxcc.com/tags/Mactype/"/>
+    
+      <category term="Chrome" scheme="http://blog.iamxcc.com/tags/Chrome/"/>
+    
+      <category term="Win10" scheme="http://blog.iamxcc.com/tags/Win10/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 258: Add Digits</title>
@@ -354,234 +575,6 @@
       <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
     
       <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>趣说KMP算法</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/%E8%B6%A3%E8%AF%B4KMP%E7%AE%97%E6%B3%95/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/趣说KMP算法/</id>
-    <published>2016-08-06T11:59:24.000Z</published>
-    <updated>2016-08-06T12:04:51.241Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记 <a id="more"></a>。作者信息如下：<br>作者：逍遥行<br>链接：<a href="https://www.zhihu.com/question/21923021/answer/37475572" target="_blank" rel="external">https://www.zhihu.com/question/21923021/answer/37475572</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
-<p>甲：abbaabbaaba<br>在里面寻找<br>乙：abbaaba<br>发现第 7 个字符不匹配。<br>这时候甲把乙叫走了，说你先一边玩去，我自己研究下。<br>然后甲想，自己已经知道乙的前 6 个字符就是自己的前 6 个字符，不妨先「自己与自己匹配一番」。<br>然后甲先用 abbaab 这 6 个已知的字符去匹配自身，错 1 个位，发现第一个就不一样（不匹配），然后错 2 个位，还是不匹配。<br>当错 3 个位的时候，甲发现匹配了一个 a，但是第二个 b 不匹配。<br>当错 4 个位的时候，匹配了两个。错 5 个位不匹配。后面的东西甲就不知道了，因为他只知道前 6 个字符。<br>（注：实际的匹配个数是字符串 [0…i] 的后缀与前缀的最长公共长度）</p>
-<p>随后，甲把乙叫了过来：<br>「我已经知道你下一次匹配开始的位置了，来，让你的头部对齐我的第 5 个字符，然后从你的第 3 个字符开始继续匹配我吧！」</p>
-<p>关键的地方，在于不要让乙「前功尽弃」——已经匹配了 6 个了，还差一个就结束了，这时不匹配导致从 0 开始，多可惜啊！<br>现在我告诉你，在不匹配的情况下，你仍然已经匹配了 2 个（乙内心：还好不是 0），并且你可以继续从不匹配的地方开始比较，即用你的 3 个字符与我继续匹配。<br>那，这个 2 你是怎么算的？<br>我在你来之前就算好啦！<br>我先与自己进行匹配（预处理），对每个位置，找「当前位置往前看的最长字符串，它与我的前缀匹配」（当然这个字符串不能是前缀），这个最长字符串的长度，在学术上称作「失配函数」。<br>UCCU，从你的第 6 个位置往前看，恰好 [ab] 与你的前缀 [ab] 匹配，但是我的第 7 个字符并不知道你的第 3 个字符是否与我一样，所以你直接从这里开始继续匹配我。</p>
-<p>以上为 KMP 的基本思想，关键在于失配函数的计算，网上的代码很多，这里有个很好的例子你仔细体会下：ababzababa，注意最后一个失配函数的值为 3。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记
-    
-    </summary>
-    
-      <category term="算法" scheme="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="KMP算法" scheme="http://blog.iamxcc.com/tags/KMP%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 28: Implement strStr()</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/LeetCode-28-Implement-strStr/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/LeetCode-28-Implement-strStr/</id>
-    <published>2016-08-06T10:12:33.000Z</published>
-    <updated>2016-08-06T10:52:18.665Z</updated>
-    
-    <content type="html"><![CDATA[<p>Implement strStr(). Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.<br><a id="more"></a></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>一开始想的是暴力法，就是匹配串与被匹配串从开头开始比较，一发现不对劲，匹配串就向右移动一个单位重新开始比较，一直循环下去直到找到正确匹配位置。后来上网查了一下发现，这是个经典的字符串匹配问题，实现的算法有很多。比如：著名而难以理解的KMP算法、Brute-Force算法、Boyer-Moore算法、Sunday算法……。下面提供的就是Brute-Force算法。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(<span class="keyword">char</span>* haystack, <span class="keyword">char</span>* needle)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> m = <span class="built_in">strlen</span>(haystack);</div><div class="line">    <span class="keyword">int</span> n = <span class="built_in">strlen</span>(needle);</div><div class="line">    <span class="keyword">if</span> (!n) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m - n + <span class="number">1</span>; i++) &#123;</div><div class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (; j &lt; n; j++)&#123;</div><div class="line">            <span class="keyword">if</span> (haystack[i+j] != needle[j])&#123;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (j == n) &#123;</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>72 / 72 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Implement strStr(). Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OSI模型与TCP/IP模型</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/OSI%E6%A8%A1%E5%9E%8B%E4%B8%8ETCP-IP%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/OSI模型与TCP-IP模型/</id>
-    <published>2016-08-06T09:20:25.000Z</published>
-    <updated>2016-08-06T09:28:19.600Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天重新温习了一篇OSI模型与TCP/IP模型的知识，发现很多知识点又忘记了。所以，在此记录一下，方便下次查阅。<a id="more"></a></p>
-<h2 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h2><p>从低到高：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
-<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>并不是指物理设备或者物理媒体。而是有关物理设备通过物理媒体进行互联的描述和规定。该层定义了接口的机械特性、电气特性、功能特性、规程特性等4个基本特性。物理层以比特流的方式传送来自数据链路层的数据，而不去理会数据的含义和格式。同样，接收数据后直接传给数据链路层。</p>
-<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>负责通过物理层从一台计算机到另外一台计算机无差错的传输数据帧，允许网络层通过网络连接进行虚拟无差错的传输。通常，数据链路层发送数据帧之后，等待接收方进行确认。接收方数据链路层检测帧传输过程中产生的任何问题。没有经过确认和损坏的帧都需要重传。</p>
-<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>负责信息寻址和将逻辑地址转换为物理地址。在网络层，数据传递单位是包。网络层的任务是选择合适的路径转发数据包。使发送方的数据包能够正确无误的按地址寻找到接收方的路径。并将数据包交给接收方。网络中两点之间可以到达的路径可能有很多，在选择最快捷、花费最低的路径时必须考虑网络拥塞程度、服务质量、线路的花费和线路的有效性。总的来说，网络层负责选择最佳路径。</p>
-<p>网络层还能够协调发送、传输及接收设备的能力不平衡问题。如网络层对数据进行分段和重组，使得数据的长度能够满足该网络下层数据链路锁支持的最大数据帧MTU的长度。还需要考虑网络层不同网络协议之间的相互连接问题。</p>
-<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>传输层的功能是保证在不同子网的两台设备间数据包可靠、顺序、无错的传输。在传输层，数据传输单位是段。传输层负责处理端对端通信，即一个终端到另一个终端的通信，中间可以有多个交换节点。传输层向高层用户提供端到端的可靠的透明传输服务，为不同进程间的数据交换提供可靠的传输手段。在传输层的一个很重要的工作是数据的分段和重组，即把一个上层数据切割成更小的逻辑片和物理片。发送方在传输层把上层交给它的较大的数据进行分段后分别交给网络层进行独立输出，从而在传输层实现流量控制，提高网络资源的利用率。接收方收到数据后重组。传输层可以将收到的乱序数据包重新排序，并验证是否收到所有分组。</p>
-<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><p>会话层是利用传输层提供的端到端的服务，向表示层或会话用户提供会话服务。会话层主要功能是在两个节点之间建立、维护、释放面向用户的连接，并对会话进行管理和控制，保证会话数据可靠传送。会话层的连接与传输层的连接有1对1、1对多、多对1的关系。会话工程中，会话层需要决定到底使用全双工通信还是半双工通信。如果采用全双工，会话层的对话管理工作就很少。如果采用半双工，会话层则通过一个数据令牌来协调会话。保证每次只有一个用户能够传输数据。会话层提供同步服务，通过在数据流中定义检查点来把会话分割成明显的会话单元。当网络出故障时，从最后一个检查点开始重传数据。SQL、RPC(远程进程呼叫)都属于该层协议。</p>
-<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p>表示层专门负责有关网络中计算机信息表示方式的问题。表示层在不同的数据格式之间进行数据转换，实现不同计算机之间的信息交换。除了编码，还包括数组、浮点数、记录、图像、声音等。表示层还负责数据的加密。文件的压缩，降低传输费用。</p>
-<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>直接与用户和应用程序打交道。负责对软件提供接口以使程序可以使用网络。Telnet(虚拟终端协议)、SMTP(简单邮件传输协议)、SNMP(简单网络管理协议)、DNS(域名系统)和超文本传输协议(HTTP)。</p>
-<h2 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h2><p>从低到高：网络接口层、网络层、传输层、应用层。</p>
-<p>各层主要功能大致与OSI相对应。</p>
-<p><strong>应用层协议：</strong>HTTP、FTP、SMTP、DNS。</p>
-<p><strong>传输层协议：</strong>TCP、UDP。</p>
-<p><strong>网络层协议：</strong>IP、ARP、ICMP(因特网控制消息协议)、RARP(反向地址解释协议)。</p>
-<p><strong>网络接口层：</strong>Ethrenet、令牌环、帧中继、ISDN和分组交换网X.25。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天重新温习了一篇OSI模型与TCP/IP模型的知识，发现很多知识点又忘记了。所以，在此记录一下，方便下次查阅。
-    
-    </summary>
-    
-      <category term="计算机网络" scheme="http://blog.iamxcc.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="计算机网络" scheme="http://blog.iamxcc.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 8: String to Integer(atoi)</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/</id>
-    <published>2016-08-06T05:38:56.000Z</published>
-    <updated>2016-08-06T06:14:57.166Z</updated>
-    
-    <content type="html"><![CDATA[<p>Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases. <a id="more"></a>If you want a challenge, please do not see below and ask yourself what are the possible input cases.</p>
-<p><strong>Notes:</strong> It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span>* str)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (!str) &#123;</div><div class="line">        <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(<span class="string">' '</span> == *str) &#123;</div><div class="line">        str++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (<span class="string">'-'</span> == *str || <span class="string">'+'</span> == *str) &#123;</div><div class="line">        sign = *str++ == <span class="string">'+'</span> ? <span class="number">1</span> : <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(*str &gt;= <span class="string">'0'</span> &amp;&amp; *str &lt;= <span class="string">'9'</span>) &#123;</div><div class="line">	<span class="keyword">if</span> (res &gt; INT_MAX / <span class="number">10</span> || (res == INT_MAX / <span class="number">10</span> &amp;&amp; *str - <span class="string">'0'</span> &gt; <span class="number">7</span>)) &#123;</div><div class="line">		<span class="keyword">return</span> sign &gt; <span class="number">0</span> ? INT_MAX : INT_MIN;</div><div class="line">	&#125;</div><div class="line">	res = res * <span class="number">10</span> + (((<span class="keyword">int</span>)*str++) - <span class="string">'0'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res * sign;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>1047 / 1047 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Implement atoi to convert a string to an integer. Hint: Carefully consider all possible input cases.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 67: Add Binary</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/</id>
-    <published>2016-08-06T03:29:22.000Z</published>
-    <updated>2016-08-06T03:31:24.797Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given two binary strings, return their sum (also a binary string). For example, a = <code>&quot;11&quot;</code>, b = <code>&quot;1&quot;</code>, Return <code>&quot;100&quot;</code>.<br><a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">addBinary</span><span class="params">(<span class="keyword">char</span>* a, <span class="keyword">char</span>* b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lenA = <span class="built_in">strlen</span>(a);</div><div class="line">    <span class="keyword">int</span> lenB = <span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> len = lenA &gt; lenB ? lenA : lenB;</div><div class="line">    <span class="keyword">char</span> *sum = (<span class="keyword">char</span>*)<span class="built_in">calloc</span>(len + <span class="number">2</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</div><div class="line">    sum[len + <span class="number">1</span>] = <span class="string">'\0'</span>;</div><div class="line">    lenA--; lenB--;</div><div class="line">    <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (lenA &gt;= <span class="number">0</span> || lenB &gt;= <span class="number">0</span>) &#123;</div><div class="line">        c += lenA &gt;= <span class="number">0</span> ? a[lenA--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        c += lenB &gt;= <span class="number">0</span> ? b[lenB--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        sum[len--] = c % <span class="number">2</span> + <span class="string">'0'</span>;</div><div class="line">        c /= <span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (!c) <span class="keyword">return</span> sum + <span class="number">1</span>;</div><div class="line">    sum[<span class="number">0</span>] = <span class="string">'1'</span>;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>294 / 294 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>0 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given two binary strings, return their sum (also a binary string). For example, a = &lt;code&gt;&amp;quot;11&amp;quot;&lt;/code&gt;, b = &lt;code&gt;&amp;quot;1&amp;quot;&lt;/code&gt;, Return &lt;code&gt;&amp;quot;100&amp;quot;&lt;/code&gt;.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 14: Longest Common Prefix</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/LeetCode-14-Longest-Common-Prefix/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/LeetCode-14-Longest-Common-Prefix/</id>
-    <published>2016-08-06T02:19:56.000Z</published>
-    <updated>2016-08-06T02:21:59.596Z</updated>
-    
-    <content type="html"><![CDATA[<p>Write a function to find the longest common prefix string amongst an array of strings. <a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">longestCommonPrefix</span><span class="params">(<span class="keyword">char</span>** strs, <span class="keyword">int</span> strsSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (strs == <span class="literal">NULL</span> || *strs == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(strs[<span class="number">0</span>]);</div><div class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</div><div class="line">    <span class="keyword">char</span> *res;</div><div class="line">    <span class="keyword">while</span> (max &lt; len) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; strsSize; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (strs[i][max] != strs[<span class="number">0</span>][max]) &#123;</div><div class="line">                len = max;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (max &lt; len) max++;</div><div class="line">    &#125;</div><div class="line">    res = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>)*(max+<span class="number">1</span>));</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</div><div class="line">        res[i] = strs[<span class="number">0</span>][i];</div><div class="line">    &#125;</div><div class="line">    res[max] = <span class="string">'\0'</span>;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>117 / 117 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>0 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Write a function to find the longest common prefix string amongst an array of strings.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 345: Reverse Vowels of a String</title>
-    <link href="http://blog.iamxcc.com/2016/08/06/LeetCode-345-Reverse-Vowels-of-a-String/"/>
-    <id>http://blog.iamxcc.com/2016/08/06/LeetCode-345-Reverse-Vowels-of-a-String/</id>
-    <published>2016-08-06T01:11:36.000Z</published>
-    <updated>2016-08-06T01:14:24.580Z</updated>
-    
-    <content type="html"><![CDATA[<p>Write a function that takes a string as input and reverse only the vowels of a string.<a id="more"></a></p>
-<p><strong>Example 1:</strong><br>Given s = “hello”, return “holle”.<br><strong>Example 2:</strong><br>Given s = “leetcode”, return “leotcede”.</p>
-<p>Note:<br>The vowels does not include the letter “y”.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isVowelsChar</span><span class="params">(<span class="keyword">char</span> p)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> (p == <span class="string">'a'</span> || p == <span class="string">'e'</span> || p == <span class="string">'i'</span> || p == <span class="string">'o'</span> || p == <span class="string">'u'</span> || p==<span class="string">'A'</span> || p==<span class="string">'E'</span> || p == <span class="string">'I'</span> || p == <span class="string">'O'</span> || p ==<span class="string">'U'</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">reverseVowels</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> right = <span class="built_in">strlen</span>(s) - <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">strlen</span>(s) &lt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> s;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</div><div class="line">        <span class="keyword">while</span> (!isVowelsChar(s[left]) &amp;&amp; left &lt; right) &#123;</div><div class="line">            left++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span> (!isVowelsChar(s[right]) &amp;&amp; left &lt; right) &#123;</div><div class="line">            right--;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">char</span> temp = s[left];</div><div class="line">		s[left] = s[right];</div><div class="line">		s[right] = temp;</div><div class="line">        left++;</div><div class="line">		right--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>481 / 481 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Write a function that takes a string as input and reverse only the vowels of a string.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="String" scheme="http://blog.iamxcc.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言实现strlen函数的方法</title>
-    <link href="http://blog.iamxcc.com/2016/08/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0strlen%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://blog.iamxcc.com/2016/08/05/C语言实现strlen函数的方法/</id>
-    <published>2016-08-05T13:42:17.000Z</published>
-    <updated>2016-08-05T13:51:29.610Z</updated>
-    
-    <content type="html"><![CDATA[<p>不使用中间变量求const字符串长度，即实现求字符串长度库函数strlen函数。函数接口声明如下：int strlen(const char *p)； <a id="more"></a></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>在字符串中通常可以利用最后一个结束符’\0’，但此处参数为const，只读，那么我们不能打他的主意。<br>函数运行过程中不占用内存基本不可能，除非都使用了寄存器。“不使用中间变量”只是说程序员不能显示的申请内存而已，即不能有局部变量或者动态内存申请。如果函数自动申请栈内存或者使用寄存器存储变量，或者使用立即数寻址即常量，那么就相当于“不使用中间变量”。<br>从函数原型看，返回值为int，那么在函数内部必定需要一个地方存储这个值，要么是常数要么是寄存器。长度不为1时不能一次就求出来，说明必须有递归调用，这样递归时函数会自动申请栈内存，这样就相当于程序员“不使用中间变量”了。中间返回的值通过寄存器自动保存，最后一次返回时拷贝到int中去。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;assert.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen2</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">char</span> *str=<span class="literal">NULL</span>;</div><div class="line">    str = <span class="string">"Hello Jay!"</span>;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"original strlen():%d\n"</span>,<span class="built_in">strlen</span>(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen():%d\n"</span>,myStrlen(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen1():%d\n"</span>,myStrlen1(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen2():%d\n"</span>,myStrlen2(str));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>   <span class="comment">// 不用中间变量，用递归实现，很容易看懂</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> ( (str == <span class="literal">NULL</span>) || (*str == <span class="string">'\0'</span>) ) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> myStrlen(str+<span class="number">1</span>)+<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>  <span class="comment">// 不用中间变量，也是用递归实现，写得更简洁而已</span></span></div><div class="line">&#123;</div><div class="line">    assert(str != <span class="literal">NULL</span>);</div><div class="line">    <span class="keyword">return</span> *str ? (myStrlen1(++str) + <span class="number">1</span>) : <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen2</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>  <span class="comment">// 使用了一个int型变量</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(str==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(; *str++ != <span class="string">'\0'</span>; )</div><div class="line">    &#123;</div><div class="line">        len++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;不使用中间变量求const字符串长度，即实现求字符串长度库函数strlen函数。函数接口声明如下：int strlen(const char *p)；
-    
-    </summary>
-    
-      <category term="C语言" scheme="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="C语言" scheme="http://blog.iamxcc.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
