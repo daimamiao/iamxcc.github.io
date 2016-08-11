@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="md-10 md-offset-1">
+                <div class="md-8 md-offset-2">
                     <div id="profile">
     <div id="avatar">
         <img src="/css/images/avatar1.png" >
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
         <div id="social-links">
             
             
-                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                <a href="http://github.com/iamxcc/" target="_blank" title="github" class=tooltip>
                     <i class="fa fa-github"></i>
                     github
                 </a>
@@ -181,28 +181,6 @@ var _hmt = _hmt || [];
                     <div id="content">
                         <article id="post-LeetCode-67-Add-Binary" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<!-- <i class="fa fa-folder"></i> -->
-        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <a href="/2016/08/06/LeetCode-67-Add-Binary/">
-            <time datetime="2016-08-06T03:29:22.000Z" itemprop="datePublished">2016-08-06</time>
-        </a>
-    </div>
-
-
-                    </div>
-                
-            </header>
-        
         <div class="article-img">
             <a href="/2016/08/06/LeetCode-67-Add-Binary/" class="thumbnail">
     
@@ -213,20 +191,34 @@ var _hmt = _hmt || [];
 
         </div>
         
-
-        <div class="article-entry" itemprop="articleBody">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 67: Add Binary
         </h1>
     
 
+            </header>
+        
+        <div class="article-meta">
             
-    <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
-    </div>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                </div>
+            
+            <a href="/2016/08/06/LeetCode-67-Add-Binary/" class="article-date">
+                
+                <time datetime="2016-08-06T03:29:22.000Z" itemprop="datePublished">5天前</time>
+            </a>
+        </div>
 
+        
+            <div class="article-tag">
+                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">52</span></a>  <a class="tag-link" href="/tags/String/">String<span class="tag-count">10</span></a>
+            </div>
+        
+        <div class="article-content" itemprop="articleBody">
             
             <p>Given two binary strings, return their sum (also a binary string). For example, a = <code>&quot;11&quot;</code>, b = <code>&quot;1&quot;</code>, Return <code>&quot;100&quot;</code>.<br><a id="more"></a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">addBinary</span><span class="params">(<span class="keyword">char</span>* a, <span class="keyword">char</span>* b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lenA = <span class="built_in">strlen</span>(a);</div><div class="line">    <span class="keyword">int</span> lenB = <span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> len = lenA &gt; lenB ? lenA : lenB;</div><div class="line">    <span class="keyword">char</span> *sum = (<span class="keyword">char</span>*)<span class="built_in">calloc</span>(len + <span class="number">2</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</div><div class="line">    sum[len + <span class="number">1</span>] = <span class="string">'\0'</span>;</div><div class="line">    lenA--; lenB--;</div><div class="line">    <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (lenA &gt;= <span class="number">0</span> || lenB &gt;= <span class="number">0</span>) &#123;</div><div class="line">        c += lenA &gt;= <span class="number">0</span> ? a[lenA--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        c += lenB &gt;= <span class="number">0</span> ? b[lenB--] - <span class="string">'0'</span> : <span class="number">0</span>;</div><div class="line">        sum[len--] = c % <span class="number">2</span> + <span class="string">'0'</span>;</div><div class="line">        c /= <span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (!c) <span class="keyword">return</span> sum + <span class="number">1</span>;</div><div class="line">    sum[<span class="number">0</span>] = <span class="string">'1'</span>;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -241,7 +233,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/" data-id="cirqcbap8004uakin4kccdfkk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/" data-id="cirqi4r7g004lgwinq15ru9p8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

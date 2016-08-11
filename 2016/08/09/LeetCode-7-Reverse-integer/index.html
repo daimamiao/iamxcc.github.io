@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="md-10 md-offset-1">
+                <div class="md-8 md-offset-2">
                     <div id="profile">
     <div id="avatar">
         <img src="/css/images/avatar1.png" >
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
         <div id="social-links">
             
             
-                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                <a href="http://github.com/iamxcc/" target="_blank" title="github" class=tooltip>
                     <i class="fa fa-github"></i>
                     github
                 </a>
@@ -181,28 +181,6 @@ var _hmt = _hmt || [];
                     <div id="content">
                         <article id="post-LeetCode-7-Reverse-integer" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<!-- <i class="fa fa-folder"></i> -->
-        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <a href="/2016/08/09/LeetCode-7-Reverse-integer/">
-            <time datetime="2016-08-09T00:37:40.000Z" itemprop="datePublished">2016-08-09</time>
-        </a>
-    </div>
-
-
-                    </div>
-                
-            </header>
-        
         <div class="article-img">
             <a href="/2016/08/09/LeetCode-7-Reverse-integer/" class="thumbnail">
     
@@ -213,20 +191,34 @@ var _hmt = _hmt || [];
 
         </div>
         
-
-        <div class="article-entry" itemprop="articleBody">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 7: Reverse integer
         </h1>
     
 
+            </header>
+        
+        <div class="article-meta">
             
-    <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Math/">Math</a>
-    </div>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                </div>
+            
+            <a href="/2016/08/09/LeetCode-7-Reverse-integer/" class="article-date">
+                
+                <time datetime="2016-08-09T00:37:40.000Z" itemprop="datePublished">2天前</time>
+            </a>
+        </div>
 
+        
+            <div class="article-tag">
+                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">52</span></a>  <a class="tag-link" href="/tags/Math/">Math<span class="tag-count">10</span></a>
+            </div>
+        
+        <div class="article-content" itemprop="articleBody">
             
             <p>Reverse digits of an integer. Example1: x = 123, return 321 Example2: x = -123, return -321. <a id="more"></a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (res &gt; INT_MAX/<span class="number">10</span> ||res &lt; INT_MIN/<span class="number">10</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        res = x % <span class="number">10</span> + res * <span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -240,7 +232,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/" data-id="cirqcbap7004nakindiy8i4bh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/" data-id="cirqi4r7j004wgwin49p5d63h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="md-10 md-offset-1">
+                <div class="md-8 md-offset-2">
                     <div id="profile">
     <div id="avatar">
         <img src="/css/images/avatar1.png" >
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
         <div id="social-links">
             
             
-                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                <a href="http://github.com/iamxcc/" target="_blank" title="github" class=tooltip>
                     <i class="fa fa-github"></i>
                     github
                 </a>
@@ -181,28 +181,6 @@ var _hmt = _hmt || [];
                     <div id="content">
                         <article id="post-LeetCode-234-Palindrome-Linked-List" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<!-- <i class="fa fa-folder"></i> -->
-        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <a href="/2016/08/03/LeetCode-234-Palindrome-Linked-List/">
-            <time datetime="2016-08-03T14:21:55.000Z" itemprop="datePublished">2016-08-03</time>
-        </a>
-    </div>
-
-
-                    </div>
-                
-            </header>
-        
         <div class="article-img">
             <a href="/2016/08/03/LeetCode-234-Palindrome-Linked-List/" class="thumbnail">
     
@@ -213,20 +191,34 @@ var _hmt = _hmt || [];
 
         </div>
         
-
-        <div class="article-entry" itemprop="articleBody">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 234: Palindrome Linked List
         </h1>
     
 
+            </header>
+        
+        <div class="article-meta">
             
-    <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Linked-List/">Linked List</a>
-    </div>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                </div>
+            
+            <a href="/2016/08/03/LeetCode-234-Palindrome-Linked-List/" class="article-date">
+                
+                <time datetime="2016-08-03T14:21:55.000Z" itemprop="datePublished">8天前</time>
+            </a>
+        </div>
 
+        
+            <div class="article-tag">
+                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">52</span></a>  <a class="tag-link" href="/tags/Linked-List/">Linked List<span class="tag-count">15</span></a>
+            </div>
+        
+        <div class="article-content" itemprop="articleBody">
             
             <p>Given a singly linked list, determine if it is a palindrome. Follow up: Could you do it in O(n) time and O(1) space? <a id="more"></a></p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题让我们判断一个链表是否为回文链表，LeetCode中关于回文串的题共有六道，除了这道，其他的五道为 Palindrome Number 验证回文数字， Validate Palindrome 验证回文字符串， Palindrome Partitioning 拆分回文串，Palindrome Partitioning II 拆分回文串之二 和 Longest Palindromic Substring 最长回文串.链表比字符串难的地方就在于不能通过坐标来直接访问，而只能从头开始遍历到某个位置。那么根据回文串的特点，我们需要比较对应位置的值是否相等，那么我们首先需要找到链表的中点，这个可以用快慢指针来实现，使用方法可以参见之前的两篇Convert Sorted List to Binary Search Tree 将有序链表转为二叉搜索树 和 Reorder List 链表重排序，我们使用快慢指针找中点的原理是fast和slow两个指针，每次快指针走两步，慢指针走一步，等快指针走完时，慢指针的位置就是中点。我们还需要用栈，每次慢指针走一步，都把值存入栈中，等到达中点时，链表的前半段都存入栈中了，由于栈的后进先出的性质，就可以和后半段链表按照回文对应的顺序比较了。</p>
@@ -242,7 +234,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/" data-id="cirqcbaof002kakinjvcv2jsz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/" data-id="cirqi4r6p002kgwiny6i2o9ex" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

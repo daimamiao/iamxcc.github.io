@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="md-10 md-offset-1">
+                <div class="md-8 md-offset-2">
                     <div id="profile">
     <div id="avatar">
         <img src="/css/images/avatar1.png" >
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
         <div id="social-links">
             
             
-                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                <a href="http://github.com/iamxcc/" target="_blank" title="github" class=tooltip>
                     <i class="fa fa-github"></i>
                     github
                 </a>
@@ -181,28 +181,6 @@ var _hmt = _hmt || [];
                     <div id="content">
                         <article id="post-趣说KMP算法" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<!-- <i class="fa fa-folder"></i> -->
-        <a class="article-category-link" href="/categories/算法/">算法</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <a href="/2016/08/06/趣说KMP算法/">
-            <time datetime="2016-08-06T11:59:24.000Z" itemprop="datePublished">2016-08-06</time>
-        </a>
-    </div>
-
-
-                    </div>
-                
-            </header>
-        
         <div class="article-img">
             <a href="/2016/08/06/趣说KMP算法/" class="thumbnail">
     
@@ -213,20 +191,34 @@ var _hmt = _hmt || [];
 
         </div>
         
-
-        <div class="article-entry" itemprop="articleBody">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name" class="name">
             趣说KMP算法
         </h1>
     
 
+            </header>
+        
+        <div class="article-meta">
             
-    <div class="article-tag">
-        <a class="tag-link" href="/tags/KMP算法/">KMP算法</a>
-    </div>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/算法/">算法</a>
+                </div>
+            
+            <a href="/2016/08/06/趣说KMP算法/" class="article-date">
+                
+                <time datetime="2016-08-06T11:59:24.000Z" itemprop="datePublished">5天前</time>
+            </a>
+        </div>
 
+        
+            <div class="article-tag">
+                <a class="tag-link" href="/tags/KMP算法/">KMP算法<span class="tag-count">1</span></a>
+            </div>
+        
+        <div class="article-content" itemprop="articleBody">
             
             <p>今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记 <a id="more"></a>。作者信息如下：<br>作者：逍遥行<br>链接：<a href="https://www.zhihu.com/question/21923021/answer/37475572" target="_blank" rel="external">https://www.zhihu.com/question/21923021/answer/37475572</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
 <p>甲：abbaabbaaba<br>在里面寻找<br>乙：abbaaba<br>发现第 7 个字符不匹配。<br>这时候甲把乙叫走了，说你先一边玩去，我自己研究下。<br>然后甲想，自己已经知道乙的前 6 个字符就是自己的前 6 个字符，不妨先「自己与自己匹配一番」。<br>然后甲先用 abbaab 这 6 个已知的字符去匹配自身，错 1 个位，发现第一个就不一样（不匹配），然后错 2 个位，还是不匹配。<br>当错 3 个位的时候，甲发现匹配了一个 a，但是第二个 b 不匹配。<br>当错 4 个位的时候，匹配了两个。错 5 个位不匹配。后面的东西甲就不知道了，因为他只知道前 6 个字符。<br>（注：实际的匹配个数是字符串 [0…i] 的后缀与前缀的最长公共长度）</p>
@@ -243,7 +235,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/" data-id="cirqcbaq3007lakinlum2bs8p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/" data-id="cirqi4r8b007mgwinoxpp40ls" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

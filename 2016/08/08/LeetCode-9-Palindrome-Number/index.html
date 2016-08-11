@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="md-10 md-offset-1">
+                <div class="md-8 md-offset-2">
                     <div id="profile">
     <div id="avatar">
         <img src="/css/images/avatar1.png" >
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
         <div id="social-links">
             
             
-                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                <a href="http://github.com/iamxcc/" target="_blank" title="github" class=tooltip>
                     <i class="fa fa-github"></i>
                     github
                 </a>
@@ -181,28 +181,6 @@ var _hmt = _hmt || [];
                     <div id="content">
                         <article id="post-LeetCode-9-Palindrome-Number" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<!-- <i class="fa fa-folder"></i> -->
-        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <a href="/2016/08/08/LeetCode-9-Palindrome-Number/">
-            <time datetime="2016-08-08T07:52:04.000Z" itemprop="datePublished">2016-08-08</time>
-        </a>
-    </div>
-
-
-                    </div>
-                
-            </header>
-        
         <div class="article-img">
             <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="thumbnail">
     
@@ -213,20 +191,34 @@ var _hmt = _hmt || [];
 
         </div>
         
-
-        <div class="article-entry" itemprop="articleBody">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 9: Palindrome Number
         </h1>
     
 
+            </header>
+        
+        <div class="article-meta">
             
-    <div class="article-tag">
-        <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Math/">Math</a>
-    </div>
+                <div class="article-category">
+                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                </div>
+            
+            <a href="/2016/08/08/LeetCode-9-Palindrome-Number/" class="article-date">
+                
+                <time datetime="2016-08-08T07:52:04.000Z" itemprop="datePublished">3天前</time>
+            </a>
+        </div>
 
+        
+            <div class="article-tag">
+                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">52</span></a>  <a class="tag-link" href="/tags/Math/">Math<span class="tag-count">10</span></a>
+            </div>
+        
+        <div class="article-content" itemprop="articleBody">
             
             <p>Determine whether an integer is a palindrome. Do this without extra space. <a id="more"></a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x!=<span class="number">0</span> &amp;&amp; x%<span class="number">10</span>==<span class="number">0</span>)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (x &gt; sum) &#123;</div><div class="line">        sum = sum*<span class="number">10</span> + x%<span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (x==sum)||(x==sum/<span class="number">10</span>);</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -239,7 +231,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/" data-id="cirqcbapb0055akinf0xm9686" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/" data-id="cirqi4r7k004zgwinb1kau5z8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
