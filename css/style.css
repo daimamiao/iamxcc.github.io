@@ -1399,10 +1399,13 @@ code {
 .entry .entry-content {
   font-size: 15px;
   margin-bottom: 6px;
+  color: #808080;
 }
 @media screen and (max-width: 768px) {
   .entry .entry-content {
-    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 .entry .entry-category {
