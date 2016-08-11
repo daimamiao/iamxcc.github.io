@@ -1311,11 +1311,16 @@ code {
   border-radius: 6px;
 }
 .last-entry .last-entry-title {
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   margin-top: -3px;
 }
 .last-entry .last-entry-title a {
   font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .last-entry .last-entry-title a {
+    font-size: 18px;
+  }
 }
 .last-entry .last-entry-title a:hover {
   color: #666;
@@ -1333,14 +1338,10 @@ code {
 }
 .last-entry .last-entry-meta .last-entry-category {
   font-size: 16px;
-  border: 1px solid #bebebe;
-  -webkit-border-radius: 23px;
-  border-radius: 23px;
-  padding: 4px 12px;
   display: inline-block;
 }
 .last-entry .last-entry-meta .last-entry-category a {
-  color: #888;
+  color: #65b965;
 }
 .last-entry .last-entry-meta .last-entry-date {
   display: inline-block;
@@ -1548,16 +1549,12 @@ a.article-title:hover {
 }
 .article-entry .highlight {
   margin-bottom: 48px;
-}
-@media screen and (max-width: 768px) {
-  .article-entry .highlight {
-    margin: 1.6em -20px;
-    border-left: none;
-    border-right: none;
-  }
+  border: 1px solid #eee;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .article-entry .highlight .line {
-  font-size: 15px;
+  font-size: 14px;
 }
 .article-entry:before,
 .article-entry:after {
@@ -3007,7 +3004,7 @@ ol.toc {
 }
 .highlight .gutter pre {
   border-right: 2px solid #eee;
-  color: #aaa;
+  color: #888;
   text-align: center;
   padding-right: 12px;
 }
