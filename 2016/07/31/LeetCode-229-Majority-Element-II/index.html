@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-229-Majority-Element-II" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-229-Majority-Element-II" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 229: Majority Element II
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/Array/">Array</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
     </div>
 
-        
-        
             
             <p>Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times. The algorithm should run in linear time and in O(1) space.<a id="more"></a><br>Hint:</p>
 <ol>
@@ -252,18 +237,16 @@ var _hmt = _hmt || [];
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>* res = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*numsSize);</div><div class="line">    <span class="keyword">int</span> firstNum = <span class="number">0</span>, secondNum = <span class="number">0</span>, countFN = <span class="number">0</span>, countSN = <span class="number">0</span>; </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numsSize; i++)&#123;</div><div class="line">        <span class="keyword">if</span> (nums[i] == firstNum)&#123;</div><div class="line">            countFN++;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (nums[i] == secondNum)&#123;</div><div class="line">            countSN++;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (countFN == <span class="number">0</span>)&#123;</div><div class="line">            firstNum = nums[i];</div><div class="line">            countFN = <span class="number">1</span>;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (countSN == <span class="number">0</span>)&#123;</div><div class="line">            secondNum = nums[i];</div><div class="line">            countSN = <span class="number">1</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            countFN--;</div><div class="line">            countSN--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    countFN = countSN = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numsSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (nums[i] == firstNum)&#123;</div><div class="line">            ++countFN;</div><div class="line">        &#125; </div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] == secondNum)&#123;</div><div class="line">            ++countSN;</div><div class="line">        &#125; </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (countFN &gt; numsSize/<span class="number">3</span>)&#123;</div><div class="line">        res[<span class="number">0</span>] = firstNum;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (countSN &gt; numsSize/<span class="number">3</span>)&#123;</div><div class="line">        res[<span class="number">1</span>] = secondNum;</div><div class="line">    &#125;</div><div class="line">    *returnSize = numsSize;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>C++版本：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; majorityElement(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</div><div class="line">        <span class="keyword">int</span> m = <span class="number">0</span>, n = <span class="number">0</span>, cm = <span class="number">0</span>, cn = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;a : nums) &#123;</div><div class="line">            <span class="keyword">if</span> (a == m) ++cm;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (a ==n) ++cn;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (cm == <span class="number">0</span>) m = a, cm = <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (cn == <span class="number">0</span>) n = a, cn = <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> --cm, --cn;</div><div class="line">        &#125;</div><div class="line">        cm = cn = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;a : nums) &#123;</div><div class="line">            <span class="keyword">if</span> (a == m) ++cm;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (a == n) ++cn;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (cm &gt; nums.size() / <span class="number">3</span>) res.push_back(m);</div><div class="line">        <span class="keyword">if</span> (cn &gt; nums.size() / <span class="number">3</span>) res.push_back(n);</div><div class="line">        <span class="keyword">return</span> res;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/" data-id="cirp3dtqn0020j4inz1w8htxm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/" data-id="cirq4mvqa00280kin09un13gd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -329,16 +312,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/01/贪心算法入门/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -359,11 +340,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -408,7 +387,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

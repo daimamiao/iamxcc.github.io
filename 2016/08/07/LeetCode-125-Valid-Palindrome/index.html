@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-125-Valid-Palindrome" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-125-Valid-Palindrome" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 125: Valid Palindrome
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
     </div>
 
-        
-        
             
             <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases. <a id="more"></a></p>
 <p>For example,<br>“A man, a plan, a canal: Panama” is a palindrome.<br>“race a car” is not a palindrome.</p>
@@ -250,18 +235,16 @@ var _hmt = _hmt || [];
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isAlphanumeric</span><span class="params">(<span class="keyword">char</span> p)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="string">'a'</span> &lt;= p &amp;&amp; p &lt;= <span class="string">'z'</span>) || (<span class="string">'A'</span> &lt;= p &amp;&amp; p &lt;= <span class="string">'Z'</span>) || (<span class="string">'0'</span> &lt;= p &amp;&amp; p &lt;= <span class="string">'9'</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">char</span> <span class="title">lower2Upper</span><span class="params">(<span class="keyword">char</span> p)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (<span class="string">'A'</span> &lt;= p &amp;&amp; p &lt;= <span class="string">'Z'</span>) &#123;</div><div class="line">		<span class="keyword">return</span> p + <span class="number">32</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">return</span> p;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">if</span> (len &lt; <span class="number">2</span>) &#123;</div><div class="line">        <span class="keyword">return</span> s;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> start = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> end = len - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span> (start &lt; end) &#123;</div><div class="line">        <span class="keyword">while</span> (!isAlphanumeric(s[start])) &#123;</div><div class="line">		<span class="keyword">if</span> (start &lt; end) &#123;</div><div class="line">			start++;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span> (!isAlphanumeric(s[end])) &#123;</div><div class="line">		<span class="keyword">if</span> (start &lt; end) &#123;</div><div class="line">			end--;</div><div class="line">		&#125;<span class="keyword">else</span> &#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">        <span class="keyword">if</span> (lower2Upper(s[start]) != lower2Upper(s[end])) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        start++;</div><div class="line">        end--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>476 / 476 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-125-Valid-Palindrome/" data-id="cirp3dtps000wj4inj3vtq02h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/07/LeetCode-125-Valid-Palindrome/" data-id="cirq4mvpl000w0kiny32w2f4j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -327,16 +310,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/07/LeetCode-125-Valid-Palindrome/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/07/LeetCode-125-Valid-Palindrome/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/07/LeetCode-20-Valid-Parentheses/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -357,11 +338,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -406,7 +385,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

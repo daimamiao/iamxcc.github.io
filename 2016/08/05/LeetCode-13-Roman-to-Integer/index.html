@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-13-Roman-to-Integer" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-13-Roman-to-Integer" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 13: Roman to Integer
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
     </div>
 
-        
-        
             
             <p>Given a roman numeral, convert it to an integer.3999 / 3999 test cases passed. <a id="more"></a></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanCharToInt</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</div><div class="line">    <span class="keyword">switch</span> (c) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'I'</span>: 	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'V'</span>:	<span class="keyword">return</span> <span class="number">5</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'X'</span>:	<span class="keyword">return</span> <span class="number">10</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'L'</span>:	<span class="keyword">return</span> <span class="number">50</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'C'</span>:	<span class="keyword">return</span> <span class="number">100</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'D'</span>:	<span class="keyword">return</span> <span class="number">500</span>;</div><div class="line">		<span class="keyword">case</span> <span class="string">'M'</span>:	<span class="keyword">return</span> <span class="number">1000</span>;</div><div class="line">		<span class="keyword">default</span>:	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> size = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (romanCharToInt(s[i]) &lt; romanCharToInt(s[i + <span class="number">1</span>]))&#123;</div><div class="line">            res -= romanCharToInt(s[i]);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            res += romanCharToInt(s[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -249,18 +234,16 @@ var _hmt = _hmt || [];
 <p><code>3999 / 3999 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>36 ms</code><br>java版本：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="comment">//：Ⅰ（1）Ⅴ（5）Ⅹ（10）L（50）C（100）D（500）M（1000） </span></div><div class="line">        <span class="comment">// rules:位于大数的后面时就作为加数；位于大数的前面就作为减数</span></div><div class="line">        <span class="comment">//eg：Ⅲ=3,Ⅳ=4,Ⅵ=6,ⅩⅨ=19,ⅩⅩ=20,ⅩLⅤ=45,MCMⅩⅩC=1980</span></div><div class="line">        <span class="comment">//"DCXXI"</span></div><div class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> len = s.length();</div><div class="line">        HashMap&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character,Integer&gt;();</div><div class="line">        map.put(<span class="string">'I'</span>,<span class="number">1</span>);</div><div class="line">        map.put(<span class="string">'V'</span>,<span class="number">5</span>);</div><div class="line">        map.put(<span class="string">'X'</span>,<span class="number">10</span>);</div><div class="line">        map.put(<span class="string">'L'</span>,<span class="number">50</span>);</div><div class="line">        map.put(<span class="string">'C'</span>,<span class="number">100</span>);</div><div class="line">        map.put(<span class="string">'D'</span>,<span class="number">500</span>);</div><div class="line">        map.put(<span class="string">'M'</span>,<span class="number">1000</span>);</div><div class="line">        <span class="keyword">int</span> result = map.get(s.charAt(len -<span class="number">1</span>));</div><div class="line">        <span class="keyword">int</span> pivot = result;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = len -<span class="number">2</span>; i&gt;= <span class="number">0</span>;i--)&#123;</div><div class="line">            <span class="keyword">int</span> cur = map.get(s.charAt(i));</div><div class="line">            <span class="keyword">if</span>(cur &gt;=  pivot)&#123;</div><div class="line">                result += cur;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                result -= cur;</div><div class="line">            &#125;</div><div class="line">            pivot = cur;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><code>3999 / 3999 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>24 ms</code></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/" data-id="cirp3dtpp000pj4ine1r6vevr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/" data-id="cirq4mvpq00150kinye3b9tyf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,16 +309,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/05/LeetCode-58-Length-of-Last-Word/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -356,11 +337,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -405,7 +384,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

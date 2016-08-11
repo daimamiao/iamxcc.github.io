@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-342-Power-of-Four" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-342-Power-of-Four" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,39 +215,34 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 342: Power of Four
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
     </div>
 
-        
-        
             
             <p>Given an integer (signed 32 bits), write a function to check whether it is a power of 4. <a id="more"></a><br><strong>Example:</strong><br>Given num = 16, return true. Given num = 5, return false.<br>Follow up: Could you solve it without loops/recursion?</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先我们可以列出4, 16, 64, 256这几个数的二进制来看一下规律，发现它们都是在偶数位为1，而且只有一位是1，其余位都是0。有了上面这个规律我们就可以结题了。首先，筛选只有一位是1，其余位是0的数，使用<code>num &amp; (num-1)</code>即可。再使用<code>0x55555555</code>与num作位与操作<code>&amp;</code>即可发现，不是我们所要的数经过这步后都是0。到此我们就可以判断出结果了。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfFour</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> num &gt; <span class="number">0</span> &amp;&amp; (num&amp;(num<span class="number">-1</span>)) == <span class="number">0</span> &amp;&amp; (num &amp; <span class="number">0x55555555</span>) != <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>1060 / 1060 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>4 ms</code></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/" data-id="cirp3dtrf003fj4int0f60s9i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/" data-id="cirq4mvr5003k0kinwbra4c5c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -325,16 +308,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/10/LeetCode-338-Counting-Bits/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -355,11 +336,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -404,7 +383,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

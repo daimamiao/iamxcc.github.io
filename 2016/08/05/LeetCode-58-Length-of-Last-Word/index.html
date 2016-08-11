@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-58-Length-of-Last-Word" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-58-Length-of-Last-Word" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,39 +215,34 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 58: Length of Last Word
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/String/">String</a>
     </div>
 
-        
-        
             
             <p>Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. <a id="more"></a></p>
 <p>If the last word does not exist, return 0.<br>Note: A word is defined as a character sequence consists of non-space characters only.</p>
 <p><strong>For example,</strong><br>Given <code>s = &quot;Hello World&quot;</code>,<br>return <code>5</code>.</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isChar</span><span class="params">(<span class="keyword">char</span> p)</span> </span>&#123;  </div><div class="line">    <span class="keyword">return</span> (<span class="string">'a'</span>&lt;=p &amp;&amp; p&lt;=<span class="string">'z'</span>)||(<span class="string">'A'</span>&lt;=p &amp;&amp; p&lt;=<span class="string">'Z'</span>);  </div><div class="line">&#125;  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> size = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">int</span> begin;</div><div class="line">    <span class="keyword">int</span> end = size - <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (size &lt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(end &gt;= <span class="number">0</span> &amp;&amp; s[end] == <span class="string">' '</span>) &#123;</div><div class="line">        end--;</div><div class="line">    &#125;</div><div class="line">    begin = end;</div><div class="line">    <span class="keyword">while</span> ( begin &gt;= <span class="number">0</span> &amp;&amp; isChar(s[begin])) &#123;</div><div class="line">            begin--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> end - begin;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/" data-id="cirp3dtru0042j4in6vyoflwg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/" data-id="cirq4mvrf004f0kin73w96nf7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -325,16 +308,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/05/LeetCode-263-Ugly-Number/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -355,11 +336,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -404,7 +383,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

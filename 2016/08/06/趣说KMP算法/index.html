@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-趣说KMP算法" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-趣说KMP算法" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        算
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             趣说KMP算法
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/KMP算法/">KMP算法</a>
     </div>
 
-        
-        
             
             <p>今天逛知乎时，发现了一个比较浅显易懂的KMP算法解释。故在此做个笔记 <a id="more"></a>。作者信息如下：<br>作者：逍遥行<br>链接：<a href="https://www.zhihu.com/question/21923021/answer/37475572" target="_blank" rel="external">https://www.zhihu.com/question/21923021/answer/37475572</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
 <p>甲：abbaabbaaba<br>在里面寻找<br>乙：abbaaba<br>发现第 7 个字符不匹配。<br>这时候甲把乙叫走了，说你先一边玩去，我自己研究下。<br>然后甲想，自己已经知道乙的前 6 个字符就是自己的前 6 个字符，不妨先「自己与自己匹配一番」。<br>然后甲先用 abbaab 这 6 个已知的字符去匹配自身，错 1 个位，发现第一个就不一样（不匹配），然后错 2 个位，还是不匹配。<br>当错 3 个位的时候，甲发现匹配了一个 a，但是第二个 b 不匹配。<br>当错 4 个位的时候，匹配了两个。错 5 个位不匹配。后面的东西甲就不知道了，因为他只知道前 6 个字符。<br>（注：实际的匹配个数是字符串 [0…i] 的后缀与前缀的最长公共长度）</p>
@@ -249,18 +234,16 @@ var _hmt = _hmt || [];
 <p>关键的地方，在于不要让乙「前功尽弃」——已经匹配了 6 个了，还差一个就结束了，这时不匹配导致从 0 开始，多可惜啊！<br>现在我告诉你，在不匹配的情况下，你仍然已经匹配了 2 个（乙内心：还好不是 0），并且你可以继续从不匹配的地方开始比较，即用你的 3 个字符与我继续匹配。<br>那，这个 2 你是怎么算的？<br>我在你来之前就算好啦！<br>我先与自己进行匹配（预处理），对每个位置，找「当前位置往前看的最长字符串，它与我的前缀匹配」（当然这个字符串不能是前缀），这个最长字符串的长度，在学术上称作「失配函数」。<br>UCCU，从你的第 6 个位置往前看，恰好 [ab] 与你的前缀 [ab] 匹配，但是我的第 7 个字符并不知道你的第 3 个字符是否与我一样，所以你直接从这里开始继续匹配我。</p>
 <p>以上为 KMP 的基本思想，关键在于失配函数的计算，网上的代码很多，这里有个很好的例子你仔细体会下：ababzababa，注意最后一个失配函数的值为 3。</p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/" data-id="cirp3dtt40077j4in3ls2gsu2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/" data-id="cirq4mvsr007j0kinht1e3ex8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,16 +309,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/06/趣说KMP算法/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/07/LeetCode-125-Valid-Palindrome/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -356,11 +337,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -405,7 +384,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

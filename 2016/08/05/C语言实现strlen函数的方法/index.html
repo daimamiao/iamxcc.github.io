@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-C语言实现strlen函数的方法" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-C语言实现strlen函数的方法" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        C
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,37 +215,32 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             C语言实现strlen函数的方法
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/C语言/">C语言</a>
     </div>
 
-        
-        
             
             <p>不使用中间变量求const字符串长度，即实现求字符串长度库函数strlen函数。函数接口声明如下：int strlen(const char *p)； <a id="more"></a></p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>在字符串中通常可以利用最后一个结束符’\0’，但此处参数为const，只读，那么我们不能打他的主意。<br>函数运行过程中不占用内存基本不可能，除非都使用了寄存器。“不使用中间变量”只是说程序员不能显示的申请内存而已，即不能有局部变量或者动态内存申请。如果函数自动申请栈内存或者使用寄存器存储变量，或者使用立即数寻址即常量，那么就相当于“不使用中间变量”。<br>从函数原型看，返回值为int，那么在函数内部必定需要一个地方存储这个值，要么是常数要么是寄存器。长度不为1时不能一次就求出来，说明必须有递归调用，这样递归时函数会自动申请栈内存，这样就相当于程序员“不使用中间变量”了。中间返回的值通过寄存器自动保存，最后一次返回时拷贝到int中去。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;assert.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen2</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">char</span> *str=<span class="literal">NULL</span>;</div><div class="line">    str = <span class="string">"Hello Jay!"</span>;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"original strlen():%d\n"</span>,<span class="built_in">strlen</span>(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen():%d\n"</span>,myStrlen(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen1():%d\n"</span>,myStrlen1(str));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"myStrlen2():%d\n"</span>,myStrlen2(str));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>   <span class="comment">// 不用中间变量，用递归实现，很容易看懂</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> ( (str == <span class="literal">NULL</span>) || (*str == <span class="string">'\0'</span>) ) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> myStrlen(str+<span class="number">1</span>)+<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>  <span class="comment">// 不用中间变量，也是用递归实现，写得更简洁而已</span></span></div><div class="line">&#123;</div><div class="line">    assert(str != <span class="literal">NULL</span>);</div><div class="line">    <span class="keyword">return</span> *str ? (myStrlen1(++str) + <span class="number">1</span>) : <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mStrlen2</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span>  <span class="comment">// 使用了一个int型变量</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(str==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(; *str++ != <span class="string">'\0'</span>; )</div><div class="line">    &#123;</div><div class="line">        len++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/05/C语言实现strlen函数的方法/" data-id="cirp3dtpg000bj4in38hemkbr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/05/C语言实现strlen函数的方法/" data-id="cirq4mvpa000e0kinw9hblmq9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -323,16 +306,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/05/C语言实现strlen函数的方法/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/05/C语言实现strlen函数的方法/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/06/LeetCode-345-Reverse-Vowels-of-a-String/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -353,11 +334,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -402,7 +381,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

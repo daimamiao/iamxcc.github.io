@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-贪心算法入门" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-贪心算法入门" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        算
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,38 +215,33 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             贪心算法入门
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/贪心算法/">贪心算法</a>
     </div>
 
-        
-        
             
             <p>约翰认为字符串的完美度等于它里面所有字母的完美度之和。每个字母的完美度可以由你来分配，不同字母的完美度不同，分别对应一个1-26之间的整数。 <a id="more"></a>    </p>
 <p>约翰不在乎字母大小写。（也就是说字母F和f）的完美度相同。给定一个字符串，输出它的最大可能的完美度。例如：dad，你可以将26分配给d，25分配给a，这样整个字符串完美度为77。</p>
 <p>分析： 由排序不等式，出现次数最多的字母显然应该给26。所以这个题目变成了统计每种字母出现的次数了，然后按照出现次数从大到小，依次分配从高到低的权值。这就是最朴素的贪心思想。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* a, <span class="keyword">const</span> <span class="keyword">char</span>* b)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">char</span> str[<span class="number">100</span>];</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str);</div><div class="line">	<span class="keyword">int</span> strSize;</div><div class="line">	strSize = <span class="built_in">strlen</span>(str);</div><div class="line">	qsort(str, strSize, <span class="keyword">sizeof</span>(<span class="keyword">char</span>), cmp);</div><div class="line">	<span class="keyword">int</span> res = <span class="number">26</span>;</div><div class="line">	<span class="keyword">int</span> maxValue = <span class="number">26</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = strSize - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (str[i] != str[i - <span class="number">1</span>])</div><div class="line">		&#123;</div><div class="line">			maxValue--;</div><div class="line">		&#125;</div><div class="line">		res += maxValue;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, res);</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/01/贪心算法入门/" data-id="cirp3dtt2006zj4in1z0p405v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/01/贪心算法入门/" data-id="cirq4mvsr007n0kind79nxb98" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -324,16 +307,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/01/贪心算法入门/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/01/贪心算法入门/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/01/51NOD-1005-排序/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -354,11 +335,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -403,7 +382,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-232-Implement-Queue-using-Stacks" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-232-Implement-Queue-using-Stacks" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 232: Implement Queue using Stacks
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Stack/">Stack</a>
     </div>
 
-        
-        
             
             <p>Implement the following operations of a queue using stacks. <a id="more"></a></p>
 <ul>
@@ -261,18 +246,16 @@ var _hmt = _hmt || [];
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="comment">//using deque to imitate the two stacks operation avoid extra O(N) space wasting;</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> *<span class="built_in">stack</span>;</div><div class="line">    <span class="keyword">int</span> begin; <span class="comment">//begin -&gt; point to the exact first front element;</span></div><div class="line">    <span class="keyword">int</span> end; <span class="comment">//end -&gt; point to the next element of the last element to be easily indicate the empty case;</span></div><div class="line">    <span class="keyword">int</span> maxSize;</div><div class="line">&#125; Queue;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queueCreate</span><span class="params">(Queue *<span class="built_in">queue</span>, <span class="keyword">int</span> maxSize)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span> = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*maxSize);</div><div class="line">    <span class="built_in">queue</span>-&gt;begin = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>-&gt;end = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>-&gt;maxSize = maxSize; <span class="comment">//record the maxSize for checking;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queuePush</span><span class="params">(Queue *<span class="built_in">queue</span>, <span class="keyword">int</span> element)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">queue</span>-&gt;end == <span class="built_in">queue</span>-&gt;maxSize) <span class="comment">//reach its valid end, we have to rearrange the stack;</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="built_in">queue</span>-&gt;begin; i &lt; <span class="built_in">queue</span>-&gt;end; i++)</div><div class="line">            <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[i-<span class="built_in">queue</span>-&gt;begin] = <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[i];</div><div class="line">        <span class="built_in">queue</span>-&gt;begin = <span class="number">0</span>;</div><div class="line">        <span class="built_in">queue</span>-&gt;end -= <span class="built_in">queue</span>-&gt;begin;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[<span class="built_in">queue</span>-&gt;end++] = element;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queuePop</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">queue</span>-&gt;begin++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">queuePeek</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>[<span class="built_in">queue</span>-&gt;begin];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queueEmpty</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">queue</span>-&gt;begin == <span class="built_in">queue</span>-&gt;end;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">queueDestroy</span><span class="params">(Queue *<span class="built_in">queue</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">free</span>(<span class="built_in">queue</span>-&gt;<span class="built_in">stack</span>);</div><div class="line">    <span class="comment">/*free(queue); this part cannot be executed*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ul>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" data-id="cirp3dtqu002aj4ing98wto76" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/" data-id="cirq4mvqg002h0kinwnon6xxe" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -338,16 +321,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/08/LeetCode-326-Power-of-Three/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -368,11 +349,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -417,7 +396,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

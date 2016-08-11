@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>LeetCode 121: Best Time to Buy and Sell Stock I, II, III | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="Say you have an array for which the ith element is the price of a given stock on day i.If you were only permitted to complete at most one transaction">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 121: Best Time to Buy and Sell Stock I, II, III">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="Say you have an array for which the ith element is the price of a given stock on day i.If you were only permitted to complete at most one transaction">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta property="og:updated_time" content="2016-08-11T06:49:30.772Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode 121: Best Time to Buy and Sell Stock I, II, III">
+<meta name="twitter:description" content="Say you have an array for which the ith element is the price of a given stock on day i.If you were only permitted to complete at most one transaction">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+</head>
+
+<body>
+    <header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+        <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/series">系列</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav>
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="md-10 md-offset-1">
+                    <div id="profile">
+    <div id="avatar">
+        <img src="/css/images/avatar1.png" >
+    </div>
+    <p id="site-title">胡闹的日子</p>
+    <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
+    <ul id="site-state">
+        <li class="site-state-item">
+            <div class="site-state-item-count">81</div>
+            <div class="site-state-item-name">文章</div>
+        </li>
+        <li class="site-state-item">
+            
+            <div class="site-state-item-count">38</div>
+            <div class="site-state-item-name">标签</div>
+        </li>
+        <li class="site-state-item">
+            
+            <div class="site-state-item-count">19</div>
+            <div class="site-state-item-name">分类</div>
+        </li>
+    </ul>
+    
+        <div id="social-links">
+            
+            
+                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                    <i class="fa fa-github"></i>
+                    github
+                </a>
+            
+                <a href="https://www.zhihu.com/people/iamxcc" target="_blank" title="知乎" class=tooltip>
+                    <i class="fa fa-bookmark"></i>
+                    知乎
+                </a>
+            
+                <a href="https://www.v2ex.com/member/ybzbxcc" target="_blank" title="V2EX" class=tooltip>
+                    <i class="fa fa-codepen"></i>
+                    V2EX
+                </a>
+            
+                <a href="http://www.jianshu.com/users/a820fe80f428/timeline" target="_blank" title="简书" class=tooltip>
+                    <i class="fa fa-book"></i>
+                    简书
+                </a>
+            
+                <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                    <i class="fa fa-rss"></i>
+                    rss
+                </a>
+            
+        </div>
+    
+</div>
+                    <div id="content">
+                        <article id="post-LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/">
+            <time datetime="2016-08-11T05:56:26.000Z" itemprop="datePublished">2016-08-11</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 121: Best Time to Buy and Sell Stock I, II, III" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            LeetCode 121: Best Time to Buy and Sell Stock I, II, III
+        </h1>
+    
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
+    </div>
+
+            
+            <p>Say you have an array for which the ith element is the price of a given stock on day i.If you were only permitted to complete at most one transaction <a id="more"></a>(ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p><strong>Example 1:</strong></p>
+<blockquote>
+<p>Input: [7, 1, 5, 3, 6, 4]<br>Output: 5<br>max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)</p>
+</blockquote>
+<p><strong>Example 2:</strong></p>
+<blockquote>
+<p>Input: [7, 6, 4, 3, 1]<br>Output: 0<br>In this case, no transaction is done, i.e. max profit = 0.</p>
+</blockquote>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>* prices, <span class="keyword">int</span> pricesSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> low = prices[<span class="number">0</span>];</div><div class="line">    <span class="keyword">int</span> profit = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pricesSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (low &gt; prices[i]) &#123;</div><div class="line">            low = prices[i];</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (prices[i] - low &gt; profit) &#123;</div><div class="line">            profit = prices[i] - low;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> profit;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Best-Time-to-Buy-and-Sell-Stock-II"><a href="#Best-Time-to-Buy-and-Sell-Stock-II" class="headerlink" title="Best Time to Buy and Sell Stock II"></a>Best Time to Buy and Sell Stock II</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>* prices, <span class="keyword">int</span> pricesSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> low = prices[<span class="number">0</span>];</div><div class="line">    <span class="keyword">int</span> profit = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pricesSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (low &gt; prices[i]) &#123;</div><div class="line">            low = prices[i];</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            profit = profit + prices[i] - low;</div><div class="line">            low = prices[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> profit;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Best-Time-to-Buy-and-Sell-Stock-III"><a href="#Best-Time-to-Buy-and-Sell-Stock-III" class="headerlink" title="Best Time to Buy and Sell Stock III"></a>Best Time to Buy and Sell Stock III</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete at most two transactions.</p>
+<p><strong>Note:</strong><br>You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>* prices, <span class="keyword">int</span> pricesSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> maxProfit[pricesSize];</div><div class="line">    <span class="keyword">int</span> maxRevealProfit[pricesSize];</div><div class="line">    maxProfit[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    maxRevealProfit[pricesSize - <span class="number">1</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> low = prices[<span class="number">0</span>];</div><div class="line">    <span class="keyword">int</span> profit = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pricesSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (low &gt; prices[i]) &#123;</div><div class="line">            low = prices[i];</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (prices[i] - low &gt; profit) &#123;</div><div class="line">            profit = prices[i] - low;</div><div class="line">        &#125;</div><div class="line">        maxProfit[i] = profit;</div><div class="line">    &#125;</div><div class="line">    profit = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> high = prices[pricesSize - <span class="number">1</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = pricesSize - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</div><div class="line">        <span class="keyword">if</span> (high &lt; prices[i]) &#123;</div><div class="line">            high = prices[i];</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (profit &lt; high - prices[i])&#123;</div><div class="line">            profit = high - prices[i];</div><div class="line">        &#125;</div><div class="line">        maxRevealProfit[i] = profit;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pricesSize; i++)&#123;</div><div class="line">        <span class="keyword">int</span> tmp = maxProfit[i] + maxRevealProfit[i];</div><div class="line">        <span class="keyword">if</span>(res &lt; tmp) &#123;</div><div class="line">            res = tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/" data-id="cirq4mvpj000s0kin9xcsesa2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+<nav id="article-nav">
+    
+    
+        <a href="/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">LeetCode 287: Find the Duplicate Number</div>
+        </a>
+    
+</nav>
+
+
+</article>
+
+
+    <section id="comments" class="comments">
+	    
+	        
+    <div class="ds-thread" data-thread-key="2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/" data-title="LeetCode 121: Best Time to Buy and Sell Stock I, II, III" data-url="http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+	    
+    </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 本站总访问人数<span id="busuanzi_value_site_uv"></span>次</span>
+        </div>
+    </div>
+</footer>
+        
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- Statistics Scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+

@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-wampserver配置多站点" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-wampserver配置多站点" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        W
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             wampserver配置多站点
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/Wampserver/">Wampserver</a> <a class="tag-link" href="/tags/Wordpress/">Wordpress</a>
     </div>
 
-        
-        
             
             <p>一般而言，当我们在本地调试网站时都会有多个站点。这时候为了方便区分各个网站，就需要设置多站点，即给每个站点取一个网址。<a id="more"></a>当然，这个网址只能在本地打开。这里，就介绍一下wampserver在win10下怎么设置多站点。</p>
 <h3 id="修改wampserver配置文件"><a href="#修改wampserver配置文件" class="headerlink" title="修改wampserver配置文件"></a>修改wampserver配置文件</h3><p>在<code>wampserver安装位置\bin\apache\apache\apache2.4.17\conf\httpd.conf</code>文件中查找<code>Include conf/extra/httpd-vhosts.conf</code>，去掉前面的注释#。打开<code>wampserver安装位置\bin\apache\apache\apache2.4.17\conf\extra/httpd-vhosts.conf</code>文件；在最后加入类似内容：（文件路径是自己安装程序的路径）</p>
@@ -252,18 +237,16 @@ var _hmt = _hmt || [];
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></div><div class="line">    DocumentRoot "D:\Web\wamp64\www\my-site\blog"</div><div class="line">    ServerName blog.iamxcc.com</div><div class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></div><div class="line">    DocumentRoot "D:\Web\wamp64\www\my-site\sf"</div><div class="line">    ServerName www.sf.com</div><div class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>其中<code>blog.iamxcc.com</code>指向位于<code>D:\Web\wamp64\www\my-site\blog</code>下的站点，<code>www.sf.com</code>指向<code>D:\Web\wamp64\www\my-site\blog</code>下的站点。<br>到此为止，wampserver配置多任务已经成功。</p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/06/14/wampserver配置多站点/" data-id="cirp3dtsx006nj4inmkb3s9ts" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/06/14/wampserver配置多站点/" data-id="cirq4mvsm00700kinhms43qca" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -329,16 +312,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/06/14/wampserver配置多站点/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/06/14/wampserver配置多站点/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/06/16/通信协议之Http/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -359,11 +340,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -408,7 +387,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>LeetCode 287: Find the Duplicate Number | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 287: Find the Duplicate Number">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist.">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta property="og:updated_time" content="2016-08-11T05:59:02.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode 287: Find the Duplicate Number">
+<meta name="twitter:description" content="Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist.">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+</head>
+
+<body>
+    <header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+        <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/series">系列</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav>
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="md-10 md-offset-1">
+                    <div id="profile">
+    <div id="avatar">
+        <img src="/css/images/avatar1.png" >
+    </div>
+    <p id="site-title">胡闹的日子</p>
+    <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
+    <ul id="site-state">
+        <li class="site-state-item">
+            <div class="site-state-item-count">81</div>
+            <div class="site-state-item-name">文章</div>
+        </li>
+        <li class="site-state-item">
+            
+            <div class="site-state-item-count">38</div>
+            <div class="site-state-item-name">标签</div>
+        </li>
+        <li class="site-state-item">
+            
+            <div class="site-state-item-count">19</div>
+            <div class="site-state-item-name">分类</div>
+        </li>
+    </ul>
+    
+        <div id="social-links">
+            
+            
+                <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                    <i class="fa fa-github"></i>
+                    github
+                </a>
+            
+                <a href="https://www.zhihu.com/people/iamxcc" target="_blank" title="知乎" class=tooltip>
+                    <i class="fa fa-bookmark"></i>
+                    知乎
+                </a>
+            
+                <a href="https://www.v2ex.com/member/ybzbxcc" target="_blank" title="V2EX" class=tooltip>
+                    <i class="fa fa-codepen"></i>
+                    V2EX
+                </a>
+            
+                <a href="http://www.jianshu.com/users/a820fe80f428/timeline" target="_blank" title="简书" class=tooltip>
+                    <i class="fa fa-book"></i>
+                    简书
+                </a>
+            
+                <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                    <i class="fa fa-rss"></i>
+                    rss
+                </a>
+            
+        </div>
+    
+</div>
+                    <div id="content">
+                        <article id="post-LeetCode-287-Find-the-Duplicate-Number" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/">
+            <time datetime="2016-08-11T03:40:43.000Z" itemprop="datePublished">2016-08-11</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 287: Find the Duplicate Number" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            LeetCode 287: Find the Duplicate Number
+        </h1>
+    
+
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/Array/">Array</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
+    </div>
+
+            
+            <p>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. <a id="more"></a>Assume that there is only one duplicate number, find the duplicate one.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>You must not modify the array (assume the array is read only).</li>
+<li>You must use only constant, O(1) extra space.</li>
+<li>Your runtime complexity should be less than O(n2).</li>
+<li>There is only one duplicate number in the array, but it could be repeated more than once.</li>
+</ul>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><p>实际上，我们可以根据抽屉原理简化刚才的暴力法。我们不一定要依次选择数，然后看是否有这个数的重复数，我们可以用二分法先选取n/2，按照抽屉原理，整个数组中如果小于等于n/2的数的数量大于n/2，说明1到n/2这个区间是肯定有重复数字的。比如6个抽屉，如果有7个袜子要放到抽屉里，那肯定有一个抽屉至少两个袜子。这里抽屉就是1到n/2的每一个数，而袜子就是整个数组中小于等于n/2的那些数。这样我们就能知道下次选择的数的范围，如果1到n/2区间内肯定有重复数字，则下次在1到n/2范围内找，否则在n/2到n范围内找。下次找的时候，还是找一半。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findDuplicate</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> minValue = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> maxValue = numsSize - <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> mid = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(minValue &lt; maxValue) &#123;</div><div class="line">        mid = (maxValue + minValue) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; numsSize; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (nums[i] &lt;= mid) &#123;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (count &gt; mid) &#123;</div><div class="line">            maxValue = mid;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            minValue = mid + <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        count = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> minValue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="映射找环法"><a href="#映射找环法" class="headerlink" title="映射找环法"></a>映射找环法</h3><p>假设数组中没有重复，那我们可以做到这么一点，就是将数组的下标和1到n每一个数一对一的映射起来。比如数组是213,则映射关系为0-&gt;2, 1-&gt;1, 2-&gt;3。假设这个一对一映射关系是一个函数f(n)，其中n是下标，f(n)是映射到的数。如果我们从下标为0出发，根据这个函数计算出一个值，以这个值为新的下标，再用这个函数计算，以此类推，直到下标超界。实际上可以产生一个类似链表一样的序列。比如在这个例子中有两个下标的序列，0-&gt;2-&gt;3。</p>
+<p>但如果有重复的话，这中间就会产生多对一的映射，比如数组2131,则映射关系为0-&gt;2, {1，3}-&gt;1, 2-&gt;3。这样，我们推演的序列就一定会有环路了，这里下标的序列是0-&gt;2-&gt;3-&gt;1-&gt;1-&gt;1-&gt;1-&gt;…，而环的起点就是重复的数。</p>
+<p>所以该题实际上就是找环路起点的题，和Linked List Cycle II一样。我们先用快慢两个下标都从0开始，快下标每轮映射两次，慢下标每轮映射一次，直到两个下标再次相同。这时候保持慢下标位置不变，再用一个新的下标从0开始，这两个下标都继续每轮映射一次，当这两个下标相遇时，就是环的起点，也就是重复的数。对这个找环起点算法不懂的，请参考Floyd’s Algorithm。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> Solution &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> slow = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> fast = <span class="number">0</span>;</div><div class="line">        <span class="comment">// 找到快慢指针相遇的地方</span></div><div class="line">        <span class="keyword">do</span>&#123;</div><div class="line">            slow = nums[slow];</div><div class="line">            fast = nums[nums[fast]];</div><div class="line">        &#125; <span class="keyword">while</span>(slow != fast);</div><div class="line">        <span class="keyword">int</span> find = <span class="number">0</span>;</div><div class="line">        <span class="comment">// 用一个新指针从头开始，直到和慢指针相遇</span></div><div class="line">        <span class="keyword">while</span>(find != slow)&#123;</div><div class="line">            slow = nums[slow];</div><div class="line">            find = nums[find];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> find;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/" data-id="cirq4mvr2003a0kinikj2n4u5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+<nav id="article-nav">
+    
+        <a href="/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">
+                
+                    LeetCode 121: Best Time to Buy and Sell Stock I, II, III
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/11/LeetCode-100-Same-Tree/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">LeetCode 100: Same Tree</div>
+        </a>
+    
+</nav>
+
+
+</article>
+
+
+    <section id="comments" class="comments">
+	    
+	        
+    <div class="ds-thread" data-thread-key="2016/08/11/LeetCode-287-Find-the-Duplicate-Number/" data-title="LeetCode 287: Find the Duplicate Number" data-url="http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+	    
+    </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 本站总访问人数<span id="busuanzi_value_site_uv"></span>次</span>
+        </div>
+    </div>
+</footer>
+        
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- Statistics Scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+

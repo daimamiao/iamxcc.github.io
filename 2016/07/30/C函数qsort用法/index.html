@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-C函数qsort用法" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-C函数qsort用法" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        C
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             C函数qsort的用法
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/C语言/">C语言</a>
     </div>
 
-        
-        
             
             <p>qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分发写的，其时间复杂度为n*log(n)。<a id="more"></a>为了了解</p>
 <h3 id="排序方式"><a href="#排序方式" class="headerlink" title="排序方式"></a>排序方式</h3><p>排序方式有很多种，比如：选择排序、冒泡排序、归并排序、快速排序等等。顾名思义快速排序是目前公认的一种比较好的排序算法，其比选择排序、冒泡排序都要快。因为它的速度很快，所以系统也在库里实现这个算法，便于我们使用，这个函数就是qsort了。</p>
@@ -262,18 +247,16 @@ var _hmt = _hmt || [];
 <h3 id="对结构体类型排序"><a href="#对结构体类型排序" class="headerlink" title="对结构体类型排序"></a>对结构体类型排序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Node&#123; </div><div class="line">	<span class="keyword">double</span> data; </div><div class="line">	<span class="keyword">int</span> other; </div><div class="line">&#125;s[<span class="number">100</span>]</div><div class="line"></div><div class="line"><span class="comment">//按照data的值从小到大将结构体排序,关于结构体内的排序关键数据data的类型可以很多种，</span></div><div class="line"><span class="comment">//参考上面的例子写</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">( <span class="keyword">const</span> <span class="keyword">void</span> *a ,<span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span>&#123; </div><div class="line">	<span class="keyword">return</span> (*(Node *)a).data - (*(Node *)b).data ? <span class="number">1</span> : <span class="number">-1</span>; </div><div class="line">&#125;</div><div class="line">qsort(s,<span class="number">100</span>,<span class="keyword">sizeof</span>(s[<span class="number">0</span>]),cmp);</div></pre></td></tr></table></figure>
 <h4 id="对结构体二级排序"><a href="#对结构体二级排序" class="headerlink" title="对结构体二级排序"></a>对结构体二级排序</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Node&#123; </div><div class="line">	<span class="keyword">int</span> x; </div><div class="line">	<span class="keyword">int</span> y; </div><div class="line">&#125;s[<span class="number">100</span>];</div><div class="line"></div><div class="line"><span class="comment">//按照x从小到大排序，当x相等时按照y从大到小排序</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">( <span class="keyword">const</span> <span class="keyword">void</span> *a , <span class="keyword">const</span> <span class="keyword">void</span> *b )</span></span>&#123;</div><div class="line">	<span class="keyword">struct</span> Node *c = (Node *)a; </div><div class="line">	<span class="keyword">struct</span> Node *d = (Node *)b;</div><div class="line">	<span class="keyword">if</span>(c-&gt;x != d-&gt;x)</div><div class="line">		<span class="keyword">return</span> c-&gt;x - d-&gt;x;</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="keyword">return</span> d-&gt;y - c-&gt;y;</div><div class="line">&#125;</div><div class="line">qsort(s,<span class="number">100</span>,<span class="keyword">sizeof</span>(s[<span class="number">0</span>]),cmp);</div></pre></td></tr></table></figure>
 <h4 id="对字符串进行排序"><a href="#对字符串进行排序" class="headerlink" title="对字符串进行排序"></a>对字符串进行排序</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Node &#123; </div><div class="line">	<span class="keyword">int</span> data; </div><div class="line">	<span class="keyword">char</span> str[<span class="number">100</span>]; </div><div class="line">&#125;s[<span class="number">100</span>];</div><div class="line"></div><div class="line"><span class="comment">//按照结构体中字符串str的字典顺序排序</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span> <span class="params">( <span class="keyword">const</span> <span class="keyword">void</span> *a , <span class="keyword">const</span> <span class="keyword">void</span> *b )</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="built_in">strcmp</span>( (*(Node *)a)-&gt;str , (*(Node *)b)-&gt;str );</div><div class="line">&#125;</div><div class="line">qsort(s,<span class="number">100</span>,<span class="keyword">sizeof</span>(s[<span class="number">0</span>]),cmp);</div></pre></td></tr></table></figure>
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/07/30/C函数qsort用法/" data-id="cirp3dtpi000fj4invimt5mf6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/07/30/C函数qsort用法/" data-id="cirq4mvp700090kindiktbspf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -339,16 +322,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/07/30/C函数qsort用法/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/07/30/C函数qsort用法/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/07/30/Leetcode-217-Contains-Duplicate/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -369,11 +350,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -418,7 +397,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

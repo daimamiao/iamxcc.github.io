@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-2-Add-Two-Numbers" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-2-Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 2: Add Two Numbers
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/LeetCode/">LeetCode</a> <a class="tag-link" href="/tags/Linked-List/">Linked List</a>
     </div>
 
-        
-        
             
             <p>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. <a id="more"></a> Add the two numbers and return it as a linked list.</p>
 <p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>Output: 7 -&gt; 0 -&gt; 8</p>
@@ -249,18 +234,16 @@ var _hmt = _hmt || [];
 <p>C++版本：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * struct ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode *next;</div><div class="line"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) &#123;</div><div class="line">       <span class="function">ListNode <span class="title">preheader</span><span class="params">(<span class="number">-1</span>)</span>, *curr</span>=&amp;preheader;</div><div class="line">        <span class="keyword">int</span> carry=<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(l1 || l2 || carry) &#123;</div><div class="line">            curr-&gt;next = <span class="keyword">new</span> ListNode(((l1?l1-&gt;val:<span class="number">0</span>)+(l2?l2-&gt;val:<span class="number">0</span>)+carry)%<span class="number">10</span>);</div><div class="line">            curr = curr-&gt;next;</div><div class="line">            carry = ((l1?l1-&gt;val:<span class="number">0</span>)+(l2?l2-&gt;val:<span class="number">0</span>)+carry)/<span class="number">10</span>;</div><div class="line">            l1?l1=l1-&gt;next:<span class="number">0</span>;</div><div class="line">            l2?l2=l2-&gt;next:<span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> preheader.next;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <p><code>1558 / 1558 test cases passed.</code><br><code>Status: Accepted</code><br>Runtime: <code>40 ms</code></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/" data-id="cirp3dtqf001hj4inisfoktlo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/" data-id="cirq4mvq600220kinsdjoobsy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,16 +309,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/05/LeetCode-344-Reverse-String/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -356,11 +337,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -405,7 +384,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

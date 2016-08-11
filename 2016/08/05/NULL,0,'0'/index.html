@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-NULL,0,&#39;0&#39;" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-NULL,0,&#39;0&#39;" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        C
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             NULL,&#39;\0&#39;,0,&#39;/0&#39;和&quot;0&quot;的区别
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/C语言/">C语言</a>
     </div>
 
-        
-        
             
             <p>最近发现对于NULL,’\0’,0,’/0’和”0”的区别有点混淆了。所以在查阅资料之后，将笔记记录在此处，免得下次忘记了可以看看。<br><a id="more"></a></p>
 <h2 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h2><p>NULL 即空指针，在C和C++中的形式不一样，msdn上有如下的内容那个：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> !defined(NULL)&amp;&amp;defined(__NEEDS_NULL)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL 0</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL ((void *)0)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
@@ -258,18 +243,16 @@ var _hmt = _hmt || [];
 <h2 id="“0”"><a href="#“0”" class="headerlink" title="“0”"></a>“0”</h2><p>“0”表示的是字符串，即在存储中存储了两个内容，一个是’0’(即字符0)，另一个是字符串结束符’\0’(也即数字0)。</p>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>为了说明情况，下面列举了几个例子。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">48</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>);		==&gt;空（即<span class="literal">NULL</span>）</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>);		==&gt;<span class="number">0</span></div><div class="line"></div><div class="line">那么<span class="number">0</span>+<span class="string">'0'</span>,<span class="number">0</span>+<span class="string">'\0'</span>分别是什么呢？</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;空（<span class="literal">NULL</span>）<span class="comment">//先转换成int,然后ASCII编码相加为0，%c输出，转换成char,所以输出NULL</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;<span class="number">0</span>   	 <span class="comment">//先转换成int，然后ASCII编码相加为0, %d输出，不用转换，输出数字0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">48</span></div></pre></td></tr></table></figure></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/05/NULL,0,'0'/" data-id="cirp3dtsa004xj4in8h8mgns6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/05/NULL,0,'0'/" data-id="cirq4mvrx005i0kinbtma8mxk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -335,16 +318,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/05/NULL,0,'0'/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/05/NULL,0,&#39;0&#39;/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/05/C语言实现strlen函数的方法/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -365,11 +346,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -414,7 +393,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>

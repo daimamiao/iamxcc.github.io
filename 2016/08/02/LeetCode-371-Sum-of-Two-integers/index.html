@@ -132,12 +132,12 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">78</div>
+            <div class="site-state-item-count">81</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">36</div>
+            <div class="site-state-item-count">38</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
@@ -179,24 +179,12 @@ var _hmt = _hmt || [];
     
 </div>
                     <div id="content">
-                        <article id="post-LeetCode-371-Sum-of-Two-integers" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+                        <article id="post-LeetCode-371-Sum-of-Two-integers" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
         
             <header class="article-header">
                 
                     <div class="article-meta">
-                        
-                            <div class="article-category-img">
-                                
-                                
-                                    
-                                        L
-                                    
-                                
-                            </div>
-                        
                         
     <div class="article-category">
     	<!-- <i class="fa fa-folder"></i> -->
@@ -227,21 +215,18 @@ var _hmt = _hmt || [];
         
 
         <div class="article-entry" itemprop="articleBody">
-        
+            
     
         <h1 class="article-title" itemprop="name" class="name">
             LeetCode 371: Sum of Two integers
         </h1>
     
 
-        
             
     <div class="article-tag">
         <a class="tag-link" href="/tags/Bit-Manupulation/">Bit Manupulation</a> <a class="tag-link" href="/tags/LeetCode/">LeetCode</a>
     </div>
 
-        
-        
             
             <p>Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.Example: Given a = 1 and b = 2, return 3.<a id="more"></a></p>
 <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>计算a和b的和，但是不能使用<code>+</code>和<code>-</code>号。</p>
@@ -312,18 +297,16 @@ var _hmt = _hmt || [];
 <p>我们可以基于以上的真值表用&amp;和^运算来实现加法，每一位的^运算得到每一位上的不加进位的和，用&amp;运算得到每一位的进位。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>C语言版本：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sum = a;</div><div class="line">    <span class="keyword">int</span> carry = b;</div><div class="line">    <span class="keyword">int</span> tmp;</div><div class="line">    <span class="keyword">while</span> ( carry )&#123;</div><div class="line">        tmp = sum;</div><div class="line">        sum = sum ^ carry;</div><div class="line">        carry = (carry &amp; tmp) &lt;&lt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-        
         </div>
 
-        
-            <footer class="article-footer">
-                <div class="share-container">
+        <footer class="article-footer">
+            <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/" data-id="cirp3dtrn003vj4in86g09sru" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/" data-id="cirq4mvre00480kin9ghw3fsw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -389,16 +372,14 @@ var _hmt = _hmt || [];
     })(jQuery);
 </script>
 
-                
+            
     
         <a href="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/">评论</a>
     
 
-            </footer>
-        
+        </footer>
     </div>
     
-        
 <nav id="article-nav">
     
         <a href="/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -419,11 +400,9 @@ var _hmt = _hmt || [];
 </nav>
 
 
-    
 </article>
 
 
-    
     <section id="comments" class="comments">
 	    
 	        
@@ -468,7 +447,6 @@ var _hmt = _hmt || [];
 
 	    
     </section>
-
 
                     </div>
                 </div>
