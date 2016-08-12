@@ -49,7 +49,7 @@
     <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-48-Rotate-Image/"/>
     <id>http://blog.iamxcc.com/2016/08/12/LeetCode-48-Rotate-Image/</id>
     <published>2016-08-12T03:13:48.000Z</published>
-    <updated>2016-08-12T03:15:22.109Z</updated>
+    <updated>2016-08-12T09:36:09.551Z</updated>
     
     <content type="html"><![CDATA[<p>You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). <a id="more"></a></p>
 <p>Follow up:<br>Could you do this in-place?</p>

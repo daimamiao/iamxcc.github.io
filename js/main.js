@@ -1,7 +1,7 @@
 (function($){
     var toTop = ($('#sidebar').height() - $(window).height()) + 60;
     // Caption
-    $('.article-entry').each(function(i){
+    $('.article').each(function(i){
         $(this).find('img').each(function(){
             if ($(this).parent().hasClass('fancybox')) {
                 return;
