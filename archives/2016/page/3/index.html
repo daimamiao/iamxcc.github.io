@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">81</div>
+            <div class="site-state-item-count">86</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
@@ -184,6 +184,31 @@ var _hmt = _hmt || [];
         
         <div class="timeline-row">
             <div class="timeline-thumbnail">
+                <a href="/2016/08/09/LeetCode-258-Add-Digits/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 258: Add Digits" class="thumbnail-image"></span>
+    
+</a>
+
+            </div>
+            
+                <a class="timeline-entry-title" href="/2016/08/09/LeetCode-258-Add-Digits/"> LeetCode 258: Add Digits </a>
+            分类于
+            
+               <b>
+            <a class="timeline-entry-category-link" href="/categories/LeetCode/">LeetCode</a>
+               </b> 
+            
+            <div class="timeline-entry-date">
+                
+                <time datetime="2016-08-09T02:42:38.000Z" itemprop="datePublished">3天前</time>
+            </div>
+                
+        </div>
+    
+        <div class="timeline-row">
+            <div class="timeline-thumbnail">
                 <a href="/2016/08/09/LeetCode-69-Sqrt-x/" class="thumbnail">
     
     
@@ -202,7 +227,7 @@ var _hmt = _hmt || [];
             
             <div class="timeline-entry-date">
                 
-                <time datetime="2016-08-09T02:08:51.000Z" itemprop="datePublished">2天前</time>
+                <time datetime="2016-08-09T02:08:51.000Z" itemprop="datePublished">3天前</time>
             </div>
                 
         </div>
@@ -227,7 +252,7 @@ var _hmt = _hmt || [];
             
             <div class="timeline-entry-date">
                 
-                <time datetime="2016-08-09T01:57:20.000Z" itemprop="datePublished">2天前</time>
+                <time datetime="2016-08-09T01:57:20.000Z" itemprop="datePublished">3天前</time>
             </div>
                 
         </div>
@@ -252,7 +277,7 @@ var _hmt = _hmt || [];
             
             <div class="timeline-entry-date">
                 
-                <time datetime="2016-08-09T00:37:40.000Z" itemprop="datePublished">2天前</time>
+                <time datetime="2016-08-09T00:37:40.000Z" itemprop="datePublished">3天前</time>
             </div>
                 
         </div>
@@ -277,7 +302,7 @@ var _hmt = _hmt || [];
             
             <div class="timeline-entry-date">
                 
-                <time datetime="2016-08-09T00:18:43.000Z" itemprop="datePublished">2天前</time>
+                <time datetime="2016-08-09T00:18:43.000Z" itemprop="datePublished">3天前</time>
             </div>
                 
         </div>
@@ -332,10 +357,35 @@ var _hmt = _hmt || [];
                 
         </div>
     
+        <div class="timeline-row">
+            <div class="timeline-thumbnail">
+                <a href="/2016/08/08/LeetCode-231-Power-of-Two/" class="thumbnail">
+    
+    
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 231: Power of Two" class="thumbnail-image"></span>
+    
+</a>
+
+            </div>
+            
+                <a class="timeline-entry-title" href="/2016/08/08/LeetCode-231-Power-of-Two/"> LeetCode 231: Power of Two </a>
+            分类于
+            
+               <b>
+            <a class="timeline-entry-category-link" href="/categories/LeetCode/">LeetCode</a>
+               </b> 
+            
+            <div class="timeline-entry-date">
+                
+                <time datetime="2016-08-08T07:33:15.000Z" itemprop="datePublished">3天前</time>
+            </div>
+                
+        </div>
+    
 </div>
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2016/page/2/">上一页</a><a class="page-number" href="/archives/2016/">1</a><a class="page-number" href="/archives/2016/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2016/page/4/">4</a><a class="page-number" href="/archives/2016/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2016/page/14/">14</a><a class="extend next" rel="next" href="/archives/2016/page/4/">下一页</a>
+        <a class="extend prev" rel="prev" href="/archives/2016/page/2/">上一页</a><a class="page-number" href="/archives/2016/">1</a><a class="page-number" href="/archives/2016/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2016/page/4/">4</a><a class="page-number" href="/archives/2016/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2016/page/11/">11</a><a class="extend next" rel="next" href="/archives/2016/page/4/">下一页</a>
     </nav>
 
                     </div>
@@ -409,8 +459,26 @@ var _hmt = _hmt || [];
     <script src="/js/insight.js"></script>
 
 
+<!-- set up the scroll bar -->
 
-
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
 
 
 

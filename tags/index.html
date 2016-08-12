@@ -130,7 +130,7 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">81</div>
+            <div class="site-state-item-count">86</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
@@ -201,7 +201,7 @@ var _hmt = _hmt || [];
     		<li class="md-3 sm-4 xs-4 tag-list-item">
 	    		<a href="/tags/Array/">
 		    		<div class="tag-list-img">A</div>
-	    			<div class="tag-list-name">Array <!-- (7) --></div>
+	    			<div class="tag-list-name">Array <!-- (12) --></div>
 	    		</a>
     		</li>
 	    	
@@ -278,7 +278,7 @@ var _hmt = _hmt || [];
     		<li class="md-3 sm-4 xs-4 tag-list-item">
 	    		<a href="/tags/LeetCode/">
 		    		<div class="tag-list-img">L</div>
-	    			<div class="tag-list-name">LeetCode <!-- (52) --></div>
+	    			<div class="tag-list-name">LeetCode <!-- (57) --></div>
 	    		</a>
     		</li>
 	    	
@@ -524,8 +524,26 @@ var _hmt = _hmt || [];
     <script src="/js/insight.js"></script>
 
 
+<!-- set up the scroll bar -->
 
-
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
 
 
 

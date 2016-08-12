@@ -1410,6 +1410,7 @@ code {
   position: absolute;
   right: 16px;
   top: 28px;
+  right: 0;
   font-size: 15px;
 }
 @media screen and (max-width: 768px) {

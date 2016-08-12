@@ -132,7 +132,7 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">81</div>
+            <div class="site-state-item-count">86</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
@@ -215,7 +215,7 @@ var _hmt = _hmt || [];
 
         
             <div class="article-tag">
-                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">52</span></a>  <a class="tag-link" href="/tags/Math/">Math<span class="tag-count">10</span></a>
+                <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">57</span></a>  <a class="tag-link" href="/tags/Math/">Math<span class="tag-count">10</span></a>
             </div>
         
         <div class="article-content" itemprop="articleBody">
@@ -236,7 +236,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/" data-id="cirqinetv0031s0inewkdyw7a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/" data-id="cirrb1txv003ijsinya3r3sa0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -449,8 +449,26 @@ var _hmt = _hmt || [];
     <script src="/js/insight.js"></script>
 
 
+<!-- set up the scroll bar -->
 
-
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
 
 
 

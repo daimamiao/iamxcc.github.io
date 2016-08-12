@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-11T06:49:30.772Z</updated>
+  <updated>2016-08-12T03:42:40.155Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -14,6 +14,140 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode 162: Find Peak Element</title>
+    <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-162-Find-Peak-Element/"/>
+    <id>http://blog.iamxcc.com/2016/08/12/LeetCode-162-Find-Peak-Element/</id>
+    <published>2016-08-12T03:40:49.000Z</published>
+    <updated>2016-08-12T03:42:40.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>A peak element is an element that is greater than its neighbors. <a id="more"></a> </p>
+<p>Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.</p>
+<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
+<p>You may imagine that <code>num[-1] = num[n] = -∞</code>.</p>
+<p>For example, in array <code>[1, 2, 3, 1]</code>, <code>3</code> is a peak element and your function should return the index number <code>2</code>.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findPeakElement</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize - <span class="number">1</span>; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (nums[i] &lt; nums[i+<span class="number">1</span>]) &#123;</div><div class="line">            index = i + <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> index;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A peak element is an element that is greater than its neighbors.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 48: Rotate Image</title>
+    <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-48-Rotate-Image/"/>
+    <id>http://blog.iamxcc.com/2016/08/12/LeetCode-48-Rotate-Image/</id>
+    <published>2016-08-12T03:13:48.000Z</published>
+    <updated>2016-08-12T03:15:22.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). <a id="more"></a></p>
+<p>Follow up:<br>Could you do this in-place?</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * clockwise rotate</div><div class="line"> * first reverse up to down, then swap the symmetry </div><div class="line"> * 1 2 3     7 8 9     7 4 1</div><div class="line"> * 4 5 6  =&gt; 4 5 6  =&gt; 8 5 2</div><div class="line"> * 7 8 9     1 2 3     9 6 3</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>** matrix, <span class="keyword">int</span> matrixRowSize, <span class="keyword">int</span> matrixColSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrixRowSize / <span class="number">2</span>; i++) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; matrixColSize; j++) &#123;</div><div class="line">			matrix[i][j] ^= matrix[matrixRowSize - <span class="number">1</span> - i][j];</div><div class="line">			matrix[matrixRowSize - <span class="number">1</span> - i][j] ^= matrix[i][j];</div><div class="line">			matrix[i][j] ^= matrix[matrixRowSize - <span class="number">1</span> - i][j];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrixRowSize - <span class="number">1</span>; i++) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; matrixColSize; j++) &#123;</div><div class="line">			matrix[i][j] ^= matrix[j][i];</div><div class="line">			matrix[j][i] ^= matrix[i][j];</div><div class="line">			matrix[i][j] ^= matrix[j][i];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 53: Maximum Subarray</title>
+    <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-53-Maximum-Subarray/"/>
+    <id>http://blog.iamxcc.com/2016/08/12/LeetCode-53-Maximum-Subarray/</id>
+    <published>2016-08-12T01:20:36.000Z</published>
+    <updated>2016-08-12T01:21:42.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>Find the contiguous subarray within an array (containing at least one number) which has the largest sum. <a id="more"></a><br>For example, given the array <code>[−2,1,−3,4,−1,2,1,−5,4]</code>,<br>the contiguous subarray <code>[4,−1,2,1]</code> has the largest <code>sum = 6</code>.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> move = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> res = nums[<span class="number">0</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</div><div class="line">            sum = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        sum += nums[i];</div><div class="line">        <span class="keyword">if</span> (res &lt;= sum) &#123;</div><div class="line">            res = sum;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 35: Search Insert Position</title>
+    <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-35-Search-Insert-Position/"/>
+    <id>http://blog.iamxcc.com/2016/08/12/LeetCode-35-Search-Insert-Position/</id>
+    <published>2016-08-12T01:01:23.000Z</published>
+    <updated>2016-08-12T01:03:41.053Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. <a id="more"></a><br>You may assume no duplicates in the array.<br>Here are few examples.<br><code>[1,3,5,6]</code>, 5 → 2<br><code>[1,3,5,6]</code>, 2 → 1<br><code>[1,3,5,6]</code>, 7 → 4<br><code>[1,3,5,6]</code>, 0 → 0</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> move = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(move &lt; numsSize) &#123;</div><div class="line">        <span class="keyword">if</span> (nums[move] &gt; target) &#123;</div><div class="line">            <span class="keyword">return</span> move &gt; <span class="number">0</span> ? move : <span class="number">0</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[move] == target) &#123;</div><div class="line">            <span class="keyword">return</span> move;</div><div class="line">        &#125;</div><div class="line">        move++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> move;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 11: Container With Most Water</title>
+    <link href="http://blog.iamxcc.com/2016/08/12/LeetCode-11-Container-With-Most-Water/"/>
+    <id>http://blog.iamxcc.com/2016/08/12/LeetCode-11-Container-With-Most-Water/</id>
+    <published>2016-08-11T23:59:36.000Z</published>
+    <updated>2016-08-12T00:51:46.262Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). <a id="more"></a>n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br><strong>Note:</strong> You may not slant the container.</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>有两个指针i和j分别指向头和尾， 如果a[i] &lt; a[j], 则i++,否则j–:<br>证明：<br>对任意ｋ&lt; j：<br>都有(k-i)<em>min(a[k],a[i]) &lt; (j-i)min(a[j],a[i]) = (j-i)a[i]<br><em>*因为:</em></em><br>(k-i) &lt; (j-i)<br>min(a[k],a[i]) &lt; a[i] &lt; min(a[j],a[i])<br>所以此种情况移动j只能得到更小的值， 移动j无用， 只能移动i。 反之亦然。</p>
+</blockquote>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>* height, <span class="keyword">int</span> heightSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> right = heightSize - <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</div><div class="line">        <span class="keyword">if</span> (height[left] &lt;= height[right]) &#123;</div><div class="line">            temp = (right - left) * height[left];</div><div class="line">            left++;</div><div class="line">            <span class="keyword">if</span> (temp &gt;= max) &#123;</div><div class="line">                max = temp;</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            temp = (right - left) * height[right];</div><div class="line">            right--;</div><div class="line">            <span class="keyword">if</span> (temp &gt;= max) &#123;</div><div class="line">                max = temp;</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> max;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai).
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 121: Best Time to Buy and Sell Stock I, II, III</title>
@@ -428,144 +562,6 @@
     <summary type="html">
     
       &lt;p&gt;Reverse digits of an integer. Example1: x = 123, return 321 Example2: x = -123, return -321.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 12: Integer to Roman</title>
-    <link href="http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/"/>
-    <id>http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/</id>
-    <published>2016-08-09T00:18:43.000Z</published>
-    <updated>2016-08-09T06:23:15.703Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999. <a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">    <span class="keyword">char</span> *str = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);</div><div class="line">    <span class="built_in">memset</span>(str,<span class="number">0</span>,<span class="number">100</span>);</div><div class="line">	<span class="keyword">char</span> *strM[] = &#123; <span class="string">""</span>, <span class="string">"M"</span>, <span class="string">"MM"</span>, <span class="string">"MMM"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strC[] = &#123; <span class="string">""</span>, <span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strX[] = &#123; <span class="string">""</span>, <span class="string">"X"</span>, <span class="string">"XX"</span>, <span class="string">"XXX"</span>, <span class="string">"XL"</span>, <span class="string">"L"</span>, <span class="string">"LX"</span>, <span class="string">"LXX"</span>, <span class="string">"LXXX"</span>, <span class="string">"XC"</span> &#125;;</div><div class="line">	<span class="keyword">char</span> *strI[] = &#123; <span class="string">""</span>, <span class="string">"I"</span>, <span class="string">"II"</span>, <span class="string">"III"</span>, <span class="string">"IV"</span>, <span class="string">"V"</span>, <span class="string">"VI"</span>, <span class="string">"VII"</span>, <span class="string">"VIII"</span>, <span class="string">"IX"</span> &#125;;</div><div class="line">	<span class="built_in">strcpy</span>(str, strM[num / <span class="number">1000</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strC[(num % <span class="number">1000</span>) / <span class="number">100</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strX[(num % <span class="number">100</span>) / <span class="number">10</span>]);</div><div class="line">	<span class="built_in">strcat</span>(str, strI[num % <span class="number">10</span>]);</div><div class="line">	<span class="keyword">return</span> str;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 这里不太明白char str[100] = &#123;0&#125; 为什么不行</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 319: Bulb Switcher</title>
-    <link href="http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/"/>
-    <id>http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/</id>
-    <published>2016-08-08T08:15:41.000Z</published>
-    <updated>2016-08-08T08:52:14.614Z</updated>
-    
-    <content type="html"><![CDATA[<p>There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. <a id="more"></a>  On the third round, you toggle every third bulb (turning on if it’s off or turning off if it’s on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.</p>
-<p>Example:</p>
-<blockquote>
-<p>Given n = 3.<br>At first, the three bulbs are [off, off, off].<br>After first round, the three bulbs are [on, on, on].<br>After second round, the three bulbs are [on, off, on].<br>After third round, the three bulbs are [on, off, off].<br>So you should return 1, because there is only one bulb is on.</p>
-</blockquote>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>用数学的方法来思考这道题，会发现很简单。首先，决定一盏灯最后的亮灭取决于她所处在的序号。比如，6号灯最后一定是灭的，为什么呢？因为在n次操作中，只有她的因数次才能切换她的亮灭，比如第1次、第2次、第3次、第6次操作，又第1次是开，那么低6次后，她就灭了。所以要想亮，那么这个数要为有奇数个因数的数才行，而我们知道只有能开平方的数，有奇数个因数，因为她有一个不是成对出现的因数。所以要知道最后有几个灯是亮的，只要找到有几个小于n的能开平方数的数即可。而要计算一个数之下有多少小于或等于它的平方数，使用一个开平方用的函数就可以了。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">bulbSwitch</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>(n);</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 9: Palindrome Number</title>
-    <link href="http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/"/>
-    <id>http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/</id>
-    <published>2016-08-08T07:52:04.000Z</published>
-    <updated>2016-08-08T07:54:48.313Z</updated>
-    
-    <content type="html"><![CDATA[<p>Determine whether an integer is a palindrome. Do this without extra space. <a id="more"></a></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x!=<span class="number">0</span> &amp;&amp; x%<span class="number">10</span>==<span class="number">0</span>)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (x &gt; sum) &#123;</div><div class="line">        sum = sum*<span class="number">10</span> + x%<span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (x==sum)||(x==sum/<span class="number">10</span>);</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Determine whether an integer is a palindrome. Do this without extra space.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 231: Power of Two</title>
-    <link href="http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/"/>
-    <id>http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/</id>
-    <published>2016-08-08T07:33:15.000Z</published>
-    <updated>2016-08-08T07:56:22.033Z</updated>
-    
-    <content type="html"><![CDATA[<p>这个题跟<code>Power of Three</code>的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以<code>&amp;</code>,<code>|</code>这些位操作总能出奇迹。<br><a id="more"></a></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>我们可以列几个2的次幂数就可以发现，他们的二进制数的最高位为1，其他位都是0。所以让她与比她小的一个数的数做一下位与<code>&amp;</code>即有结果为0。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfTwo</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; !(n &amp; (n - <span class="number">1</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这个题跟&lt;code&gt;Power of Three&lt;/code&gt;的思路基本一模一样，解法也差不多。但是因为是2啊，毕竟是计算机的进制数，所以&lt;code&gt;&amp;amp;&lt;/code&gt;,&lt;code&gt;|&lt;/code&gt;这些位操作总能出奇迹。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 326: Power of Three</title>
-    <link href="http://blog.iamxcc.com/2016/08/08/LeetCode-326-Power-of-Three/"/>
-    <id>http://blog.iamxcc.com/2016/08/08/LeetCode-326-Power-of-Three/</id>
-    <published>2016-08-08T07:02:06.000Z</published>
-    <updated>2016-08-08T07:55:28.625Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天突然发现做LeetCode上Math的题目真心很有趣，不仅解法多样，还能时不时被绝妙的想法高潮一波。<a id="more"></a><br>Given an integer, write a function to determine if it is a power of three.<br><strong>Follow up:</strong><br>Could you do it without using any loop / recursion?</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目因为有int的限制，所以知道3的次幂的数肯定大不过1162261467。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> (n &gt; <span class="number">0</span> &amp;&amp; <span class="number">1162261467</span> % n == <span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>利用log实现<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">fmod</span>(<span class="built_in">log10</span>(n)/<span class="built_in">log10</span>(<span class="number">3</span>), <span class="number">1</span>)==<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>题目说明了不可以使用循环或递归：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 递归</span></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> n&gt;<span class="number">0</span> &amp;&amp; (n==<span class="number">1</span> || (n%<span class="number">3</span>==<span class="number">0</span> &amp;&amp; isPowerOfThree(n/<span class="number">3</span>)));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 循环</span></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span>(n&gt;<span class="number">1</span>)</div><div class="line">        <span class="keyword">while</span>(n%<span class="number">3</span>==<span class="number">0</span>) n /= <span class="number">3</span>;</div><div class="line">    <span class="keyword">return</span> n==<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>21038 / 21038 test cases passed.</code><br>Status: <code>Accepted</code><br>Runtime: <code>120 ms</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天突然发现做LeetCode上Math的题目真心很有趣，不仅解法多样，还能时不时被绝妙的想法高潮一波。
     
     </summary>
     
