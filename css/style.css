@@ -1219,6 +1219,7 @@ code {
 .scope-title {
   margin-bottom: 26px;
   position: relative;
+  text-align: center;
 }
 .scope-title span {
   background: #323337;
@@ -1227,6 +1228,7 @@ code {
   font-weight: 800;
   position: relative;
   padding-right: 16px;
+  padding-left: 16px;
   z-index: 1;
   left: 0;
 }
@@ -1266,7 +1268,7 @@ code {
 }
 .last-entry .last-entry-title {
   margin-bottom: 8px;
-  margin-top: -14px;
+  margin-top: -3px;
 }
 .last-entry .last-entry-title a {
   color: #bbb;
@@ -1307,7 +1309,7 @@ code {
 }
 .entry {
   overflow: hidden;
-  margin-bottom: 46px;
+  margin-bottom: 28px;
   position: relative;
 }
 .entry .entry-img {
@@ -1328,7 +1330,7 @@ code {
   height: 100%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #323337;
 }
 .entry .entry-body {
   margin: 0 96px 0 84px;
@@ -1359,14 +1361,6 @@ code {
 .entry .entry-content {
   font-size: 14px;
   color: #bbb;
-}
-@media screen and (max-width: 768px) {
-  .entry .entry-content {
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
 }
 .entry .entry-category {
   position: absolute;
@@ -2314,8 +2308,10 @@ ol.toc {
   margin-bottom: 8px;
 }
 .timeline-wrap .timeline-title span {
+  color: #fff;
+  font-weight: 700;
   padding: 8px 16px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   -webkit-border-radius: 28px;
   border-radius: 28px;
 }
@@ -2325,6 +2321,7 @@ ol.toc {
   border-left: 1px solid #ccc;
   position: relative;
   padding: 18px 0 18px 46px;
+  color: #ddd;
 }
 .timeline-row:before,
 .timeline-row:after {
@@ -2359,7 +2356,7 @@ ol.toc {
 }
 .timeline-row .timeline-entry-date {
   margin-top: 12px;
-  color: #999;
+  color: #bbb;
   font-size: 13px;
 }
 .timeline-row-major .node {
