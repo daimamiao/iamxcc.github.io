@@ -60,7 +60,7 @@ var _hmt = _hmt || [];
         <a href="/" id="logo">
             <i class="logo"></i>
         </a>
-        <nav id="main-nav">
+        <!-- <nav id="main-nav">
             
                 <a class="main-nav-link" href="/archives">归档</a>
             
@@ -72,7 +72,7 @@ var _hmt = _hmt || [];
             
                 <a class="main-nav-link" href="/about">关于</a>
             
-        </nav>
+        </nav> -->
         <div id="search-form-wrap">
 
     <form class="search-form">
@@ -176,6 +176,19 @@ var _hmt = _hmt || [];
             
         </div>
     
+    <div id="profile-nav">
+        
+            <a class="profile-nav-link" href="/archives">归档</a>
+        
+            <a class="profile-nav-link" href="/categories">分类</a>
+        
+            <a class="profile-nav-link" href="/tags">标签</a>
+        
+            <a class="profile-nav-link" href="/series">系列</a>
+        
+            <a class="profile-nav-link" href="/about">关于</a>
+        
+    </div>
 </div>
                     <div id="content">
                         <article id="post-L1-002-打印沙漏" class="article article-type-post" itemscope itemprop="blogPost">
@@ -208,7 +221,7 @@ var _hmt = _hmt || [];
             
             <a href="/2016/08/10/L1-002-打印沙漏/" class="article-date">
                 
-                <time datetime="2016-08-10T11:00:27.000Z" itemprop="datePublished">1天前</time>
+                <time datetime="2016-08-10T11:00:27.000Z" itemprop="datePublished">2天前</time>
             </a>
         </div>
 
@@ -228,86 +241,6 @@ var _hmt = _hmt || [];
 <p>首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">输入样例：</div><div class="line">19 *</div><div class="line">输出样例：</div><div class="line">*****</div><div class="line"> ***</div><div class="line">  *</div><div class="line"> ***</div><div class="line">*****</div><div class="line">2</div></pre></td></tr></table></figure></p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> num = <span class="number">0</span>;</div><div class="line">	<span class="keyword">char</span> symbol;</div><div class="line">	<span class="keyword">int</span> max = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> times = <span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %c"</span>, &amp;num, &amp;symbol);</div><div class="line">	max = <span class="built_in">sqrt</span>(<span class="number">2</span>*(num + <span class="number">1</span>)) - <span class="number">1</span>;</div><div class="line">	max = (max % <span class="number">2</span>) == <span class="number">0</span> ? max - <span class="number">1</span> : max;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; max; j++) &#123;</div><div class="line">			<span class="keyword">int</span> temp = i &gt; max / <span class="number">2</span> ? (max - i - <span class="number">1</span>) : i;</div><div class="line">			<span class="keyword">if</span> (temp &lt;= j &amp;&amp; j &lt;= max - <span class="number">1</span> - temp) &#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">"%c"</span>, symbol);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (j &gt; max - <span class="number">1</span> - temp) &#123;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">" "</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> left = <span class="built_in">pow</span>((max + <span class="number">1</span>), <span class="number">2</span>) / <span class="number">2</span> - <span class="number">1</span>;</div><div class="line">	left = left &gt; <span class="number">0</span> ? left : <span class="number">0</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, num - left);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         </div>
-
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://blog.iamxcc.com/2016/08/10/L1-002-打印沙漏/" data-id="cirrlxbd2000i2oinbbi46zkp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://blog.iamxcc.com/2016/08/10/L1-002-打印沙漏/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/10/L1-002-打印沙漏/">评论</a>
-    
-
-        </footer>
     </div>
     
 <nav id="article-nav">
@@ -337,43 +270,6 @@ var _hmt = _hmt || [];
 	    
 	        
     <div class="ds-thread" data-thread-key="2016/08/10/L1-002-打印沙漏/" data-title="L1-002: 打印沙漏" data-url="http://blog.iamxcc.com/2016/08/10/L1-002-打印沙漏/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 3px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
 
 	    
     </section>
@@ -481,6 +377,8 @@ var _hmt = _hmt || [];
 
 
 <!-- firefly -->
+
+    <script src="/js/firefly.js"></script>
 
 <canvas id="pixie" width="1301" height="935"></canvas>
 

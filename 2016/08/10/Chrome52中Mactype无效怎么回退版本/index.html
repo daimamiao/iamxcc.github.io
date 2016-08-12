@@ -60,7 +60,7 @@ var _hmt = _hmt || [];
         <a href="/" id="logo">
             <i class="logo"></i>
         </a>
-        <nav id="main-nav">
+        <!-- <nav id="main-nav">
             
                 <a class="main-nav-link" href="/archives">归档</a>
             
@@ -72,7 +72,7 @@ var _hmt = _hmt || [];
             
                 <a class="main-nav-link" href="/about">关于</a>
             
-        </nav>
+        </nav> -->
         <div id="search-form-wrap">
 
     <form class="search-form">
@@ -176,6 +176,19 @@ var _hmt = _hmt || [];
             
         </div>
     
+    <div id="profile-nav">
+        
+            <a class="profile-nav-link" href="/archives">归档</a>
+        
+            <a class="profile-nav-link" href="/categories">分类</a>
+        
+            <a class="profile-nav-link" href="/tags">标签</a>
+        
+            <a class="profile-nav-link" href="/series">系列</a>
+        
+            <a class="profile-nav-link" href="/about">关于</a>
+        
+    </div>
 </div>
                     <div id="content">
                         <article id="post-Chrome52中Mactype无效怎么回退版本" class="article article-type-post" itemscope itemprop="blogPost">
@@ -224,86 +237,6 @@ var _hmt = _hmt || [];
 <p>可是怎么回退呢？卸载掉再重新装吗？<br>答案是不用这么麻烦。下面是解决办法，来自知乎 <a href="https://www.zhihu.com/people/zhen-ming-36-24" target="_blank" rel="external">Dorawei</a>：<br>C:\Program Files (x86)\Google\Chrome\Temp\ 下的一个文件夹中有old_chrome.exe，把它复制到C:\Program Files (x86)\Google\Chrome\Application 中改为 chrome.exe 就可以返回上一版了。</p>
 
         </div>
-
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://blog.iamxcc.com/2016/08/10/Chrome52中Mactype无效怎么回退版本/" data-id="cirrlxbcy00092oinw15gs274" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://blog.iamxcc.com/2016/08/10/Chrome52中Mactype无效怎么回退版本/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/10/Chrome52中Mactype无效怎么回退版本/">评论</a>
-    
-
-        </footer>
     </div>
     
 <nav id="article-nav">
@@ -333,43 +266,6 @@ var _hmt = _hmt || [];
 	    
 	        
     <div class="ds-thread" data-thread-key="2016/08/10/Chrome52中Mactype无效怎么回退版本/" data-title="Chrome52中Mactype无效怎么回退版本" data-url="http://blog.iamxcc.com/2016/08/10/Chrome52中Mactype无效怎么回退版本/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 3px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
 
 	    
     </section>
@@ -477,6 +373,8 @@ var _hmt = _hmt || [];
 
 
 <!-- firefly -->
+
+    <script src="/js/firefly.js"></script>
 
 <canvas id="pixie" width="1301" height="935"></canvas>
 
