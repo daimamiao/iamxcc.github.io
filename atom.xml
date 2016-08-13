@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-13T06:09:22.175Z</updated>
+  <updated>2016-08-13T06:20:42.248Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.iamxcc.com/2016/08/13/jquery%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%90%A4%E7%81%AB%E8%99%AB%E6%95%88%E6%9E%9C/"/>
     <id>http://blog.iamxcc.com/2016/08/13/jquery插件实现萤火虫效果/</id>
     <published>2016-08-13T05:52:51.000Z</published>
-    <updated>2016-08-13T06:09:22.175Z</updated>
+    <updated>2016-08-13T06:20:42.248Z</updated>
     
     <content type="html"><![CDATA[<p>如果博客页面是黑色的，可以添加一些萤火虫效果在上面，从而显得不那么单调。<a id="more"></a></p>
 <p>源码在<a href="https://github.com/iamxcc/jquery-firefly" target="_blank" rel="external">jQuery-firefly</a>上，支持一下。</p>
