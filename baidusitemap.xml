@@ -4,6 +4,143 @@
 
     
   <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/jquery%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%90%A4%E7%81%AB%E8%99%AB%E6%95%88%E6%9E%9C/</loc>
+    <lastmod>2016-08-13T06:09:22.175Z</lastmod>
+    <data>
+        <display>
+        <title>jquery插件实现萤火虫效果</title>
+        <pubTime>2016-08-13T05:52:51.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+         
+           
+             
+              <breadCrumb title="jQuery" url="http://blog.iamxcc.com/categories/jQuery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/git%E6%8E%A8%E9%80%81%E6%96%87%E4%BB%B6%E5%88%B0github%E6%AD%A5%E9%AA%A4/</loc>
+    <lastmod>2016-08-13T03:48:46.131Z</lastmod>
+    <data>
+        <display>
+        <title>git推送文件到github步骤</title>
+        <pubTime>2016-08-13T03:41:50.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://blog.iamxcc.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-74-Search-a-2D-Matrix/</loc>
+    <lastmod>2016-08-13T03:10:56.688Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 74:Search a 2D Matrix</title>
+        <pubTime>2016-08-13T03:09:30.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+        <tag>Binary Search</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-378-Kth-Smallest-Element-in-a-Sorted-Matrix/</loc>
+    <lastmod>2016-08-13T02:38:27.216Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 378:Kth Smallest Element in a Sorted Matrix</title>
+        <pubTime>2016-08-13T02:37:11.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+        <tag>Binary Search</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-34-Search-for-a-Range/</loc>
+    <lastmod>2016-08-13T00:56:04.213Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 34:Search for a Range</title>
+        <pubTime>2016-08-13T00:54:59.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+        <tag>Binary Search</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-I-II/</loc>
+    <lastmod>2016-08-13T00:55:32.165Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 154:Find Minimum in Rotated Sorted Array I,II</title>
+        <pubTime>2016-08-12T23:33:20.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Array</tag>
+         
+        <tag>Binary Search</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.iamxcc.com/2016/07/31/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2016-08-12T10:18:40.871Z</lastmod>
     <data>
