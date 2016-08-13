@@ -30,19 +30,24 @@
     
 
     
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
     
     
-        <script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-82072441-1', 'auto');
-ga('send', 'pageview');
-
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    
+
+
     
 </head>
 
@@ -52,7 +57,8 @@ ga('send', 'pageview');
         <a href="/" id="logo">
             <i class="logo"></i>
         </a>
-        <!-- <nav id="main-nav">
+
+       <!--  <nav id="main-nav">
             
                 <a class="main-nav-link" href="/archives">归档</a>
             
@@ -115,7 +121,8 @@ ga('send', 'pageview');
         <div class="container">
             <div class="row">
                 <div class="md-9 md-offset-1">
-                    <div id="profile">
+                    
+                        <div id="profile">
     <a id="avatar" href="/">
         <img src="/css/images/avatar1.png" >
     </a>
@@ -192,6 +199,7 @@ ga('send', 'pageview');
         
     </div>
 </div>
+                    
                     <div id="content">
                         
 <div class="timeline-wrap md">
@@ -355,8 +363,15 @@ ga('send', 'pageview');
 
 <!-- Automatic page load progress bar  -->
 
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.min.css">
+
 
 <!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
 
 <!-- comment -->
 
@@ -434,23 +449,30 @@ ga('send', 'pageview');
 
 <!-- busuanzi statistics scripts -->
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 <!-- CNZZ analytics script  -->
 
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255957443'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255957443%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
 <!-- baidu analytics script  -->
 
-<!-- google analytics script  -->
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-    <script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-82072441-1', 'auto');
-ga('send', 'pageview');
 
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
