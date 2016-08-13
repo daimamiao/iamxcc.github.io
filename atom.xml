@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-13T06:20:42.248Z</updated>
+  <updated>2016-08-13T06:25:26.905Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.iamxcc.com/2016/08/13/jquery%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%90%A4%E7%81%AB%E8%99%AB%E6%95%88%E6%9E%9C/"/>
     <id>http://blog.iamxcc.com/2016/08/13/jquery插件实现萤火虫效果/</id>
     <published>2016-08-13T05:52:51.000Z</published>
-    <updated>2016-08-13T06:20:42.248Z</updated>
+    <updated>2016-08-13T06:25:26.905Z</updated>
     
     <content type="html"><![CDATA[<p>如果博客页面是黑色的，可以添加一些萤火虫效果在上面，从而显得不那么单调。<a id="more"></a></p>
 <p>源码在<a href="https://github.com/iamxcc/jquery-firefly" target="_blank" rel="external">jQuery-firefly</a>上，支持一下。</p>
@@ -45,7 +45,7 @@
     <link href="http://blog.iamxcc.com/2016/08/13/git%E6%8E%A8%E9%80%81%E6%96%87%E4%BB%B6%E5%88%B0github%E6%AD%A5%E9%AA%A4/"/>
     <id>http://blog.iamxcc.com/2016/08/13/git推送文件到github步骤/</id>
     <published>2016-08-13T03:41:50.000Z</published>
-    <updated>2016-08-13T03:48:46.131Z</updated>
+    <updated>2016-08-13T06:33:11.945Z</updated>
     
     <content type="html"><![CDATA[<p>每次想用git推送文件到github时，总是忘记那几个命令，如果出错还不知道是怎么回事。所以在这里做个记录，方便下次翻阅。<a id="more"></a></p>
 <h3 id="推送到新的仓库"><a href="#推送到新的仓库" class="headerlink" title="推送到新的仓库"></a>推送到新的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"# hexo-source"</span> &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"first commit"</span></div><div class="line">git remote add origin git@github.com:iamxcc/hexo-source.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
