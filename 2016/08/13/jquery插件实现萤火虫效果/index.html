@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
             <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
             <a href="/2016/08/13/jquery插件实现萤火虫效果/" class="article-date">
                 
-                <time datetime="2016-08-13T05:52:51.000Z" itemprop="datePublished">7小时前</time>
+                <time datetime="2016-08-13T05:52:51.000Z" itemprop="datePublished">8小时前</time>
             </a>
         </div>
 
@@ -308,6 +308,14 @@ var _hmt = _hmt || [];
 
 
 <!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
 
 
 <!-- snowfall -->

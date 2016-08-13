@@ -253,7 +253,7 @@ var _hmt = _hmt || [];
             
             <div class="timeline-entry-date">
                 
-                <time datetime="2016-08-05T13:42:17.000Z" itemprop="datePublished">7天前</time>
+                <time datetime="2016-08-05T13:42:17.000Z" itemprop="datePublished">8天前</time>
             </div>
                 
         </div>
@@ -503,6 +503,14 @@ var _hmt = _hmt || [];
 
 
 <!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
 
 
 <!-- snowfall -->

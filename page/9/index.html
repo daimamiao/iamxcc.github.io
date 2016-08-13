@@ -255,6 +255,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
     <span>时间轴</span>
 </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -297,6 +298,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -339,6 +341,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -381,6 +384,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -423,6 +427,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -465,6 +470,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -507,6 +513,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -549,6 +556,7 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
         
     </div>
 
+<div class="pjax-content"></div>
 
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/">下一页</a>
@@ -642,6 +650,14 @@ input第1行：整数的数量N（1 &amp;lt;= N &amp;lt;= 50000)第2 - N  ...
 
 
 <!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
 
 
 <!-- snowfall -->

@@ -254,6 +254,7 @@ var _hmt = _hmt || [];
     <span>时间轴</span>
 </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -296,6 +297,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -338,6 +340,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -380,6 +383,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -422,6 +426,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -464,6 +469,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -506,6 +512,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -548,6 +555,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
@@ -641,6 +649,14 @@ var _hmt = _hmt || [];
 
 
 <!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
 
 
 <!-- snowfall -->

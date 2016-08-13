@@ -255,6 +255,7 @@ var _hmt = _hmt || [];
     <span>时间轴</span>
 </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -297,6 +298,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -339,6 +341,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -368,7 +371,7 @@ var _hmt = _hmt || [];
                 <div class="entry-date">
                     <a href="/2016/08/04/LeetCode-328-Odd-Even-Linked-List/">
                         
-                        <time datetime="2016-08-04T13:47:47.000Z" itemprop="datePublished">8天前</time>
+                        <time datetime="2016-08-04T13:47:47.000Z" itemprop="datePublished">9天前</time>
                     </a>
                 </div>
             
@@ -381,6 +384,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -423,6 +427,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -465,6 +470,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -494,7 +500,7 @@ var _hmt = _hmt || [];
                 <div class="entry-date">
                     <a href="/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/">
                         
-                        <time datetime="2016-08-03T13:46:45.000Z" itemprop="datePublished">9天前</time>
+                        <time datetime="2016-08-03T13:46:45.000Z" itemprop="datePublished">10天前</time>
                     </a>
                 </div>
             
@@ -507,6 +513,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
 	
     
@@ -549,6 +556,7 @@ var _hmt = _hmt || [];
         
     </div>
 
+<div class="pjax-content"></div>
 
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
@@ -642,6 +650,14 @@ var _hmt = _hmt || [];
 
 
 <!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
 
 
 <!-- snowfall -->

@@ -365,6 +365,14 @@ var _hmt = _hmt || [];
 
 <!-- pjax -->
 
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+        });
+    </script>
+
 
 <!-- snowfall -->
 
