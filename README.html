@@ -242,7 +242,7 @@ var _hmt = _hmt || [];
             <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
             <a href="/README.html" class="article-date">
                 
-                <time datetime="2016-08-13T03:37:19.172Z" itemprop="datePublished">10小时前</time>
+                <time datetime="2016-08-13T03:37:19.172Z" itemprop="datePublished">12小时前</time>
             </a>
         </div>
 
@@ -271,9 +271,6 @@ var _hmt = _hmt || [];
         </div>
     </div>
     <footer id="footer">
-    <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors">
-    </div>
-
     <div class="outer">
         <div id="footer-info" class="inner">&copy;  
         	
@@ -359,7 +356,20 @@ var _hmt = _hmt || [];
         $(document).pjax('a[target!=_blank]', '#content', {
             fragment: '#content',
             timeout: 5000,
+            scrollTo: false
         });
+        var headerHeight = parseInt($('#header').height());
+        var headerMarginBottom = parseInt($('#header').css('marginBottom').replace("px", ""));
+        var profileHeight = parseInt($('#profile').height());
+        var profileMarginBottom = parseInt($('#profile').css('marginBottom').replace("px", ""));
+        $(document).on('pjax:complete', function() {
+            $('html,body').animate({
+                scrollTop: headerHeight + headerMarginBottom + profileHeight + profileMarginBottom - 30},
+                600, function() {
+                /* stuff to do after animation is complete */
+            });
+            // $(document).scrollTop(headerHeight+headerMarginBottom+profileHeight+profileMarginBottom);
+        })
     </script>
 
 
@@ -410,6 +420,7 @@ var _hmt = _hmt || [];
 
 
 <!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
 </body>
 </html>
