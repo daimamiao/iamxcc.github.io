@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/C%E5%87%BD%E6%95%B0qsort%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2016-08-14T11:13:54.903Z</lastmod>
+    <data>
+        <display>
+        <title>C函数qsort的用法</title>
+        <pubTime>2016-07-30T07:37:31.000Z</pubTime>
+        
+        <tag>C语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/14/VS2015%E4%B8%AD%E4%BD%BF%E7%94%A8scanf%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2016-08-14T10:45:44.553Z</lastmod>
+    <data>
+        <display>
+        <title>VS2015中使用scanf报错</title>
+        <pubTime>2016-08-14T10:30:48.000Z</pubTime>
+        
+        <tag>VS2015</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="VS2015" url="http://blog.iamxcc.com/categories/VS2015/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</loc>
     <lastmod>2016-08-14T06:26:51.701Z</lastmod>
     <data>
@@ -2011,26 +2053,6 @@
            
              
               <breadCrumb title="Win10" url="http://blog.iamxcc.com/categories/Win10/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/30/C%E5%87%BD%E6%95%B0qsort%E7%94%A8%E6%B3%95/</loc>
-    <lastmod>2016-07-30T23:18:34.435Z</lastmod>
-    <data>
-        <display>
-        <title>C函数qsort的用法</title>
-        <pubTime>2016-07-30T07:37:31.000Z</pubTime>
-        
-        <tag>C语言</tag>
-         
-         
-           
-             
-              <breadCrumb title="C语言" url="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
           
         </display>
     </data>

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.iamxcc.com/2016/07/30/C%E5%87%BD%E6%95%B0qsort%E7%94%A8%E6%B3%95/</loc>
+    
+    <lastmod>2016-08-14T11:13:54.903Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/14/VS2015%E4%B8%AD%E4%BD%BF%E7%94%A8scanf%E6%8A%A5%E9%94%99/</loc>
+    
+    <lastmod>2016-08-14T10:45:44.553Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</loc>
     
     <lastmod>2016-08-14T06:26:51.701Z</lastmod>
@@ -691,13 +705,6 @@
     <loc>http://blog.iamxcc.com/2016/07/26/WinSnap-%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE%E6%89%8D%E6%98%AF%E5%A5%BD%E6%88%AA%E5%9B%BE/</loc>
     
     <lastmod>2016-07-30T23:19:03.997Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/30/C%E5%87%BD%E6%95%B0qsort%E7%94%A8%E6%B3%95/</loc>
-    
-    <lastmod>2016-07-30T23:18:34.435Z</lastmod>
     
   </url>
   

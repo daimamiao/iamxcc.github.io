@@ -6,17 +6,17 @@
     <title>C函数qsort的用法 | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
-    <meta name="description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分发写的，其时间复杂度为n*log(n)。">
+    <meta name="description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分法写的，其时间复杂度为n*log(n)。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C函数qsort的用法">
 <meta property="og:url" content="http://blog.iamxcc.com/2016/07/30/C函数qsort用法/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分发写的，其时间复杂度为n*log(n)。">
+<meta property="og:description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分法写的，其时间复杂度为n*log(n)。">
 <meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/qsort2.png">
-<meta property="og:updated_time" content="2016-07-30T23:18:34.435Z">
+<meta property="og:updated_time" content="2016-08-14T11:13:54.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C函数qsort的用法">
-<meta name="twitter:description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分发写的，其时间复杂度为n*log(n)。">
+<meta name="twitter:description" content="qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分法写的，其时间复杂度为n*log(n)。">
 <meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/qsort2.png">
     
     
@@ -132,17 +132,17 @@ var _hmt = _hmt || [];
     <p id="site-description">人一切的痛苦，本质上都是对自己的无能的愤怒</p>
     <ul id="site-state">
         <li class="site-state-item">
-            <div class="site-state-item-count">97</div>
+            <div class="site-state-item-count">98</div>
             <div class="site-state-item-name">文章</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">40</div>
+            <div class="site-state-item-count">42</div>
             <div class="site-state-item-name">标签</div>
         </li>
         <li class="site-state-item">
             
-            <div class="site-state-item-count">20</div>
+            <div class="site-state-item-count">21</div>
             <div class="site-state-item-name">分类</div>
         </li>
     </ul>
@@ -267,15 +267,19 @@ var _hmt = _hmt || [];
         
         <div class="article-content" itemprop="articleBody">
             
-            <p>qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分发写的，其时间复杂度为n*log(n)。<a id="more"></a>为了了解</p>
+            <p>qsort()函数是ANSI C标准中提供的，其声明在stdlib.h文件中，是根据二分法写的，其时间复杂度为n*log(n)。<a id="more"></a>为了了解</p>
 <h3 id="排序方式"><a href="#排序方式" class="headerlink" title="排序方式"></a>排序方式</h3><p>排序方式有很多种，比如：选择排序、冒泡排序、归并排序、快速排序等等。顾名思义快速排序是目前公认的一种比较好的排序算法，其比选择排序、冒泡排序都要快。因为它的速度很快，所以系统也在库里实现这个算法，便于我们使用，这个函数就是qsort了。</p>
 <h3 id="qsort简介"><a href="#qsort简介" class="headerlink" title="qsort简介"></a>qsort简介</h3><p>qsort的函数原型是:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">qsort</span><span class="params">(<span class="keyword">void</span>* base, <span class="keyword">size_t</span> nelem, <span class="keyword">size_t</span> width, cmp)</span></span></div></pre></td></tr></table></figure></p>
 <p>其中：</p>
 <ol>
-<li>*base为要排序的数组</li>
-<li>nelem为要排序的数组的长度</li>
-<li>width为每个数组元素的大小(以字节为单位)</li>
-<li>cmp为自己定义的比较函数，其作用在于方便使用者实现对数组、字符串、结构体等结构进行升序或降序排列。</li>
+<li><p>*base为要排序的数组</p>
+</li>
+<li><p>nelem为要排序的数组的长度</p>
+</li>
+<li><p>width为每个数组元素的大小(以字节为单位)</p>
+</li>
+<li><p>cmp为自己定义的比较函数，其作用在于方便使用者实现对数组、字符串、结构体等结构进行升序或降序排列。</p>
+</li>
 </ol>
 <h3 id="cmp函数"><a href="#cmp函数" class="headerlink" title="cmp函数"></a>cmp函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></div></pre></td></tr></table></figure>
 <p>cmp函数中有两个元素作为参数，返回一个int值，如果比较函数返回大于0，qsort就认为a&gt;b；如果返回等于0，qsort就认为a=b；如果返回小于0，qsort就认为a小于b。<br>因此，qsort函数知道元素大小，就可以把大的放到前面去。<br>如果你把cmp函数的返回值1与-1的位置调换，那么就造成了升降序的差别了。</p>
