@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-13T06:25:26.905Z</updated>
+  <updated>2016-08-14T02:33:08.519Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -16,6 +16,125 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode 33:Search a 2D Matrix II</title>
+    <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/"/>
+    <id>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</id>
+    <published>2016-08-14T02:28:31.000Z</published>
+    <updated>2016-08-14T02:33:08.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才反应过来。一开始就从右上角开始比较，那么上面的问题就没有了。 <a id="more"></a><br>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
+<ul>
+<li>Integers in each row are sorted in ascending from left to right.</li>
+<li>Integers in each column are sorted in ascending from top to bottom.<br>For example,</li>
+</ul>
+<p>Consider the following matrix:</p>
+<blockquote>
+<p>[<br>  [1,   4,  7, 11, 15],<br>  [2,   5,  8, 12, 19],<br>  [3,   6,  9, 16, 22],<br>  [10, 13, 14, 17, 24],<br>  [18, 21, 23, 26, 30]<br>]</p>
+</blockquote>
+<p>Given target = <code>5</code>, return <code>true</code>.</p>
+<p>Given target = <code>20</code>, return <code>false</code>.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="keyword">int</span>** matrix, <span class="keyword">int</span> matrixRowSize, <span class="keyword">int</span> matrixColSize, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> row = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> col = matrixColSize - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(row &lt; matrixRowSize &amp;&amp; col &gt;= <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (matrix[row][col] == target) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (matrix[row][col] &gt; target) &#123;</div><div class="line">            col--;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            row++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才反应过来。一开始就从右上角开始比较，那么上面的问题就没有了。
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Binary Search" scheme="http://blog.iamxcc.com/tags/Binary-Search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 33:Search in Rotated Sorted Array</title>
+    <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-in-Rotated-Sorted-Array/"/>
+    <id>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-in-Rotated-Sorted-Array/</id>
+    <published>2016-08-14T01:18:24.000Z</published>
+    <updated>2016-08-14T01:39:38.130Z</updated>
+    
+    <content type="html"><![CDATA[<p>Suppose a sorted array is rotated at some pivot unknown to you beforehand. <a id="more"></a></p>
+<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
+<p>You are given a target value to search. If found in the array return its index, otherwise return -1.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> move = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i  = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (nums[i] == target) &#123;</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="使用Binary-Search"><a href="#使用Binary-Search" class="headerlink" title="使用Binary Search"></a>使用Binary Search</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> right = numsSize - <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> mid = <span class="number">0</span>;</div><div class="line">    <span class="comment">// find the index of smallest value using binary search</span></div><div class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</div><div class="line">        mid = (left + right) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span> (nums[mid] &gt; nums[right]) &#123;</div><div class="line">            left = mid + <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            right = mid;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> smallest = left;</div><div class="line">    left = <span class="number">0</span>;</div><div class="line">    right = numsSize - <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> realMid = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(left &lt;= right) &#123;</div><div class="line">        mid = (left + right) / <span class="number">2</span>;</div><div class="line">        realMid = (mid + smallest) % numsSize;</div><div class="line">        <span class="keyword">if</span>(nums[realMid] == target) &#123;</div><div class="line">            <span class="keyword">return</span> realMid;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(nums[realMid] &lt; target) &#123;</div><div class="line">            left = mid + <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            right = mid - <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Suppose a sorted array is rotated at some pivot unknown to you beforehand.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Binary Search" scheme="http://blog.iamxcc.com/tags/Binary-Search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 300:Longest Increasing Subsequence</title>
+    <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-300-Longest-Increasing-Subsequence/"/>
+    <id>http://blog.iamxcc.com/2016/08/14/LeetCode-300-Longest-Increasing-Subsequence/</id>
+    <published>2016-08-14T01:00:09.000Z</published>
+    <updated>2016-08-14T01:01:07.141Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given an unsorted array of integers, find the length of longest increasing subsequence. <a id="more"></a></p>
+<p>For example,<br>Given [10, 9, 2, 5, 3, 7, 101, 18],<br>The longest increasing subsequence is [2, 3, 7, 101], therefore the length is 4. Note that there may be more than one LIS combination, it is only necessary for you to return the length.</p>
+<p>Your algorithm should run in O(n2) complexity.</p>
+<p>Follow up: Could you improve it to O(n log n) time complexity?</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLIS</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>* tails = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*numsSize);</div><div class="line">    <span class="keyword">int</span> size = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</div><div class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = size;</div><div class="line">        <span class="keyword">while</span>(left != right) &#123;</div><div class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</div><div class="line">            <span class="keyword">if</span> (tails[mid] &lt; nums[i])</div><div class="line">                left = mid + <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span></div><div class="line">                right = mid;</div><div class="line">        &#125;</div><div class="line">        tails[left] = nums[i];</div><div class="line">        <span class="keyword">if</span> (left == size) ++size;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> size;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given an unsorted array of integers, find the length of longest increasing subsequence.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Binary Search" scheme="http://blog.iamxcc.com/tags/Binary-Search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 230:Kth Smallest Element in a BST</title>
+    <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/"/>
+    <id>http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/</id>
+    <published>2016-08-13T23:43:32.000Z</published>
+    <updated>2016-08-13T23:47:01.704Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it. <a id="more"></a></p>
+<p><strong>Note:</strong><br>You may assume k is always valid, 1 ≤ k ≤ BST’s total elements.</p>
+<p><strong>Follow up:</strong><br>What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * struct TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct TreeNode *left;</div><div class="line"> *     struct TreeNode *right;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(<span class="keyword">struct</span> TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span> + countNodes(root -&gt; left) + countNodes(root -&gt; right);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthSmallest</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> count = countNodes(root -&gt; left);</div><div class="line">    <span class="keyword">if</span> (k &lt;= count) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; left, k);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (k &gt; count + <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; right, k - count - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> root -&gt; val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Binary Search" scheme="http://blog.iamxcc.com/tags/Binary-Search/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jquery插件实现萤火虫效果</title>
     <link href="http://blog.iamxcc.com/2016/08/13/jquery%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%90%A4%E7%81%AB%E8%99%AB%E6%95%88%E6%9E%9C/"/>
     <id>http://blog.iamxcc.com/2016/08/13/jquery插件实现萤火虫效果/</id>
@@ -24,7 +143,7 @@
     
     <content type="html"><![CDATA[<p>如果博客页面是黑色的，可以添加一些萤火虫效果在上面，从而显得不那么单调。<a id="more"></a></p>
 <p>源码在<a href="https://github.com/iamxcc/jquery-firefly" target="_blank" rel="external">jQuery-firefly</a>上，支持一下。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">$(<span class="built_in">document</span>).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">$(document).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -483,113 +602,6 @@
     
     
       <category term="PAT" scheme="http://blog.iamxcc.com/tags/PAT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 349: Intersection of Two Arrays</title>
-    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-349-Intersection-of-Two-Arrays/"/>
-    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-349-Intersection-of-Two-Arrays/</id>
-    <published>2016-08-10T05:25:50.000Z</published>
-    <updated>2016-08-10T14:18:47.912Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given two arrays, write a function to compute their intersection. <a id="more"></a></p>
-<p><strong>Example:</strong><br>Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].</p>
-<p><strong>Note:</strong><br>Each element in the result must be unique.<br>The result can be in any order.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> *a, <span class="keyword">const</span> <span class="keyword">int</span> *b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">intersection</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    qsort(nums1,nums1Size,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</div><div class="line">    qsort(nums2,nums2Size,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</div><div class="line">    <span class="keyword">int</span> size = nums1Size &lt; nums2Size ? nums1Size : nums2Size;</div><div class="line">    <span class="keyword">int</span>* arr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*size); <span class="comment">//the size of the result will at most be size;</span></div><div class="line">    <span class="keyword">int</span> top = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">int</span> p1=<span class="number">0</span>, p2=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(p1&lt;nums1Size &amp;&amp; p2&lt;nums2Size)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(nums1[p1] &gt; nums2[p2]) p2++;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums1[p1] &lt; nums2[p2]) p1++;</div><div class="line">        <span class="keyword">else</span> <span class="comment">//only collect the equal one;</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(top==<span class="number">-1</span> || arr[top]!=nums1[p1])  <span class="comment">//avoid duplicates;</span></div><div class="line">                arr[++top] = nums1[p1];</div><div class="line">            p1++, p2++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    *returnSize = top+<span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given two arrays, write a function to compute their intersection.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Sort" scheme="http://blog.iamxcc.com/tags/Sort/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 242: Valid Anagram</title>
-    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-242-Valid-Anagram/"/>
-    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-242-Valid-Anagram/</id>
-    <published>2016-08-10T05:08:47.000Z</published>
-    <updated>2016-08-10T14:19:08.593Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given two strings s and t, write a function to determine if t is an anagram of s. <a id="more"></a><br><strong>For example,</strong><br>s = “anagram”, t = “nagaram”, return true.<br>s = “rat”, t = “car”, return false.</p>
-<p>Note:<br>You may assume the string contains only lowercase alphabets.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *a, <span class="keyword">const</span> <span class="keyword">char</span> *b)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> *a - *b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isAnagram</span><span class="params">(<span class="keyword">char</span>* s, <span class="keyword">char</span>* t)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lenS = <span class="built_in">strlen</span>(s);</div><div class="line">    <span class="keyword">int</span> lenT = <span class="built_in">strlen</span>(t);</div><div class="line">    <span class="keyword">if</span> (lenS != lenT) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    qsort(s, lenS, <span class="keyword">sizeof</span>(<span class="keyword">char</span>), cmp);</div><div class="line">    qsort(t, lenT, <span class="keyword">sizeof</span>(<span class="keyword">char</span>), cmp);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lenS; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (s[i] != t[i]) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given two strings s and t, write a function to determine if t is an anagram of s.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Sort" scheme="http://blog.iamxcc.com/tags/Sort/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 191: Number of 1 Bits</title>
-    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-191-Number-of-1-Bits/"/>
-    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-191-Number-of-1-Bits/</id>
-    <published>2016-08-10T03:42:49.000Z</published>
-    <updated>2016-08-10T03:43:36.392Z</updated>
-    
-    <content type="html"><![CDATA[<p>Write a function that takes an unsigned integer and returns the number of ’1’ bits it has (also known as the Hamming weight). <a id="more"></a><br>For example, the 32-bit integer ’11’ has binary representation <code>00000000000000000000000000001011</code>, so the function should return <code>3</code>.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> nums = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> ( n != <span class="number">0</span>) &#123;</div><div class="line">        nums = nums + (n &amp; <span class="number">1</span>);</div><div class="line">        n = n &gt;&gt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> nums;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Write a function that takes an unsigned integer and returns the number of ’1’ bits it has (also known as the Hamming weight).
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Bit Manipulation" scheme="http://blog.iamxcc.com/tags/Bit-Manipulation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 338: Counting Bits</title>
-    <link href="http://blog.iamxcc.com/2016/08/10/LeetCode-338-Counting-Bits/"/>
-    <id>http://blog.iamxcc.com/2016/08/10/LeetCode-338-Counting-Bits/</id>
-    <published>2016-08-10T03:23:44.000Z</published>
-    <updated>2016-08-10T03:28:18.920Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. <a id="more"></a></p>
-<p>Example:<br>For num = 5 you should return [0,1,1,2,1,2].</p>
-<p>Follow up:</p>
-<p>It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n) /possibly in a single pass?<br>Space complexity should be O(n).<br>Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Return an array of size *returnSize.</div><div class="line"> * Note: The returned array must be malloced, assume caller calls free().</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span>* <span class="title">countBits</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span>* res = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>((num+<span class="number">1</span>)*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</div><div class="line">    res[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num; i++ ) &#123;</div><div class="line">        res[i] = res[i&gt;&gt;<span class="number">1</span>] + (i &amp; <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    *returnSize = num + <span class="number">1</span>; </div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Bit Manipulation" scheme="http://blog.iamxcc.com/tags/Bit-Manipulation/"/>
     
   </entry>
   
