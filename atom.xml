@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-14T10:45:44.553Z</updated>
+  <updated>2016-08-14T13:53:34.292Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>排序实例</title>
+    <link href="http://blog.iamxcc.com/2016/08/14/%E6%8E%92%E5%BA%8F%E5%AE%9E%E4%BE%8B/"/>
+    <id>http://blog.iamxcc.com/2016/08/14/排序实例/</id>
+    <published>2016-08-14T13:37:31.000Z</published>
+    <updated>2016-08-14T13:53:34.292Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。<a id="more"></a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>有N个学生的数据，将学生数据按成绩高低排序，如果成绩相同则按姓名字符的字母序排序，如果姓名的字母序也相同则按照学生的年龄排序，并输出N个学生排序后的信息。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>测试数据有多组，每组输入第一行有一个整数N（N&lt;=1000），接下来的N行包括N个学生的数据。<br>每个学生的数据包括姓名（长度不超过100的字符串）、年龄（整形数）、成绩（小于等于100的正数）。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>将学生信息按成绩进行排序，成绩相同的则按姓名的字母序进行排序。<br>然后输出学生信息，按照如下格式：<br><code>姓名 年龄 成绩</code></p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><blockquote>
+<p>3<br>abc 20 99<br>bcd 19 97<br>bed 20 97</p>
+</blockquote>
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><blockquote>
+<p>bcd 19 97<br>bed 20 97<br>abc 20 99</p>
+</blockquote>
+<p><strong>提示：</strong><br>学生姓名的字母序区分字母的大小写，如A要比a的字母序靠前(因为A的ASC码比a的ASC码要小)。</p>
+<p><strong>来源：</strong><br>2000年清华大学计算机研究生机试真题</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Student &#123;</div><div class="line">	<span class="keyword">char</span> name[<span class="number">101</span>];</div><div class="line">	<span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">int</span> score;</div><div class="line">&#125; buf[<span class="number">1000</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(Student a, Student b)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (a.score != b.score) &#123;</div><div class="line">		<span class="keyword">return</span> a.score &gt; b.score;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> tmp = <span class="built_in">strcmp</span>(a.name, b.name);</div><div class="line">	<span class="keyword">if</span> (tmp != <span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">return</span> tmp &gt; <span class="number">0</span>;</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">return</span> a.age &gt; b.age;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> size;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;size) != EOF) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%s%d%d"</span>, buf[i].name, &amp;buf[i].age, &amp;buf[i].score);</div><div class="line">		&#125;</div><div class="line">		sort(buf, buf + size, cmp);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%s %d %d\n"</span>, buf[i].name, buf[i].age, buf[i].score);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>#define _CRT_SECURE_NO_WARNINGS</code> 是为了防止VS2015对于<code>scanf</code>的报错, 可以看到<code>sort</code>比<code>qsort</code>函数少了一个参数。而<code>cmp</code>函数是对于结构体的比较作出规定。<code>cmp</code>的编写基本最复杂的就是结构体的规则编写了，弄懂了基本其他的<code>整型</code>、<code>字符</code>、<code>字符串</code>等等的比较也会了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://blog.iamxcc.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>VS2015中使用scanf报错</title>
@@ -217,7 +253,7 @@
     
     <content type="html"><![CDATA[<p>如果博客页面是黑色的，可以添加一些萤火虫效果在上面，从而显得不那么单调。<a id="more"></a></p>
 <p>源码在<a href="https://github.com/iamxcc/jquery-firefly" target="_blank" rel="external">jQuery-firefly</a>上，支持一下。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">$(document).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">$(<span class="built_in">document</span>).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -593,32 +629,6 @@
       <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
     
       <category term="Array" scheme="http://blog.iamxcc.com/tags/Array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 100: Same Tree</title>
-    <link href="http://blog.iamxcc.com/2016/08/11/LeetCode-100-Same-Tree/"/>
-    <id>http://blog.iamxcc.com/2016/08/11/LeetCode-100-Same-Tree/</id>
-    <published>2016-08-11T01:21:44.000Z</published>
-    <updated>2016-08-11T01:25:25.602Z</updated>
-    
-    <content type="html"><![CDATA[<p>Given two binary trees, write a function to check if they are equal or not. Two binary trees are considered equal if they are structurally identical and the nodes have the same value. <a id="more"></a></p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * struct TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct TreeNode *left;</div><div class="line"> *     struct TreeNode *right;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isSameTree</span><span class="params">(<span class="keyword">struct</span> TreeNode* p, <span class="keyword">struct</span> TreeNode* q)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (p == <span class="literal">NULL</span> &amp;&amp; q == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (p == <span class="literal">NULL</span> || q == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">if</span> (p -&gt; val == q -&gt; val) &#123;</div><div class="line">            <span class="keyword">return</span> isSameTree(p -&gt; left, q -&gt; left) &amp;&amp; isSameTree(p -&gt; right, q -&gt; right);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Given two binary trees, write a function to check if they are equal or not. Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
-    
-    </summary>
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
-    
-      <category term="Tree" scheme="http://blog.iamxcc.com/tags/Tree/"/>
     
   </entry>
   

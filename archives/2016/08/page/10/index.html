@@ -3,21 +3,18 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>LeetCode 230:Kth Smallest Element in a BST | 胡闹的日子</title>
+    <title>归档: 2016/8 | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
-    <meta name="description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 230:Kth Smallest Element in a BST">
-<meta property="og:url" content="http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/index.html">
+    <meta name="description" content="人一切的痛苦，本质上都是对自己的无能的愤怒">
+<meta property="og:type" content="website">
+<meta property="og:title" content="胡闹的日子">
+<meta property="og:url" content="http://blog.iamxcc.com/archives/2016/08/page/10/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
-<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-13T23:47:01.704Z">
+<meta property="og:description" content="人一切的痛苦，本质上都是对自己的无能的愤怒">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 230:Kth Smallest Element in a BST">
-<meta name="twitter:description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
-<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta name="twitter:title" content="胡闹的日子">
+<meta name="twitter:description" content="人一切的痛苦，本质上都是对自己的无能的愤怒">
     
     
     
@@ -202,108 +199,44 @@ var _hmt = _hmt || [];
     </div>
 </div>
                     <div id="content">
-                        <div class="article-nav">
+                        
+<div class="timeline-wrap md">
     
-        <div class="article-nav-wrap">
-            <a class="article-nav-link" href="/archives">归档</a>
-        </div>
-    
-        <div class="article-nav-wrap">
-            <a class="article-nav-link" href="/categories">分类</a>
-        </div>
-    
-        <div class="article-nav-wrap">
-            <a class="article-nav-link" href="/tags">标签</a>
-        </div>
-    
-        <div class="article-nav-wrap">
-            <a class="article-nav-link" href="/message">留言</a>
-        </div>
-    
-        <div class="article-nav-wrap">
-            <a class="article-nav-link" href="/about">关于</a>
-        </div>
-    
-</div>
-<article id="post-LeetCode-230-Kth-Smallest-Element-in-a-BST" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        <div class="article-img">
-            <a href="/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" class="thumbnail">
+            <div class="timeline-title">
+                <span class="title">2016</span>
+            </div>
+        
+        <div class="timeline-row">
+            <div class="timeline-thumbnail">
+                <a href="/2016/08/01/贪心算法入门/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 230:Kth Smallest Element in a BST" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/Greedy_algorithm_36_cents.svg.png) no-repeat;background-size: 100% 100%;" alt="贪心算法入门" class="thumbnail-image"></span>
     
 </a>
 
-        </div>
-        
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name" class="name">
-            LeetCode 230:Kth Smallest Element in a BST
-        </h1>
-    
-
-            </header>
-        
-        <div class="article-meta">
-            
-                <div class="article-category">
-                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-                </div>
-            
-            <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
-            <a href="/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" class="article-date">
-                
-                <time datetime="2016-08-13T23:43:32.000Z" itemprop="datePublished">14小时前</time>
-            </a>
-        </div>
-
-        
-            <div class="article-tag">
-                <a class="tag-link" href="/tags/Binary-Search/">Binary Search<span class="tag-count">8</span></a>  <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">66</span></a>
             </div>
-        
-        <div class="article-content" itemprop="articleBody">
             
-            <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it. <a id="more"></a></p>
-<p><strong>Note:</strong><br>You may assume k is always valid, 1 ≤ k ≤ BST’s total elements.</p>
-<p><strong>Follow up:</strong><br>What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * struct TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct TreeNode *left;</div><div class="line"> *     struct TreeNode *right;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(<span class="keyword">struct</span> TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span> + countNodes(root -&gt; left) + countNodes(root -&gt; right);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthSmallest</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> count = countNodes(root -&gt; left);</div><div class="line">    <span class="keyword">if</span> (k &lt;= count) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; left, k);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (k &gt; count + <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; right, k - count - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> root -&gt; val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        </div>
-    </div>
-    
-<nav id="article-nav">
-    
-        <a href="/2016/08/14/LeetCode-300-Longest-Increasing-Subsequence/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">
+                <a class="timeline-entry-title" href="/2016/08/01/贪心算法入门/"> 贪心算法入门 </a>
+            分类于
+            
+               <b>
+            <a class="timeline-entry-category-link" href="/categories/算法/">算法</a>
+               </b> 
+            
+            <div class="timeline-entry-date">
                 
-                    LeetCode 300:Longest Increasing Subsequence
-                
+                <time datetime="2016-07-31T16:10:35.000Z" itemprop="datePublished">13天前</time>
             </div>
-        </a>
+                
+        </div>
     
-    
-        <a href="/2016/08/13/jquery插件实现萤火虫效果/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">jquery插件实现萤火虫效果</div>
-        </a>
-    
-</nav>
+</div>
 
+    <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/2016/08/page/9/">上一页</a><a class="page-number" href="/archives/2016/08/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2016/08/page/8/">8</a><a class="page-number" href="/archives/2016/08/page/9/">9</a><span class="page-number current">10</span>
+    </nav>
 
-</article>
-
-
-    <section id="comments" class="comments">
-	    
-	        
-    <div class="ds-thread" data-thread-key="2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" data-title="LeetCode 230:Kth Smallest Element in a BST" data-url="http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/"></div>
-
-	    
-    </section>
 
                     </div>
                 </div>

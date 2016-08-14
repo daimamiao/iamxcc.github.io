@@ -3,21 +3,21 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>LeetCode 230:Kth Smallest Element in a BST | 胡闹的日子</title>
+    <title>排序实例 | 胡闹的日子</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
-    <meta name="description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
+    <meta name="description" content="今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 230:Kth Smallest Element in a BST">
-<meta property="og:url" content="http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/index.html">
+<meta property="og:title" content="排序实例">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/14/排序实例/index.html">
 <meta property="og:site_name" content="胡闹的日子">
-<meta property="og:description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
-<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
-<meta property="og:updated_time" content="2016-08-13T23:47:01.704Z">
+<meta property="og:description" content="今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/merge-sort.png">
+<meta property="og:updated_time" content="2016-08-14T13:53:34.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 230:Kth Smallest Element in a BST">
-<meta name="twitter:description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.">
-<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg">
+<meta name="twitter:title" content="排序实例">
+<meta name="twitter:description" content="今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/merge-sort.png">
     
     
     
@@ -225,13 +225,13 @@ var _hmt = _hmt || [];
         </div>
     
 </div>
-<article id="post-LeetCode-230-Kth-Smallest-Element-in-a-BST" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-排序实例" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         <div class="article-img">
-            <a href="/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" class="thumbnail">
+            <a href="/2016/08/14/排序实例/" class="thumbnail">
     
     
-        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/logolarge.jpg) no-repeat;background-size: 100% 100%;" alt="LeetCode 230:Kth Smallest Element in a BST" class="thumbnail-image"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/merge-sort.png) no-repeat;background-size: 100% 100%;" alt="排序实例" class="thumbnail-image"></span>
     
 </a>
 
@@ -241,7 +241,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 class="article-title" itemprop="name" class="name">
-            LeetCode 230:Kth Smallest Element in a BST
+            排序实例
         </h1>
     
 
@@ -250,45 +250,47 @@ var _hmt = _hmt || [];
         <div class="article-meta">
             
                 <div class="article-category">
-                    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+                    <a class="article-category-link" href="/categories/算法/">算法</a>
                 </div>
             
             <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
-            <a href="/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" class="article-date">
+            <a href="/2016/08/14/排序实例/" class="article-date">
                 
-                <time datetime="2016-08-13T23:43:32.000Z" itemprop="datePublished">14小时前</time>
+                <time datetime="2016-08-14T13:37:31.000Z" itemprop="datePublished">46分钟前</time>
             </a>
         </div>
 
         
             <div class="article-tag">
-                <a class="tag-link" href="/tags/Binary-Search/">Binary Search<span class="tag-count">8</span></a>  <a class="tag-link" href="/tags/LeetCode/">LeetCode<span class="tag-count">66</span></a>
+                <a class="tag-link" href="/tags/算法/">算法<span class="tag-count">3</span></a>
             </div>
         
         <div class="article-content" itemprop="articleBody">
             
-            <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it. <a id="more"></a></p>
-<p><strong>Note:</strong><br>You may assume k is always valid, 1 ≤ k ≤ BST’s total elements.</p>
-<p><strong>Follow up:</strong><br>What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * struct TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     struct TreeNode *left;</div><div class="line"> *     struct TreeNode *right;</div><div class="line"> * &#125;;</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">countNodes</span><span class="params">(<span class="keyword">struct</span> TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span> + countNodes(root -&gt; left) + countNodes(root -&gt; right);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthSmallest</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> count = countNodes(root -&gt; left);</div><div class="line">    <span class="keyword">if</span> (k &lt;= count) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; left, k);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (k &gt; count + <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> kthSmallest(root -&gt; right, k - count - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> root -&gt; val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <p>今天发现使用C++的sort比C的qsort还要方便一些，为了说明sort的使用方法，这里使用一个实例来说明。<a id="more"></a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>有N个学生的数据，将学生数据按成绩高低排序，如果成绩相同则按姓名字符的字母序排序，如果姓名的字母序也相同则按照学生的年龄排序，并输出N个学生排序后的信息。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>测试数据有多组，每组输入第一行有一个整数N（N&lt;=1000），接下来的N行包括N个学生的数据。<br>每个学生的数据包括姓名（长度不超过100的字符串）、年龄（整形数）、成绩（小于等于100的正数）。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>将学生信息按成绩进行排序，成绩相同的则按姓名的字母序进行排序。<br>然后输出学生信息，按照如下格式：<br><code>姓名 年龄 成绩</code></p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><blockquote>
+<p>3<br>abc 20 99<br>bcd 19 97<br>bed 20 97</p>
+</blockquote>
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><blockquote>
+<p>bcd 19 97<br>bed 20 97<br>abc 20 99</p>
+</blockquote>
+<p><strong>提示：</strong><br>学生姓名的字母序区分字母的大小写，如A要比a的字母序靠前(因为A的ASC码比a的ASC码要小)。</p>
+<p><strong>来源：</strong><br>2000年清华大学计算机研究生机试真题</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Student &#123;</div><div class="line">	<span class="keyword">char</span> name[<span class="number">101</span>];</div><div class="line">	<span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">int</span> score;</div><div class="line">&#125; buf[<span class="number">1000</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(Student a, Student b)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (a.score != b.score) &#123;</div><div class="line">		<span class="keyword">return</span> a.score &gt; b.score;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> tmp = <span class="built_in">strcmp</span>(a.name, b.name);</div><div class="line">	<span class="keyword">if</span> (tmp != <span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">return</span> tmp &gt; <span class="number">0</span>;</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">return</span> a.age &gt; b.age;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> size;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;size) != EOF) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%s%d%d"</span>, buf[i].name, &amp;buf[i].age, &amp;buf[i].score);</div><div class="line">		&#125;</div><div class="line">		sort(buf, buf + size, cmp);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%s %d %d\n"</span>, buf[i].name, buf[i].age, buf[i].score);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>#define _CRT_SECURE_NO_WARNINGS</code> 是为了防止VS2015对于<code>scanf</code>的报错, 可以看到<code>sort</code>比<code>qsort</code>函数少了一个参数。而<code>cmp</code>函数是对于结构体的比较作出规定。<code>cmp</code>的编写基本最复杂的就是结构体的规则编写了，弄懂了基本其他的<code>整型</code>、<code>字符</code>、<code>字符串</code>等等的比较也会了。</p>
+
         </div>
     </div>
     
 <nav id="article-nav">
     
-        <a href="/2016/08/14/LeetCode-300-Longest-Increasing-Subsequence/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">
-                
-                    LeetCode 300:Longest Increasing Subsequence
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/08/13/jquery插件实现萤火虫效果/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/08/14/VS2015中使用scanf报错/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">jquery插件实现萤火虫效果</div>
+            <div class="article-nav-title">VS2015中使用scanf报错</div>
         </a>
     
 </nav>
@@ -300,7 +302,7 @@ var _hmt = _hmt || [];
     <section id="comments" class="comments">
 	    
 	        
-    <div class="ds-thread" data-thread-key="2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/" data-title="LeetCode 230:Kth Smallest Element in a BST" data-url="http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/14/排序实例/" data-title="排序实例" data-url="http://blog.iamxcc.com/2016/08/14/排序实例/"></div>
 
 	    
     </section>
