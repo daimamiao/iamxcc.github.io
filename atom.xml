@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-14T02:52:16.855Z</updated>
+  <updated>2016-08-14T06:09:07.528Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-367-Valid-Perfect-Square/"/>
     <id>http://blog.iamxcc.com/2016/08/14/LeetCode-367-Valid-Perfect-Square/</id>
     <published>2016-08-14T02:51:34.000Z</published>
-    <updated>2016-08-14T02:52:16.855Z</updated>
+    <updated>2016-08-14T06:09:07.528Z</updated>
     
     <content type="html"><![CDATA[<p>Given a positive integer num, write a function which returns True if num is a perfect square else False. <a id="more"></a></p>
 <p>Note: Do not use any built-in library function such as sqrt.</p>
@@ -40,6 +40,12 @@
     
     </summary>
     
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="http://blog.iamxcc.com/tags/LeetCode/"/>
+    
+      <category term="Math" scheme="http://blog.iamxcc.com/tags/Math/"/>
     
   </entry>
   
@@ -48,9 +54,10 @@
     <link href="http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/"/>
     <id>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</id>
     <published>2016-08-14T02:28:31.000Z</published>
-    <updated>2016-08-14T02:33:08.519Z</updated>
+    <updated>2016-08-14T06:26:51.701Z</updated>
     
-    <content type="html"><![CDATA[<p>一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才反应过来。一开始就从右上角开始比较，那么上面的问题就没有了。 <a id="more"></a><br>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
+    <content type="html"><![CDATA[<p>一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才发现如果一开始就从右上角开始比较，那么上面的问题就没有了。 <a id="more"></a></p>
+<p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
 <ul>
 <li>Integers in each row are sorted in ascending from left to right.</li>
 <li>Integers in each column are sorted in ascending from top to bottom.<br>For example,</li>
@@ -65,7 +72,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才反应过来。一开始就从右上角开始比较，那么上面的问题就没有了。
+      &lt;p&gt;一开始看到这题，脑子一下子转不过来，就想着从左上角开始比较，但是如果发现目标值比较大的话，那么可以向下遍历比较也可以向右比较，这时候我就反应不过来了。后来看了别人的解法，才发现如果一开始就从右上角开始比较，那么上面的问题就没有了。
     
     </summary>
     
@@ -171,7 +178,7 @@
     
     <content type="html"><![CDATA[<p>如果博客页面是黑色的，可以添加一些萤火虫效果在上面，从而显得不那么单调。<a id="more"></a></p>
 <p>源码在<a href="https://github.com/iamxcc/jquery-firefly" target="_blank" rel="external">jQuery-firefly</a>上，支持一下。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">$(<span class="built_in">document</span>).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>直接在页面上添加上这两行代码即可，不过记得要在jquery之下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"firefly.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">$(document).firefly();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">

@@ -4,23 +4,8 @@
 
     
   <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-367-Valid-Perfect-Square/</loc>
-    <lastmod>2016-08-14T02:52:16.855Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 367:Valid Perfect Square</title>
-        <pubTime>2016-08-14T02:51:34.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</loc>
-    <lastmod>2016-08-14T02:33:08.519Z</lastmod>
+    <lastmod>2016-08-14T06:26:51.701Z</lastmod>
     <data>
         <display>
         <title>LeetCode 33:Search a 2D Matrix II</title>
@@ -29,6 +14,28 @@
         <tag>LeetCode</tag>
          
         <tag>Binary Search</tag>
+         
+         
+           
+             
+              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-367-Valid-Perfect-Square/</loc>
+    <lastmod>2016-08-14T06:09:07.528Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 367:Valid Perfect Square</title>
+        <pubTime>2016-08-14T02:51:34.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Math</tag>
          
          
            
