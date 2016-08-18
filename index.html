@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
             <a href="/2016/08/16/小球下落问题/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/ball.png) no-repeat;background-size: 100% 100%;" alt="小球下落问题" class="thumbnail-image"></span>
     
 </a>
 
@@ -270,7 +270,7 @@ var _hmt = _hmt || [];
             <a href="/2016/08/16/二叉排序树的建立与遍历/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png) no-repeat;background-size: 100% 100%;" alt="二叉排序树的建立与遍历" class="thumbnail-image"></span>
     
 </a>
 
@@ -341,7 +341,7 @@ var _hmt = _hmt || [];
             <a href="/2016/08/15/STL中的栈/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic002.cnblogs.com/images/2012/396557/2012070311193419.png) no-repeat;background-size: 100% 100%;" alt="STL中的栈" class="thumbnail-image"></span>
     
 </a>
 
@@ -412,7 +412,7 @@ var _hmt = _hmt || [];
             <a href="/2016/08/15/日期类问题/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic.58pic.com/58pic/11/55/90/61P58PIC85q.jpg) no-repeat;background-size: 100% 100%;" alt="日期类问题" class="thumbnail-image"></span>
     
 </a>
 
@@ -483,7 +483,7 @@ var _hmt = _hmt || [];
             <a href="/2016/08/15/C和C-结构体的区别/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic002.cnblogs.com/images/2012/396557/2012070311193419.png) no-repeat;background-size: 100% 100%;" alt="C和C++结构体的区别" class="thumbnail-image"></span>
     
 </a>
 
@@ -500,13 +500,10 @@ var _hmt = _hmt || [];
 
         
         
-            
-            <p>最近在学习C++，发现它的结构体使用起来比C语言的结构体还要方便一些。具体的区别如下：</p>
-<h5 id="1-C结构体变量定义时-若为struct-结构体名-变量名-struct不能省-而C-中则可以省去struct"><a href="#1-C结构体变量定义时-若为struct-结构体名-变量名-struct不能省-而C-中则可以省去struct" class="headerlink" title="1.C结构体变量定义时,若为struct  结构体名 变量名, struct不能省,而C++中则可以省去struct."></a>1.C结构体变量定义时,若为<code>struct  结构体名 变量名</code>, <code>struct</code>不能省,而C++中则可以省去<code>struct</code>.</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C</span></div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> val;</div><div class="line">	Node *next;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> Node p; <span class="comment">// 定义结构变量</span></div><div class="line"><span class="keyword">struct</span> Node *p1; <span class="comment">// 定义结构指针</span></div></pre></td></tr></table></figure>
-<p>可以看到其中的struct都不可以省略，如果想要省略还需要加上<code>typedef</code>。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> val;</div><div class="line">	Node *next;</div><div class="line">&#125;Node;</div><div class="line">Node p; <span class="comment">// 定义结构变量</span></div><div class="line">Node *p1; <span class="comment">// 定义结构指针</span></div></pre></td></tr></table></figure></p>
-<p>加上<code>typedef</code>之后，就可以直接声明变量了。然而在C++中是可以直接声明的。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C++</span></div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> val;</div><div class="line">	Node *next;</div><div class="line">&#125;;</div><div class="line">Node p; <span class="comment">// 定义结构变量</span></div><div class="line">Node *p1; <span class="comment">// 定义结构指针</span></div></pre></td></tr></table></figure></p>
-<p>可以看到C++还是方便一些的。</p>
-<h5 id="2-C-结构体中只能定义成员变量-而不能定义成员函数-而C-结构体则可以有成员变量也可以定义成员函数"><a href="#2-C-结构体中只能定义成员变量-而不能定义成员函数-而C-结构体则可以有成员变量也可以定义成员函数" class="headerlink" title="2.C 结构体中只能定义成员变量,而不能定义成员函数,.而C++结构体则可以有成员变量也可以定义成员函数."></a>2.C 结构体中只能定义成员变量,而不能定义成员函数,.而C++结构体则可以有成员变量也可以定义成员函数.</h5><h5 id="3-C-结构体中只能定义成员变量-而不能定义成员函数-而C-结构体则可以有成员变量也可以定义成员函数"><a href="#3-C-结构体中只能定义成员变量-而不能定义成员函数-而C-结构体则可以有成员变量也可以定义成员函数" class="headerlink" title="3.C 结构体中只能定义成员变量,而不能定义成员函数,.而C++结构体则可以有成员变量也可以定义成员函数."></a>3.C 结构体中只能定义成员变量,而不能定义成员函数,.而C++结构体则可以有成员变量也可以定义成员函数.</h5>
+            <p><p>最近在学习C++，发现它的结构体使用起来比C语言的结构体还要方便一些。具体的区别如下:</p>
+            <!-- <p class="article-more-link">
+                <a href="/2016/08/15/C和C-结构体的区别/#more">查看更多</a>
+            </p> -->
         
         </div>
 
@@ -1130,7 +1127,7 @@ var _hmt = _hmt || [];
                             <a href="/2016/08/16/小球下落问题/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://7xveyh.com1.z0.glb.clouddn.com/ball.png) no-repeat;background-size: 100% 100%;" alt="小球下落问题" class="thumbnail-image"></span>
     
 </a>
 
@@ -1152,7 +1149,7 @@ var _hmt = _hmt || [];
                             <a href="/2016/08/16/二叉排序树的建立与遍历/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png) no-repeat;background-size: 100% 100%;" alt="二叉排序树的建立与遍历" class="thumbnail-image"></span>
     
 </a>
 
@@ -1174,7 +1171,7 @@ var _hmt = _hmt || [];
                             <a href="/2016/08/15/STL中的栈/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic002.cnblogs.com/images/2012/396557/2012070311193419.png) no-repeat;background-size: 100% 100%;" alt="STL中的栈" class="thumbnail-image"></span>
     
 </a>
 
@@ -1196,7 +1193,7 @@ var _hmt = _hmt || [];
                             <a href="/2016/08/15/日期类问题/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic.58pic.com/58pic/11/55/90/61P58PIC85q.jpg) no-repeat;background-size: 100% 100%;" alt="日期类问题" class="thumbnail-image"></span>
     
 </a>
 
@@ -1218,7 +1215,7 @@ var _hmt = _hmt || [];
                             <a href="/2016/08/15/C和C-结构体的区别/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background:url(http://pic002.cnblogs.com/images/2012/396557/2012070311193419.png) no-repeat;background-size: 100% 100%;" alt="C和C++结构体的区别" class="thumbnail-image"></span>
     
 </a>
 
