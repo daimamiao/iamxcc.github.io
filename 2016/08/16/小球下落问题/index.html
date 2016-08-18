@@ -1,0 +1,328 @@
+    <!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>小球下落问题 | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="一颗二叉树，最大深度为D,且所有叶子的深度都相同。所有节点从上到下，从左到右编号为1,2,3…,2^D-1。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小球下落问题">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/16/小球下落问题/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="一颗二叉树，最大深度为D,且所有叶子的深度都相同。所有节点从上到下，从左到右编号为1,2,3…,2^D-1。">
+<meta property="og:image" content="http://7xveyh.com1.z0.glb.clouddn.com/ball.png">
+<meta property="og:updated_time" content="2016-08-18T12:34:06.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小球下落问题">
+<meta name="twitter:description" content="一颗二叉树，最大深度为D,且所有叶子的深度都相同。所有节点从上到下，从左到右编号为1,2,3…,2^D-1。">
+<meta name="twitter:image" content="http://7xveyh.com1.z0.glb.clouddn.com/ball.png">
+    
+    
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+</head>
+
+    <body>
+                    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+
+       <!--  <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/message">留言</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav> -->
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+        
+                            <div class="container">
+                    <div class="row">
+                                                    <div id="content">
+                                <div class="md-10 md-offset-1">
+                                        <div id="nav">
+    
+        <a class="nav-link" href="/archives">归档</a>
+    
+        <a class="nav-link" href="/categories">分类</a>
+    
+        <a class="nav-link" href="/tags">标签</a>
+    
+        <a class="nav-link" href="/message">留言</a>
+    
+        <a class="nav-link" href="/about">关于</a>
+    
+</div>
+<article class="article">
+    <a class="article-title">
+        小球下落问题
+    </a>
+    <div class="article-meta">
+        
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+            </div>
+        
+        <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
+        <a href="/2016/08/16/小球下落问题/" class="article-date">
+            <time datetime="2016-08-16T09:56:31.000Z" itemprop="datePublished">2016-08-16</time>
+        </a>
+    </div>
+
+    
+        <div class="article-tag">
+            <a class="tag-link" href="/tags/二叉树/">二叉树<span class="tag-count">2</span></a>  <a class="tag-link" href="/tags/数据结构/">数据结构<span class="tag-count">2</span></a>
+        </div>
+    
+    <div class="article-content" itemprop="articleBody">
+        
+        <p>一颗二叉树，最大深度为D,且所有叶子的深度都相同。所有节点从上到下，从左到右编号为1,2,3…,2^D-1。<a id="more"></a> 在节点1处放一个小球，它会往下落。每个内节点上都有一个开关，初始全部关闭，当每次有小球落到一个开关上时，它的状态都会改变。当小球到达一个内节点时，如果该节点上的开关关闭，则往左走，否则，往右 走，知道走到叶子节点，如图所示:<br><img src="http://7xveyh.com1.z0.glb.clouddn.com/ball.png" alt="小球下落问题"><br>一些小球从节点1处一次开始下落，最后一个小球将会落到哪里呢？输入叶子深度D和小球个数I,输出第I个小球最后所在的叶子编号。假设I不超过整棵树的叶子个数<br>。D&lt;=20,输入最多包含1000组数据。 </p>
+<p>输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">4 2 </div><div class="line">3 4 </div><div class="line">10 1 </div><div class="line">2 2 </div><div class="line">8 128 </div><div class="line">16 12345</div></pre></td></tr></table></figure></p>
+<p>输出:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">12 </div><div class="line">7 </div><div class="line">512 </div><div class="line">3 </div><div class="line">255 </div><div class="line">36358</div></pre></td></tr></table></figure></p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_DEPRECATE</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxD = <span class="number">20</span>;</div><div class="line"><span class="keyword">int</span> switcher[<span class="number">1</span> &lt;&lt; maxD] = &#123; <span class="number">0</span> &#125;;</div><div class="line"><span class="keyword">int</span> maxNum = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> D = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> I = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;D, &amp;I) == <span class="number">2</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">memset</span>(switcher, <span class="number">0</span>, <span class="keyword">sizeof</span>(switcher));</div><div class="line">		maxNum = (<span class="number">1</span> &lt;&lt; D) - <span class="number">1</span>;</div><div class="line">		<span class="keyword">int</span> k;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; I; i++)</div><div class="line">		&#123;</div><div class="line">			k = <span class="number">1</span>;</div><div class="line">			<span class="keyword">while</span> (<span class="literal">true</span>)</div><div class="line">			&#123;</div><div class="line">				switcher[k] = !switcher[k];</div><div class="line">				k = switcher[k] ? k * <span class="number">2</span> : k * <span class="number">2</span> + <span class="number">1</span>;</div><div class="line">				<span class="keyword">if</span> (k &gt; maxNum)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, k/<span class="number">2</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    </div>
+</article>
+
+
+                                </div>
+                            </div>
+                                                
+                    </div>
+                </div>
+                <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 你是第<span id="busuanzi_value_site_uv"></span>个小伙伴</span>
+        </div>
+    </div>
+</footer>
+                
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!-- Automatic page load progress bar  -->
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.min.css">
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+<!-- comment -->
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+<!-- set up the scroll bar -->
+
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
+
+
+<!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+            scrollTo: false
+        });
+        var headerHeight = parseInt($('#header').height());
+        var headerMarginBottom = parseInt($('#header').css('marginBottom').replace("px", ""));
+        var profileHeight = parseInt($('#profile').height());
+        var profileMarginBottom = parseInt($('#profile').css('marginBottom').replace("px", ""));
+        $(document).on('pjax:complete', function() {
+            $('html,body').animate({
+                scrollTop: headerHeight + headerMarginBottom + profileHeight + profileMarginBottom - 30},
+                600, function() {
+                /* stuff to do after animation is complete */
+            });
+            // $(document).scrollTop(headerHeight+headerMarginBottom+profileHeight+profileMarginBottom);
+        })
+    </script>
+
+
+<!-- snowfall -->
+
+<!-- firefly -->
+
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- busuanzi statistics scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- CNZZ analytics script  -->
+
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255957443'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255957443%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+<!-- baidu analytics script  -->
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+                </body>
+</html>
+
+

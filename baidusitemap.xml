@@ -4,6 +4,116 @@
 
     
   <url>
+    <loc>http://blog.iamxcc.com/2016/08/16/%E5%B0%8F%E7%90%83%E4%B8%8B%E8%90%BD%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2016-08-18T12:34:06.097Z</lastmod>
+    <data>
+        <display>
+        <title>小球下落问题</title>
+        <pubTime>2016-08-16T09:56:31.000Z</pubTime>
+        
+        <tag>数据结构</tag>
+         
+        <tag>二叉树</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://blog.iamxcc.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/15/STL%E4%B8%AD%E7%9A%84%E6%A0%88/</loc>
+    <lastmod>2016-08-18T06:44:45.166Z</lastmod>
+    <data>
+        <display>
+        <title>STL中的栈</title>
+        <pubTime>2016-08-15T05:21:50.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+        <tag>STL</tag>
+         
+        <tag>栈</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://blog.iamxcc.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/15/%E6%97%A5%E6%9C%9F%E7%B1%BB%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2016-08-18T06:43:09.645Z</lastmod>
+    <data>
+        <display>
+        <title>日期类问题</title>
+        <pubTime>2016-08-15T03:51:59.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/16/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E5%BB%BA%E7%AB%8B%E4%B8%8E%E9%81%8D%E5%8E%86/</loc>
+    <lastmod>2016-08-16T08:59:02.642Z</lastmod>
+    <data>
+        <display>
+        <title>二叉排序树的建立与遍历</title>
+        <pubTime>2016-08-16T08:39:25.000Z</pubTime>
+        
+        <tag>数据结构</tag>
+         
+        <tag>二叉树</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://blog.iamxcc.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/15/C%E5%92%8CC-%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2016-08-15T03:09:04.942Z</lastmod>
+    <data>
+        <display>
+        <title>C和C++结构体的区别</title>
+        <pubTime>2016-08-15T02:55:24.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://blog.iamxcc.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/14/%E6%8E%92%E5%BA%8F%E5%AE%9E%E4%BE%8B/</loc>
     <lastmod>2016-08-14T13:53:34.292Z</lastmod>
     <data>
@@ -59,116 +169,6 @@
            
              
               <breadCrumb title="VS2015" url="http://blog.iamxcc.com/categories/VS2015/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-a-2D-Matrix-II/</loc>
-    <lastmod>2016-08-14T06:26:51.701Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 33:Search a 2D Matrix II</title>
-        <pubTime>2016-08-14T02:28:31.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-367-Valid-Perfect-Square/</loc>
-    <lastmod>2016-08-14T06:09:07.528Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 367:Valid Perfect Square</title>
-        <pubTime>2016-08-14T02:51:34.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-33-Search-in-Rotated-Sorted-Array/</loc>
-    <lastmod>2016-08-14T01:39:38.130Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 33:Search in Rotated Sorted Array</title>
-        <pubTime>2016-08-14T01:18:24.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-300-Longest-Increasing-Subsequence/</loc>
-    <lastmod>2016-08-14T01:01:07.141Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 300:Longest Increasing Subsequence</title>
-        <pubTime>2016-08-14T01:00:09.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/14/LeetCode-230-Kth-Smallest-Element-in-a-BST/</loc>
-    <lastmod>2016-08-13T23:47:01.704Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 230:Kth Smallest Element in a BST</title>
-        <pubTime>2016-08-13T23:43:32.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
           
         </display>
     </data>
@@ -236,102 +236,6 @@
     
     
   <url>
-    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-74-Search-a-2D-Matrix/</loc>
-    <lastmod>2016-08-13T03:10:56.688Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 74:Search a 2D Matrix</title>
-        <pubTime>2016-08-13T03:09:30.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-378-Kth-Smallest-Element-in-a-Sorted-Matrix/</loc>
-    <lastmod>2016-08-13T02:38:27.216Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 378:Kth Smallest Element in a Sorted Matrix</title>
-        <pubTime>2016-08-13T02:37:11.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-34-Search-for-a-Range/</loc>
-    <lastmod>2016-08-13T00:56:04.213Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 34:Search for a Range</title>
-        <pubTime>2016-08-13T00:54:59.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/13/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-I-II/</loc>
-    <lastmod>2016-08-13T00:55:32.165Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 154:Find Minimum in Rotated Sorted Array I,II</title>
-        <pubTime>2016-08-12T23:33:20.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-        <tag>Binary Search</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.iamxcc.com/2016/07/31/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2016-08-12T10:18:40.871Z</lastmod>
     <data>
@@ -345,182 +249,6 @@
            
              
               <breadCrumb title="排序" url="http://blog.iamxcc.com/categories/%E6%8E%92%E5%BA%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/12/LeetCode-48-Rotate-Image/</loc>
-    <lastmod>2016-08-12T09:36:09.551Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 48: Rotate Image</title>
-        <pubTime>2016-08-12T03:13:48.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/12/LeetCode-162-Find-Peak-Element/</loc>
-    <lastmod>2016-08-12T03:42:40.155Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 162: Find Peak Element</title>
-        <pubTime>2016-08-12T03:40:49.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/12/LeetCode-53-Maximum-Subarray/</loc>
-    <lastmod>2016-08-12T01:21:42.052Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 53: Maximum Subarray</title>
-        <pubTime>2016-08-12T01:20:36.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/12/LeetCode-35-Search-Insert-Position/</loc>
-    <lastmod>2016-08-12T01:03:41.053Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 35: Search Insert Position</title>
-        <pubTime>2016-08-12T01:01:23.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/12/LeetCode-11-Container-With-Most-Water/</loc>
-    <lastmod>2016-08-12T00:51:46.262Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 11: Container With Most Water</title>
-        <pubTime>2016-08-11T23:59:36.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/11/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock-I-II-III/</loc>
-    <lastmod>2016-08-11T06:49:30.772Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 121: Best Time to Buy and Sell Stock I, II, III</title>
-        <pubTime>2016-08-11T05:56:26.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Dynamic Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/11/LeetCode-287-Find-the-Duplicate-Number/</loc>
-    <lastmod>2016-08-11T05:59:02.807Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 287: Find the Duplicate Number</title>
-        <pubTime>2016-08-11T03:40:43.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/11/LeetCode-100-Same-Tree/</loc>
-    <lastmod>2016-08-11T01:25:25.602Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 100: Same Tree</title>
-        <pubTime>2016-08-11T01:21:44.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Tree</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
           
         </display>
     </data>
@@ -568,116 +296,6 @@
 
     
   <url>
-    <loc>http://blog.iamxcc.com/2016/08/10/LeetCode-242-Valid-Anagram/</loc>
-    <lastmod>2016-08-10T14:19:08.593Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 242: Valid Anagram</title>
-        <pubTime>2016-08-10T05:08:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Sort</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/10/LeetCode-349-Intersection-of-Two-Arrays/</loc>
-    <lastmod>2016-08-10T14:18:47.912Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 349: Intersection of Two Arrays</title>
-        <pubTime>2016-08-10T05:25:50.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Sort</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/10/LeetCode-191-Number-of-1-Bits/</loc>
-    <lastmod>2016-08-10T03:43:36.392Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 191: Number of 1 Bits</title>
-        <pubTime>2016-08-10T03:42:49.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Bit Manipulation</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/10/LeetCode-338-Counting-Bits/</loc>
-    <lastmod>2016-08-10T03:28:18.920Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 338: Counting Bits</title>
-        <pubTime>2016-08-10T03:23:44.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Bit Manipulation</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/10/LeetCode-342-Power-of-Four/</loc>
-    <lastmod>2016-08-10T03:03:48.001Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 342: Power of Four</title>
-        <pubTime>2016-08-10T02:56:19.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Bit Manipulation</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.iamxcc.com/2016/08/10/Chrome52%E4%B8%ADMactype%E6%97%A0%E6%95%88%E6%80%8E%E4%B9%88%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC/</loc>
     <lastmod>2016-08-10T02:28:44.914Z</lastmod>
     <data>
@@ -702,317 +320,6 @@
 
     
     
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-13-Roman-to-Integer/</loc>
-    <lastmod>2016-08-09T06:33:33.310Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 13: Roman to Integer</title>
-        <pubTime>2016-08-05T09:34:44.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-12-Integer-to-Roman/</loc>
-    <lastmod>2016-08-09T06:23:15.703Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 12: Integer to Roman</title>
-        <pubTime>2016-08-09T00:18:43.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-258-Add-Digits/</loc>
-    <lastmod>2016-08-09T02:43:23.378Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 258: Add Digits</title>
-        <pubTime>2016-08-09T02:42:38.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-69-Sqrt-x/</loc>
-    <lastmod>2016-08-09T02:29:46.675Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 69: Sqrt(x)</title>
-        <pubTime>2016-08-09T02:08:51.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-50-Pow-x-n/</loc>
-    <lastmod>2016-08-09T01:58:36.776Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 50: Pow(x, n)</title>
-        <pubTime>2016-08-09T01:57:20.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/09/LeetCode-7-Reverse-integer/</loc>
-    <lastmod>2016-08-09T01:57:58.832Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 7: Reverse integer</title>
-        <pubTime>2016-08-09T00:37:40.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-319-Bulb-Switcher/</loc>
-    <lastmod>2016-08-08T08:52:14.614Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 319: Bulb Switcher</title>
-        <pubTime>2016-08-08T08:15:41.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-231-Power-of-Two/</loc>
-    <lastmod>2016-08-08T07:56:22.033Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 231: Power of Two</title>
-        <pubTime>2016-08-08T07:33:15.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-326-Power-of-Three/</loc>
-    <lastmod>2016-08-08T07:55:28.625Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 326: Power of Three</title>
-        <pubTime>2016-08-08T07:02:06.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-9-Palindrome-Number/</loc>
-    <lastmod>2016-08-08T07:54:48.313Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 9: Palindrome Number</title>
-        <pubTime>2016-08-08T07:52:04.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/08/LeetCode-232-Implement-Queue-using-Stacks/</loc>
-    <lastmod>2016-08-08T07:54:08.585Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 232: Implement Queue using Stacks</title>
-        <pubTime>2016-08-08T05:31:50.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Stack</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-20-Valid-Parentheses/</loc>
-    <lastmod>2016-08-07T12:42:50.239Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 20: Valid Parentheses</title>
-        <pubTime>2016-08-07T02:58:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-             
-              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/LeetCode/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-203-Remove-Linked-List-Elements/</loc>
-    <lastmod>2016-08-07T07:53:43.448Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 203: Remove Linked List Elements</title>
-        <pubTime>2016-08-02T14:58:14.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/07/LeetCode-125-Valid-Palindrome/</loc>
-    <lastmod>2016-08-07T07:05:12.097Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 125: Valid Palindrome</title>
-        <pubTime>2016-08-07T02:07:53.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://blog.iamxcc.com/2016/08/01/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
@@ -1055,28 +362,6 @@
 
     
   <url>
-    <loc>http://blog.iamxcc.com/2016/08/06/LeetCode-28-Implement-strStr/</loc>
-    <lastmod>2016-08-06T10:52:18.665Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 28: Implement strStr()</title>
-        <pubTime>2016-08-06T10:12:33.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.iamxcc.com/2016/08/06/OSI%E6%A8%A1%E5%9E%8B%E4%B8%8ETCP-IP%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2016-08-06T09:28:19.600Z</lastmod>
     <data>
@@ -1090,94 +375,6 @@
            
              
               <breadCrumb title="计算机网络" url="http://blog.iamxcc.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/06/LeetCode-8-String-to-Integer-atoi/</loc>
-    <lastmod>2016-08-06T06:14:57.166Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 8: String to Integer(atoi)</title>
-        <pubTime>2016-08-06T05:38:56.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/06/LeetCode-67-Add-Binary/</loc>
-    <lastmod>2016-08-06T03:31:24.797Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 67: Add Binary</title>
-        <pubTime>2016-08-06T03:29:22.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/06/LeetCode-14-Longest-Common-Prefix/</loc>
-    <lastmod>2016-08-06T02:21:59.596Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 14: Longest Common Prefix</title>
-        <pubTime>2016-08-06T02:19:56.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/06/LeetCode-345-Reverse-Vowels-of-a-String/</loc>
-    <lastmod>2016-08-06T01:14:24.580Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 345: Reverse Vowels of a String</title>
-        <pubTime>2016-08-06T01:11:36.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
           
         </display>
     </data>
@@ -1225,557 +422,7 @@
     </url>
 
     
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-263-Ugly-Number/</loc>
-    <lastmod>2016-08-05T11:29:54.368Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 263: Ugly Number</title>
-        <pubTime>2016-08-05T11:28:12.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Math</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-58-Length-of-Last-Word/</loc>
-    <lastmod>2016-08-05T10:25:00.248Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 58: Length of Last Word</title>
-        <pubTime>2016-08-05T10:23:40.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-344-Reverse-String/</loc>
-    <lastmod>2016-08-05T09:18:56.336Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 344: Reverse String</title>
-        <pubTime>2016-08-05T09:12:25.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>String</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-2-Add-Two-Numbers/</loc>
-    <lastmod>2016-08-05T08:56:47.608Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 2: Add Two Numbers</title>
-        <pubTime>2016-08-05T08:52:42.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-147-Insertion-Sort-List/</loc>
-    <lastmod>2016-08-05T06:24:14.239Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 147: Insertion Sort List</title>
-        <pubTime>2016-08-05T06:22:38.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-86-Partition-List/</loc>
-    <lastmod>2016-08-05T03:29:19.485Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 86: Partition List</title>
-        <pubTime>2016-08-05T03:27:08.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/05/LeetCode-350-Intersection-of-Two-Arrays-II/</loc>
-    <lastmod>2016-08-04T23:28:32.643Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 350: Intersection of Two Arrays II</title>
-        <pubTime>2016-08-04T23:25:38.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/04/LeetCode-328-Odd-Even-Linked-List/</loc>
-    <lastmod>2016-08-04T14:34:11.923Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 328: Odd Even Linked List</title>
-        <pubTime>2016-08-04T13:47:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/04/LeetCode-142-Linked-List-Cycle-II/</loc>
-    <lastmod>2016-08-04T04:54:50.934Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 142: Linked List Cycle II</title>
-        <pubTime>2016-08-04T04:49:05.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-234-Palindrome-Linked-List/</loc>
-    <lastmod>2016-08-03T14:24:52.044Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 234: Palindrome Linked List</title>
-        <pubTime>2016-08-03T14:21:55.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-141-Linked-List-Cycle/</loc>
-    <lastmod>2016-08-03T14:04:32.004Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 141: Linked List Cycle</title>
-        <pubTime>2016-08-03T13:15:18.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-83-Remove-Duplicates-from-Sorted-List/</loc>
-    <lastmod>2016-08-03T13:49:34.684Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 83: Remove Duplicates from Sorted List</title>
-        <pubTime>2016-08-03T13:46:45.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-19-Remove-Nth-Node-From-End-of-List/</loc>
-    <lastmod>2016-08-03T10:37:59.938Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 19: Remove Nth Node From End of List</title>
-        <pubTime>2016-08-03T10:35:26.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/30/Leetcode-283-Move-Zeroes/</loc>
-    <lastmod>2016-08-03T08:18:14.081Z</lastmod>
-    <data>
-        <display>
-        <title>Leetcode 283: Move Zeroes</title>
-        <pubTime>2016-07-30T10:48:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/31/Leetcode-268-Missing-Number-C%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2016-08-03T08:18:09.353Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 268: Missing Number</title>
-        <pubTime>2016-07-31T07:55:31.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-238-Product-of-Array-Except-Self/</loc>
-    <lastmod>2016-08-03T08:18:02.665Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 238: Product of Array Except Self</title>
-        <pubTime>2016-07-31T13:28:39.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-169-Majority-Element/</loc>
-    <lastmod>2016-08-03T08:17:54.905Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 169 Majority Element</title>
-        <pubTime>2016-07-31T13:40:08.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/30/Leetcode-217-Contains-Duplicate/</loc>
-    <lastmod>2016-08-03T08:17:41.745Z</lastmod>
-    <data>
-        <display>
-        <title>Leetcode 217: Contains Duplicate</title>
-        <pubTime>2016-07-30T10:34:47.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/03/LeetCode-160-Intersection-of-Two-Linked-Lists/</loc>
-    <lastmod>2016-08-03T06:15:12.439Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 160: Intersection of Two Linked Lists</title>
-        <pubTime>2016-08-03T03:26:12.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-371-Sum-of-Two-integers/</loc>
-    <lastmod>2016-08-02T11:00:20.352Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 371: Sum of Two integers</title>
-        <pubTime>2016-08-02T10:43:25.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Bit Manupulation</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-24-Swap-Nodes-in-Pairs/</loc>
-    <lastmod>2016-08-02T09:22:49.264Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 24: Swap Nodes in Pairs</title>
-        <pubTime>2016-08-02T09:17:28.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-21-Merge-Two-Sorted-Lists/</loc>
-    <lastmod>2016-08-02T02:49:29.549Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 21: Merge Two Sorted Lists</title>
-        <pubTime>2016-08-02T02:45:27.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/02/LeetCode-206-Reverse-Linked-List/</loc>
-    <lastmod>2016-08-02T00:36:18.089Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 206: Reverse Linked List</title>
-        <pubTime>2016-08-02T00:30:43.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Linked List</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/08/01/LeetCode-136-Single-Number/</loc>
-    <lastmod>2016-08-02T00:32:47.031Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 136: Single Number</title>
-        <pubTime>2016-08-01T15:43:43.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Bit Manupulation</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.iamxcc.com/2016/07/31/LeetCode-229-Majority-Element-II/</loc>
-    <lastmod>2016-08-02T00:32:08.475Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 229: Majority Element II</title>
-        <pubTime>2016-07-31T14:29:46.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Array</tag>
-         
-         
-           
-             
-              <breadCrumb title="LeetCode" url="http://blog.iamxcc.com/categories/LeetCode/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://blog.iamxcc.com/2016/08/01/51NOD-1005-%E6%8E%92%E5%BA%8F/</loc>

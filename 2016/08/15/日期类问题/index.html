@@ -1,0 +1,328 @@
+    <!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>日期类问题 | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="给两个日期怎么计算两者间的日期差数，其中还要考虑闰年。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日期类问题">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/15/日期类问题/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="给两个日期怎么计算两者间的日期差数，其中还要考虑闰年。">
+<meta property="og:updated_time" content="2016-08-18T06:43:09.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日期类问题">
+<meta name="twitter:description" content="给两个日期怎么计算两者间的日期差数，其中还要考虑闰年。">
+    
+    
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+</head>
+
+    <body>
+                    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+
+       <!--  <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/message">留言</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav> -->
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+        
+                            <div class="container">
+                    <div class="row">
+                                                    <div id="content">
+                                <div class="md-10 md-offset-1">
+                                        <div id="nav">
+    
+        <a class="nav-link" href="/archives">归档</a>
+    
+        <a class="nav-link" href="/categories">分类</a>
+    
+        <a class="nav-link" href="/tags">标签</a>
+    
+        <a class="nav-link" href="/message">留言</a>
+    
+        <a class="nav-link" href="/about">关于</a>
+    
+</div>
+<article class="article">
+    <a class="article-title">
+        日期类问题
+    </a>
+    <div class="article-meta">
+        
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/算法/">算法</a>
+            </div>
+        
+        <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
+        <a href="/2016/08/15/日期类问题/" class="article-date">
+            <time datetime="2016-08-15T03:51:59.000Z" itemprop="datePublished">2016-08-15</time>
+        </a>
+    </div>
+
+    
+        <div class="article-tag">
+            <a class="tag-link" href="/tags/算法/">算法<span class="tag-count">4</span></a>
+        </div>
+    
+    <div class="article-content" itemprop="articleBody">
+        
+        <p>给两个日期怎么计算两者间的日期差数，其中还要考虑闰年。 <a id="more"></a> 闰年的判断规则是：当年数不能被100整除时若其能被4整除则为闰年，或者其能被400整除时也是闰年。有了这个规则，怎么写就简单了。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="comment">// 定义宏判断是否为闰年</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ISYEAP(x) x%100 != 0 &amp;&amp; x%4 == 0 || x%400 == 0 </span></div><div class="line"></div><div class="line"><span class="keyword">int</span> dayOfMonth[<span class="number">13</span>][<span class="number">2</span>] = &#123;</div><div class="line">	<span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">28</span>, <span class="number">29</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> Date &#123;</div><div class="line">	<span class="keyword">int</span> day;</div><div class="line">	<span class="keyword">int</span> month;</div><div class="line">	<span class="keyword">int</span> year;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">nextDay</span><span class="params">()</span> </span>&#123;</div><div class="line">		day++;</div><div class="line">		<span class="keyword">if</span> (day &gt; dayOfMonth[month][ISYEAP(year)]) &#123;</div><div class="line">			day = <span class="number">1</span>;</div><div class="line">			month++;</div><div class="line">			<span class="keyword">if</span> (month &gt; <span class="number">12</span>) &#123;</div><div class="line">				month = <span class="number">1</span>;</div><div class="line">				year++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> buf[<span class="number">5001</span>][<span class="number">13</span>][<span class="number">32</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Abs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> x &lt; <span class="number">0</span> ? -x : x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	Date tmp;</div><div class="line">	<span class="keyword">int</span> count = <span class="number">0</span>; <span class="comment">// 计算日期与0000年1月1日的天数差</span></div><div class="line">	tmp.day = <span class="number">1</span>;</div><div class="line">	tmp.month = <span class="number">1</span>;</div><div class="line">	tmp.year = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span> (tmp.year != <span class="number">5001</span>) &#123;</div><div class="line">		buf[tmp.year][tmp.month][tmp.day] = count;</div><div class="line">		tmp.nextDay();</div><div class="line">		count++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> d1, m1, y1;</div><div class="line">	<span class="keyword">int</span> d2, m2, y2;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%4d%2d%2d"</span>, &amp;y1, &amp;m1, &amp;d1) != EOF) &#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%4d%2d%2d"</span>, &amp;y2, &amp;m2, &amp;d2);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, Abs(buf[y2][m2][d2] - buf[y1][m1][d1]) + <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>从上面的代码可以看到buf是个三维数组而且还挺大的，所以我们把他定义为全局变量。如果将其定义在函数main中，那么函数所可以使用的栈空间将不足以提供如此庞大的内存，出现栈溢出。</p>
+<p>有了这个模板，其他日期类的问题基本就可以解决了。</p>
+<p>如给一个日期，输出星期几：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="comment">// 定义宏判断是否为闰年</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ISYEAP(x) x%100 != 0 &amp;&amp; x%4 == 0 || x%400 == 0 </span></div><div class="line"></div><div class="line"><span class="keyword">int</span> dayOfMonth[<span class="number">13</span>][<span class="number">2</span>] = &#123;</div><div class="line">	<span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">28</span>, <span class="number">29</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span>,</div><div class="line">	<span class="number">30</span>, <span class="number">30</span>,</div><div class="line">	<span class="number">31</span>, <span class="number">31</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> Date &#123;</div><div class="line">	<span class="keyword">int</span> day;</div><div class="line">	<span class="keyword">int</span> month;</div><div class="line">	<span class="keyword">int</span> year;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">nextDay</span><span class="params">()</span> </span>&#123;</div><div class="line">		day++;</div><div class="line">		<span class="keyword">if</span> (day &gt; dayOfMonth[month][ISYEAP(year)]) &#123;</div><div class="line">			day = <span class="number">1</span>;</div><div class="line">			month++;</div><div class="line">			<span class="keyword">if</span> (month &gt; <span class="number">12</span>) &#123;</div><div class="line">				month = <span class="number">1</span>;</div><div class="line">				year++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> buf[<span class="number">3001</span>][<span class="number">13</span>][<span class="number">32</span>];</div><div class="line"><span class="keyword">char</span> monthName[<span class="number">13</span>][<span class="number">20</span>] = &#123;</div><div class="line">	<span class="string">""</span>,</div><div class="line">	<span class="string">"January"</span>,</div><div class="line">	<span class="string">"February"</span>,</div><div class="line">	<span class="string">"March"</span>,</div><div class="line">	<span class="string">"April"</span>,</div><div class="line">	<span class="string">"May"</span>,</div><div class="line">	<span class="string">"June"</span>,</div><div class="line">	<span class="string">"July"</span>,</div><div class="line">	<span class="string">"August"</span>,</div><div class="line">	<span class="string">"September"</span>,</div><div class="line">	<span class="string">"October"</span>,</div><div class="line">	<span class="string">"November"</span>,</div><div class="line">	<span class="string">"December"</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">char</span> weekName[<span class="number">7</span>][<span class="number">20</span>] = &#123;</div><div class="line">	<span class="string">"Sunday"</span>,</div><div class="line">	<span class="string">"Monday"</span>,</div><div class="line">	<span class="string">"Tuesday"</span>,</div><div class="line">	<span class="string">"Wednesday"</span>,</div><div class="line">	<span class="string">"Thursday"</span>,</div><div class="line">	<span class="string">"Friday"</span>,</div><div class="line">	<span class="string">"Saturday"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	Date tmp;</div><div class="line">	<span class="keyword">int</span> count = <span class="number">0</span>; <span class="comment">// 计算日期与0000年1月1日的天数差</span></div><div class="line">	tmp.day = <span class="number">1</span>;</div><div class="line">	tmp.month = <span class="number">1</span>;</div><div class="line">	tmp.year = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span> (tmp.year != <span class="number">3001</span>) &#123;</div><div class="line">		buf[tmp.year][tmp.month][tmp.day] = count;</div><div class="line">		tmp.nextDay();</div><div class="line">		count++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> d, m, y;</div><div class="line">	<span class="keyword">char</span> s[<span class="number">20</span>];</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d%s%d"</span>, &amp;d, s, &amp;y) != EOF) &#123;</div><div class="line">		<span class="keyword">for</span> (m = <span class="number">1</span>; m &lt;= <span class="number">12</span>; m++) &#123;</div><div class="line">			<span class="keyword">if</span> (<span class="built_in">strcmp</span>(s, monthName[m]) == <span class="number">0</span>) &#123;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> days = buf[y][m][d] - buf[<span class="number">2016</span>][<span class="number">8</span>][<span class="number">15</span>];</div><div class="line">		days++;</div><div class="line"></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%s\n"</span>, weekName[(days%<span class="number">7</span> + <span class="number">7</span>) % <span class="number">7</span>]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+    </div>
+</article>
+
+
+                                </div>
+                            </div>
+                                                
+                    </div>
+                </div>
+                <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 你是第<span id="busuanzi_value_site_uv"></span>个小伙伴</span>
+        </div>
+    </div>
+</footer>
+                
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!-- Automatic page load progress bar  -->
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.min.css">
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+<!-- comment -->
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+<!-- set up the scroll bar -->
+
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
+
+
+<!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+            scrollTo: false
+        });
+        var headerHeight = parseInt($('#header').height());
+        var headerMarginBottom = parseInt($('#header').css('marginBottom').replace("px", ""));
+        var profileHeight = parseInt($('#profile').height());
+        var profileMarginBottom = parseInt($('#profile').css('marginBottom').replace("px", ""));
+        $(document).on('pjax:complete', function() {
+            $('html,body').animate({
+                scrollTop: headerHeight + headerMarginBottom + profileHeight + profileMarginBottom - 30},
+                600, function() {
+                /* stuff to do after animation is complete */
+            });
+            // $(document).scrollTop(headerHeight+headerMarginBottom+profileHeight+profileMarginBottom);
+        })
+    </script>
+
+
+<!-- snowfall -->
+
+<!-- firefly -->
+
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- busuanzi statistics scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- CNZZ analytics script  -->
+
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255957443'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255957443%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+<!-- baidu analytics script  -->
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+                </body>
+</html>
+
+

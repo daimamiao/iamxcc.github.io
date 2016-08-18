@@ -1,0 +1,346 @@
+    <!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>STL中的栈 | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="栈是一种数据项按序排列的数据结构，只能在它的一端进行删除和插入。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STL中的栈">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/15/STL中的栈/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="栈是一种数据项按序排列的数据结构，只能在它的一端进行删除和插入。">
+<meta property="og:updated_time" content="2016-08-18T06:44:45.166Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="STL中的栈">
+<meta name="twitter:description" content="栈是一种数据项按序排列的数据结构，只能在它的一端进行删除和插入。">
+    
+    
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+</head>
+
+    <body>
+                    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+
+       <!--  <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/message">留言</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav> -->
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+        
+                            <div class="container">
+                    <div class="row">
+                                                    <div id="content">
+                                <div class="md-10 md-offset-1">
+                                        <div id="nav">
+    
+        <a class="nav-link" href="/archives">归档</a>
+    
+        <a class="nav-link" href="/categories">分类</a>
+    
+        <a class="nav-link" href="/tags">标签</a>
+    
+        <a class="nav-link" href="/message">留言</a>
+    
+        <a class="nav-link" href="/about">关于</a>
+    
+</div>
+<article class="article">
+    <a class="article-title">
+        STL中的栈
+    </a>
+    <div class="article-meta">
+        
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/C/">C++</a>
+            </div>
+        
+        <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
+        <a href="/2016/08/15/STL中的栈/" class="article-date">
+            <time datetime="2016-08-15T05:21:50.000Z" itemprop="datePublished">2016-08-15</time>
+        </a>
+    </div>
+
+    
+        <div class="article-tag">
+            <a class="tag-link" href="/tags/C/">C++<span class="tag-count">2</span></a>  <a class="tag-link" href="/tags/STL/">STL<span class="tag-count">1</span></a>  <a class="tag-link" href="/tags/栈/">栈<span class="tag-count">1</span></a>
+        </div>
+    
+    <div class="article-content" itemprop="articleBody">
+        
+        <p>栈是一种数据项按序排列的数据结构，只能在它的一端进行删除和插入。 <a id="more"></a>最近在学习STL中一些基础数据结构的模板。因为C语言在使用这些数据结构之前还得自己实现一遍，很是麻烦。而STL中已经帮我们封装好了这些数据结构的内部操作。</p>
+<h3 id="栈的基本用法"><a href="#栈的基本用法" class="headerlink" title="栈的基本用法"></a>栈的基本用法</h3><h5 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h5><p>首先使用stack标准模板之前我们需要在加上头文件<code>#include &lt;stack&gt;</code>。并要声明使用标准命名空间<code>using namespace std;</code>。</p>
+<p>然后使用<code>stack&lt;int&gt; S;</code>定义一个保存int类型数据的栈S，这样所有有关栈实现的内部操作，STL都已经帮我们实现好了。</p>
+<h5 id="内部操作"><a href="#内部操作" class="headerlink" title="内部操作"></a>内部操作</h5><ol>
+<li><p>使用<code>S.push()</code>向栈中压进一个数值为i的元素。</p>
+</li>
+<li><p>使用<code>int x = S.top()</code>读取栈顶元素，并将其值赋予给x。</p>
+</li>
+<li><p>使用<code>S.pop()</code>弹出栈顶元素。</p>
+</li>
+</ol>
+<h3 id="具体例子"><a href="#具体例子" class="headerlink" title="具体例子"></a>具体例子</h3><h4 id="括号匹配问题"><a href="#括号匹配问题" class="headerlink" title="括号匹配问题"></a>括号匹配问题</h4><h5 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h5><p>在某个字符串（长度不超过100）中有左括号、右括号和大小写字母；规定（与常见的算数式子一样）任何一个左括号都从内到外与在它右边且距离最近的右括号匹配。写一个程序，找到无法匹配的左括号和右括号，输出原来字符串，并在下一行标出不能匹配的括号。不能匹配的左括号用”$”标注,不能匹配的右括号用”?”标注.</p>
+<h5 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h5><p>输入包括多组数据，每组数据一行，包含一个字符串，只包含左右括号和大小写字母，字符串长度不超过100。<br>注意：cin.getline(str,100)最多只能输入99个字符！</p>
+<h5 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h5><p>对每组输出数据，输出两行，第一行包含原始输入字符，第二行由”$”,”?”和空格组成，”$”和”?”表示与之对应的左括号和右括号不能匹配。</p>
+<h5 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">)(rttyy())sss)(</div></pre></td></tr></table></figure>
+<h5 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">)(rttyy())sss)(</div><div class="line">?            ?$</div></pre></td></tr></table></figure>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; S;</div><div class="line"><span class="keyword">char</span> str[<span class="number">110</span>];</div><div class="line"><span class="keyword">char</span> res[<span class="number">110</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str) != EOF) &#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; str[i] != <span class="number">0</span>; i++) &#123;</div><div class="line">			<span class="keyword">if</span> (str[i] == <span class="string">'('</span>) &#123;</div><div class="line">				S.push(i);</div><div class="line">				res[i] = <span class="string">' '</span>;</div><div class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">')'</span>) &#123;</div><div class="line">				<span class="keyword">if</span> (S.empty() == <span class="literal">false</span>) &#123;</div><div class="line">					S.pop();</div><div class="line">					res[i] = <span class="string">' '</span>;</div><div class="line">				&#125; <span class="keyword">else</span> &#123;</div><div class="line">					res[i] = <span class="string">'?'</span>;</div><div class="line">				&#125;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				res[i] = <span class="string">' '</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">while</span> (!S.empty()) &#123;</div><div class="line">			res[S.top()] = <span class="string">'$'</span>;</div><div class="line">			S.pop();</div><div class="line">		&#125;</div><div class="line">		res[i] = <span class="number">0</span>;</div><div class="line">		<span class="built_in">puts</span>(str);</div><div class="line">		<span class="built_in">puts</span>(res);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="简单计数器"><a href="#简单计数器" class="headerlink" title="简单计数器"></a>简单计数器</h4><h5 id="题目描述：-1"><a href="#题目描述：-1" class="headerlink" title="题目描述："></a>题目描述：</h5><p>读入一个只包含 +, -, *, / 的非负整数计算表达式，计算该表达式的值。</p>
+<h5 id="输入：-1"><a href="#输入：-1" class="headerlink" title="输入："></a>输入：</h5><p>测试输入包含若干测试用例，每个测试用例占一行，每行不超过200个字符，整数和运算符之间用一个空格分隔。没有非法表达式。当一行中只有0时输入结束，相应的结果不要输出。</p>
+<h5 id="输出：-1"><a href="#输出：-1" class="headerlink" title="输出："></a>输出：</h5><p>对每个测试用例输出1行，即该表达式的值，精确到小数点后2位。</p>
+<h5 id="样例输入：-1"><a href="#样例输入：-1" class="headerlink" title="样例输入："></a>样例输入：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1 + 2</div><div class="line">4 + 2 * 5 - 7 / 11</div><div class="line">0</div></pre></td></tr></table></figure>
+<h5 id="样例输出：-1"><a href="#样例输出：-1" class="headerlink" title="样例输出："></a>样例输出：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">3.00</div><div class="line">13.36</div></pre></td></tr></table></figure>
+<h5 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_DEPRECATE</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="built_in">stack</span>&lt;<span class="keyword">double</span>&gt; digit;</div><div class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; op;</div><div class="line"><span class="keyword">char</span> str[<span class="number">110</span>];</div><div class="line"><span class="keyword">int</span> mat[][<span class="number">5</span>] = &#123;</div><div class="line">	<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>,</div><div class="line">	<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// reto is true =&gt; oparator</span></div><div class="line"><span class="comment">// reto is false =&gt; number</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">getOp</span><span class="params">(<span class="keyword">bool</span> &amp;reto, <span class="keyword">int</span> &amp;retn, <span class="keyword">int</span> &amp;i)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; op.empty()) &#123;</div><div class="line">		reto = <span class="literal">true</span>;</div><div class="line">		retn = <span class="number">0</span>;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (str[i] == <span class="number">0</span>) &#123;</div><div class="line">		reto = <span class="literal">true</span>;</div><div class="line">		retn = <span class="number">0</span>;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (str[i] &gt;= <span class="string">'0'</span> &amp;&amp; str[i] &lt;= <span class="string">'9'</span>) &#123;</div><div class="line">		reto = <span class="literal">false</span>;</div><div class="line">		retn = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (; str[i] != <span class="string">' '</span> &amp;&amp; str[i] != <span class="number">0</span>; i++) &#123;</div><div class="line">			retn *= <span class="number">10</span>;</div><div class="line">			retn += str[i] - <span class="string">'0'</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (str[i] == <span class="string">' '</span>) &#123;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> &#123;</div><div class="line">		reto = <span class="literal">true</span>;</div><div class="line">		<span class="keyword">if</span> (str[i] == <span class="string">'+'</span>) &#123;</div><div class="line">			retn = <span class="number">1</span>;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</div><div class="line">			retn = <span class="number">2</span>;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'*'</span>) &#123;</div><div class="line">			retn = <span class="number">3</span>;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'/'</span>) &#123;</div><div class="line">			retn = <span class="number">4</span>;</div><div class="line">		&#125;</div><div class="line">		i += <span class="number">2</span>;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">while</span> (gets_s(str)) &#123;</div><div class="line">		<span class="keyword">if</span> (str[<span class="number">0</span>] == <span class="string">'0'</span> &amp;&amp; str[<span class="number">1</span>] == <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">bool</span> retop;</div><div class="line">		<span class="keyword">int</span> retnum;</div><div class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> (!op.empty()) &#123;</div><div class="line">			op.pop();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">while</span> (!digit.empty()) &#123;</div><div class="line">			digit.pop();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">			getOp(retop, retnum, idx);</div><div class="line">			<span class="keyword">if</span> (retop == <span class="literal">false</span>) &#123;</div><div class="line">				digit.push((<span class="keyword">double</span>)retnum);</div><div class="line">			&#125; </div><div class="line">			<span class="keyword">else</span> &#123;</div><div class="line">				<span class="keyword">double</span> tmp;</div><div class="line">				<span class="keyword">if</span> (op.empty() == <span class="literal">true</span> || mat[retnum][op.top()] == <span class="number">1</span>) &#123;</div><div class="line">					op.push(retnum);</div><div class="line">				&#125; </div><div class="line">				<span class="keyword">else</span> &#123;</div><div class="line">					<span class="keyword">while</span> (mat[retnum][op.top()] == <span class="number">0</span>) &#123;</div><div class="line">						<span class="keyword">int</span> ret = op.top();</div><div class="line">						op.pop();</div><div class="line">						<span class="keyword">double</span> b = digit.top();</div><div class="line">						digit.pop();</div><div class="line">						<span class="keyword">double</span> a = digit.top();</div><div class="line">						digit.pop();</div><div class="line">						<span class="keyword">if</span> (ret == <span class="number">1</span>) &#123;</div><div class="line">							tmp = a + b;</div><div class="line">						&#125; </div><div class="line">						<span class="keyword">else</span> <span class="keyword">if</span> (ret == <span class="number">2</span>) &#123;</div><div class="line">							tmp = a - b;</div><div class="line">						&#125; </div><div class="line">						<span class="keyword">else</span> <span class="keyword">if</span> (ret == <span class="number">3</span>) &#123;</div><div class="line">							tmp = a * b;</div><div class="line">						&#125; </div><div class="line">						<span class="keyword">else</span> &#123;</div><div class="line">							tmp = a / b;</div><div class="line">						&#125;</div><div class="line">						digit.push(tmp);</div><div class="line">					&#125;</div><div class="line">					op.push(retnum);</div><div class="line">				&#125;</div><div class="line"></div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (op.size() == <span class="number">2</span> &amp;&amp; op.top() == <span class="number">0</span>) &#123;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>, digit.top());</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    </div>
+</article>
+
+
+                                </div>
+                            </div>
+                                                
+                    </div>
+                </div>
+                <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 你是第<span id="busuanzi_value_site_uv"></span>个小伙伴</span>
+        </div>
+    </div>
+</footer>
+                
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!-- Automatic page load progress bar  -->
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.min.css">
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+<!-- comment -->
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+<!-- set up the scroll bar -->
+
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
+
+
+<!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+            scrollTo: false
+        });
+        var headerHeight = parseInt($('#header').height());
+        var headerMarginBottom = parseInt($('#header').css('marginBottom').replace("px", ""));
+        var profileHeight = parseInt($('#profile').height());
+        var profileMarginBottom = parseInt($('#profile').css('marginBottom').replace("px", ""));
+        $(document).on('pjax:complete', function() {
+            $('html,body').animate({
+                scrollTop: headerHeight + headerMarginBottom + profileHeight + profileMarginBottom - 30},
+                600, function() {
+                /* stuff to do after animation is complete */
+            });
+            // $(document).scrollTop(headerHeight+headerMarginBottom+profileHeight+profileMarginBottom);
+        })
+    </script>
+
+
+<!-- snowfall -->
+
+<!-- firefly -->
+
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- busuanzi statistics scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- CNZZ analytics script  -->
+
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255957443'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255957443%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+<!-- baidu analytics script  -->
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+                </body>
+</html>
+
+

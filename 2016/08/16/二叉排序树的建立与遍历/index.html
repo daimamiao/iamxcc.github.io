@@ -1,0 +1,330 @@
+    <!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>二叉排序树的建立与遍历 | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="二叉排序树的建立与遍历基本没什么花样可变，这里做个记录，方便下次查阅。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉排序树的建立与遍历">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/16/二叉排序树的建立与遍历/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="二叉排序树的建立与遍历基本没什么花样可变，这里做个记录，方便下次查阅。">
+<meta property="og:updated_time" content="2016-08-16T08:59:02.642Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二叉排序树的建立与遍历">
+<meta name="twitter:description" content="二叉排序树的建立与遍历基本没什么花样可变，这里做个记录，方便下次查阅。">
+    
+    
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+</head>
+
+    <body>
+                    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header">
+    <div id="header-inner" class="container-fluid">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+        </a>
+
+       <!--  <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/message">留言</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav> -->
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</header>
+
+        
+                            <div class="container">
+                    <div class="row">
+                                                    <div id="content">
+                                <div class="md-10 md-offset-1">
+                                        <div id="nav">
+    
+        <a class="nav-link" href="/archives">归档</a>
+    
+        <a class="nav-link" href="/categories">分类</a>
+    
+        <a class="nav-link" href="/tags">标签</a>
+    
+        <a class="nav-link" href="/message">留言</a>
+    
+        <a class="nav-link" href="/about">关于</a>
+    
+</div>
+<article class="article">
+    <a class="article-title">
+        二叉排序树的建立与遍历
+    </a>
+    <div class="article-meta">
+        
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+            </div>
+        
+        <span id="busuanzi_container_page_pv">热度 <span id="busuanzi_value_page_pv"></span> &#8451</span>
+        <a href="/2016/08/16/二叉排序树的建立与遍历/" class="article-date">
+            <time datetime="2016-08-16T08:39:25.000Z" itemprop="datePublished">2016-08-16</time>
+        </a>
+    </div>
+
+    
+        <div class="article-tag">
+            <a class="tag-link" href="/tags/二叉树/">二叉树<span class="tag-count">2</span></a>  <a class="tag-link" href="/tags/数据结构/">数据结构<span class="tag-count">2</span></a>
+        </div>
+    
+    <div class="article-content" itemprop="articleBody">
+        
+        <p>二叉排序树的建立与遍历基本没什么花样可变，这里做个记录，方便下次查阅。 <a id="more"></a></p>
+<h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p>输入一系列整数，建立二叉排序数，并进行前序，中序，后序遍历。</p>
+<h4 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h4><p>输入第一行包括一个整数n(1&lt;=n&lt;=100)。<br>接下来的一行包括n个整数。</p>
+<h4 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h4><p>可能有多组测试数据，对于每组数据，将题目所给数据建立一个二叉排序树，并对二叉排序树进行前序、中序和后序遍历。<br>每种遍历结果输出一行。每行最后一个数据之后有一个空格。</p>
+<h4 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">5</div><div class="line">1 6 5 9 8</div></pre></td></tr></table></figure>
+<h4 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1 6 5 9 8 </div><div class="line">1 5 6 8 9 </div><div class="line">5 8 9 6 1</div></pre></td></tr></table></figure>
+<p><strong>提示：</strong><br>输入中可能有重复元素，但是输出的二叉树遍历序列中重复元素不用输出。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_DEPRECATE</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node</div><div class="line">&#123;</div><div class="line">	Node *lchild;</div><div class="line">	Node *rchild;</div><div class="line">	<span class="keyword">int</span> c;</div><div class="line">&#125;tree[<span class="number">110</span>];</div><div class="line"></div><div class="line"><span class="keyword">int</span> index;</div><div class="line"><span class="function">Node* <span class="title">createNode</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	tree[index].lchild = tree[index].rchild = <span class="literal">NULL</span>;</div><div class="line">	<span class="keyword">return</span> &amp;tree[index++];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// preorder traversal</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(Node *T)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>, T-&gt;c);</div><div class="line">	<span class="keyword">if</span> (T-&gt;lchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		preOrder(T-&gt;lchild);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (T-&gt;rchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		preOrder(T-&gt;rchild);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// inorder traversal</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(Node *T)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (T-&gt;lchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		inOrder(T-&gt;lchild);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>, T-&gt;c);</div><div class="line">	<span class="keyword">if</span> (T-&gt;rchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		inOrder(T-&gt;rchild);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// postorder traversal</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">postOrder</span><span class="params">(Node *T)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (T-&gt;lchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		postOrder(T-&gt;lchild);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (T-&gt;rchild != <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		postOrder(T-&gt;rchild);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>, T-&gt;c);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Node* <span class="title">insert</span><span class="params">(Node *T, <span class="keyword">int</span> x)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (T == <span class="literal">NULL</span>)</div><div class="line">	&#123;</div><div class="line">		T = createNode();</div><div class="line">		T-&gt;c = x;</div><div class="line">		<span class="keyword">return</span> T;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (T-&gt;c &lt; x)</div><div class="line">	&#123;</div><div class="line">		T-&gt;rchild = insert(T-&gt;rchild, x);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (T-&gt;c &gt; x)</div><div class="line">	&#123;</div><div class="line">		T-&gt;lchild = insert(T-&gt;lchild, x);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> T;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> n = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) != EOF)</div><div class="line">	&#123;</div><div class="line">		index = <span class="number">0</span>;</div><div class="line">		Node *root = <span class="literal">NULL</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</div><div class="line">			root = insert(root, x);</div><div class="line">		&#125;</div><div class="line">		preOrder(root);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">		inOrder(root);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">		postOrder(root);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    </div>
+</article>
+
+
+                                </div>
+                            </div>
+                                                
+                    </div>
+                </div>
+                <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 你是第<span id="busuanzi_value_site_uv"></span>个小伙伴</span>
+        </div>
+    </div>
+</footer>
+                
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!-- Automatic page load progress bar  -->
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.min.css">
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+<!-- comment -->
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+<!-- set up the scroll bar -->
+
+    <div class="scroll-bar"></div>
+    <style>
+        .scroll-bar {
+             position: fixed;
+             top: 0;
+             left: 0;
+             z-index: 4500;
+             display: none;
+             width: 0;
+             height: 2px;
+             background: #1f72cd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+        $(".scroll-bar").attr("style","width:"+($(this).scrollTop()/($(document).height()-$(this).height())*100)+"%;display: block;");
+        });
+    </script>
+
+
+<!-- pjax -->
+
+    <script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+    <script>
+        $(document).pjax('a[target!=_blank]', '#content', {
+            fragment: '#content',
+            timeout: 5000,
+            scrollTo: false
+        });
+        var headerHeight = parseInt($('#header').height());
+        var headerMarginBottom = parseInt($('#header').css('marginBottom').replace("px", ""));
+        var profileHeight = parseInt($('#profile').height());
+        var profileMarginBottom = parseInt($('#profile').css('marginBottom').replace("px", ""));
+        $(document).on('pjax:complete', function() {
+            $('html,body').animate({
+                scrollTop: headerHeight + headerMarginBottom + profileHeight + profileMarginBottom - 30},
+                600, function() {
+                /* stuff to do after animation is complete */
+            });
+            // $(document).scrollTop(headerHeight+headerMarginBottom+profileHeight+profileMarginBottom);
+        })
+    </script>
+
+
+<!-- snowfall -->
+
+<!-- firefly -->
+
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- busuanzi statistics scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- CNZZ analytics script  -->
+
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255957443'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255957443%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+<!-- baidu analytics script  -->
+
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- google analytics script  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+                </body>
+</html>
+
+
