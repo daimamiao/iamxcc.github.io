@@ -48,7 +48,7 @@
     <link href="http://blog.iamxcc.com/2016/08/22/wordpress%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
     <id>http://blog.iamxcc.com/2016/08/22/wordpress常用函数/</id>
     <published>2016-08-22T04:10:16.000Z</published>
-    <updated>2016-08-31T15:27:05.722Z</updated>
+    <updated>2016-08-31T15:28:29.986Z</updated>
     
     <content type="html"><![CDATA[<p>wordpress开发过程中一般要用到很多wordpress的函数，但是这么多我们不可能记下来。所以这里做一个总结，方便下一次查阅。 <a id="more"></a></p>
 <h4 id="get-bloginfo"><a href="#get-bloginfo" class="headerlink" title="get_bloginfo()"></a>get_bloginfo()</h4><p>获取博客信息</p>
