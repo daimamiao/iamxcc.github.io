@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>二叉树的遍历 | 胡闹的日子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="description" content="二叉树的遍历包括前序遍历、中序遍历、后序遍历和层次遍历，如果能熟练把握，对于写关于二叉树的代码定能信手拈来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树的遍历">
+<meta property="og:url" content="http://blog.iamxcc.com/2016/08/24/二叉树的遍历/index.html">
+<meta property="og:site_name" content="胡闹的日子">
+<meta property="og:description" content="二叉树的遍历包括前序遍历、中序遍历、后序遍历和层次遍历，如果能熟练把握，对于写关于二叉树的代码定能信手拈来。">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png">
+<meta property="og:updated_time" content="2016-08-24T08:52:27.026Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二叉树的遍历">
+<meta name="twitter:description" content="二叉树的遍历包括前序遍历、中序遍历、后序遍历和层次遍历，如果能熟练把握，对于写关于二叉树的代码定能信手拈来。">
+<meta name="twitter:image" content="http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="胡闹的日子" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+
+    
+        
+            <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+        
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4f1bafa1ed47ca0c3a656ab3536a18ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner container">
+        <a href="/" id="logo">
+            <i class="logo"></i>
+            <span class="site-title">胡闹的日子</span>
+        </a>
+        <nav id="main-nav">
+            
+                <a class="main-nav-link" href="/archives">归档</a>
+            
+                <a class="main-nav-link" href="/categories">分类</a>
+            
+                <a class="main-nav-link" href="/tags">标签</a>
+            
+                <a class="main-nav-link" href="/series">系列</a>
+            
+                <a class="main-nav-link" href="/about">关于</a>
+            
+        </nav>
+        
+            
+            <nav id="sub-nav">
+                <div class="profile" id="profile-nav">
+                    <a id="profile-anchor" href="javascript:;">
+                        <img class="avatar" src="/css/images/avatar1.png" />
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                </div>
+            </nav>
+        
+        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/series">系列</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="row">
+                <section id="main" class="md-8 sm-8">
+                    <div class="row">
+                        <article id="post-二叉树的遍历" class="article article-type-post article-position-false" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                            <div class="article-category-img">
+                                
+                                
+                                    
+                                        数
+                                    
+                                
+                            </div>
+                        
+                        
+    <div class="article-category">
+    	<!-- <i class="fa fa-folder"></i> -->
+        <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <a href="/2016/08/24/二叉树的遍历/">
+            <time datetime="2016-08-24T03:02:33.000Z" itemprop="datePublished">2016-08-24</time>
+        </a>
+    </div>
+
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-img">
+            <a href="/2016/08/24/二叉树的遍历/" class="thumbnail">
+    
+    
+        <span style="background:url(http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png) no-repeat;background-size: 100% 100%;" alt="二叉树的遍历" class="thumbnail-image"></span>
+    
+</a>
+
+        </div>
+        
+
+        <div class="article-entry" itemprop="articleBody">
+        
+    
+        <h1 class="article-title" itemprop="name" class="name">
+            二叉树的遍历
+        </h1>
+    
+
+        
+            
+    <div class="article-tag">
+        <a class="tag-link" href="/tags/二叉树/">二叉树</a> <a class="tag-link" href="/tags/数据结构/">数据结构</a>
+    </div>
+
+        
+        
+            
+            <p>二叉树的遍历包括前序遍历、中序遍历、后序遍历和层次遍历，如果能熟练把握，对于写关于二叉树的代码定能信手拈来。 <a id="more"></a></p>
+<h3 id="四种遍历例子"><a href="#四种遍历例子" class="headerlink" title="四种遍历例子"></a>四种遍历例子</h3><h4 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历"></a>层次遍历</h4><p>使用stl中的queue，代码很简练。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(Node T)</span></span></div><div class="line">&#123;</div><div class="line">	Q.push(T);</div><div class="line">	Node tmp;</div><div class="line">	<span class="keyword">while</span> (!Q.empty())</div><div class="line">	&#123;</div><div class="line">		tmp = Q.front();</div><div class="line">		Q.pop();</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, tmp.c);</div><div class="line">		<span class="keyword">if</span> (tmp.lchild)</div><div class="line">		&#123;</div><div class="line">			Q.push(tmp.lchild);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (tmp.rchild)</div><div class="line">		&#123;</div><div class="line">			Q.push(tmp.rchild);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>根据二叉树的前序遍历结果和中序遍历结果生成后序遍历的问题。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_DEPRECATE</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node</div><div class="line">&#123;</div><div class="line">	Node* lchild;</div><div class="line">	Node* rchild;</div><div class="line">	<span class="keyword">char</span> c;</div><div class="line">&#125;tree[<span class="number">30</span>];</div><div class="line"><span class="keyword">char</span> str1[<span class="number">30</span>];</div><div class="line"><span class="keyword">char</span> str2[<span class="number">30</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">postOrder</span><span class="params">(Node *T)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (T-&gt;lchild)</div><div class="line">	&#123;</div><div class="line">		postOrder(T-&gt;lchild);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (T-&gt;rchild)</div><div class="line">	&#123;</div><div class="line">		postOrder(T-&gt;rchild);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%c"</span>, T-&gt;c);</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> loc;</div><div class="line"><span class="function">Node* <span class="title">build</span><span class="params">(<span class="keyword">int</span> s1, <span class="keyword">int</span> e1, <span class="keyword">int</span> s2, <span class="keyword">int</span> e2)</span></span></div><div class="line">&#123;</div><div class="line">	tree[loc].lchild = tree[loc].rchild = <span class="literal">NULL</span>;</div><div class="line">	Node* ret = &amp;tree[loc++];</div><div class="line">	ret-&gt;c = str1[s1];</div><div class="line">	<span class="keyword">int</span> index;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = s2; i &lt;= e2; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (str2[i] == str1[s1])</div><div class="line">		&#123;</div><div class="line">			index = i;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (index != s2)</div><div class="line">	&#123;</div><div class="line">		ret-&gt;lchild = build(s1 + <span class="number">1</span>, s1 + (index - s2), s2, index - <span class="number">1</span>);</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (index != e2)</div><div class="line">	&#123;</div><div class="line">		ret-&gt;rchild = build(s1 + (index - s2) + <span class="number">1</span>, e1, index + <span class="number">1</span>, e2);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str1) != EOF)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str2);</div><div class="line">		loc = <span class="number">0</span>;</div><div class="line">		<span class="keyword">int</span> L1 = <span class="built_in">strlen</span>(str1);</div><div class="line">		<span class="keyword">int</span> L2 = <span class="built_in">strlen</span>(str2);</div><div class="line">		Node* T = build(<span class="number">0</span>, L1 - <span class="number">1</span>, <span class="number">0</span>, L2 - <span class="number">1</span>);</div><div class="line">		postOrder(T);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://blog.iamxcc.com/2016/08/24/二叉树的遍历/" data-id="cisj1qc1r002vz8inji1cn6c9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                
+    
+        <a href="http://blog.iamxcc.com/2016/08/24/二叉树的遍历/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://blog.iamxcc.com/2016/08/24/二叉树的遍历/">评论</a>
+    
+
+            </footer>
+        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/25/A-B-Format/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">
+                
+                    A+B Format
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/08/22/wordpress常用函数/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">wordpress常用函数</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments" class="comments">
+	    
+	        
+    <div class="ds-thread" data-thread-key="2016/08/24/二叉树的遍历/" data-title="二叉树的遍历" data-url="http://blog.iamxcc.com/2016/08/24/二叉树的遍历/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+	    
+    </section>
+
+
+                    </div>
+                </section>
+                
+                    <aside id="sidebar" class="md-4 sm-4">
+	<div class="row-mobile">
+		
+            
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar1.png" />
+            <h2 id="name">xcc</h2>
+            <h3 id="title">Web Developer &amp; Designer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>GuangDong, China</span>
+            <a id="follow" target="_blank" href="https://github.com/iamxcc/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                43
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                37
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.zhihu.com/people/iamxcc" target="_blank" title="知乎" class=tooltip>
+                            <i class="fa fa-bookmark"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.v2ex.com/member/ybzbxcc" target="_blank" title="V2EX" class=tooltip>
+                            <i class="fa fa-codepen"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://www.jianshu.com/users/a820fe80f428/timeline" target="_blank" title="简书" class=tooltip>
+                            <i class="fa fa-book"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+        
+		
+        	
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget tagcloud">
+        	<a href="/" style="background: #ffa200; color: #fff;">全部</a>	
+            <a href="/tags/51NOD/" style="font-size: 10px;">51NOD</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/GET/" style="font-size: 10px;">GET</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/KMP算法/" style="font-size: 10px;">KMP算法</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/Mactype/" style="font-size: 15px;">Mactype</a> <a href="/tags/Oneplus/" style="font-size: 10px;">Oneplus</a> <a href="/tags/PAT/" style="font-size: 15px;">PAT</a>
+        </div>
+    </div>
+
+	    
+        	
+	<a class="widget-series" href="/categories/Sublime/">
+		<img src="http://7xveyh.com1.z0.glb.clouddn.com/sublime-text-mastery.jpg" alt="">
+		<div class="series-title">优雅的Sublime</div>
+	</a>
+
+	<a class="widget-series" href="/categories/LeetCode/">
+		<img src="http://7xveyh.com1.z0.glb.clouddn.com/2013111315172517727.jpg" alt="">
+		<div class="series-title">LeetCode题解</div>
+	</a>
+
+	<a class="widget-series" href="/categories/算法/">
+		<img src="http://7xveyh.com1.z0.glb.clouddn.com/2016080413315664241_640x360.jpeg" alt="">
+		<div class="series-title">有趣的算法</div>
+	</a>
+
+
+	    
+        	
+    <div class="widget-wrap">
+        <h3 class="widget-title">最近文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/25/A-B-Format/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/25/A-B-Format/" class="title">A+B Format</a>
+                            </p>
+                            <p class="item-category">
+                                
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/24/二叉树的遍历/" class="thumbnail">
+    
+    
+        <span style="background:url(http://img.my.csdn.net/uploads/201304/14/1365945696_1472.png) no-repeat;background-size: 100% 100%;" alt="二叉树的遍历" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/24/二叉树的遍历/" class="title">二叉树的遍历</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/22/wordpress常用函数/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/22/wordpress常用函数/" class="title">wordpress常用函数</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/wordpress/">wordpress</a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/21/并查集/" class="thumbnail">
+    
+    
+        <span style="background:url(http://img.my.csdn.net/uploads/201211/24/1353765981_7190.png) no-repeat;background-size: 100% 100%;" alt="并查集" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/21/并查集/" class="title">并查集</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/算法/">算法</a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/广度优先搜索-BFS/" class="thumbnail">
+    
+    
+        <span style="background:url(http://images.cnitblog.com/blog/551698/201401/311925201877159.png) no-repeat;background-size: 100% 100%;" alt="广度优先搜索(BFS)" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-title">
+                                <a href="/2016/08/20/广度优先搜索-BFS/" class="title">广度优先搜索(BFS)</a>
+                            </p>
+                            <p class="item-category">
+                                <a class="article-category-link" href="/categories/算法/">算法</a>
+                            </p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+	    
+        	
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.v2ex.com/?r=ybzbxcc">个人V2EX主页</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+	    
+	    
+	    	
+<div class="widget-wrap">
+	<h3 class="widget-title">目录</h3>
+	<div class="widget">
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#四种遍历例子"><span class="toc-number">1.</span> <span class="toc-text">四种遍历例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#层次遍历"><span class="toc-number">1.1.</span> <span class="toc-text">层次遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Code"><span class="toc-number">1.2.</span> <span class="toc-text">Code</span></a></li></ol></li></ol>
+	</div>
+</div>
+
+
+		
+    	<div id="toTop" class="fa fa-angle-up"></div>
+	</div>
+</aside>
+                
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">&copy;  
+        	
+        	
+				2016
+			
+            XCC<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/iamxcc">xcc</a>
+            <span id="busuanzi_container_site_uv"> 本站总访问人数<span id="busuanzi_value_site_uv"></span>次</span>
+        </div>
+    </div>
+</footer>
+        
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'iamccx'};
+        (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+     
+
+
+
+
+<!-- Fancybox Scripts -->
+
+    
+        <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+<!-- mathjax Scripts -->
+
+
+<!-- Baidu Push Scripts -->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<!-- Statistics Scripts -->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Search Scripts -->
+
+    <script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
+

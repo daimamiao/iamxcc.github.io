@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.iamxcc.com/about/index.html</loc>
+    
+    <lastmod>2016-08-31T15:16:35.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/25/A-B-Format/</loc>
+    
+    <lastmod>2016-08-25T04:49:23.512Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/24/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</loc>
+    
+    <lastmod>2016-08-24T08:52:27.026Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/22/wordpress%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2016-08-22T08:04:49.470Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/20/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-BFS/</loc>
+    
+    <lastmod>2016-08-21T02:53:27.906Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/21/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
+    
+    <lastmod>2016-08-21T02:52:26.729Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.iamxcc.com/2016/08/15/%E6%97%A5%E6%9C%9F%E7%B1%BB%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2016-08-18T16:01:13.053Z</lastmod>
@@ -124,13 +166,6 @@
     <loc>http://blog.iamxcc.com/404.html</loc>
     
     <lastmod>2016-08-09T09:05:24.586Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.iamxcc.com/about/index.html</loc>
-    
-    <lastmod>2016-08-07T23:55:06.007Z</lastmod>
     
   </url>
   

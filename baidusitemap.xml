@@ -3,6 +3,104 @@
 
 
     
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/25/A-B-Format/</loc>
+    <lastmod>2016-08-25T04:49:23.512Z</lastmod>
+    <data>
+        <display>
+        <title>A+B Format</title>
+        <pubTime>2016-08-25T04:49:08.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/24/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</loc>
+    <lastmod>2016-08-24T08:52:27.026Z</lastmod>
+    <data>
+        <display>
+        <title>二叉树的遍历</title>
+        <pubTime>2016-08-24T03:02:33.000Z</pubTime>
+        
+        <tag>数据结构</tag>
+         
+        <tag>二叉树</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://blog.iamxcc.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/22/wordpress%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2016-08-22T08:04:49.470Z</lastmod>
+    <data>
+        <display>
+        <title>wordpress常用函数</title>
+        <pubTime>2016-08-22T04:10:16.000Z</pubTime>
+        
+        <tag>wordpress</tag>
+         
+         
+           
+             
+              <breadCrumb title="wordpress" url="http://blog.iamxcc.com/categories/wordpress/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/20/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-BFS/</loc>
+    <lastmod>2016-08-21T02:53:27.906Z</lastmod>
+    <data>
+        <display>
+        <title>广度优先搜索(BFS)</title>
+        <pubTime>2016-08-20T03:58:41.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.iamxcc.com/2016/08/21/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
+    <lastmod>2016-08-21T02:52:26.729Z</lastmod>
+    <data>
+        <display>
+        <title>并查集</title>
+        <pubTime>2016-08-21T02:36:38.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://blog.iamxcc.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://blog.iamxcc.com/2016/08/15/%E6%97%A5%E6%9C%9F%E7%B1%BB%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2016-08-18T16:01:13.053Z</lastmod>
@@ -318,7 +416,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
