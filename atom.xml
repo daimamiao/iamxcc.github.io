@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.iamxcc.com/"/>
-  <updated>2016-08-25T04:49:23.512Z</updated>
+  <updated>2016-08-24T08:52:27.026Z</updated>
   <id>http://blog.iamxcc.com/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>A+B Format</title>
-    <link href="http://blog.iamxcc.com/2016/08/25/A-B-Format/"/>
-    <id>http://blog.iamxcc.com/2016/08/25/A-B-Format/</id>
-    <published>2016-08-25T04:49:08.000Z</published>
-    <updated>2016-08-25T04:49:23.512Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_DEPRECATE</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a, b;</div><div class="line">	<span class="keyword">int</span> sum;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b) != EOF)</div><div class="line">	&#123;</div><div class="line">		sum = a + b;</div><div class="line">		<span class="keyword">if</span> (sum &lt; <span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"-"</span>);</div><div class="line">			sum = -sum;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (sum &gt;= <span class="number">1000000</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d,%03d,%03d"</span>, sum / <span class="number">1000000</span>, sum % <span class="number">1000000</span> / <span class="number">1000</span>, sum % <span class="number">1000</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (sum &gt;= <span class="number">1000</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d, %03d"</span>, sum / <span class="number">1000</span>, sum % <span class="number">1000</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>, sum);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;d
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>二叉树的遍历</title>
@@ -67,7 +48,7 @@
     <link href="http://blog.iamxcc.com/2016/08/22/wordpress%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
     <id>http://blog.iamxcc.com/2016/08/22/wordpress常用函数/</id>
     <published>2016-08-22T04:10:16.000Z</published>
-    <updated>2016-08-22T08:04:49.470Z</updated>
+    <updated>2016-08-31T15:27:05.722Z</updated>
     
     <content type="html"><![CDATA[<p>wordpress开发过程中一般要用到很多wordpress的函数，但是这么多我们不可能记下来。所以这里做一个总结，方便下一次查阅。 <a id="more"></a></p>
 <h4 id="get-bloginfo"><a href="#get-bloginfo" class="headerlink" title="get_bloginfo()"></a>get_bloginfo()</h4><p>获取博客信息</p>
@@ -608,6 +589,42 @@
     <summary type="html">
     
       &lt;p&gt;不使用中间变量求const字符串长度，即实现求字符串长度库函数strlen函数。函数接口声明如下：int strlen(const char *p)；
+    
+    </summary>
+    
+      <category term="C语言" scheme="http://blog.iamxcc.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="C语言" scheme="http://blog.iamxcc.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NULL,&#39;\0&#39;,0,&#39;/0&#39;和&quot;0&quot;的区别</title>
+    <link href="http://blog.iamxcc.com/2016/08/05/NULL,0,&#39;0&#39;/"/>
+    <id>http://blog.iamxcc.com/2016/08/05/NULL,0,&#39;0&#39;/</id>
+    <published>2016-08-05T13:03:42.000Z</published>
+    <updated>2016-08-05T13:29:20.946Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近发现对于NULL,’\0’,0,’/0’和”0”的区别有点混淆了。所以在查阅资料之后，将笔记记录在此处，免得下次忘记了可以看看。<br><a id="more"></a></p>
+<h2 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h2><p>NULL 即空指针，在C和C++中的形式不一样，msdn上有如下的内容那个：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">if</span> !defined(NULL)&amp;&amp;defined(__NEEDS_NULL)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL 0</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">		<span class="meta">#<span class="meta-keyword">define</span> NULL ((void *)0)</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
+<p>NULL 在c中用（void*）0表示，在c++中用0表示。    </p>
+<h2 id="‘-0’和’0’"><a href="#‘-0’和’0’" class="headerlink" title="‘\0’和’0’"></a>‘\0’和’0’</h2><ol>
+<li><p>‘\0’表示字符串结束，它在ASCII中的值为0（数值0，非字符‘0’。所以在数值上NULL, ‘\0’,0是一样的，都是0，但’0’就不同了，在ASCII码中编码为48，所以字符0和上述三个值不同。</p>
+</li>
+<li><p>在内存中<code>NULL</code> 和<code>&#39;\0&#39;</code> 和<code>&#39;0&#39;</code>都是一个8位的char类型，NULL 和’\0’ 值一样，都是0，以数字方式读取就是0，以字符串读取时就是’\0’或者null（和编译器有关）。</p>
+</li>
+<li><p>而<code>&#39;0&#39;</code>在内存存储着<code>48</code>，以字符读取就是<code>&#39;0&#39;</code>,以数字读取就是<code>48</code>，至于<code>0</code>，可能是char ,int ,float,double等类型，但是值和<code>NULL</code>和<code>&#39;\0&#39;</code>一样，都是<code>0</code>。</p>
+</li>
+</ol>
+<h2 id="‘-0’和’-0’"><a href="#‘-0’和’-0’" class="headerlink" title="‘/0’和’\0’"></a>‘/0’和’\0’</h2><p>我在写C代码时，经常把’\0’写成’/0’。其实这两者之间差别很大的。因为’/0’表示的是两个字符了，一个是’/‘, 另一个’0’。<br>而’\0’表示的字符串结束，值为0。</p>
+<h2 id="“0”"><a href="#“0”" class="headerlink" title="“0”"></a>“0”</h2><p>“0”表示的是字符串，即在存储中存储了两个内容，一个是’0’(即字符0)，另一个是字符串结束符’\0’(也即数字0)。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>为了说明情况，下面列举了几个例子。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">48</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="string">'0'</span>);	==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>);		==&gt;空（即<span class="literal">NULL</span>）</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>);		==&gt;<span class="number">0</span></div><div class="line"></div><div class="line">那么<span class="number">0</span>+<span class="string">'0'</span>,<span class="number">0</span>+<span class="string">'\0'</span>分别是什么呢？</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;空（<span class="literal">NULL</span>）<span class="comment">//先转换成int,然后ASCII编码相加为0，%c输出，转换成char,所以输出NULL</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'\0'</span>); ==&gt;<span class="number">0</span>   	 <span class="comment">//先转换成int，然后ASCII编码相加为0, %d输出，不用转换，输出数字0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%c"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">0</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">0</span>+<span class="string">'0'</span>);  ==&gt;<span class="number">48</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近发现对于NULL,’\0’,0,’/0’和”0”的区别有点混淆了。所以在查阅资料之后，将笔记记录在此处，免得下次忘记了可以看看。&lt;br&gt;
     
     </summary>
     
